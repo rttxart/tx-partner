@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TX-Partner Dokumentationsstandard: 4 Säulen für Krypto-Dokumentation | TX-Partner</title>
+    <meta name="description" content="Der TX-Partner Dokumentationsstandard definiert professionelle Krypto-Dokumentation: vollständig, nachvollziehbar, fachlich korrekt und langfristig verwertbar.">
+    
+    <!-- Local Fonts Only - DSGVO Compliant -->
+    <link rel="stylesheet" href="/css/fonts.css">
+    
+    <!-- DSGVO-HANDLUNGSBEDARF: Iconify lädt Icons von externen Servern (api.iconify.design). 
+         Für volle DSGVO-Compliance sollten Icons lokal gehostet oder ein Consent-Banner implementiert werden. -->
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    
+    <!-- DSGVO-Handlungsbedarf: Tailwind CSS CDN lädt vom externen Server (cdn.tailwindcss.com).
+         Für vollständige DSGVO-Compliance sollte ein Consent-Banner implementiert werden
+         ODER Tailwind lokal kompiliert und gehostet werden. -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        brand: {
+                            navy: '#1E3A5F',
+                            teal: '#3A9EAF',
+                            tealDark: '#2C7A87',
+                        },
+                        dark: {
+                            bg: '#050505',
+                            surface: '#0F0F0F',
+                            border: 'rgba(255,255,255,0.08)',
+                        },
+                    },
+                    borderRadius: {
+                        'container': '32px',
+                        'card': '32px',
+                        'button': '16px',
+                    },
+                    letterSpacing: {
+                        'tight': '-0.02em',
+                        'tighter': '-0.04em',
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.6s ease-out forwards',
+                        'shimmer': 'shimmer 2s infinite linear',
+                        'pulse': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'aurora-pulse': 'aurora-pulse 8s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(10px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        shimmer: {
+                            '0%': { transform: 'translateX(-100%)' },
+                            '100%': { transform: 'translateX(200%)' },
+                        },
+                        'aurora-pulse': {
+                            '0%, 100%': { opacity: '0.3', transform: 'scale(1)' },
+                            '50%': { opacity: '0.5', transform: 'scale(1.1)' },
+                        },
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Schema.org Article -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "TX-Partner Dokumentationsstandard: Der Goldstandard für Krypto-Dokumentation",
+        "description": "Der TX-Partner Dokumentationsstandard definiert die 4 Säulen professioneller Krypto-Dokumentation für Steuerberater und Finanzämter",
+        "author": {
+            "@type": "Organization",
+            "name": "TX-Partner"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "TX-Partner"
+        }
+    }
+    </script>
+    
+    <style>
+        /* Page Transition */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            opacity: 0;
+            animation: pageLoad 0.5s ease-out 0.1s forwards;
+        }
+        
+        @keyframes pageLoad {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Noise Overlay */
+        .bg-noise {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 50;
+            opacity: 0.03;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+        
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+        
+        /* Focus States for Accessibility (WCAG AA) */
+        :focus-visible {
+            outline: 2px solid #3A9EAF;
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+
+        a:focus-visible, button:focus-visible {
+            outline: 2px solid #3A9EAF;
+            outline-offset: 2px;
+        }
+
+        .glass a:focus-visible, .glass button:focus-visible {
+            outline-color: #3A9EAF;
+            outline-offset: 4px;
+        }
+        
+        /* Card Spotlight */
+        .card-spotlight {
+            position: relative;
+            overflow: hidden;
+            border-radius: 32px;
+        }
+        .card-spotlight::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(58, 158, 175, 0.06), transparent 40%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .card-spotlight:hover::before { opacity: 1; }
+        
+        /* Glass Effect */
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .dark .glass {
+            background: rgba(10, 10, 10, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        
+        /* Navigation Dropdown */
+        .nav-dropdown {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+        .group:hover .nav-dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        /* Mobile Menu Transition */
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+            transform: translateY(-10px);
+        }
+        .mobile-menu.open {
+            max-height: 500px;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Fade In Animation */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Button Hover */
+        .btn-primary {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 14px 0 rgba(30, 58, 95, 0.2);
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px 0 rgba(30, 58, 95, 0.3);
+        }
+        
+        .btn-secondary {
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.08);
+        }
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.12);
+        }
+    </style>
+</head>
+
+<body class="antialiased font-sans bg-white dark:bg-dark-bg text-slate-900 dark:text-white selection:bg-brand-teal selection:text-white">
+    
+    <!-- Noise Overlay -->
+    <div class="bg-noise"></div>
+    
+    <!-- Navigation -->
+    <nav class="fixed top-6 left-1/2 -translate-x-1/2 w-[95%] max-w-6xl z-50">
+        <div class="glass rounded-full px-6 py-3 flex items-center justify-between shadow-lg">
+            <!-- Logo (Logo-Lock) -->
+            <a href="index.html" class="flex items-center gap-3 shrink-0">
+                <div class="flex gap-1 h-6 items-end">
+                    <div class="w-1.5 h-6 rounded-full bg-brand-navy dark:bg-slate-200"></div>
+                    <div class="w-1.5 h-6 rounded-full bg-brand-navy dark:bg-slate-200"></div>
+                    <div class="w-1.5 h-6 rounded-full bg-brand-navy dark:bg-slate-200"></div>
+                    <div class="w-1.5 h-6 rounded-full bg-brand-teal"></div>
+                </div>
+                <span class="text-brand-navy dark:text-white text-lg font-bold tracking-wider">TX-Partner</span>
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <ul class="hidden lg:flex items-center gap-1">
+                <li class="relative group">
+                    <button class="flex items-center gap-1 px-4 py-2 text-sm font-medium text-slate-500 hover:text-brand-navy dark:text-slate-400 dark:hover:text-white transition-colors focus:outline-none">
+                        Leistungen
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:rotate-180 transition-transform duration-300">
+                            <path d="m6 9 6 6 6-6"></path>
+                        </svg>
+                    </button>
+                    <div class="nav-dropdown absolute top-full left-0 mt-2 w-56 rounded-button bg-white dark:bg-dark-surface border border-slate-100 dark:border-white/10 shadow-xl p-2 overflow-hidden">
+                        <a href="leistungen.html" class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                            <div class="text-sm font-semibold text-brand-navy dark:text-white mb-0.5">Leistungen</div>
+                            <div class="text-xs text-slate-400">Übersicht aller Services</div>
+                        </a>
+                        <a href="blockpit-hinweise.html" class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                            <div class="text-sm font-semibold text-brand-navy dark:text-white mb-0.5">Blockpit Hinweise</div>
+                            <div class="text-xs text-slate-400">Korrektur & Optimierung</div>
+                        </a>
+                        <a href="cointracking-fehler.html" class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                            <div class="text-sm font-semibold text-brand-navy dark:text-white mb-0.5">CoinTracking Fehler</div>
+                            <div class="text-xs text-slate-400">Datenbereinigung</div>
+                        </a>
+                    </div>
+                </li>
+                <li class="relative group">
+                    <button class="flex items-center gap-1 px-4 py-2 text-sm font-medium text-brand-navy dark:text-white transition-colors focus:outline-none">
+                        Über uns
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:rotate-180 transition-transform duration-300">
+                            <path d="m6 9 6 6 6-6"></path>
+                        </svg>
+                    </button>
+                    <div class="nav-dropdown absolute top-full left-0 mt-2 w-56 rounded-button bg-white dark:bg-dark-surface border border-slate-100 dark:border-white/10 shadow-xl p-2 overflow-hidden">
+                        <a href="ueber-uns.html" class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                            <div class="text-sm font-semibold text-brand-navy dark:text-white mb-0.5">Über uns</div>
+                            <div class="text-xs text-slate-400">Wer wir sind</div>
+                        </a>
+                        <a href="dokumentationsstandard.html" class="block px-4 py-3 rounded-xl bg-slate-50 dark:bg-white/5">
+                            <div class="text-sm font-semibold text-brand-navy dark:text-white mb-0.5">Dokumentationsstandard</div>
+                            <div class="text-xs text-slate-400">Unsere Qualitätsrichtlinien</div>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <a href="faq.html" class="block px-4 py-2 text-sm font-medium text-slate-500 hover:text-brand-navy dark:text-slate-400 dark:hover:text-white transition-colors">FAQ</a>
+                </li>
+                <li>
+                    <a href="kontakt.html" class="block px-4 py-2 text-sm font-medium text-slate-500 hover:text-brand-navy dark:text-slate-400 dark:hover:text-white transition-colors">Kontakt</a>
+                </li>
+            </ul>
+            
+            <!-- Right Side -->
+            <div class="flex items-center gap-4">
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-white/10 text-slate-500 dark:text-slate-400 transition-all duration-300" aria-label="Dark Mode umschalten" title="Dark Mode umschalten">
+                    <span class="block dark:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="4"></circle>
+                            <path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32l1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+                        </svg>
+                    </span>
+                    <span class="hidden dark:block">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </span>
+                </button>
+                <a href="https://app.cal.eu/johannesanderl-tx-partner/30min" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center justify-center btn-primary text-sm font-semibold text-white rounded-button px-5 py-2 bg-brand-navy overflow-hidden relative group">
+                    <span class="absolute w-full h-full bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:animate-shimmer"></span>
+                    <span class="relative z-10">Dokumentation prüfen</span>
+                </a>
+                <button id="mobile-menu-toggle" class="lg:hidden text-slate-600 dark:text-slate-300 p-2" aria-label="Menü öffnen" aria-expanded="false">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="4" x2="20" y1="12" y2="12"></line>
+                        <line x1="4" x2="20" y1="6" y2="6"></line>
+                        <line x1="4" x2="20" y1="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu lg:hidden mt-2 bg-white dark:bg-dark-surface rounded-card border border-slate-100 dark:border-white/10 shadow-xl p-4">
+            <a href="leistungen.html" class="block px-4 py-3 text-sm font-semibold text-brand-navy dark:text-white rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">Leistungen</a>
+            <a href="ueber-uns.html" class="block px-4 py-3 text-sm font-semibold text-brand-navy dark:text-white rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">Über uns</a>
+            <a href="dokumentationsstandard.html" class="block px-4 py-3 text-sm font-semibold text-brand-teal rounded-xl bg-slate-50 dark:bg-white/5">Dokumentationsstandard</a>
+            <a href="faq.html" class="block px-4 py-3 text-sm font-semibold text-brand-navy dark:text-white rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">FAQ</a>
+            <a href="kontakt.html" class="block px-4 py-3 text-sm font-semibold text-brand-navy dark:text-white rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">Kontakt</a>
+        </div>
+    </nav>
+    
+    <!-- Hero Section: 4 Pillars -->
+    <section class="relative pt-40 pb-24 overflow-hidden bg-slate-50 dark:bg-[#020202] border-b border-slate-200 dark:border-white/5">
+        <!-- Background Effects -->
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px]"></div>
+            <div class="absolute top-[-20%] left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-brand-teal/15 blur-[140px] rounded-full animate-aurora-pulse"></div>
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-px h-[600px] bg-gradient-to-b from-brand-teal/30 via-transparent to-transparent"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 max-w-7xl relative z-10">
+            <!-- Header -->
+            <div class="text-center max-w-3xl mx-auto mb-20">
+                <div class="inline-flex items-center gap-2 border border-brand-teal/20 text-brand-teal text-xs font-bold tracking-widest uppercase rounded-full px-3.5 py-1.5 mb-6 backdrop-blur-sm font-mono">
+                    <span class="w-1.5 h-1.5 rounded-full bg-brand-teal animate-pulse"></span>
+                    TX-Partner Dokumentationsstandard
+                </div>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tighter text-brand-navy dark:text-white mb-6 leading-[1.1]">
+                    Der <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-teal to-brand-teal/70">Goldstandard</span> für deine Krypto-Dokumentation
+                </h1>
+                <p class="text-lg text-slate-500 dark:text-slate-400 font-medium leading-relaxed max-w-2xl mx-auto">
+                    Wir verwandeln unübersichtliche Transaktionshistorien in eine lückenlose, prüfungssichere Beweiskette.
+                </p>
+            </div>
+            
+            <!-- 4 Pillars Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Pillar 1: Vollständigkeit -->
+                <div class="group relative card-spotlight p-1 transition-all duration-500 hover:-translate-y-2" onmousemove="handleMouseMove(event)">
+                    <div class="relative h-full bg-white/70 dark:bg-[#0A0A0A]/80 backdrop-blur-xl rounded-card p-8 border border-white/50 dark:border-white/5 flex flex-col">
+                        <div class="flex justify-between items-start mb-8">
+                            <div class="w-12 h-12 rounded-button bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 flex items-center justify-center text-brand-navy dark:text-white font-mono font-semibold text-lg group-hover:scale-110 transition-transform duration-300">01</div>
+                            <svg class="text-slate-300 dark:text-slate-600 group-hover:text-brand-teal transition-colors" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold tracking-tight text-brand-navy dark:text-white mb-3">Vollständigkeit</h3>
+                        <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-6 flex-grow">
+                            Keine Wallet wird vergessen. Wo APIs versagen, greift unsere manuelle Prüfung.
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-2.5 text-xs font-medium text-slate-600 dark:text-slate-300">
+                                <div class="w-1.5 h-1.5 rounded-full bg-slate-300 dark:bg-slate-600 group-hover:bg-brand-teal transition-colors"></div>
+                                Exchange API & CSV Abgleich
+                            </li>
+                            <li class="flex items-center gap-2.5 text-xs font-medium text-slate-600 dark:text-slate-300">
+                                <div class="w-1.5 h-1.5 rounded-full bg-slate-300 dark:bg-slate-600 group-hover:bg-brand-teal transition-colors"></div>
+                                Non-Custodial Wallet Tracing
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Pillar 2: Nachvollziehbarkeit -->
+                <div class="group relative card-spotlight p-1 transition-all duration-500 hover:-translate-y-2" onmousemove="handleMouseMove(event)">
+                    <div class="relative h-full bg-white/70 dark:bg-[#0A0A0A]/80 backdrop-blur-xl rounded-card p-8 border border-white/50 dark:border-white/5 flex flex-col">
+                        <div class="flex justify-between items-start mb-8">
+                            <div class="w-12 h-12 rounded-button bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 flex items-center justify-center text-brand-navy dark:text-white font-mono font-semibold text-lg group-hover:scale-110 transition-transform duration-300">02</div>
+                            <svg class="text-slate-300 dark:text-slate-600 group-hover:text-brand-teal transition-colors" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="4 17 10 11 14 15 20 9"></polyline>
+                                <line x1="20" y1="9" x2="20" y2="15"></line>
+                                <line x1="20" y1="9" x2="14" y2="9"></line>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold tracking-tight text-brand-navy dark:text-white mb-3">Nachvollziehbarkeit</h3>
+                        <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-6 flex-grow">
+                            Jede Buchung erzählt eine Geschichte. Wir machen sie lesbar für Dritte.
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-2.5 text-xs font-medium text-slate-600 dark:text-slate-300">
+                                <div class="w-1.5 h-1.5 rounded-full bg-slate-300 dark:bg-slate-600 group-hover:bg-brand-teal transition-colors"></div>
+                                Kontext für jeden Swap
+                            </li>
+                            <li class="flex items-center gap-2.5 text-xs font-medium text-slate-600 dark:text-slate-300">
+                                <div class="w-1.5 h-1.5 rounded-full bg-slate-300 dark:bg-slate-600 group-hover:bg-brand-teal transition-colors"></div>
+                                Klare interne Transferketten
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Pillar 3: Fachliche Korrektheit -->
+                <div class="group relative card-spotlight p-1 transition-all duration-500 hover:-translate-y-2" onmousemove="handleMouseMove(event)">
+                    <div class="relative h-full bg-white/70 dark:bg-[#0A0A0A]/80 backdrop-blur-xl rounded-card p-8 border border-white/50 dark:border-white/5 flex flex-col">
+                        <div class="flex justify-between items-start mb-8">
+                            <div class="w-12 h-12 rounded-button bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 flex items-center justify-center text-brand-navy dark:text-white font-mono font-semibold text-lg group-hover:scale-110 transition-transform duration-300">03</div>
+                            <svg class="text-slate-300 dark:text-slate-600 group-hover:text-brand-teal transition-colors" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold tracking-tight text-brand-navy dark:text-white mb-3">Fachlich korrekt</h3>
+                        <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-6 flex-grow">
+                            DeFi ist komplex. Wir übersetzen technische Daten in steuerlich korrekte Sachverhalte.
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-2.5 text-xs font-medium text-slate-600 dark:text-slate-300">
+                                <div class="w-1.5 h-1.5 rounded-full bg-slate-300 dark:bg-slate-600 group-hover:bg-brand-teal transition-colors"></div>
+                                Steuerneutrale Swaps
+                            </li>
+                            <li class="flex items-center gap-2.5 text-xs font-medium text-slate-600 dark:text-slate-300">
+                                <div class="w-1.5 h-1.5 rounded-full bg-slate-300 dark:bg-slate-600 group-hover:bg-brand-teal transition-colors"></div>
+                                LP-Tokens & Staking
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Pillar 4: Verwertbarkeit (Hero Card) -->
+                <div class="group relative card-spotlight p-1 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-brand-teal/20" onmousemove="handleMouseMove(event)">
+                    <div class="absolute inset-0 rounded-card bg-brand-teal/10 blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
+                    <div class="relative h-full bg-gradient-to-b from-brand-teal/5 to-white/70 dark:to-[#0A0A0A]/90 backdrop-blur-xl rounded-card p-8 border border-brand-teal/30 dark:border-brand-teal/20 flex flex-col">
+                        <div class="flex justify-between items-start mb-8">
+                            <div class="w-12 h-12 rounded-button bg-brand-teal text-white flex items-center justify-center font-mono font-bold text-lg shadow-lg shadow-brand-teal/30">04</div>
+                            <svg class="text-brand-teal" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                                <polyline points="10 9 9 9 8 9"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold tracking-tight text-brand-navy dark:text-white mb-3">Verwertbarkeit</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-6 flex-grow font-medium">
+                            Das Ziel ist Sicherheit. Unsere Daten halten auch in 5 Jahren noch jeder Prüfung stand.
+                        </p>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center gap-2.5 text-xs font-bold text-brand-teal">
+                                <div class="w-1.5 h-1.5 rounded-full bg-current"></div>
+                                Konsistente Datenstruktur
+                            </li>
+                            <li class="flex items-center gap-2.5 text-xs font-bold text-brand-teal">
+                                <div class="w-1.5 h-1.5 rounded-full bg-current"></div>
+                                Revisionssicheres Archiv
+                            </li>
+                        </ul>
+                        <div class="mt-auto relative h-1.5 w-full bg-brand-teal/10 rounded-full overflow-hidden">
+                            <div class="absolute inset-y-0 left-0 w-1/3 bg-brand-teal rounded-full animate-shimmer"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Stats Section -->
+    <section class="py-16 bg-brand-navy dark:bg-black text-white overflow-hidden relative">
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noise%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noise)%22/%3E%3C/svg%3E')] opacity-10"></div>
+        <div class="container mx-auto px-6 max-w-7xl relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-white/10">
+                <div class="p-4 fade-in-up visible">
+                    <div class="text-4xl md:text-5xl text-brand-teal font-extrabold tracking-tight font-mono mb-2">15+ Jahre</div>
+                    <div class="uppercase text-sm font-medium text-white/60 tracking-widest font-mono">Kombinierte Erfahrung</div>
+                </div>
+                <div class="p-4 fade-in-up visible">
+                    <div class="text-4xl md:text-5xl font-extrabold tracking-tight mb-2 text-brand-teal font-mono">500+</div>
+                    <div class="text-sm font-medium text-white/60 uppercase tracking-widest font-mono">Fälle dokumentiert</div>
+                </div>
+                <div class="p-4 fade-in-up visible">
+                    <div class="text-4xl md:text-5xl text-brand-teal font-extrabold tracking-tight font-mono mb-2">8 Jahre</div>
+                    <div class="text-sm font-medium text-white/60 uppercase tracking-widest font-mono">Krypto-Kanzlei-Expertise</div>
+                </div>
+            </div>
+            <p class="text-sm text-white/50 text-center max-w-2xl mt-12 mx-auto">
+                Basierend auf jahrelanger Erfahrung und hunderten erfolgreich begleiteten Krypto-Herausforderungen.
+            </p>
+        </div>
+    </section>
+    
+    <!-- Process Section -->
+    <section class="py-24 bg-white dark:bg-dark-bg">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div class="mb-16 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-brand-navy dark:text-white mb-4">Wie wir den Standard umsetzen</h2>
+                <p class="text-slate-500 dark:text-slate-400">Ein strukturierter Prozess für maximale Sicherheit.</p>
+            </div>
+            
+            <div class="relative space-y-8">
+                <!-- Vertical Line -->
+                <div class="absolute left-6 top-8 bottom-8 w-px bg-slate-200 dark:bg-white/10 md:left-1/2 md:-ml-px"></div>
+                
+                <!-- Step 1 -->
+                <div class="relative flex flex-col md:flex-row gap-8 md:gap-0 items-start md:items-center group fade-in-up">
+                    <div class="md:w-1/2 md:pr-12 md:text-right order-2 md:order-1">
+                        <h3 class="text-lg font-bold text-brand-navy dark:text-white">Vollständigkeits-Check</h3>
+                        <p class="text-sm text-slate-500 dark:text-slate-400 mt-2">Wir vergleichen alle Quellen und identifizieren fehlende Transaktionen. Keine Wallet wird vergessen.</p>
+                    </div>
+                    <div class="absolute left-0 md:relative md:left-auto md:order-2 w-12 h-12 rounded-full bg-white dark:bg-[#0A0A0A] border-2 border-slate-200 dark:border-white/10 flex items-center justify-center z-10 group-hover:border-brand-navy dark:group-hover:border-white transition-colors">
+                        <span class="text-xs font-bold font-mono text-slate-400">01</span>
+                    </div>
+                    <div class="md:w-1/2 md:pl-12 order-3 md:order-3 hidden md:block"></div>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="relative flex flex-col md:flex-row gap-8 md:gap-0 items-start md:items-center group fade-in-up">
+                    <div class="md:w-1/2 md:pr-12 md:text-right order-2 md:order-1 hidden md:block"></div>
+                    <div class="absolute left-0 md:relative md:left-auto md:order-2 w-12 h-12 rounded-full bg-white dark:bg-[#0A0A0A] border-2 border-slate-200 dark:border-white/10 flex items-center justify-center z-10 group-hover:border-brand-navy dark:group-hover:border-white transition-colors">
+                        <span class="text-xs font-bold font-mono text-slate-400">02</span>
+                    </div>
+                    <div class="md:w-1/2 md:pl-12 order-2 md:order-3">
+                        <h3 class="text-lg font-bold text-brand-navy dark:text-white">Kategorisierungs-Korrektur</h3>
+                        <p class="text-sm text-slate-500 dark:text-slate-400 mt-2">DeFi-Swaps, Staking-Rewards, NFT-Transfers – alles fachlich korrekt kategorisiert statt nur technisch importiert.</p>
+                    </div>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="relative flex flex-col md:flex-row gap-8 md:gap-0 items-start md:items-center group fade-in-up">
+                    <div class="md:w-1/2 md:pr-12 md:text-right order-2 md:order-1">
+                        <h3 class="text-lg font-bold text-brand-navy dark:text-white">Manuelle Bereinigung</h3>
+                        <p class="text-sm text-slate-500 dark:text-slate-400 mt-2">Jede unklare Transaktion wird geprüft. Wir verlassen uns nicht auf Automatismen.</p>
+                    </div>
+                    <div class="absolute left-0 md:relative md:left-auto md:order-2 w-12 h-12 rounded-full bg-white dark:bg-[#0A0A0A] border-2 border-slate-200 dark:border-white/10 flex items-center justify-center z-10 group-hover:border-brand-navy dark:group-hover:border-white transition-colors">
+                        <span class="text-xs font-bold font-mono text-slate-400">03</span>
+                    </div>
+                    <div class="md:w-1/2 md:pl-12 order-3 md:order-3 hidden md:block"></div>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="relative flex flex-col md:flex-row gap-8 md:gap-0 items-start md:items-center group fade-in-up">
+                    <div class="md:w-1/2 md:pr-12 md:text-right order-2 md:order-1 hidden md:block"></div>
+                    <div class="absolute left-0 md:relative md:left-auto md:order-2 w-12 h-12 rounded-full bg-white dark:bg-[#0A0A0A] border-2 border-slate-200 dark:border-white/10 flex items-center justify-center z-10 group-hover:border-brand-navy dark:group-hover:border-white transition-colors">
+                        <span class="text-xs font-bold font-mono text-slate-400">04</span>
+                    </div>
+                    <div class="md:w-1/2 md:pl-12 order-2 md:order-3">
+                        <h3 class="text-lg font-bold text-brand-navy dark:text-white">Konsistenz-Prüfung</h3>
+                        <p class="text-sm text-slate-500 dark:text-slate-400 mt-2">Logik-Checks: Stimmen Bestände? Sind alle internen Transfers lückenlos nachvollziehbar?</p>
+                    </div>
+                </div>
+                
+                <!-- Step 5 (Final) -->
+                <div class="relative flex flex-col md:flex-row gap-8 md:gap-0 items-start md:items-center group fade-in-up">
+                    <div class="md:w-1/2 md:pr-12 md:text-right order-2 md:order-1">
+                        <h3 class="text-lg font-bold text-brand-teal">Langfristige Archivierung</h3>
+                        <p class="text-sm text-slate-500 dark:text-slate-400 mt-2">Datenstruktur bleibt konsistent – bereit für Folgejahre und Prüfungen.</p>
+                    </div>
+                    <div class="absolute left-0 md:relative md:left-auto md:order-2 w-12 h-12 rounded-full bg-brand-teal text-white border-4 border-white dark:border-dark-bg flex items-center justify-center z-10 shadow-lg shadow-brand-teal/30">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </div>
+                    <div class="md:w-1/2 md:pl-12 order-3 md:order-3 hidden md:block"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Comparison Table Section -->
+    <section class="py-24 bg-slate-50 dark:bg-[#080808] border-t border-slate-200 dark:border-white/5 overflow-hidden relative">
+        <!-- Background -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-brand-teal/10 rounded-full blur-[100px] pointer-events-none opacity-50"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-brand-navy/5 dark:bg-brand-teal/5 rounded-full blur-[100px] pointer-events-none opacity-50"></div>
+        
+        <div class="container mx-auto px-6 max-w-5xl relative z-10">
+            <div class="text-center mb-16 max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-brand-navy dark:text-white mb-6">
+                    Standard-Tool vs. <span class="text-brand-teal">TX-Partner</span>
+                </h2>
+                <p class="text-lg text-slate-500 dark:text-slate-400 font-medium leading-relaxed">
+                    Warum automatisierte Software allein oft nicht ausreicht und wo der entscheidende Unterschied liegt.
+                </p>
+            </div>
+            
+            <!-- Comparison Card -->
+            <div class="rounded-card border border-slate-200 dark:border-white/10 shadow-2xl bg-white dark:bg-dark-surface overflow-hidden">
+                <!-- Header -->
+                <div class="hidden md:grid grid-cols-12 border-b border-slate-100 dark:border-white/5 bg-slate-50/50 dark:bg-white/[0.02]">
+                    <div class="col-span-4 p-6">
+                        <span class="text-xs font-bold uppercase tracking-widest text-slate-400 font-mono">Kriterium</span>
+                    </div>
+                    <div class="col-span-4 p-6">
+                        <span class="text-xs font-bold uppercase tracking-widest text-slate-400 font-mono">Standard-Tool</span>
+                    </div>
+                    <div class="col-span-4 p-6 bg-brand-teal/5 dark:bg-brand-teal/10 border-l border-brand-teal/10 flex items-center justify-between">
+                        <span class="text-xs font-bold uppercase tracking-widest text-brand-teal font-mono">TX-Partner</span>
+                        <span class="inline-flex items-center px-2 py-0.5 rounded-full bg-brand-teal/10 text-brand-teal text-[10px] font-bold uppercase tracking-wide border border-brand-teal/20 font-mono">Empfohlen</span>
+                    </div>
+                </div>
+                
+                <!-- Row 1 -->
+                <div class="grid grid-cols-12 border-b border-slate-100 dark:border-white/5 hover:bg-slate-50 dark:hover:bg-white/[0.02] transition-colors group">
+                    <div class="col-span-12 md:col-span-4 p-6 flex items-center">
+                        <div class="flex items-center gap-3">
+                            <div class="p-2.5 rounded-button bg-slate-100 dark:bg-white/5 text-slate-500 group-hover:text-brand-navy dark:group-hover:text-white transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                                    <path d="M3 5V19A9 3 0 0 0 21 19V5"></path>
+                                    <path d="M3 12A9 3 0 0 0 21 12"></path>
+                                </svg>
+                            </div>
+                            <span class="font-semibold text-brand-navy dark:text-white text-base">Vollständigkeit</span>
+                        </div>
+                    </div>
+                    <div class="col-span-6 md:col-span-4 p-6 flex items-center text-sm font-medium text-slate-500 dark:text-slate-400 border-t md:border-t-0 border-r md:border-r-0 border-slate-100 dark:border-white/5 bg-slate-50/30 md:bg-transparent dark:bg-white/[0.01]">
+                        <span class="flex items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-amber-500 shrink-0">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" x2="12" y1="8" y2="12"></line>
+                                <line x1="12" x2="12.01" y1="16" y2="16"></line>
+                            </svg>
+                            API-Limits (oft < 90%)
+                        </span>
+                    </div>
+                    <div class="col-span-6 md:col-span-4 p-6 flex items-center bg-brand-teal/5 dark:bg-brand-teal/10 border-l border-brand-teal/10 border-t md:border-t-0 border-slate-100 dark:border-white/5">
+                        <span class="text-sm font-bold text-brand-navy dark:text-white flex items-center gap-2">
+                            <div class="flex items-center justify-center w-5 h-5 rounded-full bg-brand-teal text-white shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M20 6 9 17 4 12"></path>
+                                </svg>
+                            </div>
+                            <span class="font-mono">100%</span> (manuell geprüft)
+                        </span>
+                    </div>
+                </div>
+                
+                <!-- Row 2 -->
+                <div class="grid grid-cols-12 border-b border-slate-100 dark:border-white/5 hover:bg-slate-50 dark:hover:bg-white/[0.02] transition-colors group">
+                    <div class="col-span-12 md:col-span-4 p-6 flex items-center">
+                        <div class="flex items-center gap-3">
+                            <div class="p-2.5 rounded-button bg-slate-100 dark:bg-white/5 text-slate-500 group-hover:text-brand-navy dark:group-hover:text-white transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"></path>
+                                    <path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"></path>
+                                </svg>
+                            </div>
+                            <span class="font-semibold text-brand-navy dark:text-white text-base">DeFi-Verständnis</span>
+                        </div>
+                    </div>
+                    <div class="col-span-6 md:col-span-4 p-6 flex items-center text-sm font-medium text-slate-500 dark:text-slate-400 border-t md:border-t-0 border-r md:border-r-0 border-slate-100 dark:border-white/5 bg-slate-50/30 md:bg-transparent dark:bg-white/[0.01]">
+                        <span class="flex items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-slate-400 shrink-0">
+                                <path d="M18 6 6 18"></path>
+                                <path d="m6 6 12 12"></path>
+                            </svg>
+                            Technisch (oft falsch)
+                        </span>
+                    </div>
+                    <div class="col-span-6 md:col-span-4 p-6 flex items-center bg-brand-teal/5 dark:bg-brand-teal/10 border-l border-brand-teal/10 border-t md:border-t-0 border-slate-100 dark:border-white/5">
+                        <span class="text-sm font-bold text-brand-navy dark:text-white flex items-center gap-2">
+                            <div class="flex items-center justify-center w-5 h-5 rounded-full bg-brand-teal text-white shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M20 6 9 17 4 12"></path>
+                                </svg>
+                            </div>
+                            Fachlich korrekt
+                        </span>
+                    </div>
+                </div>
+                
+                <!-- Row 3 -->
+                <div class="grid grid-cols-12 border-b border-slate-100 dark:border-white/5 hover:bg-slate-50 dark:hover:bg-white/[0.02] transition-colors group">
+                    <div class="col-span-12 md:col-span-4 p-6 flex items-center">
+                        <div class="flex items-center gap-3">
+                            <div class="p-2.5 rounded-button bg-slate-100 dark:bg-white/5 text-slate-500 group-hover:text-brand-navy dark:group-hover:text-white transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path>
+                                    <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
+                                    <path d="M10 9H8"></path>
+                                    <path d="M16 13H8"></path>
+                                    <path d="M16 17H8"></path>
+                                </svg>
+                            </div>
+                            <span class="font-semibold text-brand-navy dark:text-white text-base">Nachvollziehbarkeit</span>
+                        </div>
+                    </div>
+                    <div class="col-span-6 md:col-span-4 p-6 flex items-center text-sm font-medium text-slate-500 dark:text-slate-400 border-t md:border-t-0 border-r md:border-r-0 border-slate-100 dark:border-white/5 bg-slate-50/30 md:bg-transparent dark:bg-white/[0.01]">
+                        <span class="flex items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-slate-400 shrink-0">
+                                <path d="M5 12h14"></path>
+                            </svg>
+                            Reports ohne Kontext
+                        </span>
+                    </div>
+                    <div class="col-span-6 md:col-span-4 p-6 flex items-center bg-brand-teal/5 dark:bg-brand-teal/10 border-l border-brand-teal/10 border-t md:border-t-0 border-slate-100 dark:border-white/5">
+                        <span class="text-sm font-bold text-brand-navy dark:text-white flex items-center gap-2">
+                            <div class="flex items-center justify-center w-5 h-5 rounded-full bg-brand-teal text-white shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M20 6 9 17 4 12"></path>
+                                </svg>
+                            </div>
+                            Logisch dokumentiert
+                        </span>
+                    </div>
+                </div>
+                
+                <!-- Row 4 -->
+                <div class="grid grid-cols-12 hover:bg-slate-50 dark:hover:bg-white/[0.02] transition-colors group">
+                    <div class="col-span-12 md:col-span-4 p-6 flex items-center">
+                        <div class="flex items-center gap-3">
+                            <div class="p-2.5 rounded-button bg-slate-100 dark:bg-white/5 text-slate-500 group-hover:text-brand-navy dark:group-hover:text-white transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
+                                    <path d="m9 12 2 2 4-4"></path>
+                                </svg>
+                            </div>
+                            <span class="font-semibold text-brand-navy dark:text-white text-base">Bei Prüfungen</span>
+                        </div>
+                    </div>
+                    <div class="col-span-6 md:col-span-4 p-6 flex items-center text-sm font-medium text-slate-500 dark:text-slate-400 border-t md:border-t-0 border-r md:border-r-0 border-slate-100 dark:border-white/5 bg-slate-50/30 md:bg-transparent dark:bg-white/[0.01]">
+                        <span class="flex items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-slate-400 shrink-0">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                                <path d="M12 17h.01"></path>
+                            </svg>
+                            Oft unvollständig
+                        </span>
+                    </div>
+                    <div class="col-span-6 md:col-span-4 p-6 flex items-center bg-brand-teal/5 dark:bg-brand-teal/10 border-l border-brand-teal/10 border-t md:border-t-0 border-slate-100 dark:border-white/5">
+                        <span class="text-sm font-bold text-brand-navy dark:text-white flex items-center gap-2">
+                            <div class="flex items-center justify-center w-5 h-5 rounded-full bg-brand-teal text-white shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M20 6 9 17 4 12"></path>
+                                </svg>
+                            </div>
+                            Voll belastbar
+                        </span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bottom Note -->
+            <div class="mt-8 text-center fade-in-up">
+                <div class="inline-flex items-center justify-center gap-2 py-2 px-4 rounded-full bg-white dark:bg-white/5 border border-slate-200 dark:border-white/5 shadow-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-brand-teal">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M12 16v-4"></path>
+                        <path d="M12 8h.01"></path>
+                    </svg>
+                    <span class="text-sm text-slate-500 dark:text-slate-400">Wir nutzen Tools nur als Basis, der Mehrwert liegt in der <span class="text-brand-navy dark:text-white font-semibold">Experten-Prüfung</span>.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Final CTA -->
+    <section class="py-20 px-4 bg-white dark:bg-dark-bg">
+        <div class="container mx-auto max-w-6xl">
+            <div class="relative rounded-card overflow-hidden text-center py-24 px-6 md:px-20 bg-brand-navy shadow-2xl shadow-brand-navy/30">
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-teal opacity-20 blur-[120px] rounded-full pointer-events-none"></div>
+                <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noise%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noise)%22/%3E%3C/svg%3E')] opacity-20 mix-blend-overlay"></div>
+                
+                <div class="relative z-10 fade-in-up">
+                    <h2 class="text-4xl md:text-5xl font-extrabold tracking-tighter mb-6 leading-tight text-white">
+                        Bereit für Ordnung nach <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-teal to-white">Standard?</span>
+                    </h2>
+                    <p class="text-xl mb-12 max-w-xl mx-auto text-slate-200 font-medium">
+                        Endlich etwas Ruhe mit einer vollständigen Krypto-Historie.
+                    </p>
+                    <a href="https://app.cal.eu/johannesanderl-tx-partner/30min" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center text-brand-navy btn-secondary group text-lg font-bold bg-white rounded-button px-10 py-5">
+                        Dokumentation prüfen
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="pt-24 pb-12 bg-white dark:bg-dark-bg border-t border-slate-200 dark:border-white/5">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 lg:gap-16 mb-20">
+                <!-- Brand -->
+                <div class="space-y-6">
+                    <a href="index.html" class="flex items-center gap-3">
+                        <div class="flex gap-1 h-6 items-end">
+                            <div class="w-1.5 h-6 rounded-full bg-brand-navy dark:bg-slate-200"></div>
+                            <div class="w-1.5 h-6 rounded-full bg-brand-navy dark:bg-slate-200"></div>
+                            <div class="w-1.5 h-6 rounded-full bg-brand-navy dark:bg-slate-200"></div>
+                            <div class="w-1.5 h-6 rounded-full bg-brand-teal"></div>
+                        </div>
+                        <span class="text-brand-navy dark:text-white text-lg font-bold tracking-wider">TX-Partner</span>
+                    </a>
+                    <p class="dark:text-slate-400 leading-relaxed text-sm text-slate-500">Pre-Tax Infrastruktur für Krypto. Professionelle Dokumentation für Steuertools, Steuerberater und Finanzverwaltung.</p>
+                    <div class="flex gap-4">
+                        <a href="https://x.com/TX_Partner" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-brand-navy dark:hover:text-white transition-colors" aria-label="TX-Partner auf X (Twitter)">
+                            <span class="sr-only">X (Twitter)</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/company/tx-partner/" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-brand-navy dark:hover:text-white transition-colors" aria-label="TX-Partner auf LinkedIn">
+                            <span class="sr-only">LinkedIn</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect width="4" height="12" x="2" y="9"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Leistungen -->
+                <div>
+                    <h4 class="font-bold mb-6 text-xs uppercase tracking-widest text-brand-navy dark:text-white">Leistungen</h4>
+                    <ul class="space-y-4">
+                        <li><a href="leistungen.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">Leistungen</a></li>
+                        <li><a href="blockpit-hinweise.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">Blockpit Hinweise</a></li>
+                        <li><a href="cointracking-fehler.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">CoinTracking Fehler</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Unternehmen -->
+                <div>
+                    <h4 class="font-bold mb-6 text-xs uppercase tracking-widest text-brand-navy dark:text-white">Unternehmen</h4>
+                    <ul class="space-y-4">
+                        <li><a href="ueber-uns.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">Über uns</a></li>
+                        <li><a href="dokumentationsstandard.html" class="text-brand-teal text-sm font-medium">Dokumentationsstandard</a></li>
+                        <li><a href="faq.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">FAQ</a></li>
+                        <li><a href="kontakt.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">Kontakt</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Rechtliches -->
+                <div>
+                    <h4 class="font-bold mb-6 text-xs uppercase tracking-widest text-brand-navy dark:text-white">Rechtliches</h4>
+                    <ul class="space-y-4">
+                        <li><a href="agb.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">AGB</a></li>
+                        <li><a href="datenschutz.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">Datenschutz</a></li>
+                        <li><a href="impressum.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">Impressum</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate-200 dark:border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="dark:text-slate-500 text-xs font-medium text-slate-400">© 2026 TX-Partner – eine Marke bzw. Geschäftsbezeichnung der Solvum GmbH. Alle Rechte vorbehalten.</p>
+                <div class="flex gap-8">
+                    <a href="sitemap.html" class="text-xs font-medium text-slate-400 dark:text-slate-500 hover:text-brand-navy dark:hover:text-white transition-colors">Sitemap</a>
+                    <a href="cookies.html" class="text-xs font-medium text-slate-400 dark:text-slate-500 hover:text-brand-navy dark:hover:text-white transition-colors">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Dark Mode Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+        
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            html.classList.add('dark');
+        } else {
+            html.classList.remove('dark');
+        }
+        
+        themeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            localStorage.theme = html.classList.contains('dark') ? 'dark' : 'light';
+        });
+        
+        // Mobile Menu Toggle with ARIA
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuToggle.addEventListener('click', () => {
+            const isOpen = mobileMenu.classList.contains('open');
+            mobileMenu.classList.toggle('open');
+            
+            // Update ARIA
+            mobileMenuToggle.setAttribute('aria-expanded', !isOpen);
+            mobileMenuToggle.setAttribute('aria-label', !isOpen ? 'Menü schließen' : 'Menü öffnen');
+        });
+        
+        // Mouse Spotlight Effect
+        function handleMouseMove(e) {
+            const card = e.currentTarget;
+            const rect = card.getBoundingClientRect();
+            card.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
+            card.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
+        }
+        
+        // Intersection Observer for Animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        
+        document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+    </script>
+
+</body>
+</html>

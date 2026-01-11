@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressum | TX-Partner</title>
+    <meta name="description" content="Impressum der Solvum GmbH (TX-Partner). Angaben gemäß § 5 ECG, § 14 UGB.">
+
+    <!-- Local Fonts Only (DSGVO-konform) -->
+    <link rel="stylesheet" href="/css/fonts.css">
+
+    <!-- DSGVO-HANDLUNGSBEDARF: Iconify lädt Icons von externen Servern (api.iconify.design). 
+         Für volle DSGVO-Konformität sollte Iconify selbst gehostet oder durch lokale SVGs ersetzt werden. -->
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    
+    <!-- DSGVO-Handlungsbedarf: Tailwind CSS CDN lädt vom externen Server (cdn.tailwindcss.com).
+         Für vollständige DSGVO-Compliance sollte ein Consent-Banner implementiert werden
+         ODER Tailwind lokal kompiliert und gehostet werden. -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        brand: {
+                            navy: '#1E3A5F',
+                            teal: '#3A9EAF',
+                            tealDark: '#2C7A87',
+                        },
+                        dark: {
+                            bg: '#050505',
+                            surface: '#0F0F0F',
+                            border: 'rgba(255,255,255,0.08)',
+                        },
+                    },
+                    borderRadius: {
+                        'card': '32px',
+                        'button': '16px',
+                    },
+                    letterSpacing: {
+                        tight: '-0.02em',
+                        tighter: '-0.04em',
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        html { scroll-behavior: smooth; }
+        
+        @keyframes pageLoad {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        body { animation: pageLoad 0.5s ease-out forwards; }
+        
+        .bg-noise {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 50;
+            opacity: 0.03;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+        
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+        
+        /* Focus States for Accessibility (WCAG AA) */
+        :focus-visible {
+            outline: 2px solid #3A9EAF;
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+
+        a:focus-visible, button:focus-visible {
+            outline: 2px solid #3A9EAF;
+            outline-offset: 2px;
+        }
+
+        .glass-nav a:focus-visible, .glass-nav button:focus-visible {
+            outline-color: #3A9EAF;
+            outline-offset: 4px;
+        }
+        
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .dark .glass-nav {
+            background: rgba(10, 10, 10, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .nav-dropdown {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+        .group:hover .nav-dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 0.3s cubic-bezier(0.2, 0.8, 0.2, 1),
+                        opacity 0.3s cubic-bezier(0.2, 0.8, 0.2, 1),
+                        transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+            transform: translateY(-10px);
+        }
+        .mobile-menu.open {
+            max-height: 500px;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .btn-primary {
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px -10px rgba(30, 58, 95, 0.4);
+        }
+        .dark .btn-primary:hover {
+            box-shadow: 0 10px 30px -10px rgba(58, 158, 175, 0.3);
+        }
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            transform: translateX(-100%);
+            transition: transform 0.5s ease;
+        }
+        .btn-primary:hover::before {
+            transform: translateX(100%);
+        }
+    </style>
+</head>
+
+<body class="antialiased selection:bg-brand-teal selection:text-white bg-white dark:bg-dark-bg text-slate-900 dark:text-white font-sans">
+
+    <div class="bg-noise"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-6 left-1/2 -translate-x-1/2 w-[95%] max-w-6xl z-50">
+        <div class="glass-nav rounded-card px-6 py-3 flex items-center justify-between shadow-2xl shadow-black/5 dark:shadow-black/20">
+            <a href="index.html" class="flex items-center gap-3 group shrink-0">
+                <div class="flex gap-1 h-6 items-center">
+                    <div class="w-1.5 h-6 rounded-full bg-brand-navy dark:bg-slate-200"></div>
+                    <div class="w-1.5 h-6 rounded-full bg-brand-navy dark:bg-slate-200"></div>
+                    <div class="w-1.5 h-6 rounded-full bg-brand-navy dark:bg-slate-200"></div>
+                    <div class="w-1.5 h-6 rounded-full bg-brand-teal"></div>
+                </div>
+                <span class="text-brand-navy dark:text-white text-lg font-bold tracking-wider">TX-Partner</span>
+            </a>
+
+            <ul class="hidden lg:flex items-center gap-1">
+                <li class="relative group">
+                    <button class="flex items-center gap-1 px-4 py-2 text-sm font-medium text-slate-500 hover:text-brand-navy dark:text-slate-400 dark:hover:text-white transition-colors duration-300 focus:outline-none">
+                        Leistungen
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" class="group-hover:rotate-180 transition-transform duration-300">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path>
+                        </svg>
+                    </button>
+                    <div class="nav-dropdown absolute top-full left-0 mt-2 w-56 rounded-button bg-white dark:bg-dark-surface border border-slate-100 dark:border-white/10 shadow-xl p-2 overflow-hidden">
+                        <a href="leistungen.html" class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors duration-300">
+                            <div class="text-sm font-semibold text-brand-navy dark:text-white mb-0.5">Leistungen</div>
+                            <div class="text-xs text-slate-400 dark:text-slate-500 font-mono">Übersicht aller Services</div>
+                        </a>
+                        <a href="blockpit-hinweise.html" class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors duration-300">
+                            <div class="text-sm font-semibold text-brand-navy dark:text-white mb-0.5">Blockpit Hinweise</div>
+                            <div class="text-xs text-slate-400 dark:text-slate-500 font-mono">Korrektur &amp; Optimierung</div>
+                        </a>
+                        <a href="cointracking-fehler.html" class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors duration-300">
+                            <div class="text-sm font-semibold text-brand-navy dark:text-white mb-0.5">CoinTracking Fehler</div>
+                            <div class="text-xs text-slate-400 dark:text-slate-500 font-mono">Datenbereinigung</div>
+                        </a>
+                    </div>
+                </li>
+                <li class="relative group">
+                    <button class="flex items-center gap-1 px-4 py-2 text-sm font-medium text-slate-500 hover:text-brand-navy dark:text-slate-400 dark:hover:text-white transition-colors duration-300 focus:outline-none">
+                        Über uns
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" class="group-hover:rotate-180 transition-transform duration-300">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path>
+                        </svg>
+                    </button>
+                    <div class="nav-dropdown absolute top-full left-0 mt-2 w-56 rounded-button bg-white dark:bg-dark-surface border border-slate-100 dark:border-white/10 shadow-xl p-2 overflow-hidden">
+                        <a href="ueber-uns.html" class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors duration-300">
+                            <div class="text-sm font-semibold text-brand-navy dark:text-white mb-0.5">Über uns</div>
+                            <div class="text-xs text-slate-400 dark:text-slate-500 font-mono">Wer wir sind</div>
+                        </a>
+                        <a href="dokumentationsstandard.html" class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors duration-300">
+                            <div class="text-sm font-semibold text-brand-navy dark:text-white mb-0.5">Dokumentationsstandard</div>
+                            <div class="text-xs text-slate-400 dark:text-slate-500 font-mono">Unsere Qualitätsrichtlinien</div>
+                        </a>
+                    </div>
+                </li>
+                <li><a href="faq.html" class="block px-4 py-2 text-sm font-medium text-slate-500 hover:text-brand-navy dark:text-slate-400 dark:hover:text-white transition-colors duration-300">FAQ</a></li>
+                <li><a href="kontakt.html" class="block px-4 py-2 text-sm font-medium text-slate-500 hover:text-brand-navy dark:text-slate-400 dark:hover:text-white transition-colors duration-300">Kontakt</a></li>
+            </ul>
+
+            <div class="flex items-center gap-4">
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-white/10 text-slate-500 dark:text-slate-400 transition-all duration-300" aria-label="Dark Mode umschalten" title="Dark Mode umschalten">
+                    <span class="block dark:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                <circle cx="12" cy="12" r="4"></circle>
+                                <path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+                            </g>
+                        </svg>
+                    </span>
+                    <span class="hidden dark:block">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"></path>
+                        </svg>
+                    </span>
+                </button>
+                <a href="https://cal.com/johannesanderl-tx-partner/30min" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold text-white bg-brand-navy btn-primary rounded-button">
+                    Kostenloses Erstgespräch
+                </a>
+                <button id="mobile-menu-toggle" class="lg:hidden text-slate-600 dark:text-slate-300 p-2" aria-label="Menü öffnen" aria-expanded="false">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5h16M4 12h16M4 19h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <div id="mobile-menu" class="mobile-menu absolute top-full left-0 w-full mt-2 bg-white dark:bg-dark-surface rounded-card border border-slate-100 dark:border-white/10 shadow-xl p-4">
+                <a href="leistungen.html" class="block px-4 py-3 text-sm font-semibold text-brand-navy dark:text-white rounded-button hover:bg-slate-50 dark:hover:bg-white/5 transition-colors duration-300">Leistungen</a>
+                <a href="blockpit-hinweise.html" class="block px-4 py-3 text-sm font-semibold text-brand-navy dark:text-white rounded-button hover:bg-slate-50 dark:hover:bg-white/5 transition-colors duration-300">Blockpit Hinweise</a>
+                <a href="cointracking-fehler.html" class="block px-4 py-3 text-sm font-semibold text-brand-navy dark:text-white rounded-button hover:bg-slate-50 dark:hover:bg-white/5 transition-colors duration-300">CoinTracking Fehler</a>
+                <a href="ueber-uns.html" class="block px-4 py-3 text-sm font-semibold text-brand-navy dark:text-white rounded-button hover:bg-slate-50 dark:hover:bg-white/5 transition-colors duration-300">Über uns</a>
+                <a href="dokumentationsstandard.html" class="block px-4 py-3 text-sm font-semibold text-brand-navy dark:text-white rounded-button hover:bg-slate-50 dark:hover:bg-white/5 transition-colors duration-300">Dokumentationsstandard</a>
+                <a href="kontakt.html" class="block px-4 py-3 text-sm font-semibold text-brand-navy dark:text-white rounded-button hover:bg-slate-50 dark:hover:bg-white/5 transition-colors duration-300">Kontakt</a>
+                <a href="faq.html" class="block px-4 py-3 text-sm font-semibold text-brand-navy dark:text-white rounded-button hover:bg-slate-50 dark:hover:bg-white/5 transition-colors duration-300">FAQ</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="pt-40 pb-12 relative overflow-hidden">
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-brand-teal/20 blur-[120px] rounded-full mix-blend-screen opacity-40"></div>
+            <div class="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
+        </div>
+
+        <div class="container max-w-4xl mx-auto px-6 relative z-10">
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tighter text-brand-navy dark:text-white mb-4 fade-in-up visible">
+                Impressum
+            </h1>
+            <p class="text-slate-500 dark:text-slate-400 fade-in-up" style="animation-delay: 0.1s">Angaben gemäß § 5 E-Commerce-Gesetz (ECG) und § 14 Unternehmensgesetzbuch (UGB)</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="pb-32">
+        <div class="container max-w-4xl mx-auto px-6">
+
+            <div class="space-y-10 fade-in-up visible" style="animation-delay: 0.2s;">
+
+                <!-- Unternehmen -->
+                <div>
+                    <h2 class="text-brand-navy dark:text-white text-lg font-semibold mb-4">Solvum GmbH</h2>
+                    <p class="text-slate-600 dark:text-slate-300 mb-2">
+                        handelnd unter der Marke bzw. Geschäftsbezeichnung „TX-Partner"
+                    </p>
+                </div>
+
+                <!-- Adresse -->
+                <div>
+                    <h3 class="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wide mb-2">Adresse</h3>
+                    <p class="text-slate-600 dark:text-slate-300">
+                        Straße, Hausnummer<br>
+                        PLZ, Ort<br>
+                        Österreich
+                    </p>
+                </div>
+
+                <!-- Kontakt -->
+                <div>
+                    <h3 class="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wide mb-2">Kontakt</h3>
+                    <p class="text-slate-600 dark:text-slate-300">
+                        E-Mail: <a href="mailto:info@tx-partner.at" class="text-brand-teal hover:underline">info@tx-partner.at</a><br>
+                        Telefon: +43 ●●
+                    </p>
+                </div>
+
+                <!-- Geschäftsführer -->
+                <div>
+                    <h3 class="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wide mb-2">
+                        Vertretungsberechtigte Geschäftsführer
+                    </h3>
+                    <p class="text-slate-600 dark:text-slate-300">
+                        Robert Thorn<br>
+                        Johannes Anderl
+                    </p>
+                </div>
+
+                <!-- Unternehmensgegenstand -->
+                <div>
+                    <h3 class="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wide mb-2">
+                        Unternehmensgegenstand
+                    </h3>
+                    <p class="text-slate-600 dark:text-slate-300">
+                        IT-Dienstleistungen, insbesondere technische Datenaufbereitung und Strukturierung von Krypto-Transaktionsdaten („Pre-Tax Infrastructure").
+                    </p>
+                </div>
+
+                <!-- Firmenbuch & Steuern -->
+                <div>
+                    <h3 class="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wide mb-2">Firmenbuch &amp; Steuern</h3>
+                    <p class="text-slate-600 dark:text-slate-300">
+                        Firmenbuchnummer: FN ●●<br>
+                        Firmenbuchgericht: Landesgericht für ZRS Graz<br>
+                        UID-Nummer: ATU ●●
+                    </p>
+                </div>
+
+                <!-- Kammerzugehörigkeit -->
+                <div>
+                    <h3 class="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wide mb-2">
+                        Kammerzugehörigkeit
+                    </h3>
+                    <p class="text-slate-600 dark:text-slate-300">
+                        Mitglied der Wirtschaftskammer Österreich<br>
+                        Fachgruppe: z.B. Unternehmensberatung, Buchhaltung und IT / oder zutreffende Fachgruppe
+                    </p>
+                </div>
+
+                <div class="w-full h-px bg-slate-200 dark:bg-white/10 my-10"></div>
+
+                <!-- Haftungshinweis -->
+                <div>
+                    <h3 class="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wide mb-2">
+                        Haftungshinweis zur Dienstleistung
+                    </h3>
+                    <p class="text-slate-600 dark:text-slate-300">
+                        Die Solvum GmbH erbringt unter der Marke bzw. Geschäftsbezeichnung TX-Partner ausschließlich technische Dienstleistungen zur Aufbereitung von Krypto-Transaktionsdaten.
+                        Es wird keine Steuer-, Rechts- oder Finanzberatung erbracht. Für steuerliche oder rechtliche Fragen wenden Sie sich bitte an einen entsprechend befugten Berater.
+                    </p>
+                </div>
+
+                <div class="w-full h-px bg-slate-200 dark:bg-white/10 my-10"></div>
+
+                <!-- Online-Streitbeilegung -->
+                <div>
+                    <h3 class="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wide mb-2">
+                        Online-Streitbeilegung
+                    </h3>
+                    <p class="text-slate-600 dark:text-slate-300 mb-4">
+                        Verbraucher haben die Möglichkeit, Beschwerden an die Online-Streitbeilegungsplattform der EU zu richten:
+                        <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer" class="text-brand-teal hover:underline">https://ec.europa.eu/consumers/odr</a>
+                    </p>
+                    <p class="text-slate-600 dark:text-slate-300">
+                        Die Solvum GmbH ist nicht verpflichtet und nicht bereit, an einem Streitbeilegungsverfahren vor einer
+                        Verbraucherschlichtungsstelle teilzunehmen.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-dark-bg border-t border-slate-200 dark:border-white/5 pt-24 pb-12">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 lg:gap-16 mb-20">
+                <div class="space-y-6">
+                    <a href="index.html" class="flex items-center gap-3">
+                        <div class="flex gap-1 h-6 items-center">
+                            <div class="w-1.5 h-6 rounded-full bg-brand-navy dark:bg-slate-200"></div>
+                            <div class="w-1.5 h-6 rounded-full bg-brand-navy dark:bg-slate-200"></div>
+                            <div class="w-1.5 h-6 rounded-full bg-brand-navy dark:bg-slate-200"></div>
+                            <div class="w-1.5 h-6 rounded-full bg-brand-teal"></div>
+                        </div>
+                        <span class="text-brand-navy dark:text-white text-lg font-bold tracking-wider">TX-Partner</span>
+                    </a>
+                    <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Pre-Tax Infrastruktur für Krypto. Professionelle Dokumentation für Steuertools, Steuerberater und Finanzverwaltung</p>
+                    <div class="flex gap-4">
+                        <a href="https://x.com/TX_Partner" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-brand-navy dark:hover:text-white transition-colors duration-300" aria-label="TX-Partner auf X (Twitter)">
+                            <span class="sr-only">X (Twitter)</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6c2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4c-.9-4.2 4-6.6 7-3.8c1.1 0 3-1.2 3-1.2"></path>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/company/tx-partner/" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-brand-navy dark:hover:text-white transition-colors duration-300" aria-label="TX-Partner auf LinkedIn">
+                            <span class="sr-only">LinkedIn</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2a2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6M2 9h4v12H2z"></path>
+                                    <circle cx="4" cy="4" r="2"></circle>
+                                </g>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-6 text-xs uppercase tracking-widest text-brand-navy dark:text-white">Leistungen</h4>
+                    <ul class="space-y-4">
+                        <li><a href="leistungen.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors duration-300">Leistungen</a></li>
+                        <li><a href="blockpit-hinweise.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors duration-300">Blockpit Hinweise</a></li>
+                        <li><a href="cointracking-fehler.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors duration-300">CoinTracking Fehler</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-6 text-xs uppercase tracking-widest text-brand-navy dark:text-white">Unternehmen</h4>
+                    <ul class="space-y-4">
+                        <li><a href="ueber-uns.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors duration-300">Über uns</a></li>
+                        <li><a href="dokumentationsstandard.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors duration-300">Dokumentationsstandard</a></li>
+                        <li><a href="faq.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors duration-300">FAQ</a></li>
+                        <li><a href="kontakt.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors duration-300">Kontakt</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-6 text-xs uppercase tracking-widest text-brand-navy dark:text-white">Rechtliches</h4>
+                    <ul class="space-y-4">
+                        <li><a href="agb.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors duration-300">AGB</a></li>
+                        <li><a href="datenschutz.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors duration-300">Datenschutz</a></li>
+                        <li><a href="impressum.html" class="text-sm font-bold text-brand-teal transition-colors duration-300">Impressum</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-200 dark:border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-xs font-medium text-slate-400 dark:text-slate-500">© <span class="font-mono">2026</span> TX-Partner – eine Marke bzw. Geschäftsbezeichnung der Solvum GmbH. Alle Rechte vorbehalten.</p>
+                <div class="flex gap-8">
+                    <a href="sitemap.html" class="text-xs font-medium text-slate-400 dark:text-slate-500 hover:text-brand-navy dark:hover:text-white transition-colors duration-300">Sitemap</a>
+                    <a href="cookies.html" class="text-xs font-medium text-slate-400 dark:text-slate-500 hover:text-brand-navy dark:hover:text-white transition-colors duration-300">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Dark Mode Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+        
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            html.classList.add('dark');
+        } else {
+            html.classList.remove('dark');
+        }
+        
+        themeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            localStorage.theme = html.classList.contains('dark') ? 'dark' : 'light';
+        });
+
+        // Mobile Menu Toggle with ARIA
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuToggle.addEventListener('click', () => {
+            const isOpen = mobileMenu.classList.contains('open');
+            mobileMenu.classList.toggle('open');
+            
+            // Update ARIA
+            mobileMenuToggle.setAttribute('aria-expanded', !isOpen);
+            mobileMenuToggle.setAttribute('aria-label', !isOpen ? 'Menü schließen' : 'Menü öffnen');
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+                mobileMenu.classList.remove('open');
+                mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                mobileMenuToggle.setAttribute('aria-label', 'Menü öffnen');
+            }
+        });
+
+        // Fade-in-up Observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        
+        document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+    </script>
+
+</body>
+</html>

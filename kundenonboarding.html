@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kundenonboarding | TX-Partner</title>
+    <meta name="robots" content="noindex, nofollow"> <!-- Prevent indexing as this is internal/direct -->
+    <meta name="description" content="Kundenonboarding für TX-Partner.">
+    
+    <!-- Local Fonts Only (DSGVO-konform) -->
+    <link rel="stylesheet" href="/css/fonts.css">
+    
+    <!-- DSGVO-HANDLUNGSBEDARF: Iconify lädt Icons von externen Servern (api.iconify.design). 
+         Für volle DSGVO-Konformität sollte Iconify selbst gehostet oder durch lokale SVGs ersetzt werden. -->
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    
+    <!-- DSGVO-Handlungsbedarf: Tailwind CSS CDN lädt vom externen Server (cdn.tailwindcss.com).
+         Für vollständige DSGVO-Compliance sollte ein Consent-Banner implementiert werden
+         ODER Tailwind lokal kompiliert und gehostet werden. -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        brand: {
+                            navy: '#1E3A5F',
+                            teal: '#3A9EAF',
+                            tealDark: '#2C7A87',
+                        },
+                        dark: {
+                            bg: '#050505',
+                            surface: '#0F0F0F',
+                            border: 'rgba(255,255,255,0.08)',
+                        },
+                    },
+                    borderRadius: {
+                        'card': '32px',
+                        'button': '16px',
+                    },
+                    letterSpacing: {
+                        tight: '-0.02em',
+                        tighter: '-0.04em',
+                    },
+                    animation: {
+                        'spin-slow': 'spin 3s linear infinite',
+                        'check-bounce': 'checkBounce 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards',
+                    },
+                    keyframes: {
+                        checkBounce: {
+                            '0%': { transform: 'scale(0)' },
+                            '100%': { transform: 'scale(1)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Global & Utils */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .bg-noise {
+            position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+            pointer-events: none; z-index: 50; opacity: 0.03;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+        
+        /* Focus States for Accessibility (WCAG AA) */
+        :focus-visible {
+            outline: 2px solid #3A9EAF;
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+
+        a:focus-visible, button:focus-visible {
+            outline: 2px solid #3A9EAF;
+            outline-offset: 2px;
+        }
+
+        /* Form Elements */
+        .input-group { position: relative; margin-bottom: 1.5rem; }
+        
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            box-shadow: 0 0 0 4px rgba(58, 158, 175, 0.1);
+        }
+
+        /* Toggle Switch Animation */
+        .toggle-checkbox:checked {
+            right: 0;
+            border-color: #3A9EAF;
+        }
+        .toggle-checkbox:checked + .toggle-label {
+            background-color: #3A9EAF;
+        }
+
+        /* File Upload Drag State */
+        .drag-active {
+            border-color: #3A9EAF !important;
+            background-color: rgba(58, 158, 175, 0.05) !important;
+        }
+
+        /* Validation Styles */
+        .is-valid { border-color: #10B981 !important; }
+        .is-invalid { border-color: #EF4444 !important; }
+        .error-msg { display: none; font-size: 0.75rem; color: #EF4444; margin-top: 0.25rem; }
+        .is-invalid + .error-msg { display: block; }
+
+        /* Loader */
+        .loader {
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 50%;
+            border-top: 2px solid white;
+            width: 16px;
+            height: 16px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    </style>
+</head>
+
+<body class="antialiased selection:bg-brand-teal selection:text-white dark:bg-dark-bg dark:text-white transition-colors duration-300 text-slate-900 bg-slate-50 font-sans">
+
+    <!-- Global Noise Overlay -->
+    <div class="bg-noise"></div>
+
+    <!-- Header (Simple Logo Only) -->
+    <header class="fixed top-0 left-0 w-full z-40 bg-slate-50/80 dark:bg-dark-bg/80 backdrop-blur-md border-b border-slate-200 dark:border-white/5">
+        <div class="container mx-auto px-6 h-16 flex items-center justify-between max-w-2xl">
+            <div class="flex items-center gap-3">
+                <div class="flex gap-1 h-5 items-center">
+                    <div class="w-1 h-5 rounded-full bg-brand-navy dark:bg-slate-200"></div>
+                    <div class="w-1 h-5 rounded-full bg-brand-navy dark:bg-slate-200"></div>
+                    <div class="w-1 h-5 rounded-full bg-brand-navy dark:bg-slate-200"></div>
+                    <div class="w-1 h-5 bg-brand-teal rounded-full"></div>
+                </div>
+                <span class="font-bold text-lg tracking-tight text-brand-navy dark:text-white">TX-Partner</span>
+            </div>
+            
+            <!-- Dark Mode Toggle -->
+            <button id="theme-toggle" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-white/10 text-slate-500 dark:text-slate-400 transition-colors" aria-label="Dark Mode umschalten" title="Dark Mode umschalten">
+                <span class="block dark:hidden"><span class="iconify" data-icon="lucide:moon" data-width="18"></span></span>
+                <span class="hidden dark:block"><span class="iconify" data-icon="lucide:sun" data-width="18"></span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-28 pb-20 px-4 min-h-screen relative flex items-center justify-center">
+        
+        <!-- Ambient Background -->
+        <div class="fixed top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-brand-teal/5 rounded-full blur-[100px] -z-10 pointer-events-none"></div>
+
+        <div class="w-full max-w-2xl relative z-10">
+            
+            <!-- Welcome Header -->
+            <div class="text-center mb-10 fade-in-up" id="header-content">
+                <h1 class="text-3xl md:text-4xl font-bold text-brand-navy dark:text-white mb-3 tracking-tight">Willkommen bei TX-Partner</h1>
+                <p class="text-slate-500 dark:text-slate-400">Bitte vervollständigen Sie Ihre Angaben, um das Onboarding abzuschließen.</p>
+            </div>
+
+            <!-- Success Message Container (Hidden by default) -->
+            <div id="success-view" class="hidden text-center py-10 fade-in-up">
+                <div class="w-20 h-20 bg-brand-teal/10 rounded-full flex items-center justify-center mx-auto mb-6 animate-check-bounce">
+                    <span class="iconify text-brand-teal" data-icon="lucide:check" data-width="40" data-stroke-width="3"></span>
+                </div>
+                <h2 class="text-3xl font-bold text-brand-navy dark:text-white mb-4">Vielen Dank!</h2>
+                <p class="text-slate-500 dark:text-slate-400 max-w-md mx-auto mb-8 text-lg">
+                    Ihre Daten wurden erfolgreich und sicher übermittelt. Wir prüfen Ihre Angaben und melden uns innerhalb von 24 Stunden bei Ihnen.
+                </p>
+                
+                <div class="bg-white dark:bg-dark-surface border border-slate-200 dark:border-white/10 rounded-2xl p-6 max-w-sm mx-auto shadow-lg shadow-brand-navy/5">
+                    <p class="text-sm font-semibold text-brand-navy dark:text-white mb-2">Haben Sie Fragen?</p>
+                    <div class="flex items-center justify-center gap-2 text-slate-500 dark:text-slate-400 text-sm mb-1">
+                        <span class="iconify" data-icon="lucide:mail"></span>
+                        <a href="mailto:info@tx-partner.at" class="hover:text-brand-teal transition-colors">info@tx-partner.at</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form Container -->
+            <form id="onboardingForm" class="bg-white dark:bg-[#0A0A0A] border border-slate-200 dark:border-white/10 rounded-3xl shadow-2xl shadow-slate-200/50 dark:shadow-black/50 overflow-hidden relative" novalidate>
+                
+                <!-- Progress Bar -->
+                <div class="absolute top-0 left-0 w-full h-1 bg-slate-100 dark:bg-white/5">
+                    <div id="progress-bar" class="h-full bg-brand-teal transition-all duration-500 w-[10%]"></div>
+                </div>
+
+                <div class="p-6 md:p-10">
+
+                    <!-- Customer Type Toggle -->
+                    <div class="flex justify-center mb-10">
+                        <div class="bg-slate-100 dark:bg-white/5 p-1 rounded-xl flex relative w-full max-w-sm border border-slate-200 dark:border-white/5">
+                            <div id="toggle-bg" class="absolute top-1 left-1 w-[calc(50%-4px)] h-[calc(100%-8px)] bg-white dark:bg-brand-navy shadow-sm rounded-lg transition-all duration-300 ease-in-out z-0 translate-x-0"></div>
+                            
+                            <button type="button" onclick="setCustomerType('private')" id="btn-private" class="flex-1 relative z-10 py-2.5 text-sm font-semibold text-center rounded-lg transition-colors duration-300 text-brand-navy dark:text-white">
+                                Privatkunde
+                            </button>
+                            <button type="button" onclick="setCustomerType('business')" id="btn-business" class="flex-1 relative z-10 py-2.5 text-sm font-semibold text-center rounded-lg transition-colors duration-300 text-slate-500 dark:text-slate-400 hover:text-brand-navy dark:hover:text-white">
+                                Geschäftskunde
+                            </button>
+                        </div>
+                        <input type="hidden" id="customerType" name="customerType" value="private">
+                    </div>
+
+                    <!-- Referral Source -->
+                    <div class="mb-8">
+                        <label for="referral" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Wie haben Sie von uns erfahren?</label>
+                        <div class="relative">
+                            <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                                <span class="iconify" data-icon="lucide:search" data-width="18"></span>
+                            </div>
+                            <select id="referral" class="block w-full pl-10 pr-4 py-3 text-sm bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl text-brand-navy dark:text-white appearance-none focus:ring-1 focus:ring-brand-teal focus:border-brand-teal transition-all">
+                                <option value="" disabled selected>Bitte auswählen...</option>
+                                <option value="google">Google Suche</option>
+                                <option value="recommendation">Empfehlung</option>
+                                <option value="linkedin">Social Media (LinkedIn, X)</option>
+                                <option value="tax_advisor">Steuerberater</option>
+                                <option value="media">Podcast / YouTube</option>
+                                <option value="other">Sonstiges</option>
+                            </select>
+                            <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none text-slate-400">
+                                <span class="iconify" data-icon="lucide:chevron-down" data-width="16"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="border-slate-100 dark:border-white/5 mb-8">
+
+                    <!-- SECTION: PRIVATE CUSTOMER -->
+                    <div id="section-private" class="space-y-6 animate-fade-in">
+                        <h3 class="text-sm font-bold uppercase tracking-wider text-brand-teal mb-4 flex items-center gap-2 font-mono">
+                            <span class="iconify" data-icon="lucide:user" data-width="16"></span> Persönliche Daten
+                        </h3>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                            <!-- Name -->
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1.5 ml-1">Vorname *</label>
+                                <input type="text" id="p_firstname" required class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-brand-navy dark:text-white focus:border-brand-teal transition-all placeholder-slate-400 dark:placeholder-slate-600 text-sm" placeholder="Max">
+                                <span class="error-msg">Bitte geben Sie Ihren Vornamen an.</span>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1.5 ml-1">Nachname *</label>
+                                <input type="text" id="p_lastname" required class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-brand-navy dark:text-white focus:border-brand-teal transition-all placeholder-slate-400 dark:placeholder-slate-600 text-sm" placeholder="Mustermann">
+                                <span class="error-msg">Bitte geben Sie Ihren Nachnamen an.</span>
+                            </div>
+                            
+                            <!-- Contact -->
+                            <div class="md:col-span-2">
+                                <label class="block text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1.5 ml-1">E-Mail-Adresse *</label>
+                                <div class="relative">
+                                    <span class="absolute left-3.5 top-3.5 text-slate-400"><span class="iconify" data-icon="lucide:mail" data-width="16"></span></span>
+                                    <input type="email" id="p_email" required class="w-full pl-10 pr-4 py-3 rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-brand-navy dark:text-white focus:border-brand-teal transition-all placeholder-slate-400 dark:placeholder-slate-600 text-sm" placeholder="max@beispiel.at">
+                                </div>
+                                <span class="error-msg">Bitte geben Sie eine gültige E-Mail-Adresse ein.</span>
+                            </div>
+                            
+                            <div class="md:col-span-1">
+                                <label class="block text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1.5 ml-1">Telefonnummer *</label>
+                                <div class="relative">
+                                    <span class="absolute left-3.5 top-3.5 text-slate-400"><span class="iconify" data-icon="lucide:phone" data-width="16"></span></span>
+                                    <input type="tel" id="p_phone" required class="w-full pl-10 pr-4 py-3 rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-brand-navy dark:text-white focus:border-brand-teal transition-all placeholder-slate-400 dark:placeholder-slate-600 text-sm" placeholder="+43 664 1234567">
+                                </div>
+                                <span class="error-msg">Bitte geben Sie eine gültige Telefonnummer ein.</span>
+                            </div>
+
+                            <div class="md:col-span-1">
+                                <label class="block text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1.5 ml-1">Geburtsdatum *</label>
+                                <div class="relative">
+                                    <span class="absolute left-3.5 top-3.5 text-slate-400"><span class="iconify" data-icon="lucide:calendar" data-width="16"></span></span>
+                                    <input type="date" id="p_birthdate" required class="w-full pl-10 pr-4 py-3 rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-brand-navy dark:text-white focus:border-brand-teal transition-all placeholder-slate-400 dark:placeholder-slate-600 text-sm [color-scheme:light] dark:[color-scheme:dark]">
+                                </div>
+                                <span class="error-msg">Sie müssen mindestens 18 Jahre alt sein.</span>
+                            </div>
+
+                            <!-- Address -->
+                            <div class="md:col-span-2">
+                                <label class="block text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1.5 ml-1">Straße & Hausnummer *</label>
+                                <input type="text" id="p_street" required class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-brand-navy dark:text-white focus:border-brand-teal transition-all placeholder-slate-400 dark:placeholder-slate-600 text-sm" placeholder="Musterstraße 1/12">
+                                <span class="error-msg">Pflichtfeld.</span>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1.5 ml-1">Postleitzahl *</label>
+                                <input type="text" id="p_zip" required class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-brand-navy dark:text-white focus:border-brand-teal transition-all placeholder-slate-400 dark:placeholder-slate-600 text-sm" placeholder="1010">
+                                <span class="error-msg">Pflichtfeld.</span>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1.5 ml-1">Stadt *</label>
+                                <input type="text" id="p_city" required class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-brand-navy dark:text-white focus:border-brand-teal transition-all placeholder-slate-400 dark:placeholder-slate-600 text-sm" placeholder="Wien">
+                                <span class="error-msg">Pflichtfeld.</span>
+                            </div>
+                            
+                            <div class="md:col-span-2">
+                                <label class="block text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1.5 ml-1">Land *</label>
+                                <div class="relative">
+                                    <select id="p_country" required class="block w-full pl-4 pr-10 py-3 text-sm bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl text-brand-navy dark:text-white appearance-none focus:ring-1 focus:ring-brand-teal focus:border-brand-teal transition-all">
+                                        <option value="AT" selected>Österreich</option>
+                                        <option value="DE">Deutschland</option>
+                                        <option value="CH">Schweiz</option>
+                                    </select>
+                                    <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none text-slate-400">
+                                        <span class="iconify" data-icon="lucide:chevron-down" data-width="16"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- File Upload Private -->
+                            <div class="md:col-span-2 mt-4">
+                                <label class="block text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1.5 ml-1">Identitätsnachweis (Pass oder Führerschein) *</label>
+                                <div id="dropzone-p" class="border-2 border-dashed border-slate-200 dark:border-white/10 rounded-2xl p-6 text-center hover:border-brand-teal dark:hover:border-brand-teal transition-colors cursor-pointer bg-slate-50/50 dark:bg-white/5 relative group">
+                                    <input type="file" id="p_file" class="hidden" accept=".pdf,.jpg,.jpeg,.png">
+                                    
+                                    <div id="p_file_content">
+                                        <div class="w-10 h-10 bg-brand-teal/10 rounded-full flex items-center justify-center mx-auto mb-3 text-brand-teal group-hover:scale-110 transition-transform">
+                                            <span class="iconify" data-icon="lucide:upload-cloud" data-width="20"></span>
+                                        </div>
+                                        <p class="text-sm font-medium text-brand-navy dark:text-white mb-1">Datei auswählen oder hierher ziehen</p>
+                                        <p class="text-xs text-slate-400">PDF, JPG, PNG (max. 5MB). Vorder- und Rückseite.</p>
+                                    </div>
+                                    <div id="p_file_success" class="hidden flex items-center justify-center gap-2 text-brand-teal">
+                                        <span class="iconify" data-icon="lucide:file-check" data-width="18"></span>
+                                        <span class="text-sm font-medium truncate max-w-[200px]" id="p_filename">dateiname.pdf</span>
+                                        <button type="button" class="ml-2 text-slate-400 hover:text-red-500" onclick="resetFile('p')"><span class="iconify" data-icon="lucide:x" data-width="14"></span></button>
+                                    </div>
+                                </div>
+                                <span class="error-msg" id="p_file_error">Bitte laden Sie einen Ausweis hoch.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SECTION: BUSINESS CUSTOMER (Hidden by default) -->
+                    <div id="section-business" class="hidden space-y-6 animate-fade-in">
+                        <h3 class="text-sm font-bold uppercase tracking-wider text-brand-teal mb-4 flex items-center gap-2 font-mono">
+                            <span class="iconify" data-icon="lucide:building-2" data-width="16"></span> Firmendaten
+                        </h3>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                            <!-- Company Info -->
+                            <div class="md:col-span-2">
+                                <label class="block text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1.5 ml-1">Firmenname *</label>
+                                <input type="text" id="b_company" class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-brand-navy dark:text-white focus:border-brand-teal transition-all placeholder-slate-400 dark:placeholder-slate-600 text-sm" placeholder="Muster GmbH">
+                                <span class="error-msg">Pflichtfeld.</span>
+                            </div>
+
+                            <div class="md:col-span-2">
+                                <label class="block text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1.5 ml-1">Ansprechpartner (Vor- & Nachname) *</label>
+                                <input type="text" id="b_contact" class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-brand-navy dark:text-white focus:border-brand-teal transition-all placeholder-slate-400 dark:placeholder-slate-600 text-sm" placeholder="Maria Muster">
+                                <span class="error-msg">Pflichtfeld.</span>
+                            </div>
+
+                            <div class="md:col-span-1">
+                                <label class="block text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1.5 ml-1">E-Mail-Adresse *</label>
+                                <div class="relative">
+                                    <span class="absolute left-3.5 top-3.5 text-slate-400"><span class="iconify" data-icon="lucide:mail" data-width="16"></span></span>
+                                    <input type="email" id="b_email" class="w-full pl-10 pr-4 py-3 rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-brand-navy dark:text-white focus:border-brand-teal transition-all placeholder-slate-400 dark:placeholder-slate-600 text-sm" placeholder="office@muster.gmbh">
+                                </div>
+                                <span class="error-msg">Gültige E-Mail erforderlich.</span>
+                            </div>
+
+                            <div class="md:col-span-1">
+                                <label class="block text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1.5 ml-1">Telefonnummer *</label>
+                                <div class="relative">
+                                    <span class="absolute left-3.5 top-3.5 text-slate-400"><span class="iconify" data-icon="lucide:phone" data-width="16"></span></span>
+                                    <input type="tel" id="b_phone" class="w-full pl-10 pr-4 py-3 rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-brand-navy dark:text-white focus:border-brand-teal transition-all placeholder-slate-400 dark:placeholder-slate-600 text-sm" placeholder="+43 1 2345678">
+                                </div>
+                                <span class="error-msg">Telefonnummer erforderlich.</span>
+                            </div>
+
+                            <!-- Address Business -->
+                            <div class="md:col-span-2">
+                                <label class="block text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1.5 ml-1">Straße & Hausnummer *</label>
+                                <input type="text" id="b_street" class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-brand-navy dark:text-white focus:border-brand-teal transition-all placeholder-slate-400 dark:placeholder-slate-600 text-sm" placeholder="Gewerbepark 1">
+                                <span class="error-msg">Pflichtfeld.</span>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1.5 ml-1">Postleitzahl *</label>
+                                <input type="text" id="b_zip" class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-brand-navy dark:text-white focus:border-brand-teal transition-all placeholder-slate-400 dark:placeholder-slate-600 text-sm" placeholder="4020">
+                                <span class="error-msg">Pflichtfeld.</span>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1.5 ml-1">Stadt *</label>
+                                <input type="text" id="b_city" class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-brand-navy dark:text-white focus:border-brand-teal transition-all placeholder-slate-400 dark:placeholder-slate-600 text-sm" placeholder="Linz">
+                                <span class="error-msg">Pflichtfeld.</span>
+                            </div>
+
+                            <div class="md:col-span-2">
+                                <label class="block text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1.5 ml-1">Land *</label>
+                                <div class="relative">
+                                    <select id="b_country" class="block w-full pl-4 pr-10 py-3 text-sm bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl text-brand-navy dark:text-white appearance-none focus:ring-1 focus:ring-brand-teal focus:border-brand-teal transition-all">
+                                        <option value="AT" selected>Österreich</option>
+                                        <option value="DE">Deutschland</option>
+                                        <option value="CH">Schweiz</option>
+                                    </select>
+                                    <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none text-slate-400">
+                                        <span class="iconify" data-icon="lucide:chevron-down" data-width="16"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Corporate Specifics -->
+                            <div class="md:col-span-1">
+                                <label class="block text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1.5 ml-1">UID-Nummer *</label>
+                                <div class="relative">
+                                    <span class="absolute left-3.5 top-3.5 text-slate-400"><span class="iconify" data-icon="lucide:hash" data-width="16"></span></span>
+                                    <input type="text" id="b_uid" class="w-full pl-10 pr-4 py-3 rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-brand-navy dark:text-white focus:border-brand-teal transition-all placeholder-slate-400 dark:placeholder-slate-600 text-sm font-mono" placeholder="ATU12345678">
+                                </div>
+                                <span class="error-msg">Format: ATU gefolgt von 8 Ziffern.</span>
+                            </div>
+
+                            <div class="md:col-span-1">
+                                <label class="block text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1.5 ml-1">Firmenbuchnummer *</label>
+                                <div class="relative">
+                                    <span class="absolute left-3.5 top-3.5 text-slate-400"><span class="iconify" data-icon="lucide:file-text" data-width="16"></span></span>
+                                    <input type="text" id="b_fb" class="w-full pl-10 pr-4 py-3 rounded-xl bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-brand-navy dark:text-white focus:border-brand-teal transition-all placeholder-slate-400 dark:placeholder-slate-600 text-sm font-mono" placeholder="FN 123456x">
+                                </div>
+                                <span class="error-msg">Gültige FN erforderlich (z.B. FN 123456p).</span>
+                            </div>
+
+                            <!-- File Upload Business -->
+                            <div class="md:col-span-2 mt-4">
+                                <label class="block text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1.5 ml-1">Firmenbuchauszug *</label>
+                                <div id="dropzone-b" class="border-2 border-dashed border-slate-200 dark:border-white/10 rounded-2xl p-6 text-center hover:border-brand-teal dark:hover:border-brand-teal transition-colors cursor-pointer bg-slate-50/50 dark:bg-white/5 relative group">
+                                    <input type="file" id="b_file" class="hidden" accept=".pdf">
+                                    
+                                    <div id="b_file_content">
+                                        <div class="w-10 h-10 bg-brand-teal/10 rounded-full flex items-center justify-center mx-auto mb-3 text-brand-teal group-hover:scale-110 transition-transform">
+                                            <span class="iconify" data-icon="lucide:file-text" data-width="20"></span>
+                                        </div>
+                                        <p class="text-sm font-medium text-brand-navy dark:text-white mb-1">Firmenbuchauszug hochladen</p>
+                                        <p class="text-xs text-slate-400">Nur PDF (max. 5MB). Nicht älter als 6 Monate.</p>
+                                    </div>
+                                    <div id="b_file_success" class="hidden flex items-center justify-center gap-2 text-brand-teal">
+                                        <span class="iconify" data-icon="lucide:file-check" data-width="18"></span>
+                                        <span class="text-sm font-medium truncate max-w-[200px]" id="b_filename">firmenbuch.pdf</span>
+                                        <button type="button" class="ml-2 text-slate-400 hover:text-red-500" onclick="resetFile('b')"><span class="iconify" data-icon="lucide:x" data-width="14"></span></button>
+                                    </div>
+                                </div>
+                                <span class="error-msg" id="b_file_error">Bitte laden Sie den Firmenbuchauszug hoch.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="border-slate-100 dark:border-white/5 my-8">
+
+                    <!-- Legal -->
+                    <div class="space-y-3 mb-8">
+                        <label class="flex items-start gap-3 cursor-pointer group">
+                            <input type="checkbox" id="legal_privacy" required class="mt-1 w-4 h-4 rounded border-slate-300 text-brand-teal focus:ring-brand-teal bg-slate-50 dark:bg-white/5 dark:border-white/10">
+                            <span class="text-sm text-slate-500 dark:text-slate-400 group-hover:text-brand-navy dark:group-hover:text-slate-300 transition-colors">
+                                Ich habe die <a href="datenschutz.html" class="text-brand-teal hover:underline underline-offset-2">Datenschutzerklärung</a> gelesen und akzeptiere diese. *
+                            </span>
+                        </label>
+                        <label class="flex items-start gap-3 cursor-pointer group">
+                            <input type="checkbox" id="legal_terms" required class="mt-1 w-4 h-4 rounded border-slate-300 text-brand-teal focus:ring-brand-teal bg-slate-50 dark:bg-white/5 dark:border-white/10">
+                            <span class="text-sm text-slate-500 dark:text-slate-400 group-hover:text-brand-navy dark:group-hover:text-slate-300 transition-colors">
+                                Ich akzeptiere die <a href="agb.html" class="text-brand-teal hover:underline underline-offset-2">Allgemeinen Geschäftsbedingungen (AGB)</a>. *
+                            </span>
+                        </label>
+                        <span class="error-msg" id="legal_error">Bitte akzeptieren Sie die rechtlichen Bedingungen.</span>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="sticky bottom-4 md:static z-20">
+                        <button type="submit" id="submitBtn" class="w-full bg-brand-teal hover:bg-brand-tealDark text-white font-bold py-4 rounded-xl shadow-lg shadow-brand-teal/20 hover:shadow-brand-teal/40 transform transition-all active:scale-[0.98] flex items-center justify-center gap-2 group">
+                            <span>Onboarding abschließen</span>
+                            <span class="iconify group-hover:translate-x-1 transition-transform" data-icon="lucide:arrow-right" data-width="20"></span>
+                        </button>
+                    </div>
+
+                </div>
+            </form>
+
+        </div>
+    </main>
+
+    <!-- Footer (Minimal with Legal Links) -->
+    <footer class="py-8 text-center text-xs text-slate-400 dark:text-slate-600 border-t border-slate-100 dark:border-white/5 bg-white dark:bg-dark-bg">
+        <div class="container mx-auto px-4 max-w-2xl">
+            <p class="mb-4 font-mono">© 2026 TX-Partner – eine Marke bzw. Geschäftsbezeichnung der Solvum GmbH. Alle Rechte vorbehalten.</p>
+            <div class="flex justify-center gap-6">
+                <a href="agb.html" class="text-brand-teal hover:underline underline-offset-2 transition-colors">AGB</a>
+                <a href="datenschutz.html" class="text-brand-teal hover:underline underline-offset-2 transition-colors">Datenschutz</a>
+                <a href="impressum.html" class="text-brand-teal hover:underline underline-offset-2 transition-colors">Impressum</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Logic Script -->
+    <script>
+        // --- Dark Mode Logic ---
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            html.classList.add('dark');
+        } else {
+            html.classList.remove('dark');
+        }
+        themeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            localStorage.theme = html.classList.contains('dark') ? 'dark' : 'light';
+        });
+
+        // --- Toggle Logic ---
+        let currentType = 'private';
+        const progressBar = document.getElementById('progress-bar');
+        
+        function setCustomerType(type) {
+            currentType = type;
+            document.getElementById('customerType').value = type;
+            
+            const btnPrivate = document.getElementById('btn-private');
+            const btnBusiness = document.getElementById('btn-business');
+            const bg = document.getElementById('toggle-bg');
+            const secPrivate = document.getElementById('section-private');
+            const secBusiness = document.getElementById('section-business');
+
+            if (type === 'private') {
+                bg.style.transform = 'translateX(0)';
+                btnPrivate.classList.replace('text-slate-500', 'text-brand-navy');
+                btnPrivate.classList.add('dark:text-white');
+                btnBusiness.classList.replace('text-brand-navy', 'text-slate-500');
+                btnBusiness.classList.remove('dark:text-white');
+                
+                secPrivate.classList.remove('hidden');
+                secBusiness.classList.add('hidden');
+                
+                // Toggle required attributes
+                document.querySelectorAll('#section-private input, #section-private select').forEach(el => {
+                   if(el.id !== 'p_file') el.required = true; 
+                });
+                document.querySelectorAll('#section-business input, #section-business select').forEach(el => el.required = false);
+                
+            } else {
+                bg.style.transform = 'translateX(100%)';
+                btnBusiness.classList.replace('text-slate-500', 'text-brand-navy');
+                btnBusiness.classList.add('dark:text-white');
+                btnPrivate.classList.replace('text-brand-navy', 'text-slate-500');
+                btnPrivate.classList.remove('dark:text-white');
+                
+                secBusiness.classList.remove('hidden');
+                secPrivate.classList.add('hidden');
+
+                // Toggle required attributes
+                document.querySelectorAll('#section-business input, #section-business select').forEach(el => {
+                    if(el.id !== 'b_file') el.required = true;
+                });
+                document.querySelectorAll('#section-private input, #section-private select').forEach(el => el.required = false);
+            }
+            updateProgress();
+        }
+
+        // Initialize Validation Constraints
+        const p_birthdate = document.getElementById('p_birthdate');
+        const today = new Date();
+        const maxDate = new Date(today.getFullYear() - 18, today.getMonth(), today.getDate()).toISOString().split('T')[0];
+        p_birthdate.max = maxDate;
+
+        // --- File Upload Logic ---
+        const setupDropzone = (prefix) => {
+            const dropzone = document.getElementById(`dropzone-${prefix}`);
+            const input = document.getElementById(`${prefix}_file`);
+            const content = document.getElementById(`${prefix}_file_content`);
+            const success = document.getElementById(`${prefix}_file_success`);
+            const filename = document.getElementById(`${prefix}_filename`);
+
+            dropzone.addEventListener('click', () => input.click());
+            
+            ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+                dropzone.addEventListener(eventName, preventDefaults, false);
+            });
+
+            function preventDefaults(e) { e.preventDefault(); e.stopPropagation(); }
+
+            ['dragenter', 'dragover'].forEach(eventName => {
+                dropzone.addEventListener(eventName, () => dropzone.classList.add('drag-active'), false);
+            });
+
+            ['dragleave', 'drop'].forEach(eventName => {
+                dropzone.addEventListener(eventName, () => dropzone.classList.remove('drag-active'), false);
+            });
+
+            dropzone.addEventListener('drop', (e) => {
+                const dt = e.dataTransfer;
+                const files = dt.files;
+                handleFiles(files, prefix);
+            });
+
+            input.addEventListener('change', () => handleFiles(input.files, prefix));
+        };
+
+        function handleFiles(files, prefix) {
+            const file = files[0];
+            const errorMsg = document.getElementById(`${prefix}_file_error`);
+            
+            // Validate size (5MB)
+            if (file.size > 5 * 1024 * 1024) {
+                alert('Datei ist zu groß (Max 5MB)');
+                return;
+            }
+
+            // Validate type for Business (PDF only)
+            if (prefix === 'b' && file.type !== 'application/pdf') {
+                alert('Für Geschäftskunden sind nur PDF-Dateien erlaubt.');
+                return;
+            }
+
+            // UI Update
+            document.getElementById(`${prefix}_file_content`).classList.add('hidden');
+            document.getElementById(`${prefix}_file_success`).classList.remove('hidden');
+            document.getElementById(`${prefix}_file_success`).classList.add('flex');
+            document.getElementById(`${prefix}_filename`).textContent = file.name;
+            document.getElementById(`dropzone-${prefix}`).classList.add('border-brand-teal', 'bg-brand-teal/5');
+            document.getElementById(`dropzone-${prefix}`).classList.remove('border-dashed');
+            errorMsg.style.display = 'none';
+            updateProgress();
+        }
+
+        window.resetFile = function(prefix) {
+            const input = document.getElementById(`${prefix}_file`);
+            input.value = '';
+            document.getElementById(`${prefix}_file_content`).classList.remove('hidden');
+            document.getElementById(`${prefix}_file_success`).classList.add('hidden');
+            document.getElementById(`${prefix}_file_success`).classList.remove('flex');
+            document.getElementById(`dropzone-${prefix}`).classList.remove('border-brand-teal', 'bg-brand-teal/5');
+            document.getElementById(`dropzone-${prefix}`).classList.add('border-dashed');
+            event.stopPropagation();
+            updateProgress();
+        }
+
+        setupDropzone('p');
+        setupDropzone('b');
+
+        // --- Validation Logic ---
+        const patterns = {
+            email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+            uid: /^ATU[0-9]{8}$/i,
+            fb: /^FN\s?[0-9]{6}[a-zA-Z]$/i
+        };
+
+        function validateInput(input) {
+            const val = input.value.trim();
+            let valid = true;
+
+            if (input.required && !val) valid = false;
+            
+            if (val && input.type === 'email' && !patterns.email.test(val)) valid = false;
+            if (val && input.id === 'b_uid' && !patterns.uid.test(val)) valid = false;
+            if (val && input.id === 'b_fb' && !patterns.fb.test(val)) valid = false;
+            
+            if (input.id === 'p_birthdate' && val) {
+                 if(new Date(val) > new Date(maxDate)) valid = false;
+            }
+
+            if (!valid && (input.touched || input.value)) {
+                input.classList.add('is-invalid');
+                input.classList.remove('is-valid');
+            } else if (valid && val) {
+                input.classList.remove('is-invalid');
+                input.classList.add('is-valid');
+            } else {
+                input.classList.remove('is-invalid', 'is-valid');
+            }
+            return valid;
+        }
+
+        // Add listeners to all inputs
+        document.querySelectorAll('input, select').forEach(input => {
+            input.addEventListener('blur', () => {
+                input.touched = true;
+                validateInput(input);
+                updateProgress();
+            });
+            input.addEventListener('input', () => {
+                if (input.classList.contains('is-invalid') || input.classList.contains('is-valid')) {
+                    validateInput(input);
+                }
+                updateProgress();
+            });
+        });
+
+        function updateProgress() {
+            const activeSection = currentType === 'private' ? 'section-private' : 'section-business';
+            const inputs = document.querySelectorAll(`#${activeSection} input[required], #${activeSection} select[required], #referral, #legal_privacy, #legal_terms`);
+            let filled = 0;
+            let total = inputs.length;
+
+            // Add file check manually
+            total += 1;
+            const fileInput = document.getElementById(currentType === 'private' ? 'p_file' : 'b_file');
+            if(fileInput.files.length > 0) filled += 1;
+
+            inputs.forEach(inp => {
+                if(inp.type === 'checkbox' ? inp.checked : inp.value.trim() !== '') filled++;
+            });
+
+            const pct = Math.max(10, (filled / total) * 100);
+            progressBar.style.width = `${pct}%`;
+        }
+
+        // --- Submit Handler ---
+        document.getElementById('onboardingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Validate all visible fields
+            const activeSection = currentType === 'private' ? 'section-private' : 'section-business';
+            const inputs = document.querySelectorAll(`#${activeSection} input[required], #${activeSection} select[required], #referral`);
+            let allValid = true;
+
+            inputs.forEach(input => {
+                input.touched = true;
+                if (!validateInput(input)) allValid = false;
+            });
+
+            // Validate File
+            const fileInput = document.getElementById(currentType === 'private' ? 'p_file' : 'b_file');
+            const fileError = document.getElementById(`${currentType === 'private' ? 'p' : 'b'}_file_error`);
+            if (fileInput.files.length === 0) {
+                fileError.style.display = 'block';
+                allValid = false;
+            } else {
+                fileError.style.display = 'none';
+            }
+
+            // Validate Checkboxes
+            const privacy = document.getElementById('legal_privacy');
+            const terms = document.getElementById('legal_terms');
+            const legalError = document.getElementById('legal_error');
+            
+            if (!privacy.checked || !terms.checked) {
+                legalError.style.display = 'block';
+                allValid = false;
+            } else {
+                legalError.style.display = 'none';
+            }
+
+            if (!allValid) {
+                // Scroll to first error
+                const firstError = document.querySelector('.is-invalid, .error-msg[style="display: block;"]');
+                if (firstError) {
+                    firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+                return;
+            }
+
+            // Show Loading State
+            const btn = document.getElementById('submitBtn');
+            const originalContent = btn.innerHTML;
+            btn.disabled = true;
+            btn.innerHTML = `<div class="loader mr-2"></div> Wird übermittelt...`;
+            btn.classList.add('opacity-80', 'cursor-not-allowed');
+
+            // Simulate API Request
+            setTimeout(() => {
+                // Success Action
+                document.getElementById('onboardingForm').style.display = 'none';
+                document.getElementById('header-content').style.display = 'none';
+                document.getElementById('success-view').classList.remove('hidden');
+                
+                // Trigger scroll to top
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }, 1500);
+        });
+
+        // Init Logic
+        setCustomerType('private');
+    </script>
+
+</body>
+</html>

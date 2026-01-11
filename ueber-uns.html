@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Über uns | TX-Partner - Dokumentations-Experten</title>
+    <meta name="description" content="Die Spezialisten für Krypto-Dokumentation. Lernen Sie die Köpfe hinter dem TX-Partner Standard kennen.">
+    
+    <!-- Local Fonts Only (DSGVO-konform) -->
+    <link rel="stylesheet" href="/css/fonts.css">
+    
+    <!-- DSGVO-HANDLUNGSBEDARF: Iconify lädt Icons von externen Servern (api.iconify.design). 
+         Für vollständige DSGVO-Konformität sollten Icons lokal gehostet oder durch SVGs ersetzt werden. -->
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+
+    <!-- Schema.org Organization -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "TX-Partner",
+    "legalName": "Solvum GmbH",
+    "url": "https://tx-partner.com",
+    "logo": "https://tx-partner.com/assets/logo-signature2.png",
+    "foundingDate": "2024",
+    "founders": [
+        {
+            "@type": "Person",
+            "name": "Robert Thorn",
+            "jobTitle": "Co-Founder & Dokumentations-Spezialist",
+            "sameAs": "https://www.linkedin.com/in/thorn-robert/"
+        },
+        {
+            "@type": "Person",
+            "name": "Johannes Anderl",
+            "jobTitle": "Co-Founder & Onboarding Spezialist",
+            "sameAs": "https://www.linkedin.com/in/johannesanderl/"
+        }
+    ],
+    "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "AT"
+    },
+    "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "availableLanguage": ["German"]
+    },
+    "sameAs": [
+        "https://x.com/TX_Partner",
+        "https://www.linkedin.com/company/tx-partner/"
+    ],
+    "description": "Pre-Tax Infrastruktur für Krypto. Professionelle Dokumentation für Steuertools, Steuerberater und Finanzverwaltung."
+}
+</script>
+    
+    <!-- DSGVO-Handlungsbedarf: Tailwind CSS CDN lädt vom externen Server (cdn.tailwindcss.com).
+         Für vollständige DSGVO-Compliance sollte ein Consent-Banner implementiert werden
+         ODER Tailwind lokal kompiliert und gehostet werden. -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        brand: {
+                            navy: '#1E3A5F',
+                            teal: '#3A9EAF',
+                            tealDark: '#2C7A87',
+                        },
+                        dark: {
+                            bg: '#050505',
+                            surface: '#0F0F0F',
+                            border: 'rgba(255,255,255,0.08)',
+                        },
+                    },
+                    borderRadius: {
+                        'container': '32px',
+                        'card': '32px',
+                        'button': '16px',
+                    },
+                    letterSpacing: {
+                        'tight': '-0.02em',
+                        'tighter': '-0.04em',
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.6s ease-out forwards',
+                        'float': 'float 6s ease-in-out infinite',
+                        'shimmer': 'shimmer 1.5s infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(10px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        shimmer: {
+                            '100%': { transform: 'translateX(100%)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Page Transition */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            opacity: 0;
+            animation: pageLoad 0.5s ease-out 0.1s forwards;
+        }
+        
+        @keyframes pageLoad {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Global Noise Overlay */
+        .bg-noise {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 50;
+            opacity: 0.03;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+
+        /* Focus States for Accessibility (WCAG AA) */
+        :focus-visible {
+            outline: 2px solid #3A9EAF;
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+
+        a:focus-visible, button:focus-visible {
+            outline: 2px solid #3A9EAF;
+            outline-offset: 2px;
+        }
+
+        .glass a:focus-visible, .glass button:focus-visible {
+            outline-color: #3A9EAF;
+            outline-offset: 4px;
+        }
+
+        /* Card Spotlight Effect */
+        .card-spotlight {
+            position: relative;
+            background: rgba(255, 255, 255, 0.03);
+            overflow: hidden;
+            border-radius: 32px;
+        }
+        .card-spotlight::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(58, 158, 175, 0.06), transparent 40%);
+            z-index: 0;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .card-spotlight:hover::before { opacity: 1; }
+        
+        .card-border-glow {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            border-radius: 32px;
+            padding: 1px;
+            background: radial-gradient(400px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(58, 158, 175, 0.6), transparent 40%);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .card-spotlight:hover .card-border-glow { opacity: 1; }
+
+        /* Animations */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Glassmorphism - 32px radius */
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 32px;
+        }
+        .dark .glass {
+            background: rgba(10, 10, 10, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Navigation Dropdown */
+        .nav-dropdown {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+            border-radius: 16px;
+        }
+        .group:hover .nav-dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        /* Mobile Menu Transition */
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+            transform: translateY(-10px);
+        }
+        .mobile-menu.open {
+            max-height: 500px;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Button Transitions - unified */
+        .btn-primary {
+            border-radius: 16px;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 40px rgba(30, 58, 95, 0.3);
+        }
+    </style>
+</head>
+
+<body class="font-sans antialiased selection:bg-brand-teal selection:text-white bg-white text-slate-900 dark:bg-dark-bg dark:text-white">
+
+    <!-- Global Noise Overlay -->
+    <div class="bg-noise"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-6 left-1/2 -translate-x-1/2 w-[95%] max-w-6xl z-50">
+        <div class="glass flex items-center justify-between px-6 py-3 shadow-2xl shadow-black/5">
+            <!-- Logo (Logo-Lock: Nicht verändern) -->
+            <a href="index.html" class="flex items-center gap-3 group shrink-0">
+                <div class="flex items-end gap-1 h-6">
+                    <div class="w-1.5 h-6 rounded-full bg-brand-navy dark:bg-slate-200"></div>
+                    <div class="w-1.5 h-6 rounded-full bg-brand-navy dark:bg-slate-200"></div>
+                    <div class="w-1.5 h-6 rounded-full bg-brand-navy dark:bg-slate-200"></div>
+                    <div class="w-1.5 h-6 rounded-full bg-brand-teal"></div>
+                </div>
+                <span class="text-lg font-bold tracking-wider text-brand-navy dark:text-white">TX-Partner</span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <ul class="hidden lg:flex items-center gap-1">
+                <li class="relative group">
+                    <button class="flex items-center gap-1 px-4 py-2 text-sm font-medium text-slate-500 hover:text-brand-navy dark:text-slate-400 dark:hover:text-white transition-colors focus:outline-none">
+                        Leistungen
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="14" height="14" viewBox="0 0 24 24" class="group-hover:rotate-180 transition-transform duration-300">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9l6 6l6-6"></path>
+                        </svg>
+                    </button>
+                    <div class="nav-dropdown absolute top-full left-0 mt-2 w-56 bg-white dark:bg-dark-surface border border-slate-100 dark:border-white/10 shadow-xl p-2 overflow-hidden">
+                        <a href="leistungen.html" class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                            <div class="text-sm font-semibold text-brand-navy dark:text-white mb-0.5">Leistungen</div>
+                            <div class="text-xs text-slate-400">Übersicht aller Services</div>
+                        </a>
+                        <a href="blockpit-hinweise.html" class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                            <div class="text-sm font-semibold text-brand-navy dark:text-white mb-0.5">Blockpit Hinweise</div>
+                            <div class="text-xs text-slate-400">Korrektur & Optimierung</div>
+                        </a>
+                        <a href="cointracking-fehler.html" class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                            <div class="text-sm font-semibold text-brand-navy dark:text-white mb-0.5">CoinTracking Fehler</div>
+                            <div class="text-xs text-slate-400">Datenbereinigung</div>
+                        </a>
+                    </div>
+                </li>
+                <li class="relative group">
+                    <button class="flex items-center gap-1 px-4 py-2 text-sm font-medium text-brand-navy dark:text-white transition-colors focus:outline-none">
+                        Über uns
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="14" height="14" viewBox="0 0 24 24" class="group-hover:rotate-180 transition-transform duration-300">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9l6 6l6-6"></path>
+                        </svg>
+                    </button>
+                    <div class="nav-dropdown absolute top-full left-0 mt-2 w-56 bg-white dark:bg-dark-surface border border-slate-100 dark:border-white/10 shadow-xl p-2 overflow-hidden">
+                        <a href="ueber-uns.html" class="block px-4 py-3 rounded-xl bg-slate-50 dark:bg-white/5 transition-colors">
+                            <div class="text-sm font-semibold text-brand-navy dark:text-white mb-0.5">Über uns</div>
+                            <div class="text-xs text-slate-400">Wer wir sind</div>
+                        </a>
+                        <a href="dokumentationsstandard.html" class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                            <div class="text-sm font-semibold text-brand-navy dark:text-white mb-0.5">Dokumentationsstandard</div>
+                            <div class="text-xs text-slate-400">Unsere Qualitätsrichtlinien</div>
+                        </a>
+                    </div>
+                </li>
+                <li><a href="faq.html" class="block px-4 py-2 text-sm font-medium text-slate-500 hover:text-brand-navy dark:text-slate-400 dark:hover:text-white transition-colors">FAQ</a></li>
+                <li><a href="kontakt.html" class="block px-4 py-2 text-sm font-medium text-slate-500 hover:text-brand-navy dark:text-slate-400 dark:hover:text-white transition-colors">Kontakt</a></li>
+            </ul>
+
+            <!-- Right Side Actions -->
+            <div class="flex items-center gap-4">
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-white/10 text-slate-500 dark:text-slate-400 transition-all duration-300" aria-label="Dark Mode umschalten" title="Dark Mode umschalten">
+                    <span class="block dark:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="18" height="18" viewBox="0 0 24 24">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"></path>
+                        </svg>
+                    </span>
+                    <span class="hidden dark:block">
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="18" height="18" viewBox="0 0 24 24">
+                            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                <circle cx="12" cy="12" r="4"></circle>
+                                <path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32l1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+                            </g>
+                        </svg>
+                    </span>
+                </button>
+                <a href="https://app.cal.eu/johannesanderl-tx-partner/30min" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center justify-center btn-primary text-sm font-semibold px-5 py-2 bg-brand-navy text-white overflow-hidden relative group">
+                    <span class="absolute w-full h-full bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:animate-shimmer"></span>
+                    <span class="relative z-10">Dokumentation prüfen</span>
+                </a>
+                <button id="mobile-menu-toggle" class="lg:hidden text-slate-600 dark:text-slate-300 p-2" aria-label="Menü öffnen" aria-expanded="false">
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="24" height="24" viewBox="0 0 24 24">
+                        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5h16M4 12h16M4 19h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu lg:hidden mt-2 bg-white dark:bg-dark-surface border border-slate-100 dark:border-white/10 shadow-xl p-4 rounded-card">
+            <a href="leistungen.html" class="block px-4 py-3 text-sm font-semibold text-brand-navy dark:text-white rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">Leistungen</a>
+            <a href="ueber-uns.html" class="block px-4 py-3 text-sm font-semibold text-brand-navy dark:text-white rounded-xl bg-slate-50 dark:bg-white/5">Über uns</a>
+            <a href="faq.html" class="block px-4 py-3 text-sm font-semibold text-brand-navy dark:text-white rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">FAQ</a>
+            <a href="kontakt.html" class="block px-4 py-3 text-sm font-semibold text-brand-navy dark:text-white rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">Kontakt</a>
+            <div class="mt-4 pt-4 border-t border-slate-100 dark:border-white/10">
+                <a href="https://app.cal.eu/johannesanderl-tx-partner/30min" target="_blank" rel="noopener noreferrer" class="block w-full text-center px-5 py-3 text-sm font-semibold text-white bg-brand-navy btn-primary">
+                    Kostenloses Erstgespräch
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[50vh] flex flex-col items-center justify-center pt-32 pb-20 overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none"></div>
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-[400px] bg-gradient-to-b from-brand-teal/10 via-brand-teal/5 to-transparent blur-[80px] -z-10 opacity-70 pointer-events-none"></div>
+        <div class="absolute -top-20 -right-20 w-[600px] h-[600px] bg-brand-teal/5 rounded-full blur-[100px] -z-10 animate-float pointer-events-none" style="animation-duration: 18s;"></div>
+
+        <div class="container mx-auto px-6 max-w-4xl relative z-10 text-center">
+            <div class="fade-in-up visible">
+                <div class="inline-flex items-center gap-2 border border-brand-teal/20 text-brand-teal text-xs font-bold tracking-widest uppercase rounded-full px-3.5 py-1.5 mb-8 backdrop-blur-sm">
+                    <span class="w-1.5 h-1.5 rounded-full bg-brand-teal animate-pulse"></span>
+                    Mission Krypto-Dokumentation
+                </div>
+            </div>
+
+            <!-- H1: Einmalig, font-extrabold (800), tracking-tighter -->
+            <h1 class="fade-in-up text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tighter leading-[1.1] mb-6 text-brand-navy dark:text-white visible" style="animation-delay: 0.1s;">
+                Die Referenz für professionelle <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-teal to-brand-navy dark:to-white">Krypto-Dokumentation</span>
+            </h1>
+
+            <p class="fade-in-up md:text-xl dark:text-slate-400 leading-relaxed text-lg font-medium text-slate-500 max-w-2xl mr-auto ml-auto visible" style="animation-delay: 0.2s">
+                Wir dokumentieren Krypto-Transaktionen nach einem klar definierten Standard. Vollständig, fachlich korrekt und langfristig belastbar für Steuertools, Steuerberater und Finanzverwaltung.
+            </p>
+        </div>
+    </section>
+
+    <!-- Founders Section -->
+    <section class="relative py-24 bg-slate-50/50 dark:bg-[#080808] border-t border-slate-200 dark:border-white/5 overflow-hidden">
+        <!-- Background Effects -->
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
+            <div class="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-brand-teal/10 dark:bg-brand-teal/5 blur-[100px] rounded-full"></div>
+        </div>
+
+        <div class="container z-10 max-w-6xl mr-auto ml-auto pr-6 pl-6 relative">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+                
+                <!-- Founder 1: Robert -->
+                <div class="card-spotlight group p-1 fade-in-up visible" onmousemove="handleMouseMove(event)" style="animation-delay: 0.1s;">
+                    <div class="card-border-glow"></div>
+                    <div class="relative h-full bg-white dark:bg-dark-surface rounded-[30px] p-8 md:p-10 border border-slate-200 dark:border-white/5 flex flex-col shadow-lg shadow-slate-100/50 dark:shadow-none">
+
+                        <div class="flex items-start justify-between mb-8 gap-4">
+                            <!-- Unified & Responsive Image Frame -->
+                            <div class="relative overflow-hidden w-36 h-48 sm:w-48 sm:h-60 rounded-[24px] sm:rounded-[32px] bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 shrink-0 transition-all duration-300">
+                                <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/72e75028-508e-4b93-b8a7-b502f68a4e3b_3840w.png" alt="Robert Thorn - Co-Founder TX-Partner" class="w-full h-full object-cover object-top">
+                            </div>
+                            <div class="flex flex-col items-end gap-2">
+                                <span class="font-mono text-xs text-brand-teal border border-brand-teal/20 rounded-[8px] px-2 py-1">Documentation</span>
+                                <span class="font-mono text-xs text-slate-500 bg-slate-200 dark:bg-white/10 px-2 py-1 rounded-[8px] border border-slate-300 dark:border-white/5">9J_CRYPTO_XP</span>
+                                <span class="font-mono text-xs text-slate-500 bg-slate-200 dark:bg-white/10 px-2 py-1 rounded-[8px] border border-slate-300 dark:border-white/5">5J_TAX_FIRMS</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex gap-4 items-start justify-between">
+                                <div>
+                                    <!-- H3: Untergeordnet -->
+                                    <h3 class="text-2xl font-semibold tracking-tight text-brand-navy dark:text-white mb-1">Robert Thorn</h3>
+                                    <p class="text-base font-normal text-brand-teal mb-6">Co-Founder & Dokumentations-Spezialist</p>
+                                </div>
+                                <a href="https://www.linkedin.com/in/thorn-robert/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-10 h-10 rounded-full bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 text-slate-400 dark:text-slate-500 hover:text-white hover:bg-[#0077b5] hover:border-[#0077b5] transition-all duration-300 shrink-0" aria-label="Robert Thorn auf LinkedIn">
+                                    <span class="sr-only">LinkedIn</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="18" height="18" viewBox="0 0 24 24">
+                                        <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2a2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6M2 9h4v12H2z"></path>
+                                            <circle cx="4" cy="4" r="2"></circle>
+                                        </g>
+                                    </svg>
+                                </a>
+                            </div>
+
+                            <div class="border-t border-slate-200 dark:border-white/10 pt-6">
+                                <ul class="flex flex-col gap-3 text-base md:text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+                                    <li class="flex items-start gap-3">
+                                        <div class="mt-1.5 flex items-center justify-center w-5 h-5 rounded-full bg-brand-teal/10 dark:bg-brand-teal/20 shrink-0">
+                                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="12" height="12" viewBox="0 0 24 24" class="text-brand-teal">
+                                                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 6L9 17l-5-5"></path>
+                                            </svg>
+                                        </div>
+                                        <span>Etablierte <span class="font-semibold text-brand-navy dark:text-white">Krypto-Dokumentationsstandards</span> bei führenden Steuerberatungskanzleien und führte deren Datenbearbeitungsteams.</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <div class="mt-1.5 flex items-center justify-center w-5 h-5 rounded-full bg-brand-teal/10 dark:bg-brand-teal/20 shrink-0">
+                                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="12" height="12" viewBox="0 0 24 24" class="text-brand-teal">
+                                                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 6L9 17l-5-5"></path>
+                                            </svg>
+                                        </div>
+                                        <span>Dokumentierte Transaktionshistorien von <span class="font-semibold text-brand-navy dark:text-white">hunderten Klienten</span> mit verwaltetem Vermögen von <span class="font-mono font-semibold text-brand-navy dark:text-white">&gt; EUR 500 Mio.</span></span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <div class="mt-1.5 flex items-center justify-center w-5 h-5 rounded-full bg-brand-teal/10 dark:bg-brand-teal/20 shrink-0">
+                                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="12" height="12" viewBox="0 0 24 24" class="text-brand-teal">
+                                                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 6L9 17l-5-5"></path>
+                                            </svg>
+                                        </div>
+                                        <span>Unterstützte Steuertools wie <span class="font-semibold text-brand-navy dark:text-white">CoinTracking</span> bei der Produktweiterentwicklung.</span>
+                                    </li>
+                                </ul>
+                                <p class="mt-6 text-base text-slate-500 dark:text-slate-400 leading-relaxed">
+                                    Unsere Kunden und Partner profitieren von Roberts strukturierter Arbeitsweise, Neugier und seinem Streben nach Lösungen. Er kommuniziert auf Augenhöhe, bringt komplexe Sachverhalte auf den Punkt und schafft Klarheit.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Founder 2: Johannes -->
+                <div class="card-spotlight group p-1 fade-in-up visible" onmousemove="handleMouseMove(event)" style="animation-delay: 0.2s;">
+                    <div class="card-border-glow"></div>
+                    <div class="relative h-full bg-white dark:bg-dark-surface rounded-[30px] p-8 md:p-10 border border-slate-200 dark:border-white/5 flex flex-col shadow-lg shadow-slate-100/50 dark:shadow-none">
+
+                        <div class="flex items-start justify-between mb-8 gap-4">
+                            <!-- Unified & Responsive Image Frame -->
+                            <div class="relative overflow-hidden w-36 h-48 sm:w-48 sm:h-60 rounded-[24px] sm:rounded-[32px] bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 shrink-0 transition-all duration-300">
+                                <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/cec6015d-99b4-4db2-96d0-86f834cf6f9e_3840w.png" alt="Johannes Anderl - Co-Founder TX-Partner" class="w-full h-full object-cover object-top">
+                            </div>
+                            <div class="flex flex-col items-end gap-2">
+                                <span class="font-mono text-xs text-brand-teal border border-brand-teal/20 rounded-[8px] px-2 py-1">Documentation</span>
+                                <span class="font-mono text-xs text-slate-500 bg-slate-200 dark:bg-white/10 px-2 py-1 rounded-[8px] border border-slate-300 dark:border-white/5">6J_CRYPTO_XP</span>
+                                <span class="font-mono text-xs text-slate-500 bg-slate-200 dark:bg-white/10 px-2 py-1 rounded-[8px] border border-slate-300 dark:border-white/5">4J_TAX_FIRMS</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex items-start justify-between gap-4">
+                                <div>
+                                    <h3 class="text-2xl font-semibold tracking-tight text-brand-navy dark:text-white mb-1">Johannes Anderl</h3>
+                                    <p class="text-base font-normal text-brand-teal mb-6">Co-Founder & Onboarding Spezialist</p>
+                                </div>
+                                <a href="https://www.linkedin.com/in/johannesanderl/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-10 h-10 rounded-full bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 text-slate-400 dark:text-slate-500 hover:text-white hover:bg-[#0077b5] hover:border-[#0077b5] transition-all duration-300 shrink-0" aria-label="Johannes Anderl auf LinkedIn">
+                                    <span class="sr-only">LinkedIn</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="18" height="18" viewBox="0 0 24 24">
+                                        <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2a2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6M2 9h4v12H2z"></path>
+                                            <circle cx="4" cy="4" r="2"></circle>
+                                        </g>
+                                    </svg>
+                                </a>
+                            </div>
+
+                            <p class="text-base md:text-lg text-slate-600 dark:text-slate-400 leading-relaxed border-t border-slate-200 dark:border-white/10 pt-6">
+                                Johannes bringt fast <span class="font-mono font-semibold text-brand-navy dark:text-white">6 Jahre</span> Krypto-Erfahrung mit – davon <span class="font-mono font-semibold text-brand-navy dark:text-white">4 Jahre</span> gemeinsam mit Robert in führenden Kanzleien. Er sorgt für lückenlose Onboardings und Datenaufbereitung.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy & Stats Section -->
+    <section class="relative py-24 bg-brand-navy overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10 mix-blend-overlay"></div>
+        <div class="absolute top-0 right-0 w-[400px] h-[400px] bg-brand-teal rounded-full blur-[100px] opacity-20"></div>
+        <div class="absolute bottom-0 left-0 w-[300px] h-[300px] bg-white rounded-full blur-[100px] opacity-10"></div>
+
+        <div class="container mx-auto px-6 max-w-6xl relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="fade-in-up">
+                    <!-- H2: Sektions-Titel, font-bold (700), tracking-tight -->
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white mb-6 leading-tight">
+                        Dokumentation ist der <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-teal to-blue-300">Schlüssel</span>
+                    </h2>
+                    <p class="text-lg text-slate-300 leading-relaxed mb-8">
+                        Unsere gemeinsame Erfahrung aus Hunderten Fällen hat uns eines gezeigt: Am Ende zählt nicht das Tool allein, sondern die Qualität der Daten darin. Eine saubere Krypto-Dokumentation ist das Fundament.
+                    </p>
+                    <div class="flex items-center gap-2 text-brand-teal font-medium">
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="20" height="20" viewBox="0 0 24 24">
+                            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="m9 12l2 2l4-4"></path>
+                            </g>
+                        </svg>
+                        <span>Erfahrung aus führenden Kanzleien</span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-6 fade-in-up" style="animation-delay: 0.2s">
+                    <!-- Primary Stat: Dominant Visual Hierarchy -->
+                    <div class="relative bg-gradient-to-br from-brand-teal/20 to-brand-teal/5 backdrop-blur-md rounded-card p-8 border border-brand-teal/30 shadow-lg shadow-brand-teal/10 hover:scale-[1.02] transition-all duration-300">
+                        <div class="font-mono text-6xl font-extrabold text-white mb-2 tracking-tighter drop-shadow-sm">500+</div>
+                        <div class="text-base font-bold text-brand-teal uppercase tracking-widest">Bearbeitete Fälle</div>
+                    </div>
+                    
+                    <!-- Secondary Stat: Receded Visual Hierarchy -->
+                    <div class="flex flex-col justify-center bg-white/5 backdrop-blur-md rounded-card p-8 border border-white/5 hover:bg-white/10 hover:border-white/10 transition-colors group">
+                        <div class="font-mono text-4xl font-semibold text-slate-400 group-hover:text-slate-300 transition-colors mb-2 tracking-tighter">15J.</div>
+                        <div class="text-xs font-medium text-slate-500 group-hover:text-slate-400 transition-colors uppercase tracking-widest">Kombinierte Erfahrung</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-24 bg-slate-50 dark:bg-dark-bg">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-brand-navy dark:text-white mb-4">Was wir für dich lösen</h2>
+                <p class="dark:text-slate-400 text-slate-500">Eingriff auf Datenebene. Nicht nur im Tool.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Service 1 -->
+                <div class="card-spotlight bg-white dark:bg-dark-surface p-8 border border-slate-200 dark:border-white/5 hover:shadow-xl hover:shadow-brand-navy/5 transition-all duration-300 group fade-in-up" onmousemove="handleMouseMove(event)">
+                    <div class="card-border-glow"></div>
+                    <div class="w-12 h-12 rounded-button bg-slate-100 dark:bg-white/5 text-brand-navy dark:text-white flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-brand-teal/10 group-hover:text-brand-teal transition-all">
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m21.73 18l-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3M12 9v4m0 4h.01"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold tracking-tight text-brand-navy dark:text-white mb-3">Fehler in Steuertools</h3>
+                    <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Lösung von Fehlermeldungen, negativen Balances und Missing History Fehlern in Blockpit, CoinTracking & Co.</p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="card-spotlight bg-white dark:bg-dark-surface p-8 border border-slate-200 dark:border-white/5 hover:shadow-xl hover:shadow-brand-navy/5 transition-all duration-300 group fade-in-up" onmousemove="handleMouseMove(event)" style="animation-delay: 0.1s;">
+                    <div class="card-border-glow"></div>
+                    <div class="w-12 h-12 rounded-button bg-slate-100 dark:bg-white/5 text-brand-navy dark:text-white flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-brand-teal/10 group-hover:text-brand-teal transition-all">
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="24" height="24" viewBox="0 0 24 24">
+                            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                <path d="m21 21l-4.34-4.34"></path>
+                                <circle cx="11" cy="11" r="8"></circle>
+                            </g>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold tracking-tight text-brand-navy dark:text-white mb-3">On-Chain Recherche</h3>
+                    <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Detaillierte Analyse von Block-Explorern (Etherscan, Solscan etc.) zur Schließung von Datenlücken.</p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="card-spotlight bg-white dark:bg-dark-surface p-8 border border-slate-200 dark:border-white/5 hover:shadow-xl hover:shadow-brand-navy/5 transition-all duration-300 group fade-in-up" onmousemove="handleMouseMove(event)" style="animation-delay: 0.2s;">
+                    <div class="card-border-glow"></div>
+                    <div class="w-12 h-12 rounded-button bg-slate-100 dark:bg-white/5 text-brand-navy dark:text-white flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-brand-teal/10 group-hover:text-brand-teal transition-all">
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="24" height="24" viewBox="0 0 24 24">
+                            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                <path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path>
+                                <path d="M14 2v5a1 1 0 0 0 1 1h5M9 15l2 2l4-4"></path>
+                            </g>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold tracking-tight text-brand-navy dark:text-white mb-3">Senior Categorization</h3>
+                    <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Fachliche Einordnung und Klassifizierung von DeFi, Staking, Liquidity Mining und NFTs im Steuertool.</p>
+                </div>
+            </div>
+
+            <div class="mt-16 pt-10 border-t border-slate-200 dark:border-white/10 text-center fade-in-up">
+                <p class="text-sm font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-6">Wir optimieren Daten für</p>
+                <div class="flex flex-wrap justify-center gap-8 md:gap-12 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+                    <span class="text-xl font-bold text-slate-400 dark:text-slate-500 hover:text-brand-navy dark:hover:text-white transition-colors">Blockpit</span>
+                    <span class="text-xl font-bold text-slate-400 dark:text-slate-500 hover:text-brand-navy dark:hover:text-white transition-colors">CoinTracking</span>
+                    <span class="text-xl font-bold text-slate-400 dark:text-slate-500 hover:text-brand-navy dark:hover:text-white transition-colors">Koinly</span>
+                    <span class="text-xl font-bold text-slate-400 dark:text-slate-500 hover:text-brand-navy dark:hover:text-white transition-colors">Awaken</span>
+                    <span class="text-xl font-bold text-slate-400 dark:text-slate-500 hover:text-brand-navy dark:hover:text-white transition-colors">CoinTracker</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-20 px-4 bg-white dark:bg-dark-bg">
+        <div class="container mx-auto max-w-6xl">
+            <div class="relative rounded-card overflow-hidden text-center py-24 px-6 md:px-20 bg-brand-navy shadow-2xl shadow-brand-navy/30">
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-teal opacity-20 blur-[120px] rounded-full pointer-events-none"></div>
+                <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay"></div>
+                
+                <div class="relative z-10 fade-in-up">
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-6 leading-tight text-white">
+                        Bereit für <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-teal to-white">belastbare Daten?</span>
+                    </h2>
+                    <p class="text-lg md:text-xl font-medium text-slate-200 max-w-xl mx-auto mb-12">
+                        Sicher dir einen Slot für ein Erstgespräch und sei einen Schritt näher an einer vollständigen Krypto-Dokumentation.
+                    </p>
+                    <a href="https://app.cal.eu/johannesanderl-tx-partner/30min" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center text-brand-navy btn-primary hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(255,255,255,0.3)] text-lg font-bold bg-white px-10 py-5">
+                        Dokumentation prüfen
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="pt-24 pb-12 bg-white dark:bg-dark-bg border-t border-slate-200 dark:border-white/5">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 lg:gap-16 mb-20">
+                <!-- Column 1: Brand -->
+                <div class="space-y-6">
+                    <!-- Logo (Logo-Lock: Nicht verändern) -->
+                    <a href="index.html" class="flex items-center gap-3">
+                        <div class="flex items-end gap-1 h-6">
+                            <div class="w-1.5 h-6 rounded-full bg-brand-navy dark:bg-slate-200"></div>
+                            <div class="w-1.5 h-6 rounded-full bg-brand-navy dark:bg-slate-200"></div>
+                            <div class="w-1.5 h-6 rounded-full bg-brand-navy dark:bg-slate-200"></div>
+                            <div class="w-1.5 h-6 rounded-full bg-brand-teal"></div>
+                        </div>
+                        <span class="text-lg font-bold tracking-wider text-brand-navy dark:text-white">TX-Partner</span>
+                    </a>
+                    <p class="dark:text-slate-400 leading-relaxed text-sm text-slate-500">Pre-Tax Infrastruktur für Krypto. Professionelle Dokumentation für Steuertools, Steuerberater und Finanzverwaltung.</p>
+                    <div class="flex gap-4">
+                        <a href="https://x.com/TX_Partner" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-brand-navy dark:hover:text-white transition-colors" aria-label="TX-Partner auf X (Twitter)">
+                            <span class="sr-only">X (Twitter)</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="20" height="20" viewBox="0 0 24 24">
+                                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6c2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4c-.9-4.2 4-6.6 7-3.8c1.1 0 3-1.2 3-1.2"></path>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/company/tx-partner/" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-brand-navy dark:hover:text-white transition-colors" aria-label="TX-Partner auf LinkedIn">
+                            <span class="sr-only">LinkedIn</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="20" height="20" viewBox="0 0 24 24">
+                                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2a2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6M2 9h4v12H2z"></path>
+                                    <circle cx="4" cy="4" r="2"></circle>
+                                </g>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Leistungen -->
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-widest text-brand-navy dark:text-white mb-6">Leistungen</h4>
+                    <ul class="space-y-4">
+                        <li><a href="leistungen.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">Leistungen</a></li>
+                        <li><a href="blockpit-hinweise.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">Blockpit Hinweise</a></li>
+                        <li><a href="cointracking-fehler.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">CoinTracking Fehler</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Unternehmen -->
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-widest text-brand-navy dark:text-white mb-6">Unternehmen</h4>
+                    <ul class="space-y-4">
+                        <li><a href="ueber-uns.html" class="text-brand-teal text-sm font-medium">Über uns</a></li>
+                        <li><a href="dokumentationsstandard.html" class="dark:text-slate-400 hover:text-brand-teal transition-colors text-sm font-medium text-slate-500">Dokumentationsstandard</a></li>
+                        <li><a href="faq.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">FAQ</a></li>
+                        <li><a href="kontakt.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">Kontakt</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Rechtliches -->
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-widest text-brand-navy dark:text-white mb-6">Rechtliches</h4>
+                    <ul class="space-y-4">
+                        <li><a href="agb.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">AGB</a></li>
+                        <li><a href="datenschutz.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">Datenschutz</a></li>
+                        <li><a href="impressum.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">Impressum</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-200 dark:border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="dark:text-slate-500 text-xs font-medium text-slate-400">© 2026 TX-Partner – eine Marke bzw. Geschäftsbezeichnung der Solvum GmbH. Alle Rechte vorbehalten.</p>
+                <div class="flex gap-8">
+                    <a href="sitemap.html" class="text-xs font-medium text-slate-400 dark:text-slate-500 hover:text-brand-navy dark:hover:text-white transition-colors">Sitemap</a>
+                    <a href="cookies.html" class="text-xs font-medium text-slate-400 dark:text-slate-500 hover:text-brand-navy dark:hover:text-white transition-colors">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Dark Mode Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+        
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            html.classList.add('dark');
+        } else {
+            html.classList.remove('dark');
+        }
+        
+        themeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            localStorage.theme = html.classList.contains('dark') ? 'dark' : 'light';
+        });
+
+        // Mobile Menu Toggle with ARIA
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuToggle.addEventListener('click', () => {
+            const isOpen = mobileMenu.classList.contains('open');
+            mobileMenu.classList.toggle('open');
+            
+            // Update ARIA
+            mobileMenuToggle.setAttribute('aria-expanded', !isOpen);
+            mobileMenuToggle.setAttribute('aria-label', !isOpen ? 'Menü schließen' : 'Menü öffnen');
+        });
+
+        // Card Spotlight Effect
+        function handleMouseMove(e) {
+            const card = e.currentTarget;
+            const rect = card.getBoundingClientRect();
+            card.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
+            card.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
+        }
+
+        // Intersection Observer for Animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        
+        document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+    </script>
+
+</body>
+</html>
