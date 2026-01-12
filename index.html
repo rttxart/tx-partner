@@ -85,15 +85,13 @@
     <!-- 
         DSGVO-HANDLUNGSBEDARF: 
         Die folgenden externen Skripte laden Ressourcen von Drittanbietern:
-        2. Unicorn Studio (cdn.jsdelivr.net) - Lädt Animationen von externem CDN
-        3. Tailwind CDN (cdn.tailwindcss.com) - Lädt CSS Framework
+        1. Unicorn Studio (cdn.jsdelivr.net) - Lädt Animationen von externem CDN
         
         EMPFEHLUNG: Vor Produktiveinsatz:
         - Consent-Banner implementieren ODER
         - Ressourcen lokal hosten
 --->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
+    <script src="assets/tailwind-playcdn.js"></script>    
     <script>
         tailwind.config = {
             darkMode: 'class',
