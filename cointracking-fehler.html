@@ -229,7 +229,7 @@
     <div class="bg-noise"></div>
 
     <!-- Navigation -->
-    <nav class="fixed top-6 left-1/2 -translate-x-1/2 w-[95%] max-w-6xl z-50">
+    <nav class="fixed top-0 left-1/2 -translate-x-1/2 w-[95%] max-w-6xl z-50 pt-6">
         <div class="glass rounded-card px-6 py-3 shadow-lg shadow-black/5 flex items-center justify-between">
             
             <!-- Logo (Logo-Lock) -->
@@ -243,54 +243,59 @@
                 <span class="text-brand-navy dark:text-white text-lg font-bold tracking-wider font-sans">TX-Partner</span>
             </a>
 
-            <!-- Desktop Navigation -->
+                        <!-- Desktop Navigation -->
             <ul class="hidden lg:flex items-center gap-1">
+                <!-- Dropdown: Leistungen -->
                 <li class="relative group">
-                    <button class="flex items-center gap-1 px-4 py-2 text-sm font-medium text-brand-navy dark:text-white transition-colors focus:outline-none">
+                    <button class="flex items-center gap-1 px-4 py-2 text-sm font-medium text-slate-500 hover:text-brand-navy dark:text-slate-400 dark:hover:text-white transition-colors">
                         Leistungen
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="group-hover:rotate-180 transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:rotate-180 transition-transform duration-300">
                             <path d="m6 9 6 6 6-6"></path>
                         </svg>
                     </button>
-                    <div class="nav-dropdown absolute top-full left-0 mt-2 w-56 rounded-button bg-white dark:bg-dark-surface border border-slate-200 dark:border-white/10 shadow-xl shadow-slate-200/50 dark:shadow-black/50 p-2 overflow-hidden">
-                        <a href="leistungen.html" class="block px-4 py-3 rounded-[12px] hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                    <div class="nav-dropdown absolute top-full left-0 mt-2 w-56 rounded-button bg-white dark:bg-[#0F0F0F] border border-slate-100 dark:border-white/10 shadow-xl p-2">
+                        <a href="leistungen.html" class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
                             <div class="text-sm font-semibold text-brand-navy dark:text-white mb-0.5">Leistungen</div>
-                            <div class="text-xs text-slate-500 dark:text-slate-400">Übersicht aller Services</div>
+                            <div class="text-xs text-slate-500 dark:text-slate-500 font-mono">Übersicht aller Services</div>
                         </a>
-                        <a href="blockpit-hinweise.html" class="block px-4 py-3 rounded-[12px] hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                        <a href="blockpit-hinweise.html" class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
                             <div class="text-sm font-semibold text-brand-navy dark:text-white mb-0.5">Blockpit Hinweise</div>
-                            <div class="text-xs text-slate-500 dark:text-slate-400">Korrektur & Optimierung</div>
+                            <div class="text-xs text-slate-500 dark:text-slate-500 font-mono">Korrektur & Optimierung</div>
                         </a>
-                        <a href="cointracking-fehler.html" class="block px-4 py-3 rounded-[12px] bg-slate-50 dark:bg-white/5">
+                        <a href="cointracking-fehler.html" class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
                             <div class="text-sm font-semibold text-brand-navy dark:text-white mb-0.5">CoinTracking Fehler</div>
-                            <div class="text-xs text-slate-500 dark:text-slate-400">Datenbereinigung</div>
+                            <div class="text-xs text-slate-500 dark:text-slate-500 font-mono">Datenbereinigung</div>
                         </a>
                     </div>
                 </li>
+                
+                <!-- Dropdown: Über uns -->
                 <li class="relative group">
-                    <button class="flex items-center gap-1 px-4 py-2 text-sm font-medium text-slate-500 hover:text-brand-navy dark:text-slate-400 dark:hover:text-white transition-colors focus:outline-none">
+                    <button class="flex items-center gap-1 px-4 py-2 text-sm font-medium text-slate-500 hover:text-brand-navy dark:text-slate-400 dark:hover:text-white transition-colors">
                         Über uns
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="group-hover:rotate-180 transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:rotate-180 transition-transform duration-300">
                             <path d="m6 9 6 6 6-6"></path>
                         </svg>
                     </button>
-                    <div class="nav-dropdown absolute top-full left-0 mt-2 w-56 rounded-button bg-white dark:bg-dark-surface border border-slate-200 dark:border-white/10 shadow-xl shadow-slate-200/50 dark:shadow-black/50 p-2 overflow-hidden">
-                        <a href="ueber-uns.html" class="block px-4 py-3 rounded-[12px] hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                    <div class="nav-dropdown absolute top-full left-0 mt-2 w-56 rounded-button bg-white dark:bg-[#0F0F0F] border border-slate-100 dark:border-white/10 shadow-xl p-2">
+                        <a href="ueber-uns.html" class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
                             <div class="text-sm font-semibold text-brand-navy dark:text-white mb-0.5">Über uns</div>
-                            <div class="text-xs text-slate-500 dark:text-slate-400">Wer wir sind</div>
+                            <div class="text-xs text-slate-500 dark:text-slate-500 font-mono">Wer wir sind</div>
                         </a>
-                        <a href="dokumentationsstandard.html" class="block px-4 py-3 rounded-[12px] hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                        <a href="dokumentationsstandard.html" class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
                             <div class="text-sm font-semibold text-brand-navy dark:text-white mb-0.5">Dokumentationsstandard</div>
-                            <div class="text-xs text-slate-500 dark:text-slate-400">Unsere Qualitätsrichtlinien</div>
+                            <div class="text-xs text-slate-500 dark:text-slate-500 font-mono">Unsere Qualitätsrichtlinien</div>
                         </a>
                     </div>
                 </li>
+                
                 <li>
                     <a href="faq.html" class="block px-4 py-2 text-sm font-medium text-slate-500 hover:text-brand-navy dark:text-slate-400 dark:hover:text-white transition-colors">FAQ</a>
                 </li>
                 <li>
                     <a href="kontakt.html" class="block px-4 py-2 text-sm font-medium text-slate-500 hover:text-brand-navy dark:text-slate-400 dark:hover:text-white transition-colors">Kontakt</a>
                 </li>
+            </ul>
             </ul>
 
             <!-- Right Side -->
@@ -309,9 +314,8 @@
                     </span>
                 </button>
                 
-                <a href="https://app.cal.eu/johannesanderl-tx-partner/30min" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex btn-primary items-center justify-center text-sm font-semibold rounded-button px-5 py-2 bg-brand-navy text-white overflow-hidden relative group">
-                    <span class="absolute w-full h-full bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:animate-shimmer"></span>
-                    <span class="relative z-10">Dokumentation prüfen</span>
+                                <a href="https://app.cal.eu/johannesanderl-tx-partner/30min?overlayCalendar=true" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center justify-center px-5 py-2 text-sm font-semibold text-white bg-brand-navy hover:bg-brand-navy/90 transition-all duration-300 rounded-button">
+                    Dokumentation prüfen
                 </a>
                 
                 <button id="mobile-menu-toggle" class="lg:hidden text-slate-600 dark:text-slate-300 p-2" aria-label="Menü öffnen" aria-expanded="false">
@@ -324,14 +328,43 @@
             </div>
         </div>
 
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="mobile-menu lg:hidden mt-2 bg-white dark:bg-dark-surface rounded-card border border-slate-200 dark:border-white/10 shadow-xl p-4">
-            <a href="leistungen.html" class="block px-4 py-3 text-sm font-semibold text-brand-navy dark:text-white rounded-[12px] hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">Leistungen</a>
-            <a href="blockpit-hinweise.html" class="block px-4 py-3 text-sm font-semibold text-brand-navy dark:text-white rounded-[12px] hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">Blockpit Hinweise</a>
-            <a href="cointracking-fehler.html" class="block px-4 py-3 text-sm font-semibold text-brand-teal rounded-[12px] bg-slate-50 dark:bg-white/5">CoinTracking Fehler</a>
-            <a href="ueber-uns.html" class="block px-4 py-3 text-sm font-semibold text-brand-navy dark:text-white rounded-[12px] hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">Über uns</a>
-            <a href="faq.html" class="block px-4 py-3 text-sm font-semibold text-brand-navy dark:text-white rounded-[12px] hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">FAQ</a>
-            <a href="kontakt.html" class="block px-4 py-3 text-sm font-semibold text-brand-navy dark:text-white rounded-[12px] hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">Kontakt</a>
+                    <!-- Mobile Menu -->
+            <div id="mobile-menu" class="mobile-menu hidden absolute top-full left-0 w-full mt-2 bg-white dark:bg-[#0F0F0F] rounded-card border border-slate-100 dark:border-white/10 shadow-xl p-2 z-50 max-h-[85vh] overflow-y-auto flex-col">
+                <div class="px-4 pt-3 pb-1 text-[11px] font-bold text-slate-400 uppercase tracking-widest">Leistungen</div>
+                <a href="leistungen.html" class="block px-4 py-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                    <div class="text-sm font-semibold text-slate-700 dark:text-white">Leistungen</div>
+                    <div class="text-xs text-slate-500 dark:text-slate-500 font-mono">Übersicht aller Services</div>
+                </a>
+                <a href="blockpit-hinweise.html" class="block px-4 py-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                    <div class="text-sm font-semibold text-slate-700 dark:text-white">Blockpit Hinweise</div>
+                    <div class="text-xs text-slate-500 dark:text-slate-500 font-mono">Korrektur & Optimierung</div>
+                </a>
+                <a href="cointracking-fehler.html" class="block px-4 py-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                    <div class="text-sm font-semibold text-slate-700 dark:text-white">CoinTracking Fehler</div>
+                    <div class="text-xs text-slate-500 dark:text-slate-500 font-mono">Datenbereinigung</div>
+                </a>
+
+                <div class="h-px bg-slate-100 dark:bg-white/5 my-1 mx-4"></div>
+
+                <div class="px-4 pt-3 pb-1 text-[11px] font-bold text-slate-400 uppercase tracking-widest">Über uns</div>
+                <a href="ueber-uns.html" class="block px-4 py-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                    <div class="text-sm font-semibold text-slate-700 dark:text-white">Über uns</div>
+                    <div class="text-xs text-slate-500 dark:text-slate-500 font-mono">Wer wir sind</div>
+                </a>
+                <a href="dokumentationsstandard.html" class="block px-4 py-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                    <div class="text-sm font-semibold text-slate-700 dark:text-white">Dokumentationsstandard</div>
+                    <div class="text-xs text-slate-500 dark:text-slate-500 font-mono">Unsere Qualitätsrichtlinien</div>
+                </a>
+
+                <div class="h-px bg-slate-100 dark:bg-white/5 my-1 mx-4"></div>
+
+                <a href="faq.html" class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 font-semibold text-sm text-slate-600 dark:text-slate-300 transition-colors">FAQ</a>
+                <a href="kontakt.html" class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 font-semibold text-sm text-slate-600 dark:text-slate-300 transition-colors">Kontakt</a>
+
+                <div class="h-px bg-slate-100 dark:bg-white/5 my-1 mx-2"></div>
+
+                <a href="https://app.cal.eu/johannesanderl-tx-partner/30min?overlayCalendar=true" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center px-4 py-3 rounded-button bg-brand-navy text-white text-sm font-semibold hover:bg-brand-navy/90 transition-colors mt-1">Dokumentation prüfen</a>
+            </div>
         </div>
     </nav>
 
