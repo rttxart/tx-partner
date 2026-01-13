@@ -293,7 +293,25 @@
             100% { width: 100%; }
         }
         
-        .animate-scroll { animation: scroll 60s linear infinite; }
+        /* Desktop Default */
+.animate-scroll {
+    animation: scroll 60s linear infinite;
+    will-change: transform;
+}
+
+/* Mobile Speed-Up */
+@media (max-width: 768px) {
+    .animate-scroll {
+        animation-duration: 25s;
+    }
+}
+
+/* Hover-Pause nur auf Desktop */
+@media (hover: hover) {
+    .animate-scroll:hover {
+        animation-play-state: paused;
+    }
+}
         .animate-float { animation: float 6s ease-in-out infinite; }
     </style>
 </head>
@@ -585,87 +603,111 @@
         <!-- Trust Marquee -->
         <div class="border-y border-slate-200 dark:border-white/5 bg-white/90 dark:bg-dark-bg/90 backdrop-blur-xl w-full pt-6 pb-6 fixed bottom-0 left-0 z-20" style="mask-image: linear-gradient(90deg, transparent, black 15%, black 85%, transparent); -webkit-mask-image: linear-gradient(90deg, transparent, black 15%, black 85%, transparent);">
             <div class="flex w-full overflow-hidden">
-                <div class="flex min-w-full gap-8 animate-scroll hover:[animation-play-state:paused] items-center px-4">
-                    
-                    <!-- Review Items -->
-                    <div class="flex shrink-0 items-center gap-4 px-6 py-3 rounded-full border border-slate-200/60 dark:border-white/10 bg-white/40 dark:bg-white/5 shadow-sm hover:border-brand-teal/30 transition-all cursor-default">
-                        <div class="flex gap-0.5 text-amber-400">
-                            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
-                            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
-                            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
-                            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
-                            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
-                        </div>
-                        <p class="text-sm font-medium text-slate-700 dark:text-slate-200">"Perfekt. Sehr nett, sehr kompetent, sehr schnell."</p>
-                        <div class="w-px h-3 bg-slate-300 dark:bg-white/20"></div>
-                        <span class="text-xs font-bold text-slate-900 dark:text-white">Michael K.</span>
-                    </div>
-                    
-                    <div class="flex shrink-0 items-center gap-4 px-6 py-3 rounded-full border border-slate-200/60 dark:border-white/10 bg-white/40 dark:bg-white/5 shadow-sm hover:border-brand-teal/30 transition-all cursor-default">
-                        <div class="flex items-center justify-center w-5 h-5 rounded-full bg-brand-teal/10 text-brand-teal">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                        </div>
-                        <p class="text-sm font-medium text-slate-700 dark:text-slate-200">"Portfolio in einer Sitzung fehlerfrei gemacht"</p>
-                        <div class="w-px h-3 bg-slate-300 dark:bg-white/20"></div>
-                        <span class="text-xs font-bold text-slate-900 dark:text-white">Julia V.</span>
-                    </div>
-                    
-                    <div class="flex shrink-0 items-center gap-4 px-6 py-3 rounded-full border border-slate-200/60 dark:border-white/10 bg-white/40 dark:bg-white/5 shadow-sm hover:border-brand-teal/30 transition-all cursor-default">
-                        <div class="flex gap-0.5 text-amber-400">
-                            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
-                            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
-                            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
-                            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
-                            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
-                        </div>
-                        <p class="text-sm font-medium text-slate-700 dark:text-slate-200">"Nur zu empfehlen bei Fragen und Hilfebedarf"</p>
-                        <div class="w-px h-3 bg-slate-300 dark:bg-white/20"></div>
-                        <span class="text-xs font-bold text-slate-900 dark:text-white">Lorenz R.</span>
-                    </div>
-                    
-                    <div class="flex shrink-0 items-center gap-4 px-6 py-3 rounded-full border border-slate-200/60 dark:border-white/10 bg-white/40 dark:bg-white/5 shadow-sm hover:border-brand-teal/30 transition-all cursor-default">
-                        <div class="flex items-center justify-center w-5 h-5 rounded-full bg-brand-teal/10 text-brand-teal">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                        </div>
-                        <p class="text-sm font-medium text-slate-700 dark:text-slate-200">"Komplexe Sachverhalte verständlich erklärt"</p>
-                        <div class="w-px h-3 bg-slate-300 dark:bg-white/20"></div>
-                        <span class="text-xs font-bold text-slate-900 dark:text-white">Mirza Z.</span>
-                    </div>
-                    
-                    <!-- Duplicate for infinite scroll -->
-                    <div class="flex shrink-0 items-center gap-4 px-6 py-3 rounded-full border border-slate-200/60 dark:border-white/10 bg-white/40 dark:bg-white/5 shadow-sm hover:border-brand-teal/30 transition-all cursor-default">
-                        <div class="flex gap-0.5 text-amber-400">
-                            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
-                            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
-                            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
-                            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
-                            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
-                        </div>
-                        <p class="text-sm font-medium text-slate-700 dark:text-slate-200">"Alle Transaktionen fehlerfrei dokumentiert"</p>
-                        <div class="w-px h-3 bg-slate-300 dark:bg-white/20"></div>
-                        <span class="text-xs font-bold text-slate-900 dark:text-white">Andreas D.</span>
-                    </div>
-                    
-                    <div class="flex shrink-0 items-center gap-4 px-6 py-3 rounded-full border border-slate-200/60 dark:border-white/10 bg-white/40 dark:bg-white/5 shadow-sm hover:border-brand-teal/30 transition-all cursor-default">
-                        <div class="flex items-center justify-center w-5 h-5 rounded-full bg-brand-teal/10 text-brand-teal">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                        </div>
-                        <p class="text-sm font-medium text-slate-700 dark:text-slate-200">"Super Beratung in Blockpit"</p>
-                        <div class="w-px h-3 bg-slate-300 dark:bg-white/20"></div>
-                        <span class="text-xs font-bold text-slate-900 dark:text-white">Eduard A.</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<div class="flex w-full overflow-hidden">
+    <div class="flex gap-8 animate-scroll items-center px-4">
 
-    
+        <!-- LOOP BLOCK 1 -->
+        <div class="flex gap-8 items-center shrink-0">
+
+            <div class="flex items-center gap-4 px-6 py-3 rounded-full border border-slate-200/60 dark:border-white/10 bg-white/40 dark:bg-white/5 shadow-sm">
+                <div class="flex gap-0.5 text-amber-400">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                </div>
+                <p class="text-sm font-medium">"Perfekt. Sehr nett, sehr kompetent, sehr schnell."</p>
+                <div class="w-px h-3 bg-slate-300 dark:bg-white/20"></div>
+                <span class="text-xs font-bold">Michael K.</span>
+            </div>
+
+            <div class="flex items-center gap-4 px-6 py-3 rounded-full border border-slate-200/60 dark:border-white/10 bg-white/40 dark:bg-white/5 shadow-sm">
+                <p class="text-sm font-medium">"Portfolio in einer Sitzung fehlerfrei gemacht"</p>
+                <div class="w-px h-3 bg-slate-300 dark:bg-white/20"></div>
+                <span class="text-xs font-bold">Julia V.</span>
+            </div>
+
+            <div class="flex items-center gap-4 px-6 py-3 rounded-full border border-slate-200/60 dark:border-white/10 bg-white/40 dark:bg-white/5 shadow-sm">
+                <p class="text-sm font-medium">"Nur zu empfehlen bei Fragen und Hilfebedarf"</p>
+                <div class="w-px h-3 bg-slate-300 dark:bg-white/20"></div>
+                <span class="text-xs font-bold">Lorenz R.</span>
+            </div>
+
+            <div class="flex items-center gap-4 px-6 py-3 rounded-full border border-slate-200/60 dark:border-white/10 bg-white/40 dark:bg-white/5 shadow-sm">
+                <p class="text-sm font-medium">"Komplexe Sachverhalte verständlich erklärt"</p>
+                <div class="w-px h-3 bg-slate-300 dark:bg-white/20"></div>
+                <span class="text-xs font-bold">Mirza Z.</span>
+            </div>
+
+            <div class="flex items-center gap-4 px-6 py-3 rounded-full border border-slate-200/60 dark:border-white/10 bg-white/40 dark:bg-white/5 shadow-sm">
+                <p class="text-sm font-medium">"Alle Transaktionen fehlerfrei dokumentiert"</p>
+                <div class="w-px h-3 bg-slate-300 dark:bg-white/20"></div>
+                <span class="text-xs font-bold">Andreas D.</span>
+            </div>
+
+            <div class="flex items-center gap-4 px-6 py-3 rounded-full border border-slate-200/60 dark:border-white/10 bg-white/40 dark:bg-white/5 shadow-sm">
+                <p class="text-sm font-medium">"Super Beratung in Blockpit"</p>
+                <div class="w-px h-3 bg-slate-300 dark:bg-white/20"></div>
+                <span class="text-xs font-bold">Eduard A.</span>
+            </div>
+
+        </div>
+
+        <!-- LOOP BLOCK 2 (exakte Kopie) -->
+        <div class="flex gap-8 items-center shrink-0">
+            <!-- 1:1 identische Kopie von Block 1 -->
+            <!-- (bewusst identisch lassen) -->
+             <div class="flex gap-8 items-center shrink-0">
+
+            <div class="flex items-center gap-4 px-6 py-3 rounded-full border border-slate-200/60 dark:border-white/10 bg-white/40 dark:bg-white/5 shadow-sm">
+                <div class="flex gap-0.5 text-amber-400">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                </div>
+                <p class="text-sm font-medium">"Perfekt. Sehr nett, sehr kompetent, sehr schnell."</p>
+                <div class="w-px h-3 bg-slate-300 dark:bg-white/20"></div>
+                <span class="text-xs font-bold">Michael K.</span>
+            </div>
+
+            <div class="flex items-center gap-4 px-6 py-3 rounded-full border border-slate-200/60 dark:border-white/10 bg-white/40 dark:bg-white/5 shadow-sm">
+                <p class="text-sm font-medium">"Portfolio in einer Sitzung fehlerfrei gemacht"</p>
+                <div class="w-px h-3 bg-slate-300 dark:bg-white/20"></div>
+                <span class="text-xs font-bold">Julia V.</span>
+            </div>
+
+            <div class="flex items-center gap-4 px-6 py-3 rounded-full border border-slate-200/60 dark:border-white/10 bg-white/40 dark:bg-white/5 shadow-sm">
+                <p class="text-sm font-medium">"Nur zu empfehlen bei Fragen und Hilfebedarf"</p>
+                <div class="w-px h-3 bg-slate-300 dark:bg-white/20"></div>
+                <span class="text-xs font-bold">Lorenz R.</span>
+            </div>
+
+            <div class="flex items-center gap-4 px-6 py-3 rounded-full border border-slate-200/60 dark:border-white/10 bg-white/40 dark:bg-white/5 shadow-sm">
+                <p class="text-sm font-medium">"Komplexe Sachverhalte verständlich erklärt"</p>
+                <div class="w-px h-3 bg-slate-300 dark:bg-white/20"></div>
+                <span class="text-xs font-bold">Mirza Z.</span>
+            </div>
+
+            <div class="flex items-center gap-4 px-6 py-3 rounded-full border border-slate-200/60 dark:border-white/10 bg-white/40 dark:bg-white/5 shadow-sm">
+                <p class="text-sm font-medium">"Alle Transaktionen fehlerfrei dokumentiert"</p>
+                <div class="w-px h-3 bg-slate-300 dark:bg-white/20"></div>
+                <span class="text-xs font-bold">Andreas D.</span>
+            </div>
+
+            <div class="flex items-center gap-4 px-6 py-3 rounded-full border border-slate-200/60 dark:border-white/10 bg-white/40 dark:bg-white/5 shadow-sm">
+                <p class="text-sm font-medium">"Super Beratung in Blockpit"</p>
+                <div class="w-px h-3 bg-slate-300 dark:bg-white/20"></div>
+                <span class="text-xs font-bold">Eduard A.</span>
+            </div>
+
+        </div>
+        </div>
+    </div>
+</div>
+    </section>
     <!-- Solutions Section -->
     <section class="bg-white dark:bg-dark-bg py-32 relative" id="leistungen">
         <div class="container mx-auto px-6 max-w-7xl">
@@ -1155,22 +1197,19 @@
             localStorage.theme = html.classList.contains('dark') ? 'dark' : 'light';
         });
         
-        // Mobile Menu with smooth transition + ARIA
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            const isExpanded = mobileMenu.classList.contains('active');
-            mobileMenu.classList.toggle('hidden');
-            // Trigger reflow for animation
-            void mobileMenu.offsetWidth;
-            mobileMenu.classList.toggle('active');
-            
-            // Update ARIA
-            mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
-            mobileMenuBtn.setAttribute('aria-label', !isExpanded ? 'Menü schließen' : 'Menü öffnen');
-        });
-        
+  // Mobile Menu (clean, animation-safe, ARIA-correct)
+const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+
+mobileMenuBtn.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('active');
+
+    mobileMenuBtn.setAttribute('aria-expanded', isOpen);
+    mobileMenuBtn.setAttribute(
+        'aria-label',
+        isOpen ? 'Menü schließen' : 'Menü öffnen'
+    );
+});     
         // Hex Matrix Generation
         document.addEventListener('DOMContentLoaded', () => {
             const container = document.getElementById('reveal-container');
