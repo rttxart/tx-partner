@@ -44,8 +44,9 @@
 }
 </script>
 
-<script src="assets/tailwind-playcdn.js"></script><script>
-tailwind.config = {
+    <script src="assets/tailwind-playcdn.js"></script>
+    <script>
+    tailwind.config = {
     darkMode: 'class',
     theme: {
         extend: {
@@ -72,6 +73,15 @@ tailwind.config = {
             letterSpacing: {
                 tight: '-0.02em',
                 tighter: '-0.04em',
+            },
+            animation: {
+                'aurora-pulse': 'aurora-pulse 8s ease-in-out infinite',
+            },
+            keyframes: {
+                'aurora-pulse': {
+                    '0%, 100%': { opacity: '0.4', transform: 'scale(1)' },
+                    '50%': { opacity: '0.8', transform: 'scale(1.1)' },
+                }
             }
         }
     }
@@ -351,11 +361,10 @@ a:focus-visible, button:focus-visible {
                     <a href="kontakt.html" class="block px-4 py-2 text-sm font-medium text-slate-500 hover:text-brand-navy dark:text-slate-400 dark:hover:text-white transition-colors">Kontakt</a>
                 </li>
             </ul>
-            </ul>
             
             <!-- Right Side -->
             <div class="flex items-center gap-4">
-                <button id="theme-toggle" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-white/10 text-slate-500 dark:text-slate-400 transition-all duration-300" aria-label="Dark Mode umschalten" title="Dark Mode umschalten">
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-white/10 text-slate-600 dark:text-slate-400 transition-all duration-300" aria-label="Dark Mode umschalten" title="Dark Mode umschalten">
                     <span class="block dark:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                             <circle cx="12" cy="12" r="4"></circle>
@@ -424,8 +433,8 @@ a:focus-visible, button:focus-visible {
             <!-- Background Elements -->
             <div class="absolute inset-0 -z-10 pointer-events-none overflow-hidden">
                 <div class="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] dark:bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)]"></div>
-                <div class="absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-brand-teal/5 dark:bg-brand-teal/10 blur-[120px]"></div>
-                <div class="absolute bottom-0 right-1/4 translate-y-1/3 w-[600px] h-[600px] rounded-full bg-brand-navy/5 dark:bg-brand-navy/10 blur-[100px]"></div>
+                <div class="absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-brand-teal/5 dark:bg-brand-teal/10 blur-[120px] mix-blend-multiply dark:mix-blend-screen animate-aurora-pulse"></div>
+                <div class="absolute bottom-0 right-1/4 translate-y-1/3 w-[600px] h-[600px] rounded-full bg-brand-navy/5 dark:bg-brand-navy/10 blur-[100px] mix-blend-multiply dark:mix-blend-screen animate-aurora-pulse" style="animation-delay: 2s;"></div>
             </div>
             
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-start">
@@ -444,7 +453,7 @@ a:focus-visible, button:focus-visible {
                             <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-teal to-brand-navy dark:to-white">Kostenlose Erstprüfung</span> deiner Krypto-Dokumentation
                         </h1>
                         
-                        <p class="text-lg font-medium text-slate-500 dark:text-slate-400 leading-relaxed max-w-md">
+                        <p class="text-lg font-medium text-slate-600 dark:text-slate-400 leading-relaxed max-w-md">
                             Wir analysieren deine aktuelle Krypto-Dokumentation und geben dir eine klare, fachliche Einschätzung zum weiteren Vorgehen. Kostenlos und unverbindlich
                         </p>
                     </div>
@@ -495,7 +504,7 @@ a:focus-visible, button:focus-visible {
                     </div>
                     
                     <!-- Quote -->
-                    <blockquote class="border-l-2 border-brand-teal/30 pl-6 text-slate-500 dark:text-slate-400 italic">
+                    <blockquote class="border-l-2 border-brand-teal/30 pl-6 text-slate-600 dark:text-slate-400 italic">
                         "Pre-Tax Infrastructure: Wir schließen die Lücke zwischen Rohdaten und Steuerreport."
                     </blockquote>
                 </div>
@@ -550,7 +559,7 @@ a:focus-visible, button:focus-visible {
                                             <polyline points="20 6 9 17 4 12"></polyline>
                                         </svg>
                                     </span>
-                                    <span class="text-sm text-slate-500 dark:text-slate-400 group-hover:text-brand-navy dark:group-hover:text-white transition-colors leading-relaxed">
+                                    <span class="text-sm text-slate-600 dark:text-slate-400 group-hover:text-brand-navy dark:group-hover:text-white transition-colors leading-relaxed">
                                         Ich akzeptiere die <a href="datenschutz.html" class="text-brand-teal hover:underline">Datenschutzbestimmungen</a> für diese Anfrage.
                                     </span>
                                 </label>
@@ -600,7 +609,7 @@ a:focus-visible, button:focus-visible {
                         </svg>
                     </div>
                     <h3 class="font-semibold text-brand-navy dark:text-white mb-2 text-lg">Sichtung</h3>
-                    <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Wir prüfen Anfragen technisch innerhalb eines Werktages.</p>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Wir prüfen Anfragen technisch innerhalb eines Werktages.</p>
                 </div>
                 
                 <!-- Step 2 -->
@@ -614,7 +623,7 @@ a:focus-visible, button:focus-visible {
                         </svg>
                     </div>
                     <h3 class="font-semibold text-brand-navy dark:text-white mb-2 text-lg">Daten-Check</h3>
-                    <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Kostenlose Ersteinschätzung der Datensituation.</p>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Kostenlose Ersteinschätzung der Datensituation.</p>
                 </div>
                 
                 <!-- Step 3 -->
@@ -630,7 +639,7 @@ a:focus-visible, button:focus-visible {
                         </svg>
                     </div>
                     <h3 class="font-semibold text-brand-navy dark:text-white mb-2 text-lg">Angebot</h3>
-                    <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Transparente Preisstruktur angepasst an den spezifischen Fall.</p>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Transparente Preisstruktur angepasst an den spezifischen Fall.</p>
                 </div>
                 
                 <!-- Step 4 -->
@@ -642,7 +651,7 @@ a:focus-visible, button:focus-visible {
                         </svg>
                     </div>
                     <h3 class="font-semibold text-brand-navy dark:text-white mb-2 text-lg">Start</h3>
-                    <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Beginn der professionellen Krypto-Dokumentation.</p>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Beginn der professionellen Krypto-Dokumentation.</p>
                 </div>
             </div>
         </div>
@@ -663,12 +672,12 @@ a:focus-visible, button:focus-visible {
                     <div class="space-y-6">
                         <div class="p-6 rounded-card bg-white dark:bg-dark-surface border border-slate-100 dark:border-white/5 shadow-sm">
                             <h3 class="text-brand-navy dark:text-white text-lg font-semibold mb-3">Brauchen wir Zugriff auf Wallet-Keys?</h3>
-                            <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Nein. Wir arbeiten ausschließlich mit Lese-Exports (CSV/API) und können eine verschlüsselte Übertragung anbieten. Deine Sicherheit steht an erster Stelle. Wir benötigen niemals Private Keys, Seed Phrases oder Zugang zu deinen zentralen Börsen.</p>
+                            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Nein. Wir arbeiten ausschließlich mit Lese-Exports (CSV/API) und können eine verschlüsselte Übertragung anbieten. Deine Sicherheit steht an erster Stelle. Wir benötigen niemals Private Keys, Seed Phrases oder Zugang zu deinen zentralen Börsen.</p>
                         </div>
                         
                         <div class="p-6 rounded-card bg-white dark:bg-dark-surface border border-slate-100 dark:border-white/5 shadow-sm">
                             <h3 class="text-brand-navy dark:text-white text-lg font-semibold mb-3">Wann erhalte ich eine Rückmeldung?</h3>
-                            <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Du erhältst kurzfristig eine Rückmeldung von uns, in der Regel innerhalb eines Werktages.</p>
+                            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Du erhältst kurzfristig eine Rückmeldung von uns, in der Regel innerhalb eines Werktages.</p>
                         </div>
                     </div>
                 </div>
@@ -717,7 +726,7 @@ a:focus-visible, button:focus-visible {
                         </div>
                         <span class="text-brand-navy dark:text-white text-lg font-bold tracking-wider">TX-Partner</span>
                     </a>
-                    <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Pre-Tax Infrastruktur für Krypto. Professionelle Dokumentation für Steuertools, Steuerberater und Finanzverwaltung</p>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Pre-Tax Infrastruktur für Krypto. Professionelle Dokumentation für Steuertools, Steuerberater und Finanzverwaltung</p>
                     <div class="flex gap-4">
                         <a href="https://x.com/TX_Partner" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-brand-navy dark:hover:text-white transition-colors" aria-label="TX-Partner auf X (Twitter)">
                             <span class="sr-only">X (Twitter)</span>
@@ -742,9 +751,9 @@ a:focus-visible, button:focus-visible {
                 <div>
                     <h4 class="font-bold mb-6 text-xs uppercase tracking-widest text-brand-navy dark:text-white">Leistungen</h4>
                     <ul class="space-y-4">
-                        <li><a href="leistungen.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">Leistungen</a></li>
-                        <li><a href="blockpit-hinweise.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">Blockpit Hinweise</a></li>
-                        <li><a href="cointracking-fehler.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">CoinTracking Fehler</a></li>
+                        <li><a href="leistungen.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Leistungen</a></li>
+                        <li><a href="blockpit-hinweise.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Blockpit Hinweise</a></li>
+                        <li><a href="cointracking-fehler.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">CoinTracking Fehler</a></li>
                     </ul>
                 </div>
                 
@@ -752,9 +761,9 @@ a:focus-visible, button:focus-visible {
                 <div>
                     <h4 class="font-bold mb-6 text-xs uppercase tracking-widest text-brand-navy dark:text-white">Unternehmen</h4>
                     <ul class="space-y-4">
-                        <li><a href="ueber-uns.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">Über uns</a></li>
-                        <li><a href="dokumentationsstandard.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">Dokumentationsstandard</a></li>
-                        <li><a href="faq.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">FAQ</a></li>
+                        <li><a href="ueber-uns.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Über uns</a></li>
+                        <li><a href="dokumentationsstandard.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Dokumentationsstandard</a></li>
+                        <li><a href="faq.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">FAQ</a></li>
                         <li><a href="kontakt.html" class="text-sm font-bold text-brand-teal transition-colors">Kontakt</a></li>
                     </ul>
                 </div>
@@ -763,9 +772,9 @@ a:focus-visible, button:focus-visible {
                 <div>
                     <h4 class="font-bold mb-6 text-xs uppercase tracking-widest text-brand-navy dark:text-white">Rechtliches</h4>
                     <ul class="space-y-4">
-                        <li><a href="agb.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">AGB</a></li>
-                        <li><a href="datenschutz.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">Datenschutz</a></li>
-                        <li><a href="impressum.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">Impressum</a></li>
+                        <li><a href="agb.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">AGB</a></li>
+                        <li><a href="datenschutz.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Datenschutz</a></li>
+                        <li><a href="impressum.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Impressum</a></li>
                     </ul>
                 </div>
             </div>
@@ -774,7 +783,7 @@ a:focus-visible, button:focus-visible {
                 <p class="text-xs font-medium text-slate-400 dark:text-slate-500">© <span class="font-mono">2026</span> TX-Partner – eine Geschäftsbezeichnung der Solvum GmbH. Alle Rechte vorbehalten.</p>
                 <div class="flex gap-8">
                     <a href="sitemap.html" class="text-xs font-medium text-slate-400 dark:text-slate-500 hover:text-brand-navy dark:hover:text-white transition-colors">Sitemap</a>
-                    <a href="cookies.html" class="text-xs font-medium text-slate-400 dark:text-slate-500 hover:text-brand-navy dark:hover:text-white transition-colors">Cookies</a>
+
                 </div>
             </div>
         </div>

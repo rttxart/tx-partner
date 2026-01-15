@@ -109,6 +109,20 @@
                         'h1': '-0.04em',
                         'h2': '-0.02em',
                     },
+                    animation: {
+                        'fade-in': 'fadeIn 0.6s ease-out forwards',
+                        'aurora-pulse': 'aurora-pulse 8s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(10px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        'aurora-pulse': {
+                            '0%, 100%': { opacity: '0.5', transform: 'scale(1)' },
+                            '50%': { opacity: '0.9', transform: 'scale(1.2)' },
+                        }
+                    }
                 }
             }
         }
@@ -396,7 +410,7 @@
             <div class="flex items-center gap-4">
                 <!-- Theme Toggle -->
                 <button id="theme-toggle" 
-                        class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-white/10 text-slate-500 dark:text-slate-400 transition-all duration-300 hover:rotate-12"
+                        class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-white/10 text-slate-600 dark:text-slate-400 transition-all duration-300 hover:rotate-12"
                         aria-label="Dark Mode umschalten"
                         title="Dark Mode umschalten">
                     <span class="block dark:hidden">
@@ -471,10 +485,12 @@
 
     
     <!-- Hero Section -->
-    <section class="min-h-screen flex flex-col overflow-hidden pt-32 pb-20 relative justify-center">
+    <section class="min-h-screen flex flex-col overflow-hidden pt-32 pb-20 relative justify-center bg-white dark:bg-[#050505]">
         <!-- Ambient Background -->
-        <div class="absolute top-0 right-0 w-[400px] md:w-[600px] lg:w-[800px] h-[400px] md:h-[600px] lg:h-[800px] bg-brand-teal/10 rounded-full blur-[120px] -z-10 translate-x-1/4 md:translate-x-1/3 -translate-y-1/4"></div>
-        <div class="absolute bottom-0 left-0 w-[400px] md:w-[600px] lg:w-[800px] h-[400px] md:h-[600px] lg:h-[800px] bg-brand-navy/10 rounded-full blur-[120px] -z-10 -translate-x-1/4 md:-translate-x-1/3 translate-y-1/4"></div>
+        <div class="absolute top-0 right-0 w-[400px] md:w-[600px] lg:w-[800px] h-[400px] md:h-[600px] lg:h-[800px] bg-brand-teal/25 rounded-full blur-[100px] -z-10 translate-x-1/4 md:translate-x-1/3 -translate-y-1/4 mix-blend-multiply dark:mix-blend-screen animate-aurora-pulse"></div>
+        <div class="absolute bottom-0 left-0 w-[400px] md:w-[600px] lg:w-[800px] h-[400px] md:h-[600px] lg:h-[800px] bg-brand-navy/25 rounded-full blur-[100px] -z-10 -translate-x-1/4 md:-translate-x-1/3 translate-y-1/4 mix-blend-multiply dark:mix-blend-screen animate-aurora-pulse" style="animation-delay: 2s;"></div>
+        
+        <div class="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('assets/noise.svg')]"></div>
         
         <div class="container z-10 max-w-7xl mx-auto px-6 relative">
             <div class="grid lg:grid-cols-2 gap-16 items-center">
@@ -486,11 +502,11 @@
                         Pre-Tax Infrastruktur für Krypto
                     </div>
                     
-                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-slate-900 dark:text-white mb-8 leading-[1.1]" style="letter-spacing: -0.04em">
+                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-slate-900 dark:text-white mb-6 pb-2 pt-2 leading-snug" style="letter-spacing: -0.04em">
                         Fehlerfreie <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-teal to-brand-navy dark:to-white">Krypto-Steuerreports</span> beginnen bei der einzelnen Transaktion
                     </h1>
                     
-                    <p class="text-lg md:text-xl font-medium text-slate-500 dark:text-slate-400 leading-relaxed max-w-lg mb-10">
+                    <p class="text-lg md:text-xl font-medium text-slate-600 dark:text-slate-400 leading-relaxed max-w-lg mb-10">
                         TX-Partner dokumentiert Krypto-Transaktionen so, dass Steuertools wie Blockpit, CoinTracking & Co. vollständige, nachvollziehbare und langfristig verwertbare Steuerreports ermöglichen.
                     </p>
                     
@@ -571,7 +587,7 @@
                                     
                                     <div class="space-y-6">
                                         <div>
-                                            <div class="text-[11px] font-medium text-slate-500 dark:text-slate-400 mb-1 uppercase tracking-wider">Qualitäts-Level</div>
+                                            <div class="text-[11px] font-medium text-slate-600 dark:text-slate-400 mb-1 uppercase tracking-wider">Qualitäts-Level</div>
                                             <div class="text-xl font-bold flex items-center gap-2 text-brand-navy dark:text-white" style="letter-spacing: -0.02em;">
                                                 Senior Expert
                                                 <span class="px-2 py-0.5 rounded text-[10px] bg-brand-teal/20 text-brand-teal font-bold font-mono border border-brand-teal/20">A+</span>
@@ -769,7 +785,7 @@
                 <h2 class="text-4xl md:text-5xl font-bold text-brand-navy dark:text-white mb-6" style="letter-spacing: -0.02em;">
                     Warum selbst gute Krypto-Steuertools falsche Reports liefern
                 </h2>
-                <p class="text-lg text-slate-500 dark:text-slate-400 leading-relaxed">
+                <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
                     Automatisierte Steuertools funktionieren nur mit einer sauberen, vollständigen und nachvollziehbaren Datenbasis. In der Praxis fehlt diese Grundlage fast immer.
                 </p>
             </div>
@@ -794,7 +810,7 @@
                         <h3 class="text-2xl font-semibold text-brand-navy dark:text-white group-hover:text-brand-teal transition-colors duration-300 mb-4 relative" style="letter-spacing: -0.02em">
                             Unvollständige oder fehlende Transaktionsdaten
                         </h3>
-                        <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed relative z-10">
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed relative z-10">
                             Fehlende Ein- oder Ausgänge, nicht erfasste DeFi-Interaktionen oder manuelle Transfers führen dazu, dass Tools falsche oder negative Bestände berechnen. Ohne vollständige Dokumentation ist keine belastbare Berechnung möglich.
                         </p>
                     </div>
@@ -815,7 +831,7 @@
                         <h3 class="text-2xl font-semibold text-brand-navy dark:text-white group-hover:text-brand-teal transition-colors duration-300 mb-4 relative" style="letter-spacing: -0.02em">
                             Widersprüchliche Bestände & Bilanzen
                         </h3>
-                        <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed relative z-10">
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed relative z-10">
                             Wallets, Börsen und Steuertools zeigen unterschiedliche Bestände, weil Transaktionen nicht konsistent erfasst oder fachlich falsch kategorisiert sind. Das Problem liegt nicht im Tool, sondern in der Datenbasis.
                         </p>
                     </div>
@@ -838,7 +854,7 @@
                         <h3 class="text-2xl font-semibold text-brand-navy dark:text-white group-hover:text-brand-teal transition-colors duration-300 mb-4 relative" style="letter-spacing: -0.02em">
                             Hoher Zeitaufwand & Unsicherheit
                         </h3>
-                        <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed relative z-10">
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed relative z-10">
                             Ab einigen hundert Transaktionen wird manuelle Fehlersuche ineffizient und fehleranfällig. Ohne professionellen Dokumentationsstandard bleibt Unsicherheit, auch nach dem Export des Steuerreports.
                         </p>
                     </div>
@@ -851,7 +867,7 @@
                     <div class="relative w-2 h-2 shrink-0">
     <span class="absolute inset-0 rounded-full bg-brand-teal animate-pulse"></span>
 </div>
-                    <p class="text-sm text-slate-500 dark:text-slate-400">
+                    <p class="text-sm text-slate-600 dark:text-slate-400">
                         <span class="font-semibold text-slate-600 dark:text-slate-300">Gemeinsamer Nenner:</span>
                         Nicht das Steuertool ist das Problem, sondern die fehlende dokumentarische Grundlage davor.
                     </p>
@@ -860,7 +876,8 @@
         </div>
     </section>
     <!-- Gap Architecture Section -->
-    <section class="bg-slate-50 dark:bg-[#080808] border-y border-slate-200 dark:border-white/5 pt-20 pb-20">
+    <section class="bg-slate-50 dark:bg-[#050505] border-y border-slate-200 dark:border-white/5 pt-20 pb-20 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-[0.4] bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)] dark:opacity-[0.1]"></div>
         <div class="container mx-auto px-6 max-w-7xl">
             <div class="grid lg:grid-cols-2 gap-8 lg:gap-12">
                 
@@ -877,7 +894,7 @@
                         <p class="text-lg font-medium text-slate-800 dark:text-slate-200 mb-6 leading-relaxed">
                             Krypto entwickelt sich schneller als steuerliche Standards und Steuertools. Neue Chains, DeFi-Protokolle, Airdrops und Sonderfälle entstehen kontinuierlich.
                         </p>
-                        <p class="text-slate-500 dark:text-slate-400 leading-relaxed mb-10">
+                        <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-10">
                             Steuertools bilden standardisierte Szenarien ab, nicht jede individuelle Transaktionshistorie. Daraus folgt eine dokumentarische Lücke zwischen realer Krypto-Aktivität und dem, was Steuertools verarbeiten können.
                         </p>
                     </div>
@@ -890,7 +907,7 @@
                         </svg>
                         <div>
                             <p class="font-semibold text-sm text-brand-navy dark:text-white mb-1">Das Ergebnis:</p>
-                            <p class="text-sm text-slate-500 dark:text-slate-400">
+                            <p class="text-sm text-slate-600 dark:text-slate-400">
                                 Unvollständige oder nicht nachvollziehbare Krypto-Steuerreports, die Rückfragen, Unsicherheit und späteren Klärungsbedarf verursachen.
                             </p>
                         </div>
@@ -998,7 +1015,7 @@
                     <div class="h-1 w-24 bg-gradient-to-r from-brand-teal to-transparent rounded-full opacity-60"></div>
                 </div>
                 <div class="max-w-md pt-2">
-                    <p class="text-lg font-medium leading-relaxed text-slate-500 dark:text-slate-400">
+                    <p class="text-lg font-medium leading-relaxed text-slate-600 dark:text-slate-400">
                         Komplexe Krypto-Transaktionen erfordern spezialisierte Erfahrung.
                         <span class="block mt-2">TX-Partner fokussiert sich ausschließlich auf die professionelle Rekonstruktion und Dokumentation von Krypto-Historien. Wo Standard-Service an seine Grenzen stößt.</span>
                     </p>
@@ -1016,7 +1033,7 @@
                         <span class="text-xl font-semibold text-brand-navy dark:text-white transition-transform duration-500 group-hover:translate-x-3 group-hover:text-brand-teal">Jahre</span>
                     </div>
                     <div class="text-lg font-semibold mb-3 text-brand-navy dark:text-white">Markterfahrung</div>
-                    <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed pr-8">
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed pr-8">
                         Wir kennen das Krypto-Ökosystem seit seinen Anfängen. Von frühen zentralen Börsen bis zu komplexen DeFi-Protokollen.
                     </p>
                 </div>
@@ -1029,7 +1046,7 @@
                         <span class="relative text-6xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-brand-teal to-cyan-400 font-mono" style="letter-spacing: -0.04em;">500+</span>
                     </div>
                     <div class="text-lg font-semibold mb-3 text-brand-navy dark:text-white">Dokumentierte Fälle</div>
-                    <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed pr-8">
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed pr-8">
                         Hands-on Erfahrung aus hunderten realen Portfolios. Kein theoretisches Wissen, sondern gelöste Praxisfälle.
                     </p>
                 </div>
@@ -1043,7 +1060,7 @@
                         <span class="text-xl font-semibold text-brand-navy dark:text-white transition-transform duration-500 group-hover:translate-x-3 group-hover:text-brand-teal">Jahre</span>
                     </div>
                     <div class="text-lg font-semibold mb-3 text-brand-navy dark:text-white">Kanzlei-Background</div>
-                    <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed pr-8">
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed pr-8">
                         Erfahrung aus der Zusammenarbeit mit führenden Krypto-Steuerkanzleien. Wir wissen, welche Dokumentation für Steuer & Compliance belastbar ist.
                     </p>
                 </div>
@@ -1059,7 +1076,7 @@
                     <h3 class="text-3xl md:text-4xl font-bold text-brand-navy dark:text-white mb-6" style="letter-spacing: -0.02em">
                         Entwickelt aus realer Kanzlei- und Projekterfahrung
                     </h3>
-                    <p class="text-lg font-medium leading-relaxed text-slate-500 dark:text-slate-400">
+                    <p class="text-lg font-medium leading-relaxed text-slate-600 dark:text-slate-400">
                         TX-Partner wurde von Praktikern aufgebaut, die über Jahre hinweg Krypto-Transaktionen in Krypto-Steuerkanzleien und komplexen Klienten dokumentiert haben.
                         <span class="block mt-2">Jeder Standard, den wir anwenden, basiert auf realen Fällen, nicht auf Annahmen.</span>
                     </p>
@@ -1083,7 +1100,7 @@
                                     <div>
                                         <div class="text-sm font-bold text-brand-navy dark:text-white">Robert Thorn</div>
                                         <div class="text-[10px] font-medium text-brand-teal mb-1">Co-Founder</div>
-                                        <div class="text-xs text-slate-500 dark:text-slate-400 max-w-[200px]">Verantwortlich für Dokumentationsstandard & fachliche Korrektheit</div>
+                                        <div class="text-xs text-slate-600 dark:text-slate-400 max-w-[200px]">Verantwortlich für Dokumentationsstandard & fachliche Korrektheit</div>
                                     </div>
                                 </div>
                                 <div class="hidden sm:block w-px h-16 bg-slate-100 dark:bg-white/10"></div>
@@ -1101,7 +1118,7 @@
                                     <div>
                                         <div class="text-sm font-bold text-brand-navy dark:text-white">Johannes Anderl</div>
                                         <div class="text-[10px] font-medium text-brand-teal mb-1">Co-Founder</div>
-                                        <div class="text-xs text-slate-500 dark:text-slate-400 max-w-[200px]">Verantwortung für komplexe Rekonstruktionen & Sonderfälle</div>
+                                        <div class="text-xs text-slate-600 dark:text-slate-400 max-w-[200px]">Verantwortung für komplexe Rekonstruktionen & Sonderfälle</div>
                                     </div>
                                 </div>
                             </div>
@@ -1118,7 +1135,7 @@
         <div class="container mx-auto max-w-6xl">
             <div class="relative rounded-[32px] overflow-hidden text-center py-24 px-6 md:px-20 bg-brand-navy shadow-2xl shadow-brand-navy/30">
                 <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] md:w-[500px] lg:w-[600px] h-[300px] md:h-[500px] lg:h-[600px] bg-brand-teal opacity-20 blur-[120px] rounded-full pointer-events-none"></div>
-                <div class="absolute inset-0 contrast-150 opacity-20 mix-blend-overlay bg-[url('https://grainy-gradients.vercel.app/noise.svg')] brightness-100"></div>
+                <div class="absolute inset-0 contrast-150 opacity-20 mix-blend-overlay bg-[url('assets/noise.svg')] brightness-100"></div>
                 
                 <div class="relative z-10 fade-in-up">
                     <h2 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-8" style="letter-spacing: -0.04em">
@@ -1155,14 +1172,14 @@
                         </div>
                         <span class="text-brand-navy dark:text-white text-lg font-bold tracking-wider">TX-Partner</span>
                     </a>
-                    <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                         Pre-Tax Infrastruktur für Krypto. Professionelle Dokumentation für Steuertools, Steuerberater und Finanzverwaltung.
                     </p>
                     <div class="flex gap-4">
                         <a href="https://x.com/TX_Partner" 
                            target="_blank" 
                            rel="noopener noreferrer" 
-                           class="text-slate-400 hover:text-brand-navy dark:hover:text-white transition-colors"
+                           class="text-slate-600 hover:text-brand-navy dark:hover:text-white transition-colors"
                            aria-label="TX-Partner auf X (Twitter)">
                             <span class="sr-only">X (Twitter)</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -1173,7 +1190,7 @@
                         <a href="https://www.linkedin.com/company/tx-partner/" 
                            target="_blank" 
                            rel="noopener noreferrer" 
-                           class="text-slate-400 hover:text-brand-navy dark:hover:text-white transition-colors"
+                           class="text-slate-600 hover:text-brand-navy dark:hover:text-white transition-colors"
                            aria-label="TX-Partner auf LinkedIn">
                             <span class="sr-only">LinkedIn</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -1190,9 +1207,9 @@
                 <div>
                     <h4 class="text-xs font-bold text-brand-navy dark:text-white uppercase tracking-widest mb-6">Leistungen</h4>
                     <ul class="space-y-4">
-                        <li><a href="leistungen.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">Leistungen</a></li>
-                        <li><a href="blockpit-hinweise.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">Blockpit Hinweise</a></li>
-                        <li><a href="cointracking-fehler.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">CoinTracking Fehler</a></li>
+                        <li><a href="leistungen.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Leistungen</a></li>
+                        <li><a href="blockpit-hinweise.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Blockpit Hinweise</a></li>
+                        <li><a href="cointracking-fehler.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">CoinTracking Fehler</a></li>
                     </ul>
                 </div>
                 
@@ -1200,10 +1217,10 @@
                 <div>
                     <h4 class="text-xs font-bold text-brand-navy dark:text-white uppercase tracking-widest mb-6">Unternehmen</h4>
                     <ul class="space-y-4">
-                        <li><a href="ueber-uns.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">Über uns</a></li>
-                        <li><a href="dokumentationsstandard.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">Dokumentationsstandard</a></li>
-                        <li><a href="faq.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">FAQ</a></li>
-                        <li><a href="kontakt.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">Kontakt</a></li>
+                        <li><a href="ueber-uns.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Über uns</a></li>
+                        <li><a href="dokumentationsstandard.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Dokumentationsstandard</a></li>
+                        <li><a href="faq.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">FAQ</a></li>
+                        <li><a href="kontakt.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Kontakt</a></li>
                     </ul>
                 </div>
                 
@@ -1211,15 +1228,15 @@
                 <div>
                     <h4 class="text-xs font-bold text-brand-navy dark:text-white uppercase tracking-widest mb-6">Rechtliches</h4>
                     <ul class="space-y-4">
-                        <li><a href="agb.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">AGB</a></li>
-                        <li><a href="datenschutz.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">Datenschutz</a></li>
-                        <li><a href="impressum.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">Impressum</a></li>
+                        <li><a href="agb.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">AGB</a></li>
+                        <li><a href="datenschutz.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Datenschutz</a></li>
+                        <li><a href="impressum.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Impressum</a></li>
                     </ul>
                 </div>
             </div>
             
             <div class="border-t border-slate-200 dark:border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
-                <p class="text-xs font-medium text-slate-400 dark:text-slate-500">© 2026 TX-Partner – eine Geschäftsbezeichnung der Solvum GmbH. Alle Rechte vorbehalten.</p>
+                <p class="text-xs font-medium text-slate-400 dark:text-slate-500">© <span class="font-mono">2026</span> TX-Partner – eine Geschäftsbezeichnung der Solvum GmbH. Alle Rechte vorbehalten.</p>
                 <div class="flex gap-8">
                     <a href="sitemap.html" class="text-xs font-medium text-slate-400 dark:text-slate-500 hover:text-brand-navy dark:hover:text-white transition-colors">Sitemap</a>
                 </div>
@@ -1229,6 +1246,7 @@
 
     
     <!-- Scripts -->
+    <script src="assets/tx-partner-common.js"></script>
     <script>
         // Dark Mode
         const themeToggle = document.getElementById('theme-toggle');

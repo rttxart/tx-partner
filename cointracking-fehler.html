@@ -9,8 +9,11 @@
     <link rel="canonical" href="https://tx-partner.com/cointracking-fehler.html">
     <!-- Local Fonts Only (DSGVO-konform) -->
     <link rel="stylesheet" href="assets/css/fonts.css">
-        
-    <script src="assets/tailwind-playcdn.js"></script>    <script>
+
+    <script src="assets/tx-partner-common.js"></script>
+    <script src="assets/tailwind-playcdn.js"></script>
+
+    <script>
         tailwind.config = {
             darkMode: 'class',
             theme: {
@@ -55,6 +58,10 @@
                         },
                         shimmer: {
                             '100%': { transform: 'translateX(100%)' }
+                        },
+                        'aurora-pulse': {
+                            '0%, 100%': { opacity: '0.5', transform: 'scale(1)' },
+                            '50%': { opacity: '0.9', transform: 'scale(1.2)' },
                         }
                     }
                 }
@@ -369,16 +376,14 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="min-h-[85vh] flex flex-col overflow-hidden pt-32 pb-20 relative justify-center">
-        <!-- Grid Pattern -->
-        <div class="absolute inset-0 -z-20 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none"></div>
+    <section class="min-h-screen flex flex-col overflow-hidden pt-32 pb-20 relative justify-center bg-white dark:bg-[#050505]">
+    <!-- Ambient Background -->
+    <div
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] md:w-[800px] lg:w-[1000px] h-[300px] md:h-[500px] lg:h-[600px] bg-brand-navy/25 rounded-full blur-[120px] -z-10 mix-blend-multiply dark:mix-blend-screen animate-aurora-pulse" style="animation-delay: 2s;">
+    </div>
+    <div class="absolute top-0 right-0 w-[300px] md:w-[500px] lg:w-[600px] h-[300px] md:h-[500px] lg:h-[600px] bg-brand-teal/25 rounded-full blur-[100px] -z-10 translate-x-1/4 md:translate-x-0 mix-blend-multiply dark:mix-blend-screen animate-aurora-pulse"></div>
 
-        <!-- Ambient Background -->
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] md:w-[800px] lg:w-[1000px] h-[300px] md:h-[500px] lg:h-[600px] bg-brand-navy/5 dark:bg-brand-navy/10 rounded-full blur-[120px] -z-10 mix-blend-multiply dark:mix-blend-screen"></div>
-        <div class="absolute top-0 right-0 w-[400px] md:w-[600px] lg:w-[800px] h-[400px] md:h-[600px] lg:h-[800px] bg-brand-teal/5 dark:bg-brand-teal/10 rounded-full blur-[100px] -z-10 mix-blend-multiply dark:mix-blend-screen translate-x-1/4 md:translate-x-0"></div>
-
-        <!-- Bottom Fade -->
-        <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-white via-white/50 to-transparent dark:from-dark-bg dark:via-dark-bg/50 dark:to-transparent -z-10 pointer-events-none"></div>
+    <div class="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('assets/noise.svg')]"></div>
 
         <div class="container text-center max-w-7xl mr-auto ml-auto pr-6 pl-6 relative z-10">
             <!-- Tag -->
@@ -390,19 +395,16 @@
             </div>
 
             <!-- H1 - Einzige H1 auf der Seite -->
-         <h1
-  class="fade-in-up md:text-6xl lg:text-7xl dark:text-white leading-[1.1] text-5xl font-extrabold text-slate-900 tracking-tighter max-w-5xl mx-auto mb-8 visible"
-  style="animation-delay: 0.1s"
+<h1 
+  class="fade-in-up text-5xl md:text-6xl lg:text-7xl font-extrabold text-slate-900 dark:text-white mb-8 leading-snug visible pt-2 pb-2"
+  style="letter-spacing: -0.04em; animation-delay: 0.1s"
 >
-  <span class="block text-transparent bg-clip-text bg-gradient-to-r from-brand-teal to-brand-navy dark:to-white">
+  <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-teal to-brand-navy dark:to-white">
     CoinTracking-Fehler?
   </span>
-
-  <span class="block">
-    Wir beheben die Ursachen, bevor sie im Steuerreport landen.
-  </span>
-</h1> 
-
+  <br>
+  Wir beheben die Ursachen, bevor sie im Steuerreport landen.
+</h1>
             <!-- Subheadline (TYPO FIXED!) -->
             <p class="fade-in-up md:text-xl dark:text-slate-400 leading-relaxed text-lg font-medium text-slate-500 max-w-2xl mr-auto mb-12 ml-auto visible" style="animation-delay: 0.2s">
                 TX-Partner analysiert die Ursachen hinter CoinTracking-Fehler und bereitet deine Transaktionen fachlich korrekt auf.
@@ -534,9 +536,9 @@
     </section>
 
     <!-- Solution Standard Section -->
-    <section class="py-24 bg-slate-50 dark:bg-[#020202] border-y border-slate-200 dark:border-white/5 relative overflow-hidden">
-        <div class="absolute inset-0 opacity-20 mix-blend-overlay bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
-        <div class="absolute right-0 top-0 w-[500px] h-[500px] bg-brand-teal/5 rounded-full blur-[100px] pointer-events-none"></div>
+    <section class="py-24 bg-slate-50 dark:bg-[#050505] border-y border-slate-200 dark:border-white/5 overflow-hidden relative">
+        <div class="absolute inset-0 opacity-[0.4] pointer-events-none bg-[url('assets/noise.svg')]"></div>
+        <div class="absolute right-0 top-0 w-[500px] h-[500px] bg-brand-teal/10 rounded-full blur-[100px] pointer-events-none mix-blend-multiply dark:mix-blend-screen"></div>
 
         <div class="container mx-auto px-6 max-w-7xl relative z-10">
             <div class="grid lg:grid-cols-2 gap-16 items-center">
@@ -655,9 +657,9 @@
                     Root Cause Analysis
                 </div>
 
-                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-brand-navy dark:text-white mb-6 leading-[1.1]" style="letter-spacing: -0.02em">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-brand-navy dark:text-white mb-6 leading-snug pb-2" style="letter-spacing: -0.02em">
                     Warum CoinTracking diese
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-teal to-brand-navy dark:to-white">Fehler anzeigt</span>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-teal to-brand-navy dark:to-white pb-1 block md:inline">Fehler anzeigt</span>
                 </h2>
 
                 <p class="text-lg md:text-xl text-slate-500 dark:text-slate-400 font-medium leading-relaxed max-w-2xl mx-auto">
@@ -669,7 +671,7 @@
             <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
                 
                 <!-- Card 1 -->
-                <div class="group relative p-8 md:p-10 rounded-card bg-white dark:bg-dark-surface border border-slate-200 dark:border-white/5 hover:border-brand-teal/30 transition-all duration-300 hover:shadow-xl overflow-hidden">
+                <div class="group relative p-8 md:p-10 rounded-card bg-white dark:bg-[#0F0F0F] border border-slate-200 dark:border-white/5 hover:border-brand-teal/30 transition-all duration-300 hover:shadow-[0_20px_50px_-12px_rgba(30,58,95,0.12)] overflow-hidden">
                     <div class="absolute inset-0 bg-gradient-to-br from-brand-teal/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     <div class="relative z-10">
                         <div class="w-14 h-14 rounded-button bg-brand-navy/5 dark:bg-white/5 border border-brand-navy/10 dark:border-white/10 flex items-center justify-center mb-8 group-hover:scale-110 group-hover:bg-brand-teal/10 group-hover:border-brand-teal/20 transition-all duration-300">
@@ -844,8 +846,8 @@
                 <div>
                     <h4 class="font-bold mb-6 text-xs uppercase tracking-widest text-brand-navy dark:text-white">Leistungen</h4>
                     <ul class="space-y-4">
-                        <li><a href="leistungen.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">Leistungen</a></li>
-                        <li><a href="blockpit-hinweise.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">Blockpit Hinweise</a></li>
+                        <li><a href="leistungen.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Leistungen</a></li>
+                        <li><a href="blockpit-hinweise.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Blockpit Hinweise</a></li>
                         <li><a href="cointracking-fehler.html" class="text-brand-teal text-sm font-bold">CoinTracking Fehler</a></li>
                     </ul>
                 </div>
@@ -854,10 +856,10 @@
                 <div>
                     <h4 class="font-bold mb-6 text-xs uppercase tracking-widest text-brand-navy dark:text-white">Unternehmen</h4>
                     <ul class="space-y-4">
-                        <li><a href="ueber-uns.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">Über uns</a></li>
-                        <li><a href="dokumentationsstandard.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">Dokumentationsstandard</a></li>
-                        <li><a href="faq.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">FAQ</a></li>
-                        <li><a href="kontakt.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">Kontakt</a></li>
+                        <li><a href="ueber-uns.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Über uns</a></li>
+                        <li><a href="dokumentationsstandard.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Dokumentationsstandard</a></li>
+                        <li><a href="faq.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">FAQ</a></li>
+                        <li><a href="kontakt.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Kontakt</a></li>
                     </ul>
                 </div>
 
@@ -865,9 +867,9 @@
                 <div>
                     <h4 class="font-bold mb-6 text-xs uppercase tracking-widest text-brand-navy dark:text-white">Rechtliches</h4>
                     <ul class="space-y-4">
-                        <li><a href="agb.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">AGB</a></li>
-                        <li><a href="datenschutz.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">Datenschutz</a></li>
-                        <li><a href="impressum.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">Impressum</a></li>
+                        <li><a href="agb.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">AGB</a></li>
+                        <li><a href="datenschutz.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Datenschutz</a></li>
+                        <li><a href="impressum.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Impressum</a></li>
                     </ul>
                 </div>
             </div>

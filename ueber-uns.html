@@ -10,6 +10,8 @@
     <!-- Local Fonts Only (DSGVO-konform) -->
     <link rel="stylesheet" href="assets/css/fonts.css">
 
+    <script src="assets/tx-partner-common.js"></script>
+
     <!-- Schema.org Organization -->
 <script type="application/ld+json">
 {
@@ -51,7 +53,8 @@
 }
 </script>
     
-    <script src="assets/tailwind-playcdn.js"></script>    <script>
+    <script src="assets/tailwind-playcdn.js"></script>    
+    <script>
         tailwind.config = {
             darkMode: 'class',
             theme: {
@@ -83,6 +86,7 @@
                     },
                     animation: {
                         'fade-in': 'fadeIn 0.6s ease-out forwards',
+                        'aurora-pulse': 'aurora-pulse 8s ease-in-out infinite',
                         'float': 'float 6s ease-in-out infinite',
                         'shimmer': 'shimmer 1.5s infinite',
                     },
@@ -90,6 +94,10 @@
                         fadeIn: {
                             '0%': { opacity: '0', transform: 'translateY(10px)' },
                             '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        'aurora-pulse': {
+                            '0%, 100%': { opacity: '0.5', transform: 'scale(1)' },
+                            '50%': { opacity: '0.9', transform: 'scale(1.2)' },
                         },
                         float: {
                             '0%, 100%': { transform: 'translateY(0)' },
@@ -402,7 +410,7 @@
         <!-- Background Elements -->
         <div class="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none"></div>
         <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-[400px] bg-gradient-to-b from-brand-teal/10 via-brand-teal/5 to-transparent blur-[80px] -z-10 opacity-70 pointer-events-none"></div>
-        <div class="absolute -top-20 -right-20 w-[300px] md:w-[500px] lg:w-[600px] h-[300px] md:h-[500px] lg:h-[600px] bg-brand-teal/5 rounded-full blur-[100px] -z-10 animate-float pointer-events-none" style="animation-duration: 18s;"></div>
+        <div class="absolute -top-20 -right-20 w-[300px] md:w-[500px] lg:w-[600px] h-[300px] md:h-[500px] lg:h-[600px] bg-brand-teal/15 rounded-full blur-[100px] -z-10 mix-blend-multiply dark:mix-blend-screen animate-aurora-pulse pointer-events-none"></div>
 
         <div class="container mx-auto px-6 max-w-4xl relative z-10 text-center">
             <div class="fade-in-up visible">
@@ -413,7 +421,7 @@
             </div>
 
             <!-- H1: Einmalig, font-extrabold (800), tracking-tighter -->
-            <h1 class="fade-in-up text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tighter leading-[1.1] mb-6 text-brand-navy dark:text-white visible" style="animation-delay: 0.1s;"> Die Referenz für
+            <h1 class="fade-in-up text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tighter leading-snug pb-2 pt-2 mb-6 text-brand-navy dark:text-white visible" style="animation-delay: 0.1s;"> Die Referenz für
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-teal to-brand-navy dark:to-white">professionelle Krypto-Dokumentation</span> als Grundlage verlässlicher Steuerreports
             </h1>
 
@@ -437,7 +445,7 @@
         <!-- Background Effects -->
         <div class="absolute inset-0 pointer-events-none">
             <div class="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
-            <div class="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-brand-teal/10 dark:bg-brand-teal/5 blur-[100px] rounded-full"></div>
+            <div class="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-brand-teal/20 dark:bg-brand-teal/15 blur-[100px] rounded-full mix-blend-multiply dark:mix-blend-screen animate-aurora-pulse" style="animation-delay: 2s;"></div>
         </div>
 
         <div class="container z-10 max-w-6xl mr-auto ml-auto pr-6 pl-6 relative">
@@ -609,7 +617,7 @@
 
     <!-- Philosophy & Stats Section -->
     <section class="relative py-24 bg-brand-navy overflow-hidden">
-        <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10 mix-blend-overlay"></div>
+        <div class="absolute inset-0 bg-[url('assets/noise.svg')] opacity-10 mix-blend-overlay"></div>
         <div class="absolute top-0 right-0 w-[200px] md:w-[300px] lg:w-[400px] h-[200px] md:h-[300px] lg:h-[400px] bg-brand-teal rounded-full blur-[100px] opacity-20"></div>
         <div class="absolute bottom-0 left-0 w-[150px] md:w-[250px] lg:w-[300px] h-[150px] md:h-[250px] lg:h-[300px] bg-white rounded-full blur-[100px] opacity-10"></div>
 
@@ -721,7 +729,7 @@
         <div class="container mx-auto max-w-6xl">
             <div class="relative rounded-card overflow-hidden text-center py-24 px-6 md:px-20 bg-brand-navy shadow-2xl shadow-brand-navy/30">
                 <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] md:w-[500px] lg:w-[600px] h-[300px] md:h-[500px] lg:h-[600px] bg-brand-teal opacity-20 blur-[120px] rounded-full pointer-events-none"></div>
-                <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay"></div>
+                <div class="absolute inset-0 bg-[url('assets/noise.svg')] opacity-20 mix-blend-overlay"></div>
                 
                 <div class="relative z-10 fade-in-up">
                     <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-6 leading-tight text-white">
@@ -780,9 +788,9 @@
                 <div>
                     <h4 class="text-xs font-bold uppercase tracking-widest text-brand-navy dark:text-white mb-6">Leistungen</h4>
                     <ul class="space-y-4">
-                        <li><a href="leistungen.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">Leistungen</a></li>
-                        <li><a href="blockpit-hinweise.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">Blockpit Hinweise</a></li>
-                        <li><a href="cointracking-fehler.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">CoinTracking Fehler</a></li>
+                        <li><a href="leistungen.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Leistungen</a></li>
+                        <li><a href="blockpit-hinweise.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Blockpit Hinweise</a></li>
+                        <li><a href="cointracking-fehler.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">CoinTracking Fehler</a></li>
                     </ul>
                 </div>
 
@@ -792,8 +800,8 @@
                     <ul class="space-y-4">
                         <li><a href="ueber-uns.html" class="text-brand-teal text-sm font-medium">Über uns</a></li>
                         <li><a href="dokumentationsstandard.html" class="dark:text-slate-400 hover:text-brand-teal transition-colors text-sm font-medium text-slate-500">Dokumentationsstandard</a></li>
-                        <li><a href="faq.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">FAQ</a></li>
-                        <li><a href="kontakt.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">Kontakt</a></li>
+                        <li><a href="faq.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">FAQ</a></li>
+                        <li><a href="kontakt.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Kontakt</a></li>
                     </ul>
                 </div>
 
@@ -801,9 +809,9 @@
                 <div>
                     <h4 class="text-xs font-bold uppercase tracking-widest text-brand-navy dark:text-white mb-6">Rechtliches</h4>
                     <ul class="space-y-4">
-                        <li><a href="agb.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">AGB</a></li>
-                        <li><a href="datenschutz.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">Datenschutz</a></li>
-                        <li><a href="impressum.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">Impressum</a></li>
+                        <li><a href="agb.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">AGB</a></li>
+                        <li><a href="datenschutz.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Datenschutz</a></li>
+                        <li><a href="impressum.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Impressum</a></li>
                     </ul>
                 </div>
             </div>
@@ -812,7 +820,7 @@
                 <p class="dark:text-slate-500 text-xs font-medium text-slate-400">© 2026 TX-Partner – eine Geschäftsbezeichnung der Solvum GmbH. Alle Rechte vorbehalten.</p>
                 <div class="flex gap-8">
                     <a href="sitemap.html" class="text-xs font-medium text-slate-400 dark:text-slate-500 hover:text-brand-navy dark:hover:text-white transition-colors">Sitemap</a>
-                    <a href="cookies.html" class="text-xs font-medium text-slate-400 dark:text-slate-500 hover:text-brand-navy dark:hover:text-white transition-colors">Cookies</a>
+
                 </div>
             </div>
         </div>
