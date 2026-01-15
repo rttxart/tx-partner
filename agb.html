@@ -182,7 +182,7 @@
     <!-- Navigation -->
     <nav class="sticky top-6 z-50 pt-6">
   <div class="mx-auto w-[95%] max-w-6xl">
-    <div class="glass-nav rounded-card px-6 py-3 flex items-center justify-between shadow-2xl shadow-black/5 dark:shadow-black/20">
+    <div class="glass-nav rounded-full px-6 py-3 flex items-center justify-between shadow-2xl shadow-black/5 dark:shadow-black/20">
             <!-- Logo -->
             <a href="index.html" class="flex items-center gap-3 shrink-0">
                 <div class="flex gap-1 h-6 items-center">
@@ -601,28 +601,6 @@
         themeToggle.addEventListener('click', () => {
             html.classList.toggle('dark');
             localStorage.theme = html.classList.contains('dark') ? 'dark' : 'light';
-        });
-
-        // Mobile Menu Toggle with ARIA
-        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        mobileMenuToggle.addEventListener('click', () => {
-            const isOpen = mobileMenu.classList.contains('open');
-            mobileMenu.classList.toggle('open');
-            
-            // Update ARIA
-            mobileMenuToggle.setAttribute('aria-expanded', !isOpen);
-            mobileMenuToggle.setAttribute('aria-label', !isOpen ? 'Menü schließen' : 'Menü öffnen');
-        });
-        
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!mobileMenu.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
-                mobileMenu.classList.remove('open');
-                mobileMenuToggle.setAttribute('aria-expanded', 'false');
-                mobileMenuToggle.setAttribute('aria-label', 'Menü öffnen');
-            }
         });
     </script>
 

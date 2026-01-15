@@ -5,12 +5,10 @@
 function debounce(func, wait) {
     let timeout;
     return function executedFunction(...args) {
-        const later = () => {
-            clearTimeout(timeout);
-            timeout = setTimeout(() => {
-                func(...args);
-            }, wait);
-        };
+        clearTimeout(timeout);
+        timeout = setTimeout(() => {
+            func(...args);
+        }, wait);
     };
 }
 
@@ -187,7 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initDynamicYear();
     initMagneticButtons();
     initParallax();
-    initGlassmorphicTilt();
+    // initGlassmorphicTilt(); // Deaktiviert: Zu aggressive 3D-Tilt-Animation auf Leistungskarten
 });
 
 // Export for use in HTML files
