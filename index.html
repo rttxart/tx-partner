@@ -314,6 +314,7 @@
 .animate-scroll {
     animation: scroll 60s linear infinite;
     will-change: transform;
+    transition: animation-play-state 0.3s ease;
 }
 
         /* Mobile Speed-Up */
@@ -537,8 +538,8 @@
                         </a>
                         
                         <a href="leistungen.html" class="btn-secondary group">
-                            <div class="w-10 h-10 rounded-full border border-slate-200 dark:border-white/20 flex items-center justify-center bg-white dark:bg-white/5 group-hover:border-brand-teal transition-colors">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="group-hover:scale-110 transition-transform">
+                            <div class="w-10 h-10 rounded-full border border-slate-200 dark:border-white/20 flex items-center justify-center bg-white dark:bg-white/5 group-hover:border-brand-teal group-hover:bg-brand-teal/5 transition-all duration-300 ease-out">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="transition-transform duration-300 ease-out group-hover:scale-110">
                                     <path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"></path>
                                 </svg>
                             </div>
@@ -1457,7 +1458,7 @@
     </section>
     
     <!-- Footer -->
-    <footer class="bg-white dark:bg-dark-bg border-t border-slate-200 dark:border-white/5 pt-24 pb-32">
+    <footer class="bg-white dark:bg-dark-bg border-t border-slate-200 dark:border-white/5 pt-24 pb-32 relative z-30">
         <div class="container mx-auto px-6 max-w-7xl">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12 lg:gap-16 mb-20">
                 
