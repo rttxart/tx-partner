@@ -316,10 +316,23 @@
     will-change: transform;
 }
 
-/* Mobile Speed-Up */
+        /* Mobile Speed-Up */
 @media (max-width: 768px) {
     .animate-scroll {
         animation-duration: 30s;
+    }
+
+    /* Trust Marquee nicht mehr fixed auf Mobile */
+    .fixed.bottom-0 {
+        position: relative !important;
+        bottom: auto !important;
+        margin-top: 2rem;
+    }
+
+    /* Mobile Menu max-height Fix */
+    .mobile-menu {
+        max-height: calc(100vh - 200px);
+        overflow-y: auto;
     }
 }
 
