@@ -925,18 +925,7 @@
             localStorage.theme = html.classList.contains('dark') ? 'dark' : 'light';
         });
 
-        // Mobile Menu Toggle with ARIA
-        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        mobileMenuToggle.addEventListener('click', () => {
-            const isOpen = mobileMenu.classList.contains('open');
-            mobileMenu.classList.toggle('open');
-            
-            // Update ARIA
-            mobileMenuToggle.setAttribute('aria-expanded', !isOpen);
-            mobileMenuToggle.setAttribute('aria-label', !isOpen ? 'Menü schließen' : 'Menü öffnen');
-        });
+
 
         // Card Spotlight Effect
         function handleMouseMove(e) {

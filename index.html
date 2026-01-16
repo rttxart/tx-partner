@@ -823,6 +823,8 @@
         </div>
     </div>
 </div>
+    </section>
+
 
     <!-- Solutions Section -->
     <section class="bg-white dark:bg-dark-bg py-32 relative" id="leistungen">
@@ -1316,17 +1318,19 @@
         });
         
         // Mobile Menu with smooth transition + ARIA
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenuBtn = document.getElementById('mobile-menu-toggle');
         const mobileMenu = document.getElementById('mobile-menu');
 
-        mobileMenuBtn.addEventListener('click', () => {
-            const isExpanded = mobileMenu.classList.contains('active');
-            mobileMenu.classList.toggle('active');
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', () => {
+                const isExpanded = mobileMenu.classList.contains('active');
+                mobileMenu.classList.toggle('active');
 
-            // Update ARIA
-            mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
-            mobileMenuBtn.setAttribute('aria-label', !isExpanded ? 'Menü schließen' : 'Menü öffnen');
-        });
+                // Update ARIA
+                mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+                mobileMenuBtn.setAttribute('aria-label', !isExpanded ? 'Menü schließen' : 'Menü öffnen');
+            });
+        }
         
         // Hex Matrix Generation
         document.addEventListener('DOMContentLoaded', () => {
