@@ -9,8 +9,11 @@
     <link rel="canonical" href="https://tx-partner.com/dokumentationsstandard.html">
     <!-- Local Fonts Only - DSGVO Compliant -->
     <link rel="stylesheet" href="assets/css/fonts.css">
-       
-    <script src="assets/tailwind-playcdn.js"></script>    <script>
+
+    <script src="assets/tx-partner-common.js"></script>
+    <script src="assets/tailwind-playcdn.js"></script>
+
+    <script>
         tailwind.config = {
             darkMode: 'class',
             theme: {
@@ -51,14 +54,17 @@
                             '0%': { opacity: '0', transform: 'translateY(10px)' },
                             '100%': { opacity: '1', transform: 'translateY(0)' },
                         },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
                         shimmer: {
-                            '0%': { transform: 'translateX(-100%)' },
-                            '100%': { transform: 'translateX(200%)' },
+                            '100%': { transform: 'translateX(100%)' }
                         },
                         'aurora-pulse': {
-                            '0%, 100%': { opacity: '0.3', transform: 'scale(1)' },
-                            '50%': { opacity: '0.5', transform: 'scale(1.1)' },
-                        },
+                            '0%, 100%': { opacity: '0.5', transform: 'scale(1)' },
+                            '50%': { opacity: '0.9', transform: 'scale(1.2)' },
+                        }
                     }
                 }
             }
@@ -152,14 +158,14 @@
         .card-spotlight:hover::before { opacity: 1; }
         
         /* Glass Effect */
-        .glass {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.06);
         }
-        .dark .glass {
-            background: rgba(10, 10, 10, 0.6);
+        .dark .glass-nav {
+            background: rgba(10, 10, 10, 0.9);
             border: 1px solid rgba(255, 255, 255, 0.08);
         }
         
@@ -228,8 +234,9 @@
     <div class="bg-noise"></div>
     
     <!-- Navigation -->
-    <nav class="fixed top-0 left-1/2 -translate-x-1/2 w-[95%] max-w-6xl z-50 pt-6">
-        <div class="glass rounded-full px-6 py-3 flex items-center justify-between shadow-lg">
+<nav class="sticky top-6 z-50 pt-6">
+  <div class="mx-auto w-[95%] max-w-6xl">
+    <div class="glass-nav rounded-full px-6 py-3 flex items-center justify-between shadow-2xl shadow-black/5 dark:shadow-black/20">
             <!-- Logo (Logo-Lock) -->
             <a href="index.html" class="flex items-center gap-3 shrink-0">
                 <div class="flex gap-1 h-6 items-end">
@@ -294,7 +301,6 @@
                     <a href="kontakt.html" class="block px-4 py-2 text-sm font-medium text-slate-500 hover:text-brand-navy dark:text-slate-400 dark:hover:text-white transition-colors">Kontakt</a>
                 </li>
             </ul>
-            </ul>
             
             <!-- Right Side -->
             <div class="flex items-center gap-4">
@@ -311,7 +317,7 @@
                         </svg>
                     </span>
                 </button>
-                                <a href="https://app.cal.eu/johannesanderl-tx-partner/30min?overlayCalendar=true" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center justify-center px-5 py-2 text-sm font-semibold text-white bg-brand-navy hover:bg-brand-navy/90 transition-all duration-300 rounded-button">
+                                <a href="https://app.cal.eu/johannesanderl-tx-partner/dokumentation-prufen" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center justify-center px-5 py-2 text-sm font-semibold text-white bg-brand-navy hover:bg-brand-navy/90 transition-all duration-300 rounded-button">
                     Dokumentation prüfen
                 </a>
                 <button id="mobile-menu-toggle" class="lg:hidden text-slate-600 dark:text-slate-300 p-2" aria-label="Menü öffnen" aria-expanded="false">
@@ -359,29 +365,30 @@
 
                 <div class="h-px bg-slate-100 dark:bg-white/5 my-1 mx-2"></div>
 
-                <a href="https://app.cal.eu/johannesanderl-tx-partner/30min?overlayCalendar=true" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center px-4 py-3 rounded-button bg-brand-navy text-white text-sm font-semibold hover:bg-brand-navy/90 transition-colors mt-1">Dokumentation prüfen</a>
+                <a href="https://app.cal.eu/johannesanderl-tx-partner/dokumentation-prufen" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center px-4 py-3 rounded-button bg-brand-navy text-white text-sm font-semibold hover:bg-brand-navy/90 transition-colors mt-1">Dokumentation prüfen</a>
             </div>
         </div>
     </nav>
     
     <!-- Hero Section: 4 Pillars -->
-    <section class="relative pt-40 pb-24 overflow-hidden bg-slate-50 dark:bg-[#020202] border-b border-slate-200 dark:border-white/5">
+    <section class="relative pt-40 pb-24 overflow-hidden bg-white dark:bg-[#050505] border-b border-slate-200 dark:border-white/5">
         <!-- Background Effects -->
         <div class="absolute inset-0 pointer-events-none">
-            <div class="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px]"></div>
-            <div class="absolute top-[-20%] left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-brand-teal/15 blur-[140px] rounded-full animate-aurora-pulse"></div>
+            <div class="absolute inset-0 opacity-[0.4] pointer-events-none bg-[url('assets/noise.svg')]"></div>
+            <div class="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
+            <div class="absolute top-[-20%] left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-brand-teal/20 blur-[140px] rounded-full animate-aurora-pulse mix-blend-multiply dark:mix-blend-screen"></div>
             <div class="absolute top-0 left-1/2 -translate-x-1/2 w-px h-[600px] bg-gradient-to-b from-brand-teal/30 via-transparent to-transparent"></div>
         </div>
         
         <div class="container mx-auto px-6 max-w-7xl relative z-10">
             <!-- Header -->
-            <div class="text-center max-w-3xl mx-auto mb-20">
+            <div class="text-center max-w-5xl mx-auto mb-20">
                 <div class="inline-flex items-center gap-2 border border-brand-teal/20 text-brand-teal text-xs font-bold tracking-widest uppercase rounded-full px-3.5 py-1.5 mb-6 backdrop-blur-sm font-mono">
                     <span class="w-1.5 h-1.5 rounded-full bg-brand-teal animate-pulse"></span>
                     TX-Partner Dokumentationsstandard
                 </div>
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tighter text-brand-navy dark:text-white mb-6 leading-[1.1]">
-                    Der Goldstandard für belastbare Krypto-Steuerreports und professionelle Dokumentation
+                <h1 class="md:text-6xl lg:text-6xl leading-snug pb-2 pt-2 dark:text-white fade-in-up text-5xl font-extrabold text-slate-900 tracking-tight mb-6 visible">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-teal to-brand-navy dark:to-white">Der Goldstandard</span> für professionelle Krypto-Dokumentation
                 </h1>
                 <p class="text-lg text-slate-500 dark:text-slate-400 font-medium leading-relaxed max-w-2xl mx-auto">
                     Wir verwandeln unübersichtliche Transaktionshistorien in eine lückenlose, prüfungssichere Beweiskette.
@@ -392,7 +399,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Pillar 1: Vollständigkeit -->
                 <div class="group relative card-spotlight p-1 transition-all duration-500 hover:-translate-y-2" onmousemove="handleMouseMove(event)">
-                    <div class="relative h-full bg-white/70 dark:bg-[#0A0A0A]/80 backdrop-blur-xl rounded-card p-8 border border-white/50 dark:border-white/5 flex flex-col">
+                    <div class="relative h-full bg-white/70 dark:bg-[#0F0F0F] backdrop-blur-xl rounded-card p-8 border border-white/50 dark:border-white/5 flex flex-col shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none hover:shadow-brand-navy/10">
                         <div class="flex justify-between items-start mb-8">
                             <div class="w-12 h-12 rounded-button bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 flex items-center justify-center text-brand-navy dark:text-white font-mono font-semibold text-lg group-hover:scale-110 transition-transform duration-300">01</div>
                             <svg class="text-slate-300 dark:text-slate-600 group-hover:text-brand-teal transition-colors" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -419,7 +426,7 @@
                 
                 <!-- Pillar 2: Nachvollziehbarkeit -->
                 <div class="group relative card-spotlight p-1 transition-all duration-500 hover:-translate-y-2" onmousemove="handleMouseMove(event)">
-                    <div class="relative h-full bg-white/70 dark:bg-[#0A0A0A]/80 backdrop-blur-xl rounded-card p-8 border border-white/50 dark:border-white/5 flex flex-col">
+                    <div class="relative h-full bg-white/70 dark:bg-[#0F0F0F] backdrop-blur-xl rounded-card p-8 border border-white/50 dark:border-white/5 flex flex-col shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none hover:shadow-brand-navy/10">
                         <div class="flex justify-between items-start mb-8">
                             <div class="w-12 h-12 rounded-button bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 flex items-center justify-center text-brand-navy dark:text-white font-mono font-semibold text-lg group-hover:scale-110 transition-transform duration-300">02</div>
                             <svg class="text-slate-300 dark:text-slate-600 group-hover:text-brand-teal transition-colors" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -447,7 +454,7 @@
                 
                 <!-- Pillar 3: Fachliche Korrektheit -->
                 <div class="group relative card-spotlight p-1 transition-all duration-500 hover:-translate-y-2" onmousemove="handleMouseMove(event)">
-                    <div class="relative h-full bg-white/70 dark:bg-[#0A0A0A]/80 backdrop-blur-xl rounded-card p-8 border border-white/50 dark:border-white/5 flex flex-col">
+                    <div class="relative h-full bg-white/70 dark:bg-[#0F0F0F] backdrop-blur-xl rounded-card p-8 border border-white/50 dark:border-white/5 flex flex-col shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none hover:shadow-brand-navy/10">
                         <div class="flex justify-between items-start mb-8">
                             <div class="w-12 h-12 rounded-button bg-white dark:bg-white/5 border border-slate-100 dark:border-white/10 flex items-center justify-center text-brand-navy dark:text-white font-mono font-semibold text-lg group-hover:scale-110 transition-transform duration-300">03</div>
                             <svg class="text-slate-300 dark:text-slate-600 group-hover:text-brand-teal transition-colors" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -852,16 +859,16 @@
                             </svg>
                         </a>
                     </div>
-                    <p class="text-sm text-slate-500 dark:text-slate-400 mt-4">Kontakt: <a href="mailto:info@tx-partner.at" class="hover:text-brand-teal transition-colors">info@tx-partner.at</a></p>
+                    
                 </div>
                 
                 <!-- Leistungen -->
                 <div>
                     <h4 class="font-bold mb-6 text-xs uppercase tracking-widest text-brand-navy dark:text-white">Leistungen</h4>
                     <ul class="space-y-4">
-                        <li><a href="leistungen.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">Leistungen</a></li>
-                        <li><a href="blockpit-hinweise.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">Blockpit Hinweise</a></li>
-                        <li><a href="cointracking-fehler.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">CoinTracking Fehler</a></li>
+                        <li><a href="leistungen.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Leistungen</a></li>
+                        <li><a href="blockpit-hinweise.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Blockpit Hinweise</a></li>
+                        <li><a href="cointracking-fehler.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">CoinTracking Fehler</a></li>
                     </ul>
                 </div>
                 
@@ -869,10 +876,10 @@
                 <div>
                     <h4 class="font-bold mb-6 text-xs uppercase tracking-widest text-brand-navy dark:text-white">Unternehmen</h4>
                     <ul class="space-y-4">
-                        <li><a href="ueber-uns.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">Über uns</a></li>
+                        <li><a href="ueber-uns.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Über uns</a></li>
                         <li><a href="dokumentationsstandard.html" class="text-brand-teal text-sm font-medium">Dokumentationsstandard</a></li>
-                        <li><a href="faq.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">FAQ</a></li>
-                        <li><a href="kontakt.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">Kontakt</a></li>
+                        <li><a href="faq.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">FAQ</a></li>
+                        <li><a href="kontakt.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Kontakt</a></li>
                     </ul>
                 </div>
                 
@@ -880,9 +887,9 @@
                 <div>
                     <h4 class="font-bold mb-6 text-xs uppercase tracking-widest text-brand-navy dark:text-white">Rechtliches</h4>
                     <ul class="space-y-4">
-                        <li><a href="agb.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">AGB</a></li>
-                        <li><a href="datenschutz.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">Datenschutz</a></li>
-                        <li><a href="impressum.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">Impressum</a></li>
+                        <li><a href="agb.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">AGB</a></li>
+                        <li><a href="datenschutz.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Datenschutz</a></li>
+                        <li><a href="impressum.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Impressum</a></li>
                     </ul>
                 </div>
             </div>
@@ -913,18 +920,7 @@
             localStorage.theme = html.classList.contains('dark') ? 'dark' : 'light';
         });
         
-        // Mobile Menu Toggle with ARIA
-        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        mobileMenuToggle.addEventListener('click', () => {
-            const isOpen = mobileMenu.classList.contains('open');
-            mobileMenu.classList.toggle('open');
-            
-            // Update ARIA
-            mobileMenuToggle.setAttribute('aria-expanded', !isOpen);
-            mobileMenuToggle.setAttribute('aria-label', !isOpen ? 'Menü schließen' : 'Menü öffnen');
-        });
+
         
         // Mouse Spotlight Effect
         function handleMouseMove(e) {

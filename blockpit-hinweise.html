@@ -9,6 +9,8 @@
     <link rel="canonical" href="https://tx-partner.com/blockpit-hinweise.html">
     <!-- Local Fonts Only (DSGVO-konform) -->
     <link rel="stylesheet" href="assets/css/fonts.css">
+
+    <script src="assets/tx-partner-common.js"></script>
     
     <script src="assets/tailwind-playcdn.js"></script>
     <!-- Schema.org HowTo for Blockpit Error Resolution -->
@@ -71,6 +73,7 @@
                         'fade-in': 'fadeIn 0.6s ease-out forwards',
                         'float': 'float 6s ease-in-out infinite',
                         'shimmer': 'shimmer 1.5s infinite',
+                        'aurora-pulse': 'aurora-pulse 8s ease-in-out infinite',
                     },
                     keyframes: {
                         fadeIn: {
@@ -83,6 +86,10 @@
                         },
                         shimmer: {
                             '100%': { transform: 'translateX(100%)' }
+                        },
+                        'aurora-pulse': {
+                            '0%, 100%': { opacity: '0.5', transform: 'scale(1)' },
+                            '50%': { opacity: '0.9', transform: 'scale(1.2)' },
                         }
                     }
                 }
@@ -197,16 +204,15 @@
         }
 
         /* Glass Effect */
-        .glass {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.06);
         }
-        
-        .dark .glass {
-            background: rgba(10, 10, 10, 0.6);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+        .dark .glass-nav {
+            background: rgba(10, 10, 10, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.08);
         }
 
         /* Navigation Dropdown */
@@ -264,8 +270,9 @@
     <div class="bg-noise"></div>
 
     <!-- Navigation -->
-    <nav class="fixed top-0 left-1/2 -translate-x-1/2 w-[95%] max-w-6xl z-50 pt-6">
-        <div class="glass rounded-card px-6 py-3 shadow-lg shadow-black/5 flex items-center justify-between">
+  <nav class="sticky top-6 z-50 pt-6">
+  <div class="mx-auto w-[95%] max-w-6xl">
+    <div class="glass-nav rounded-full px-6 py-3 flex items-center justify-between shadow-2xl shadow-black/5 dark:shadow-black/20">
             <!-- Logo (Logo-Lock) -->
             <a href="index.html" class="flex items-center gap-3 group shrink-0">
                 <div class="flex gap-1 h-6 items-end">
@@ -342,7 +349,7 @@
                         </svg>
                     </span>
                 </button>
-                <a href="https://app.cal.eu/johannesanderl-tx-partner/30min?overlayCalendar=true" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center justify-center px-5 py-2 text-sm font-semibold text-white bg-brand-navy rounded-button hover:bg-brand-navy/90 transition-colors">Dokumentation prüfen</a>
+                <a href="https://app.cal.eu/johannesanderl-tx-partner/dokumentation-prufen" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center justify-center px-5 py-2 text-sm font-semibold text-white bg-brand-navy rounded-button hover:bg-brand-navy/90 transition-colors">Dokumentation prüfen</a>
                 <button id="mobile-menu-toggle" class="lg:hidden text-slate-600 dark:text-slate-300 p-2" aria-label="Menü öffnen" aria-expanded="false">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="4" x2="20" y1="12" y2="12"></line>
@@ -388,7 +395,7 @@
 
             <div class="h-px bg-slate-100 dark:bg-white/5 my-1 mx-2"></div>
 
-            <a href="https://app.cal.eu/johannesanderl-tx-partner/30min?overlayCalendar=true" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center px-4 py-3 rounded-button bg-brand-navy text-white text-sm font-semibold hover:bg-brand-navy/90 transition-colors mt-1">Dokumentation prüfen</a>
+            <a href="https://app.cal.eu/johannesanderl-tx-partner/dokumentation-prufen" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center px-4 py-3 rounded-button bg-brand-navy text-white text-sm font-semibold hover:bg-brand-navy/90 transition-colors mt-1">Dokumentation prüfen</a>
         </div>
     </nav>
 
@@ -396,9 +403,11 @@
     <section class="min-h-[85vh] flex flex-col overflow-hidden pt-20 sm:pt-28 md:pt-32 lg:pt-40 pb-20 relative justify-center">
     <!-- Ambient Background -->
     <div
-        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] md:w-[800px] lg:w-[1000px] h-[300px] md:h-[500px] lg:h-[600px] bg-brand-navy/5 rounded-full blur-[120px] -z-10">
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] md:w-[800px] lg:w-[1000px] h-[300px] md:h-[500px] lg:h-[600px] bg-brand-navy/25 rounded-full blur-[120px] -z-10 mix-blend-multiply dark:mix-blend-screen animate-aurora-pulse" style="animation-delay: 2s;">
     </div>
-    <div class="absolute top-0 right-0 w-[300px] md:w-[500px] lg:w-[600px] h-[300px] md:h-[500px] lg:h-[600px] bg-brand-teal/5 rounded-full blur-[100px] -z-10 translate-x-1/4 md:translate-x-0"></div>
+    <div class="absolute top-0 right-0 w-[300px] md:w-[500px] lg:w-[600px] h-[300px] md:h-[500px] lg:h-[600px] bg-brand-teal/25 rounded-full blur-[100px] -z-10 translate-x-1/4 md:translate-x-0 mix-blend-multiply dark:mix-blend-screen animate-aurora-pulse"></div>
+
+    <div class="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('assets/noise.svg')]"></div>
 
     <div class="container text-center max-w-7xl mr-auto ml-auto pr-6 pl-6">
         <!-- Tag -->
@@ -409,22 +418,25 @@
                 </div>
             </div>
         <!-- H1 - Einzige H1 auf der Seite -->
-        <h1 class="fade-in-up md:text-6xl lg:text-7xl dark:text-white leading-[1.1] text-5xl font-extrabold text-slate-900 tracking-tighter max-w-5xl mr-auto mb-8 ml-auto visible"
-            style="animation-delay: 0.1s">
-            Blockpit zeigt Hinweise? Professionelle Datenbereinigung für Steuerreports.
-        </h1>
-
-        <!-- Subheadline -->
+<h1 
+  class="fade-in-up text-5xl md:text-6xl lg:text-7xl font-extrabold text-slate-900 dark:text-white mb-8 leading-snug visible pt-2 pb-2"
+  style="letter-spacing: -0.04em; animation-delay: 0.1s"
+>
+  <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-teal to-brand-navy dark:to-white">
+    Blockpit zeigt Hinweise?
+  </span>
+  <br>
+  Wir beheben die Ursachen, bevor sie im Steuerreport landen.
+</h1>        <!-- Subheadline -->
         <p class="fade-in-up md:text-xl dark:text-slate-400 leading-relaxed text-lg font-medium text-slate-500 max-w-2xl mr-auto mb-12 ml-auto visible"
-            style="animation-delay: 0.2s">TX-Partner analysiert und behebt die Ursachen hinter Blockpit-Hinweisen.
-            Strukturiert, nachvollziehbar und fachlich korrekt.</p>
+            style="animation-delay: 0.2s">TX-Partner analysiert die Ursachen hinter Blockpit-Hinweisen und bereitet deine Transaktionen fachlich korrekt auf.</p>
 
         <!-- CTA Buttons -->
         <div class="fade-in-up flex flex-col md:flex-row items-start md:items-center justify-center gap-6 md:gap-8 visible"
             style="animation-delay: 0.3s">
             <!-- Primary CTA -->
             <div class="group flex flex-col items-center gap-3 w-full md:w-auto">
-                <a href="https://app.cal.eu/johannesanderl-tx-partner/30min?overlayCalendar=true" target="_blank"
+                <a href="https://app.cal.eu/johannesanderl-tx-partner/dokumentation-prufen" target="_blank"
                     rel="noopener noreferrer"
                     class="relative inline-flex h-14 w-full md:w-auto md:min-w-[260px] items-center justify-center gap-2 rounded-2xl bg-brand-navy px-6 md:px-8 text-base font-medium text-white shadow-lg shadow-brand-navy/20 ring-1 ring-white/10 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-brand-navy/30 hover:ring-white/20 focus:outline-none focus:ring-2 focus:ring-brand-navy focus:ring-offset-2 dark:focus:ring-offset-slate-900">
                     <span class="flex items-center gap-2">
@@ -566,9 +578,9 @@
     </section>
 
     <!-- Solution Standard Section -->
-    <section class="py-24 bg-slate-50 dark:bg-[#020202] border-y border-slate-200 dark:border-white/5 overflow-hidden relative">
-        <div class="absolute inset-0 opacity-20 mix-blend-overlay bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
-        <div class="absolute right-0 top-0 w-[500px] h-[500px] bg-brand-teal/5 rounded-full blur-[100px] pointer-events-none"></div>
+    <section class="py-24 bg-slate-50 dark:bg-[#050505] border-y border-slate-200 dark:border-white/5 overflow-hidden relative">
+        <div class="absolute inset-0 opacity-[0.4] pointer-events-none bg-[url('assets/noise.svg')]"></div>
+        <div class="absolute right-0 top-0 w-[500px] h-[500px] bg-brand-teal/10 rounded-full blur-[100px] pointer-events-none mix-blend-multiply dark:mix-blend-screen"></div>
 
         <div class="container mx-auto px-6 max-w-7xl relative z-10">
             <div class="grid lg:grid-cols-2 gap-16 items-center">
@@ -686,9 +698,9 @@
                     Root Cause Analysis
                 </div>
 
-                <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-brand-navy dark:text-white mb-6 leading-tight" style="letter-spacing: -0.02em">
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-brand-navy dark:text-white mb-6 leading-snug pb-2" style="letter-spacing: -0.02em">
                     Warum Blockpit diese
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-teal to-brand-navy dark:to-white">Hinweise anzeigt</span>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-teal to-brand-navy dark:to-white pb-1 block md:inline">Hinweise anzeigt</span>
                 </h2>
 
                 <p class="md:text-xl dark:text-slate-400 leading-relaxed text-lg font-medium text-slate-600 max-w-2xl mr-auto ml-auto">
@@ -699,7 +711,7 @@
             <!-- Cards Grid -->
             <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
                 <!-- Card 1 -->
-                <div class="group relative p-8 md:p-10 rounded-card bg-white dark:bg-dark-surface border border-slate-200 dark:border-white/5 hover:border-brand-teal/30 transition-all duration-300 hover:shadow-xl hover:shadow-brand-teal/5 overflow-hidden">
+                <div class="group relative p-8 md:p-10 rounded-card bg-white dark:bg-[#0F0F0F] border border-slate-200 dark:border-white/5 hover:border-brand-teal/30 transition-all duration-300 hover:shadow-[0_20px_50px_-12px_rgba(30,58,95,0.12)] dark:hover:shadow-brand-teal/5 overflow-hidden">
                     <div class="absolute inset-0 bg-gradient-to-br from-brand-teal/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     <div class="relative z-10">
                         <div class="w-14 h-14 rounded-2xl bg-brand-navy/5 dark:bg-white/5 border border-brand-navy/10 dark:border-white/10 flex items-center justify-center mb-8 group-hover:scale-110 group-hover:bg-brand-teal/10 group-hover:border-brand-teal/20 transition-all duration-300">
@@ -811,7 +823,7 @@
         <div class="container mx-auto max-w-6xl">
             <div class="relative rounded-card overflow-hidden text-center py-24 px-6 md:px-20 bg-brand-navy shadow-2xl shadow-brand-navy/30">
                 <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] md:w-[500px] lg:w-[600px] h-[300px] md:h-[500px] lg:h-[600px] bg-brand-teal opacity-20 blur-[120px] rounded-full pointer-events-none"></div>
-                <div class="absolute inset-0 opacity-20 mix-blend-overlay bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
+        <div class="absolute inset-0 opacity-20 mix-blend-overlay bg-[url('assets/noise.svg')]"></div>
 
                 <div class="relative z-10 fade-in-up">
                     <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-white mb-8 leading-tight" style="letter-spacing: -0.02em">
@@ -821,7 +833,7 @@
                     <p class="text-xl font-medium text-slate-200 max-w-xl mr-auto mb-12 ml-auto">
                         Starte mit einer kostenlosen strukturierten Erstprüfung deiner Blockpit-Daten, als Grundlage für saubere Reports.
                     </p>
-                    <a href="https://app.cal.eu/johannesanderl-tx-partner/30min?overlayCalendar=true" target="_blank" rel="noopener noreferrer" class="btn-primary inline-flex items-center justify-center px-10 py-5 bg-white text-brand-navy text-lg font-semibold rounded-[16px] hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(255,255,255,0.3)] transition-all duration-300 group">
+                    <a href="https://app.cal.eu/johannesanderl-tx-partner/dokumentation-prufen" target="_blank" rel="noopener noreferrer" class="btn-primary inline-flex items-center justify-center px-10 py-5 bg-white text-brand-navy text-lg font-semibold rounded-[16px] hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(255,255,255,0.3)] transition-all duration-300 group">
                         Dokumentation prüfen
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2 text-brand-teal group-hover:translate-x-1 transition-transform">
                             <path d="M5 12h14"></path>
@@ -868,7 +880,7 @@
                             </svg>
                         </a>
                     </div>
-                    <p class="text-sm text-slate-500 dark:text-slate-400 mt-4">Kontakt: <a href="mailto:info@tx-partner.at" class="hover:text-brand-teal transition-colors">info@tx-partner.at</a></p>
+                    
                 </div>
 
                 <!-- Leistungen -->
@@ -877,7 +889,7 @@
                     <ul class="space-y-4">
                         <li><a href="leistungen.html" class="dark:text-slate-400 hover:text-brand-teal transition-colors text-sm font-medium text-slate-500">Leistungen</a></li>
                         <li><a href="blockpit-hinweise.html" class="text-brand-teal text-sm font-medium">Blockpit Hinweise</a></li>
-                        <li><a href="cointracking-fehler.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">CoinTracking Fehler</a></li>
+                        <li><a href="cointracking-fehler.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">CoinTracking Fehler</a></li>
                     </ul>
                 </div>
 
@@ -885,10 +897,10 @@
                 <div>
                     <h4 class="font-bold text-xs uppercase tracking-widest text-brand-navy dark:text-white mb-6">Unternehmen</h4>
                     <ul class="space-y-4">
-                        <li><a href="ueber-uns.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">Über uns</a></li>
-                        <li><a href="dokumentationsstandard.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">Dokumentationsstandard</a></li>
-                        <li><a href="faq.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">FAQ</a></li>
-                        <li><a href="kontakt.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">Kontakt</a></li>
+                        <li><a href="ueber-uns.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Über uns</a></li>
+                        <li><a href="dokumentationsstandard.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Dokumentationsstandard</a></li>
+                        <li><a href="faq.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">FAQ</a></li>
+                        <li><a href="kontakt.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Kontakt</a></li>
                     </ul>
                 </div>
 
@@ -896,9 +908,9 @@
                 <div>
                     <h4 class="font-bold text-xs uppercase tracking-widest text-brand-navy dark:text-white mb-6">Rechtliches</h4>
                     <ul class="space-y-4">
-                        <li><a href="agb.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">AGB</a></li>
-                        <li><a href="datenschutz.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">Datenschutz</a></li>
-                        <li><a href="impressum.html" class="text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-brand-teal transition-colors">Impressum</a></li>
+                        <li><a href="agb.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">AGB</a></li>
+                        <li><a href="datenschutz.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Datenschutz</a></li>
+                        <li><a href="impressum.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Impressum</a></li>
                     </ul>
                 </div>
             </div>
@@ -928,18 +940,7 @@
             localStorage.theme = html.classList.contains('dark') ? 'dark' : 'light';
         });
 
-        // Mobile Menu Toggle with ARIA
-        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        mobileMenuToggle.addEventListener('click', () => {
-            const isOpen = mobileMenu.classList.contains('open');
-            mobileMenu.classList.toggle('open');
-            
-            // Update ARIA
-            mobileMenuToggle.setAttribute('aria-expanded', !isOpen);
-            mobileMenuToggle.setAttribute('aria-label', !isOpen ? 'Menü schließen' : 'Menü öffnen');
-        });
+
 
         // Card Spotlight Effect
         function handleMouseMove(e) {
