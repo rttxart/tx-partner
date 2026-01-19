@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CoinTracking Fehlermeldungen beheben | TX-Partner</title>
-    <meta name="description" content="CoinTracking Fehlermeldungen, falsche Bilanzen oder API-Probleme? Professionelle Bereinigung für korrekte Steuerreports. Kostenloser Check.">
+    <meta name="description"
+        content="CoinTracking Fehlermeldungen, falsche Bilanzen oder API-Probleme? Professionelle Bereinigung für korrekte Steuerreports. Kostenloser Check.">
     <link rel="icon" href="/favicon.png" type="image/png">
     <link rel="canonical" href="https://tx-partner.com/cointracking-fehler.html">
     <!-- Local Fonts Only (DSGVO-konform) -->
@@ -49,7 +51,7 @@
                     },
                     keyframes: {
                         fadeIn: {
-                            '0%': { opacity: '0', transform: 'translateY(10px)' },
+                            '0%': { opacity: '0', transform: 'translateY(8px)' },
                             '100%': { opacity: '1', transform: 'translateY(0)' },
                         },
                         float: {
@@ -68,28 +70,45 @@
             }
         }
     </script>
-    
+
     <style>
         /* Page Transition */
         html {
             scroll-behavior: smooth;
         }
-        
+
         body {
             opacity: 0;
             animation: pageLoad 0.5s ease-out 0.1s forwards;
         }
-        
+
         @keyframes pageLoad {
-            from { opacity: 0; transform: translateY(8px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
 
         /* Scrollbar */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: transparent; }
-        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #475569;
+        }
 
         /* Focus States for Accessibility (WCAG AA) */
         :focus-visible {
@@ -98,12 +117,14 @@
             border-radius: 4px;
         }
 
-        a:focus-visible, button:focus-visible {
+        a:focus-visible,
+        button:focus-visible {
             outline: 2px solid #3A9EAF;
             outline-offset: 2px;
         }
 
-        .glass a:focus-visible, .glass button:focus-visible {
+        .glass a:focus-visible,
+        .glass button:focus-visible {
             outline-color: #3A9EAF;
             outline-offset: 4px;
         }
@@ -113,7 +134,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .card-spotlight::before {
             content: "";
             position: absolute;
@@ -122,8 +143,10 @@
             opacity: 0;
             transition: opacity 0.3s ease;
         }
-        
-        .card-spotlight:hover::before { opacity: 1; }
+
+        .card-spotlight:hover::before {
+            opacity: 1;
+        }
 
         /* Animations */
         .fade-in-up {
@@ -131,7 +154,7 @@
             transform: translateY(20px);
             transition: opacity 0.6s ease-out, transform 0.6s ease-out;
         }
-        
+
         .fade-in-up.visible {
             opacity: 1;
             transform: translateY(0);
@@ -144,6 +167,7 @@
             -webkit-backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.06);
         }
+
         .dark .glass-nav {
             background: rgba(10, 10, 10, 0.9);
             border: 1px solid rgba(255, 255, 255, 0.08);
@@ -153,10 +177,10 @@
         .nav-dropdown {
             opacity: 0;
             visibility: hidden;
-            transform: translateY(10px);
+            transform: translateY(8px);
             transition: all 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
         }
-        
+
         .group:hover .nav-dropdown {
             opacity: 1;
             visibility: visible;
@@ -182,7 +206,7 @@
         .btn-primary {
             transition: all 0.2s ease-out;
         }
-        
+
         .btn-primary:hover {
             transform: translateY(-1px);
             box-shadow: 0 10px 40px -10px rgba(58, 158, 175, 0.4);
@@ -230,231 +254,339 @@
     </script>
 </head>
 
-<body class="antialiased bg-white dark:bg-dark-bg text-slate-900 dark:text-white font-sans selection:bg-brand-teal selection:text-white">
+<body
+    class="antialiased bg-white dark:bg-dark-bg text-slate-900 dark:text-white font-sans selection:bg-brand-teal selection:text-white">
 
     <!-- Noise Overlay -->
     <div class="bg-noise"></div>
 
     <!-- Navigation -->
-   <nav class="sticky top-6 z-50 pt-6">
-  <div class="mx-auto w-[95%] max-w-6xl">
-    <div class="glass-nav rounded-full px-6 py-3 flex items-center justify-between shadow-2xl shadow-black/5 dark:shadow-black/20">            
-            <!-- Logo (Logo-Lock) -->
-            <a href="index.html" class="flex items-center gap-3 group shrink-0">
-                <div class="flex items-center gap-1 h-6">
-                    <div class="w-1.5 h-6 rounded-full bg-brand-navy dark:bg-slate-200"></div>
-                    <div class="w-1.5 h-6 rounded-full bg-brand-navy dark:bg-slate-200"></div>
-                    <div class="w-1.5 h-6 rounded-full bg-brand-navy dark:bg-slate-200"></div>
-                    <div class="w-1.5 h-6 rounded-full bg-brand-teal"></div>
-                </div>
-                <span class="text-brand-navy dark:text-white text-lg font-bold tracking-wider font-sans">TX-Partner</span>
-            </a>
-
-                        <!-- Desktop Navigation -->
-            <ul class="hidden lg:flex items-center gap-1">
-                <!-- Dropdown: Leistungen -->
-                <li class="relative group">
-                    <button class="flex items-center gap-1 px-4 py-2 text-sm font-medium text-slate-500 hover:text-brand-navy dark:text-slate-400 dark:hover:text-white transition-colors">
-                        Leistungen
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:rotate-180 transition-transform duration-300">
-                            <path d="m6 9 6 6 6-6"></path>
-                        </svg>
-                    </button>
-                    <div class="nav-dropdown absolute top-full left-0 mt-2 w-56 rounded-button bg-white dark:bg-[#0F0F0F] border border-slate-100 dark:border-white/10 shadow-xl p-2">
-                        <a href="leistungen.html" class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
-                            <div class="text-sm font-semibold text-brand-navy dark:text-white mb-0.5">Leistungen</div>
-                            <div class="text-xs text-slate-500 dark:text-slate-500 font-mono">Übersicht aller Services</div>
-                        </a>
-                        <a href="blockpit-hinweise.html" class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
-                            <div class="text-sm font-semibold text-brand-navy dark:text-white mb-0.5">Blockpit Hinweise</div>
-                            <div class="text-xs text-slate-500 dark:text-slate-500 font-mono">Korrektur & Optimierung</div>
-                        </a>
-                        <a href="cointracking-fehler.html" class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
-                            <div class="text-sm font-semibold text-brand-navy dark:text-white mb-0.5">CoinTracking Fehler</div>
-                            <div class="text-xs text-slate-500 dark:text-slate-500 font-mono">Datenbereinigung</div>
-                        </a>
+    <nav class="sticky top-6 z-50 pt-6">
+        <div class="mx-auto w-[95%] max-w-6xl">
+            <div
+                class="glass-nav rounded-full px-6 py-3 flex items-center justify-between shadow-2xl shadow-black/5 dark:shadow-black/20">
+                <!-- Logo (Logo-Lock) -->
+                <a href="index.html" class="flex items-center gap-3 group shrink-0">
+                    <div class="flex items-center gap-1 h-6">
+                        <div class="w-1.5 h-6 rounded-full bg-brand-navy dark:bg-slate-200"></div>
+                        <div class="w-1.5 h-6 rounded-full bg-brand-navy dark:bg-slate-200"></div>
+                        <div class="w-1.5 h-6 rounded-full bg-brand-navy dark:bg-slate-200"></div>
+                        <div class="w-1.5 h-6 rounded-full bg-brand-teal"></div>
                     </div>
-                </li>
-                
-                <!-- Dropdown: Über uns -->
-                <li class="relative group">
-                    <button class="flex items-center gap-1 px-4 py-2 text-sm font-medium text-slate-500 hover:text-brand-navy dark:text-slate-400 dark:hover:text-white transition-colors">
-                        Über uns
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:rotate-180 transition-transform duration-300">
-                            <path d="m6 9 6 6 6-6"></path>
-                        </svg>
-                    </button>
-                    <div class="nav-dropdown absolute top-full left-0 mt-2 w-56 rounded-button bg-white dark:bg-[#0F0F0F] border border-slate-100 dark:border-white/10 shadow-xl p-2">
-                        <a href="ueber-uns.html" class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
-                            <div class="text-sm font-semibold text-brand-navy dark:text-white mb-0.5">Über uns</div>
-                            <div class="text-xs text-slate-500 dark:text-slate-500 font-mono">Wer wir sind</div>
-                        </a>
-                        <a href="dokumentationsstandard.html" class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
-                            <div class="text-sm font-semibold text-brand-navy dark:text-white mb-0.5">Dokumentationsstandard</div>
-                            <div class="text-xs text-slate-500 dark:text-slate-500 font-mono">Unsere Qualitätsrichtlinien</div>
-                        </a>
-                    </div>
-                </li>
-                
-                <li>
-                    <a href="faq.html" class="block px-4 py-2 text-sm font-medium text-slate-500 hover:text-brand-navy dark:text-slate-400 dark:hover:text-white transition-colors">FAQ</a>
-                </li>
-                <li>
-                    <a href="kontakt.html" class="block px-4 py-2 text-sm font-medium text-slate-500 hover:text-brand-navy dark:text-slate-400 dark:hover:text-white transition-colors">Kontakt</a>
-                </li>
-            </ul>
-            </ul>
-
-            <!-- Right Side -->
-            <div class="flex items-center gap-4">
-                <button id="theme-toggle" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-white/10 text-slate-500 dark:text-slate-400 transition-all duration-200 focus:outline-none" aria-label="Dark Mode umschalten" title="Dark Mode umschalten">
-                    <span class="block dark:hidden">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="4"></circle>
-                            <path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32l1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
-                        </svg>
-                    </span>
-                    <span class="hidden dark:block">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                        </svg>
-                    </span>
-                </button>
-                
-                                <a href="https://app.cal.eu/johannesanderl-tx-partner/dokumentation-prufen" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center justify-center px-5 py-2 text-sm font-semibold text-white bg-brand-navy hover:bg-brand-navy/90 transition-all duration-300 rounded-button">
-                    Dokumentation prüfen
+                    <span
+                        class="text-brand-navy dark:text-white text-lg font-bold tracking-wider font-sans">TX-Partner</span>
                 </a>
-                
-                <button id="mobile-menu-toggle" class="lg:hidden text-slate-600 dark:text-slate-300 p-2" aria-label="Menü öffnen" aria-expanded="false">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="4" x2="20" y1="12" y2="12"></line>
-                        <line x1="4" x2="20" y1="6" y2="6"></line>
-                        <line x1="4" x2="20" y1="18" y2="18"></line>
-                    </svg>
-                </button>
-            </div>
-        </div>
 
-                    <!-- Mobile Menu -->
-            <div id="mobile-menu" class="mobile-menu absolute top-full left-0 w-full mt-2 bg-white dark:bg-[#0F0F0F] rounded-card border border-slate-100 dark:border-white/10 shadow-xl p-2">
-                <div class="px-4 pt-3 pb-1 text-[11px] font-bold text-slate-400 uppercase tracking-widest">Leistungen</div>
-                <a href="leistungen.html" class="block px-4 py-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                <!-- Desktop Navigation -->
+                <ul class="hidden lg:flex items-center gap-1">
+                    <!-- Dropdown: Leistungen -->
+                    <li class="relative group">
+                        <button
+                            class="flex items-center gap-1 px-4 py-2 text-sm font-medium text-slate-500 hover:text-brand-navy dark:text-slate-400 dark:hover:text-white transition-colors">
+                            Leistungen
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="group-hover:rotate-180 transition-transform duration-300">
+                                <path d="m6 9 6 6 6-6"></path>
+                            </svg>
+                        </button>
+                        <div
+                            class="nav-dropdown absolute top-full left-0 mt-2 w-56 rounded-button bg-white dark:bg-[#0F0F0F] border border-slate-100 dark:border-white/10 shadow-xl p-2">
+                            <a href="leistungen.html"
+                                class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                                <div class="text-sm font-semibold text-brand-navy dark:text-white mb-0.5">Leistungen
+                                </div>
+                                <div class="text-xs text-slate-500 dark:text-slate-500 font-mono">Übersicht aller
+                                    Services</div>
+                            </a>
+                            <a href="blockpit-hinweise.html"
+                                class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                                <div class="text-sm font-semibold text-brand-navy dark:text-white mb-0.5">Blockpit
+                                    Hinweise</div>
+                                <div class="text-xs text-slate-500 dark:text-slate-500 font-mono">Korrektur &
+                                    Optimierung</div>
+                            </a>
+                            <a href="cointracking-fehler.html"
+                                class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                                <div class="text-sm font-semibold text-brand-navy dark:text-white mb-0.5">CoinTracking
+                                    Fehler</div>
+                                <div class="text-xs text-slate-500 dark:text-slate-500 font-mono">Datenbereinigung</div>
+                            </a>
+                        </div>
+                    </li>
+
+                    <!-- Dropdown: Über uns -->
+                    <li class="relative group">
+                        <button
+                            class="flex items-center gap-1 px-4 py-2 text-sm font-medium text-slate-500 hover:text-brand-navy dark:text-slate-400 dark:hover:text-white transition-colors">
+                            Über uns
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="group-hover:rotate-180 transition-transform duration-300">
+                                <path d="m6 9 6 6 6-6"></path>
+                            </svg>
+                        </button>
+                        <div
+                            class="nav-dropdown absolute top-full left-0 mt-2 w-56 rounded-button bg-white dark:bg-[#0F0F0F] border border-slate-100 dark:border-white/10 shadow-xl p-2">
+                            <a href="ueber-uns.html"
+                                class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                                <div class="text-sm font-semibold text-brand-navy dark:text-white mb-0.5">Über uns</div>
+                                <div class="text-xs text-slate-500 dark:text-slate-500 font-mono">Wer wir sind</div>
+                            </a>
+                            <a href="dokumentationsstandard.html"
+                                class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                                <div class="text-sm font-semibold text-brand-navy dark:text-white mb-0.5">
+                                    Dokumentationsstandard</div>
+                                <div class="text-xs text-slate-500 dark:text-slate-500 font-mono">Unsere
+                                    Qualitätsrichtlinien</div>
+                            </a>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="faq.html"
+                            class="block px-4 py-2 text-sm font-medium text-slate-500 hover:text-brand-navy dark:text-slate-400 dark:hover:text-white transition-colors">FAQ</a>
+                    </li>
+                    <li>
+                        <a href="kontakt.html"
+                            class="block px-4 py-2 text-sm font-medium text-slate-500 hover:text-brand-navy dark:text-slate-400 dark:hover:text-white transition-colors">Kontakt</a>
+                    </li>
+                </ul>
+                </ul>
+
+                <!-- Right Side -->
+                <div class="flex items-center gap-4">
+                    <button id="theme-toggle"
+                        class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-white/10 text-slate-500 dark:text-slate-400 transition-all duration-200 focus:outline-none"
+                        aria-label="Dark Mode umschalten" title="Dark Mode umschalten">
+                        <span class="block dark:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="4"></circle>
+                                <path
+                                    d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32l1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41">
+                                </path>
+                            </svg>
+                        </span>
+                        <span class="hidden dark:block">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                            </svg>
+                        </span>
+                    </button>
+
+
+
+                    <button id="mobile-menu-toggle" class="lg:hidden text-slate-600 dark:text-slate-300 p-2"
+                        aria-label="Menü öffnen" aria-expanded="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="4" x2="20" y1="12" y2="12"></line>
+                            <line x1="4" x2="20" y1="6" y2="6"></line>
+                            <line x1="4" x2="20" y1="18" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu"
+                class="mobile-menu absolute top-full left-0 w-full mt-2 bg-white dark:bg-[#0F0F0F] rounded-card border border-slate-100 dark:border-white/10 shadow-xl p-2"
+                role="dialog" aria-label="Hauptmenü">
+                <!-- Close Button Header -->
+                <div
+                    class="flex items-center justify-between px-4 py-2 mb-2 border-b border-slate-100 dark:border-white/10">
+                    <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Menü</span>
+                    <button id="mobile-menu-close"
+                        class="p-2 rounded-lg hover:bg-slate-50 dark:hover:bg-white/5 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-teal"
+                        aria-label="Menü schließen">
+                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="px-4 pt-3 pb-1 text-[11px] font-bold text-slate-400 uppercase tracking-widest">Leistungen
+                </div>
+                <a href="leistungen.html"
+                    class="block px-4 py-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
                     <div class="text-sm font-semibold text-slate-700 dark:text-white">Leistungen</div>
                     <div class="text-xs text-slate-500 dark:text-slate-500 font-mono">Übersicht aller Services</div>
                 </a>
-                <a href="blockpit-hinweise.html" class="block px-4 py-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                <a href="blockpit-hinweise.html"
+                    class="block px-4 py-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
                     <div class="text-sm font-semibold text-slate-700 dark:text-white">Blockpit Hinweise</div>
                     <div class="text-xs text-slate-500 dark:text-slate-500 font-mono">Korrektur & Optimierung</div>
                 </a>
-                <a href="cointracking-fehler.html" class="block px-4 py-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                <a href="cointracking-fehler.html"
+                    class="block px-4 py-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
                     <div class="text-sm font-semibold text-slate-700 dark:text-white">CoinTracking Fehler</div>
                     <div class="text-xs text-slate-500 dark:text-slate-500 font-mono">Datenbereinigung</div>
                 </a>
 
                 <div class="h-px bg-slate-100 dark:bg-white/5 my-1 mx-4"></div>
 
-                <div class="px-4 pt-3 pb-1 text-[11px] font-bold text-slate-400 uppercase tracking-widest">Über uns</div>
-                <a href="ueber-uns.html" class="block px-4 py-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                <div class="px-4 pt-3 pb-1 text-[11px] font-bold text-slate-400 uppercase tracking-widest">Über uns
+                </div>
+                <a href="ueber-uns.html"
+                    class="block px-4 py-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
                     <div class="text-sm font-semibold text-slate-700 dark:text-white">Über uns</div>
                     <div class="text-xs text-slate-500 dark:text-slate-500 font-mono">Wer wir sind</div>
                 </a>
-                <a href="dokumentationsstandard.html" class="block px-4 py-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                <a href="dokumentationsstandard.html"
+                    class="block px-4 py-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
                     <div class="text-sm font-semibold text-slate-700 dark:text-white">Dokumentationsstandard</div>
                     <div class="text-xs text-slate-500 dark:text-slate-500 font-mono">Unsere Qualitätsrichtlinien</div>
                 </a>
 
                 <div class="h-px bg-slate-100 dark:bg-white/5 my-1 mx-4"></div>
 
-                <a href="faq.html" class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 font-semibold text-sm text-slate-600 dark:text-slate-300 transition-colors">FAQ</a>
-                <a href="kontakt.html" class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 font-semibold text-sm text-slate-600 dark:text-slate-300 transition-colors">Kontakt</a>
-
-                <div class="h-px bg-slate-100 dark:bg-white/5 my-1 mx-2"></div>
-
-                <a href="https://app.cal.eu/johannesanderl-tx-partner/dokumentation-prufen" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center px-4 py-3 rounded-button bg-brand-navy text-white text-sm font-semibold hover:bg-brand-navy/90 transition-colors mt-1">Dokumentation prüfen</a>
+                <a href="faq.html"
+                    class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 font-semibold text-sm text-slate-600 dark:text-slate-300 transition-colors">FAQ</a>
+                <a href="kontakt.html"
+                    class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 font-semibold text-sm text-slate-600 dark:text-slate-300 transition-colors">Kontakt</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="min-h-[85vh] flex flex-col overflow-hidden pt-20 sm:pt-28 md:pt-32 lg:pt-40 pb-20 relative justify-center">
+    <section id="hero-section"
+        class="min-h-[85vh] flex flex-col overflow-hidden pt-20 sm:pt-28 md:pt-32 lg:pt-40 pb-20 relative justify-center">
         <!-- Grid Pattern -->
-        <div class="absolute inset-0 -z-20 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none"></div>
+        <div
+            class="absolute inset-0 -z-20 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none">
+        </div>
 
         <!-- Ambient Background -->
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] md:w-[800px] lg:w-[1000px] h-[300px] md:h-[500px] lg:h-[600px] bg-brand-navy/5 dark:bg-brand-navy/10 rounded-full blur-[120px] -z-10 mix-blend-multiply dark:mix-blend-screen"></div>
-        <div class="absolute top-0 right-0 w-[400px] md:w-[600px] lg:w-[800px] h-[400px] md:h-[600px] lg:h-[800px] bg-brand-teal/5 dark:bg-brand-teal/10 rounded-full blur-[100px] -z-10 mix-blend-multiply dark:mix-blend-screen translate-x-1/4 md:translate-x-0"></div>
+        <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] md:w-[800px] lg:w-[1000px] h-[300px] md:h-[500px] lg:h-[600px] bg-brand-navy/15 dark:bg-brand-navy/20 rounded-full blur-[120px] -z-10 mix-blend-multiply dark:mix-blend-screen animate-aurora-pulse">
+        </div>
+        <div class="absolute top-0 right-0 w-[400px] md:w-[600px] lg:w-[800px] h-[400px] md:h-[600px] lg:h-[800px] bg-brand-teal/15 dark:bg-brand-teal/20 rounded-full blur-[100px] -z-10 mix-blend-multiply dark:mix-blend-screen animate-aurora-pulse translate-x-1/4 md:translate-x-0"
+            style="animation-delay: 2s;"></div>
 
-    <div class="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('assets/noise.svg')]"></div>
+        <div class="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('assets/noise.svg')]"></div>
 
         <div class="container text-center max-w-7xl mr-auto ml-auto pr-6 pl-6 relative z-10">
             <!-- Tag -->
             <div class="fade-in-up visible">
-                <div class="inline-flex items-center gap-2 border border-brand-teal/20 text-brand-teal text-xs font-bold tracking-widest uppercase rounded-full px-3.5 py-1.5 mb-8 backdrop-blur-sm">
+                <div
+                    class="inline-flex items-center gap-2 border border-brand-teal/20 text-brand-teal text-xs font-bold tracking-widest uppercase rounded-full px-3.5 py-1.5 mb-8 backdrop-blur-sm">
                     <span class="w-1.5 h-1.5 rounded-full bg-brand-teal animate-pulse"></span>
                     CoinTracking Fehlermeldungen
                 </div>
             </div>
 
             <!-- H1 - Einzige H1 auf der Seite -->
-<h1 
-  class="fade-in-up text-5xl md:text-6xl lg:text-7xl font-extrabold text-slate-900 dark:text-white mb-8 leading-snug visible pt-2 pb-2"
-  style="letter-spacing: -0.04em; animation-delay: 0.1s"
->
-  <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-teal to-brand-navy dark:to-white">
-    CoinTracking-Fehler?
-  </span>
-  <br>
-  Wir beheben die Ursachen, bevor sie im Steuerreport landen.
-</h1>
+            <h1 class="fade-in-up text-5xl md:text-6xl lg:text-7xl font-extrabold text-slate-900 dark:text-white mb-8 leading-snug visible pt-2 pb-2"
+                style="animation-delay: 0.1s">
+                <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-brand-teal to-brand-navy dark:to-white">
+                    CoinTracking-Fehler?
+                </span>
+                <br>
+                Wir beheben die Ursachen, bevor sie im Steuerreport landen.
+            </h1>
             <!-- Subheadline (TYPO FIXED!) -->
-            <p class="fade-in-up md:text-xl dark:text-slate-400 leading-relaxed text-lg font-medium text-slate-500 max-w-2xl mr-auto mb-12 ml-auto visible" style="animation-delay: 0.2s">
-                TX-Partner analysiert die Ursachen hinter CoinTracking-Fehler und bereitet deine Transaktionen fachlich korrekt auf.
+            <p class="fade-in-up md:text-xl dark:text-slate-400 leading-relaxed text-lg font-medium text-slate-500 max-w-2xl mr-auto mb-12 ml-auto visible"
+                style="animation-delay: 0.2s">
+                TX-Partner analysiert die Ursachen hinter CoinTracking-Fehler und bereitet deine Transaktionen fachlich
+                korrekt auf.
             </p>
 
-            <!-- CTA Buttons (User's Dual-CTA Structure - Already Perfect!) -->
-            <div class="fade-in-up flex flex-col md:flex-row items-start md:items-center justify-center gap-6 md:gap-8 visible" style="animation-delay: 0.3s">
+            <!-- CTA Buttons -->
+            <div class="fade-in-up flex flex-col md:flex-row items-stretch justify-center gap-8 visible"
+                style="animation-delay: 0.3s">
                 <!-- Primary CTA -->
-                <div class="group flex flex-col items-center gap-3 w-full md:w-auto">
-                    <a href="https://app.cal.eu/johannesanderl-tx-partner/dokumentation-prufen" target="_blank" rel="noopener noreferrer" class="relative inline-flex h-14 w-full md:w-auto md:min-w-[260px] items-center justify-center gap-2 rounded-2xl bg-brand-navy px-6 md:px-8 text-base font-medium text-white shadow-lg shadow-brand-navy/20 ring-1 ring-white/10 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-brand-navy/30 hover:ring-white/20 focus:outline-none focus:ring-2 focus:ring-brand-navy focus:ring-offset-2 dark:focus:ring-offset-slate-900">
-                        <span class="flex items-center gap-2">
-                            Dokumentation prüfen 
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300 group-hover:translate-x-1">
+                <div class="group flex flex-col gap-2 w-full md:w-auto">
+                    <a href="https://app.cal.eu/johannesanderl-tx-partner/dokumentation-prufen" target="_blank"
+                        rel="noopener noreferrer"
+                        class="relative inline-flex h-14 w-full md:min-w-[280px] items-center justify-center gap-2 rounded-2xl bg-brand-navy px-8 text-base font-bold text-white shadow-xl shadow-brand-navy/20 ring-1 ring-white/10 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-brand-navy/30 hover:scale-[1.02]">
+                        <span class="flex items-center gap-2 relative z-10">
+                            Kostenloser Doku-Check
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="transition-transform duration-300 group-hover:translate-x-1 text-brand-teal">
                                 <path d="M5 12h14"></path>
                                 <path d="m12 5 7 7-7 7"></path>
                             </svg>
                         </span>
+                        <div class="absolute inset-0 rounded-2xl overflow-hidden">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:animate-shimmer">
+                            </div>
+                        </div>
                     </a>
-                    <div class="flex flex-col items-center gap-0.5 text-center">
-                        <p class="max-w-[260px] text-xs font-medium text-slate-500 dark:text-slate-400">
-                            Kostenlose Erstprüfung deiner Datenbasis
-                        </p>
-                        <p class="text-[10px] text-slate-400 dark:text-slate-500">
-                            Keine Live-Unterstützung · keine Fehlerbehebung
-                        </p>
-                    </div>
+                    <p class="text-[11px] font-medium text-slate-400 dark:text-slate-500 text-center">
+                        Ersteinschätzung deiner Datenbasis · 30 Min.
+                    </p>
                 </div>
 
                 <!-- Secondary CTA -->
-                <div class="group flex flex-col items-center gap-3 w-full md:w-auto">
-                    <a href="https://app.cal.eu/robertthorn-tx-partner/expertenprufung-krypto-dokumentation" target="_blank" rel="noopener noreferrer" class="relative inline-flex h-14 w-full md:w-auto md:min-w-[260px] items-center justify-center gap-3 rounded-2xl border border-slate-200 bg-white px-5 md:px-6 text-base font-medium text-brand-navy shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-brand-teal/50 hover:text-brand-teal hover:shadow-xl hover:shadow-brand-teal/10 dark:border-white/10 dark:bg-white/5 dark:text-white dark:hover:border-white/30">
-                        <span class="flex items-center gap-2.5">
-                            Expertenprüfung im Live-Call
-                            <span class="inline-flex items-center rounded-full bg-brand-teal/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-brand-teal ring-1 ring-inset ring-brand-teal/20">
-                                Kostenpflichtig
+                <div class="group flex flex-col gap-2 w-full md:w-auto">
+                    <a href="https://app.cal.eu/robertthorn-tx-partner/expertenprufung-krypto-dokumentation"
+                        target="_blank" rel="noopener noreferrer"
+                        class="relative inline-flex h-14 w-full md:min-w-[280px] items-center justify-center gap-3 rounded-2xl border border-slate-200 bg-white px-6 text-base font-bold text-brand-navy shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-brand-teal/50 hover:text-brand-teal hover:shadow-xl hover:shadow-brand-teal/10 dark:border-white/10 dark:bg-white/5 dark:text-white dark:hover:border-white/30">
+                        <span class="flex items-center gap-2 relative z-10">
+                            Expertenprüfung (Live)
+                            <span class="flex h-2 w-2 relative">
+                                <span
+                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-teal opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-teal"></span>
                             </span>
                         </span>
                     </a>
-                    <div class="flex flex-col items-center gap-0.5 text-center">
-                        <p class="max-w-[260px] text-xs font-medium text-slate-500 dark:text-slate-400">
-                            Screen-Sharing · Soforthilfe · €125/30 Min
-                        </p>
-                        <p class="text-[10px] text-transparent select-none">
-                            Placeholder
-                        </p>
-                    </div>
+                    <p class="text-[11px] font-medium text-slate-400 dark:text-slate-500 text-center">
+                        Soforthilfe via Screenshare · €125/30 Min
+                    </p>
                 </div>
             </div>
         </div>
+
+        <!-- Floating CoinTracking Elements (Desktop Only) -->
+        <div class="absolute inset-0 pointer-events-none hidden lg:block overflow-hidden -z-5">
+            <!-- Left: Warning / Missing TX -->
+            <div class="absolute top-[25%] left-[8%] animate-float" style="animation-duration: 9s;">
+                <div
+                    class="flex items-center gap-3 px-4 py-3 rounded-xl bg-white/60 dark:bg-[#1a1a1a]/60 backdrop-blur-md border border-red-500/20 shadow-lg shadow-red-500/5">
+                    <div class="w-8 h-8 rounded-lg bg-red-500/10 flex items-center justify-center text-red-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="12" y1="8" x2="12" y2="12" />
+                            <line x1="12" y1="16" x2="12.01" y2="16" />
+                        </svg>
+                    </div>
+                    <div class="flex flex-col">
+                        <div class="h-1.5 w-16 bg-slate-400 dark:bg-slate-600 rounded opacity-50 mb-1"></div>
+                        <div class="text-[10px] font-mono text-red-500 font-bold tracking-wider">MISSING_TX</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Solution / Matched -->
+            <div class="absolute top-[30%] right-[8%] animate-float"
+                style="animation-duration: 10s; animation-delay: 1.5s;">
+                <div
+                    class="flex items-center gap-3 px-4 py-3 rounded-xl bg-white/60 dark:bg-[#1a1a1a]/60 backdrop-blur-md border border-brand-teal/30 shadow-lg shadow-brand-teal/10">
+                    <div class="w-8 h-8 rounded-lg bg-brand-teal/10 flex items-center justify-center text-brand-teal">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 6 9 17 4 12"></path>
+                        </svg>
+                    </div>
+                    <div class="flex flex-col">
+                        <div class="h-1.5 w-20 bg-brand-navy/50 dark:bg-white/50 rounded mb-1"></div>
+                        <div class="text-[10px] font-mono text-brand-teal font-bold tracking-wider">MATCHED</div>
+                    </div>
+                </div>
+            </div>
     </section>
 
     <!-- Problems Grid Section -->
@@ -462,7 +594,8 @@
         <div class="container max-w-7xl mr-auto ml-auto pr-6 pl-6">
 
             <div class="mb-16 fade-in-up visible">
-                <h2 class="md:text-4xl text-brand-navy dark:text-white text-3xl font-bold tracking-tight mb-4" style="letter-spacing: -0.02em">
+                <h2 class="md:text-4xl text-brand-navy dark:text-white text-3xl font-bold tracking-tight mb-4"
+                    style="letter-spacing: -0.02em">
                     Häufige CoinTracking-Fehler
                 </h2>
                 <p class="dark:text-slate-400 text-slate-500">
@@ -474,61 +607,79 @@
 
                 <!-- Card 1 -->
                 <div class="card-spotlight group rounded-card fade-in-up visible" onmousemove="handleMouseMove(event)">
-                    <div class="h-full bg-slate-50 dark:bg-dark-surface rounded-[30px] p-8 border border-slate-200 dark:border-white/5 transition-all duration-300 group-hover:shadow-xl">
-                        <div class="text-brand-teal text-xs font-bold tracking-wider font-mono mb-4">01_MISSING_TRANSACTIONS</div>
-                        <h3 class="text-xl font-semibold text-brand-navy dark:text-white mb-3">Fehlende Transaktionen</h3>
-                        <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Transaktionen werden nicht gematcht? Wir verknüpfen Transfers zwischen Ihren Wallets manuell.</p>
+                    <div
+                        class="h-full bg-slate-50 dark:bg-dark-surface rounded-[30px] p-8 border border-slate-200 dark:border-white/5 transition-all duration-300 group-hover:shadow-xl">
+                        <div class="text-brand-teal text-xs font-bold tracking-wider font-mono mb-4">
+                            01_MISSING_TRANSACTIONS</div>
+                        <h3 class="text-xl font-semibold text-brand-navy dark:text-white mb-3">Fehlende Transaktionen
+                        </h3>
+                        <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Transaktionen werden nicht
+                            gematcht? Wir verknüpfen Transfers zwischen Ihren Wallets manuell.</p>
                     </div>
                 </div>
 
                 <!-- Card 2 -->
                 <div class="card-spotlight group rounded-card fade-in-up visible" onmousemove="handleMouseMove(event)">
-                    <div class="h-full bg-slate-50 dark:bg-dark-surface rounded-[30px] p-8 border border-slate-200 dark:border-white/5 transition-all duration-300 group-hover:shadow-xl">
-                        <div class="text-brand-teal text-xs font-bold tracking-wider font-mono mb-4">02_VALIDATION_ERRORS</div>
+                    <div
+                        class="h-full bg-slate-50 dark:bg-dark-surface rounded-[30px] p-8 border border-slate-200 dark:border-white/5 transition-all duration-300 group-hover:shadow-xl">
+                        <div class="text-brand-teal text-xs font-bold tracking-wider font-mono mb-4">
+                            02_VALIDATION_ERRORS</div>
                         <h3 class="text-xl font-semibold text-brand-navy dark:text-white mb-3">
                             <span class="sr-only">CoinTracking Validation Error - </span>Validation Errors
                         </h3>
-                        <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Fehlermeldungen beim CSV-Import? Wir prüfen Format, Spalten und Zeitstempel.</p>
+                        <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Fehlermeldungen beim
+                            CSV-Import? Wir prüfen Format, Spalten und Zeitstempel.</p>
                     </div>
                 </div>
 
                 <!-- Card 3 -->
                 <div class="card-spotlight group rounded-card fade-in-up visible" onmousemove="handleMouseMove(event)">
-                    <div class="h-full bg-slate-50 dark:bg-dark-surface rounded-[30px] p-8 border border-slate-200 dark:border-white/5 transition-all duration-300 group-hover:shadow-xl">
-                        <div class="text-brand-teal text-xs font-bold tracking-wider font-mono mb-4">03_WRONG_BALANCES</div>
+                    <div
+                        class="h-full bg-slate-50 dark:bg-dark-surface rounded-[30px] p-8 border border-slate-200 dark:border-white/5 transition-all duration-300 group-hover:shadow-xl">
+                        <div class="text-brand-teal text-xs font-bold tracking-wider font-mono mb-4">03_WRONG_BALANCES
+                        </div>
                         <h3 class="text-xl font-semibold text-brand-navy dark:text-white mb-3">
                             <span class="sr-only">CoinTracking falsche Bilanz - </span>Falsche Bilanzen
                         </h3>
-                        <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Der CoinTracking-Bestand stimmt nicht mit der Wallet überein? Wir klären die Diskrepanz.</p>
+                        <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Der CoinTracking-Bestand
+                            stimmt nicht mit der Wallet überein? Wir klären die Diskrepanz.</p>
                     </div>
                 </div>
 
                 <!-- Card 4 -->
                 <div class="card-spotlight group rounded-card fade-in-up visible" onmousemove="handleMouseMove(event)">
-                    <div class="h-full bg-slate-50 dark:bg-dark-surface rounded-[30px] p-8 border border-slate-200 dark:border-white/5 transition-all duration-300 group-hover:shadow-xl">
-                        <div class="text-brand-teal text-xs font-bold tracking-wider font-mono mb-4">04_DUPLICATE_ENTRIES</div>
+                    <div
+                        class="h-full bg-slate-50 dark:bg-dark-surface rounded-[30px] p-8 border border-slate-200 dark:border-white/5 transition-all duration-300 group-hover:shadow-xl">
+                        <div class="text-brand-teal text-xs font-bold tracking-wider font-mono mb-4">
+                            04_DUPLICATE_ENTRIES</div>
                         <h3 class="text-xl font-semibold text-brand-navy dark:text-white mb-3">Doppelte Einträge</h3>
-                        <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Doppelte Buchungen? Überlappende Imports? Wir bereinigen systematisch.</p>
+                        <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Doppelte Buchungen?
+                            Überlappende Imports? Wir bereinigen systematisch.</p>
                     </div>
                 </div>
 
                 <!-- Card 5 -->
                 <div class="card-spotlight group rounded-card fade-in-up visible" onmousemove="handleMouseMove(event)">
-                    <div class="h-full bg-slate-50 dark:bg-dark-surface rounded-[30px] p-8 border border-slate-200 dark:border-white/5 transition-all duration-300 group-hover:shadow-xl">
-                        <div class="text-brand-teal text-xs font-bold tracking-wider font-mono mb-4">05_API_PROBLEMS</div>
+                    <div
+                        class="h-full bg-slate-50 dark:bg-dark-surface rounded-[30px] p-8 border border-slate-200 dark:border-white/5 transition-all duration-300 group-hover:shadow-xl">
+                        <div class="text-brand-teal text-xs font-bold tracking-wider font-mono mb-4">05_API_PROBLEMS
+                        </div>
                         <h3 class="text-xl font-semibold text-brand-navy dark:text-white mb-3">
                             <span class="sr-only">CoinTracking API Fehler - </span>API-Probleme
                         </h3>
-                        <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Exchange-API läuft nicht sauber? Wir rekonstruieren über On-Chain-Daten.</p>
+                        <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Exchange-API läuft nicht
+                            sauber? Wir rekonstruieren über On-Chain-Daten.</p>
                     </div>
                 </div>
 
                 <!-- Card 6 -->
                 <div class="card-spotlight group rounded-card fade-in-up visible" onmousemove="handleMouseMove(event)">
-                    <div class="h-full bg-slate-50 dark:bg-dark-surface rounded-[30px] p-8 border border-slate-200 dark:border-white/5 transition-all duration-300 group-hover:shadow-xl">
+                    <div
+                        class="h-full bg-slate-50 dark:bg-dark-surface rounded-[30px] p-8 border border-slate-200 dark:border-white/5 transition-all duration-300 group-hover:shadow-xl">
                         <div class="text-brand-teal text-xs font-bold tracking-wider font-mono mb-4">06_COST_BASIS</div>
                         <h3 class="text-xl font-semibold text-brand-navy dark:text-white mb-3">Falsche Kostenbasen</h3>
-                        <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">FIFO-Fehler? Verkauft bevor gekauft? Wir korrigieren die historische Basis.</p>
+                        <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">FIFO-Fehler? Verkauft
+                            bevor gekauft? Wir korrigieren die historische Basis.</p>
                     </div>
                 </div>
 
@@ -537,62 +688,91 @@
     </section>
 
     <!-- Solution Standard Section -->
-    <section class="py-24 bg-slate-50 dark:bg-[#050505] border-y border-slate-200 dark:border-white/5 overflow-hidden relative">
+    <section
+        class="py-24 bg-slate-50 dark:bg-[#050505] border-y border-slate-200 dark:border-white/5 overflow-hidden relative">
         <div class="absolute inset-0 opacity-[0.4] pointer-events-none bg-[url('assets/noise.svg')]"></div>
-        <div class="absolute right-0 top-0 w-[500px] h-[500px] bg-brand-teal/10 rounded-full blur-[100px] pointer-events-none mix-blend-multiply dark:mix-blend-screen"></div>
+        <div
+            class="absolute right-0 top-0 w-[500px] h-[500px] bg-brand-teal/10 rounded-full blur-[100px] pointer-events-none mix-blend-multiply dark:mix-blend-screen">
+        </div>
 
         <div class="container mx-auto px-6 max-w-7xl relative z-10">
             <div class="grid lg:grid-cols-2 gap-16 items-center">
-                
+
                 <div class="fade-in-up">
-                    <div class="inline-flex items-center gap-2 text-brand-teal text-xs font-bold tracking-widest uppercase mb-6">
+                    <div
+                        class="inline-flex items-center gap-2 text-brand-teal text-xs font-bold tracking-widest uppercase mb-6">
                         <span class="w-1.5 h-1.5 rounded-full bg-brand-teal"></span>
                         Qualitätsversprechen
                     </div>
-                    
-                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-brand-navy dark:text-white leading-tight mb-8" style="letter-spacing: -0.02em">
+
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-brand-navy dark:text-white leading-tight mb-8"
+                        style="letter-spacing: -0.02em">
                         Warum unsere CoinTracking-Lösungen
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-teal to-brand-navy dark:to-white">dauerhaft halten</span>
+                        <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-brand-teal to-brand-navy dark:to-white">dauerhaft
+                            halten</span>
                     </h2>
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-                        <div class="flex items-center gap-2 md:gap-3 p-2.5 md:p-3 rounded-button bg-white/50 dark:bg-white/5 border border-slate-200 dark:border-white/10">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="md:w-5 md:h-5 text-brand-teal shrink-0">
+                        <div
+                            class="flex items-center gap-2 md:gap-3 p-2.5 md:p-3 rounded-button bg-white/50 dark:bg-white/5 border border-slate-200 dark:border-white/10">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" class="md:w-5 md:h-5 text-brand-teal shrink-0">
                                 <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
                                 <polyline points="22 4 12 14.01 9 11.01"></polyline>
                             </svg>
-                            <span class="text-brand-navy dark:text-white text-xs md:text-sm font-bold tracking-normal md:tracking-wide">VOLLSTÄNDIG</span>
+                            <span
+                                class="text-brand-navy dark:text-white text-xs md:text-sm font-bold tracking-normal md:tracking-wide">VOLLSTÄNDIG</span>
                         </div>
-                        <div class="flex items-center gap-2 md:gap-3 p-2.5 md:p-3 rounded-button bg-white/50 dark:bg-white/5 border border-slate-200 dark:border-white/10">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="md:w-5 md:h-5 text-brand-teal shrink-0">
+                        <div
+                            class="flex items-center gap-2 md:gap-3 p-2.5 md:p-3 rounded-button bg-white/50 dark:bg-white/5 border border-slate-200 dark:border-white/10">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" class="md:w-5 md:h-5 text-brand-teal shrink-0">
                                 <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
                                 <polyline points="22 4 12 14.01 9 11.01"></polyline>
                             </svg>
-                            <span class="text-brand-navy dark:text-white text-xs md:text-sm font-bold tracking-normal md:tracking-wide">NACHVOLLZIEHBAR</span>
+                            <span
+                                class="text-brand-navy dark:text-white text-xs md:text-sm font-bold tracking-normal md:tracking-wide">NACHVOLLZIEHBAR</span>
                         </div>
-                        <div class="flex items-center gap-2 md:gap-3 p-2.5 md:p-3 rounded-button bg-white/50 dark:bg-white/5 border border-slate-200 dark:border-white/10">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="md:w-5 md:h-5 text-brand-teal shrink-0">
+                        <div
+                            class="flex items-center gap-2 md:gap-3 p-2.5 md:p-3 rounded-button bg-white/50 dark:bg-white/5 border border-slate-200 dark:border-white/10">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" class="md:w-5 md:h-5 text-brand-teal shrink-0">
                                 <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
                                 <polyline points="22 4 12 14.01 9 11.01"></polyline>
                             </svg>
-                            <span class="text-brand-navy dark:text-white text-xs md:text-sm font-bold tracking-normal md:tracking-wide">FACHLICH KORREKT</span>
+                            <span
+                                class="text-brand-navy dark:text-white text-xs md:text-sm font-bold tracking-normal md:tracking-wide">FACHLICH
+                                KORREKT</span>
                         </div>
-                        <div class="flex items-center gap-2 md:gap-3 p-2.5 md:p-3 rounded-button bg-white/50 dark:bg-white/5 border border-slate-200 dark:border-white/10">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="md:w-5 md:h-5 text-brand-teal shrink-0">
+                        <div
+                            class="flex items-center gap-2 md:gap-3 p-2.5 md:p-3 rounded-button bg-white/50 dark:bg-white/5 border border-slate-200 dark:border-white/10">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" class="md:w-5 md:h-5 text-brand-teal shrink-0">
                                 <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
                                 <polyline points="22 4 12 14.01 9 11.01"></polyline>
                             </svg>
-                            <span class="text-brand-navy dark:text-white text-xs md:text-sm font-bold tracking-normal md:tracking-wide">VERWERTBAR</span>
+                            <span
+                                class="text-brand-navy dark:text-white text-xs md:text-sm font-bold tracking-normal md:tracking-wide">VERWERTBAR</span>
                         </div>
                     </div>
 
                     <p class="text-lg text-slate-500 dark:text-slate-400 leading-relaxed mb-8">
-                        TX-Partner arbeitet nach dem TX-Partner Dokumentationsstandard: vollständig, nachvollziehbar, fachlich korrekt, langfristig verwertbar. Nicht nur für dieses Jahr, sondern als stabile Grundlage für kommende Steuerperioden.
+                        TX-Partner arbeitet nach dem TX-Partner Dokumentationsstandard: vollständig, nachvollziehbar,
+                        fachlich korrekt, langfristig verwertbar. Nicht nur für dieses Jahr, sondern als stabile
+                        Grundlage für kommende Steuerperioden.
                     </p>
 
-                    <a href="dokumentationsstandard.html" class="inline-flex items-center text-brand-teal font-semibold hover:text-brand-navy dark:hover:text-white transition-colors group">
+                    <a href="dokumentationsstandard.html"
+                        class="inline-flex items-center text-brand-teal font-semibold hover:text-brand-navy dark:hover:text-white transition-colors group">
                         Mehr zum Dokumentationsstandard
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="ml-2 group-hover:translate-x-1 transition-transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                            class="ml-2 group-hover:translate-x-1 transition-transform">
                             <path d="M5 12h14m-7-7 7 7-7 7"></path>
                         </svg>
                     </a>
@@ -600,8 +780,10 @@
 
                 <!-- Visual Element -->
                 <div class="relative fade-in-up">
-                    <div class="relative z-10 bg-white dark:bg-dark-surface border border-slate-200 dark:border-white/10 rounded-card p-4 md:p-8 shadow-2xl">
-                        <div class="flex items-center justify-between mb-6 md:mb-8 pb-3 md:pb-4 border-b border-slate-100 dark:border-white/5">
+                    <div
+                        class="relative z-10 bg-white dark:bg-dark-surface border border-slate-200 dark:border-white/10 rounded-card p-4 md:p-8 shadow-2xl">
+                        <div
+                            class="flex items-center justify-between mb-6 md:mb-8 pb-3 md:pb-4 border-b border-slate-100 dark:border-white/5">
                             <div class="flex gap-2">
                                 <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
                                 <div class="w-3 h-3 rounded-full bg-amber-500/80"></div>
@@ -610,35 +792,50 @@
                             <div class="text-xs font-mono text-slate-400">TX_VALIDATOR_V2</div>
                         </div>
                         <div class="space-y-3 md:space-y-4">
-                            <div class="flex items-center p-3 md:p-4 rounded-button bg-slate-50 dark:bg-white/5 border border-slate-100 dark:border-white/5">
+                            <div
+                                class="flex items-center p-3 md:p-4 rounded-button bg-slate-50 dark:bg-white/5 border border-slate-100 dark:border-white/5">
                                 <div class="flex items-center gap-2 md:gap-3">
-                                    <div class="w-7 h-7 md:w-8 md:h-8 shrink-0 rounded-full bg-red-100 dark:bg-red-500/20 text-red-600 dark:text-red-400 flex items-center justify-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <div
+                                        class="w-7 h-7 md:w-8 md:h-8 shrink-0 rounded-full bg-red-100 dark:bg-red-500/20 text-red-600 dark:text-red-400 flex items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                                             <path d="M18 6 6 18M6 6l12 12"></path>
                                         </svg>
                                     </div>
-                                    <span class="text-xs md:text-sm font-medium text-slate-500 dark:text-slate-400 line-through">Input: Rohdaten Fehlerhaft</span>
+                                    <span
+                                        class="text-xs md:text-sm font-medium text-slate-500 dark:text-slate-400 line-through">Input:
+                                        Rohdaten Fehlerhaft</span>
                                 </div>
                             </div>
                             <div class="flex justify-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-slate-300 dark:text-slate-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="1.5"
+                                    class="text-slate-300 dark:text-slate-600">
                                     <path d="M12 5v14m7-7-7 7-7-7"></path>
                                 </svg>
                             </div>
-                            <div class="flex flex-wrap items-center gap-3 p-3 md:p-4 rounded-button bg-brand-teal/5 border border-brand-teal/20 shadow-sm">
+                            <div
+                                class="flex flex-wrap items-center gap-3 p-3 md:p-4 rounded-button bg-brand-teal/5 border border-brand-teal/20 shadow-sm">
                                 <div class="flex items-center gap-2 md:gap-3 flex-1 min-w-0">
-                                    <div class="w-7 h-7 md:w-8 md:h-8 shrink-0 rounded-full bg-brand-teal text-white flex items-center justify-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <div
+                                        class="w-7 h-7 md:w-8 md:h-8 shrink-0 rounded-full bg-brand-teal text-white flex items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                                             <polyline points="20 6 9 17 4 12"></polyline>
                                         </svg>
                                     </div>
-                                    <span class="text-xs md:text-sm font-bold text-brand-navy dark:text-white break-words">Output: TX-Partner Dokumentationsstandard</span>
+                                    <span
+                                        class="text-xs md:text-sm font-bold text-brand-navy dark:text-white break-words">Output:
+                                        TX-Partner Dokumentationsstandard</span>
                                 </div>
-                                <span class="text-xs font-mono bg-brand-teal/10 text-brand-teal px-2 py-1 rounded shrink-0">VERIFIED</span>
+                                <span
+                                    class="text-xs font-mono bg-brand-teal/10 text-brand-teal px-2 py-1 rounded shrink-0 animate-pulse">VERIFIED</span>
                             </div>
                         </div>
                     </div>
-                    <div class="absolute top-4 -right-4 w-full h-full bg-slate-200 dark:bg-white/5 rounded-card -z-10 opacity-60"></div>
+                    <div
+                        class="absolute top-4 -right-4 w-full h-full bg-slate-200 dark:bg-white/5 rounded-card -z-10 opacity-60">
+                    </div>
                 </div>
             </div>
         </div>
@@ -646,98 +843,150 @@
 
     <!-- Why Errors Happen Section -->
     <section class="py-32 bg-slate-50 dark:bg-[#050505] relative overflow-hidden">
-        <div class="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none"></div>
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-[500px] bg-brand-teal/10 blur-[100px] rounded-full pointer-events-none"></div>
+        <div
+            class="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none">
+        </div>
+        <div
+            class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-[500px] bg-brand-teal/10 blur-[100px] rounded-full pointer-events-none">
+        </div>
 
         <div class="container mx-auto px-6 max-w-7xl relative z-10">
-            
+
             <!-- Section Header -->
             <div class="max-w-3xl mx-auto text-center mb-20">
-                <div class="inline-flex items-center gap-2 text-brand-teal text-xs font-bold tracking-widest uppercase mb-6">
+                <div
+                    class="inline-flex items-center gap-2 text-brand-teal text-xs font-bold tracking-widest uppercase mb-6">
                     <span class="w-1.5 h-1.5 rounded-full bg-brand-teal"></span>
                     Root Cause Analysis
                 </div>
 
-                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-brand-navy dark:text-white mb-6 leading-snug pb-2" style="letter-spacing: -0.02em">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-brand-navy dark:text-white mb-6 leading-snug pb-2"
+                    style="letter-spacing: -0.02em">
                     Warum CoinTracking diese
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-teal to-brand-navy dark:to-white pb-1 block md:inline">Fehler anzeigt</span>
+                    <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-brand-teal to-brand-navy dark:to-white pb-1 block md:inline">Fehler
+                        anzeigt</span>
                 </h2>
 
-                <p class="text-lg md:text-xl text-slate-500 dark:text-slate-400 font-medium leading-relaxed max-w-2xl mx-auto">
-                    Steuerreports sind nur so gut wie die zugrundeliegende Datenbasis. Wir analysieren die Ursache hinter jeder Fehlermeldung.
+                <p
+                    class="text-lg md:text-xl text-slate-500 dark:text-slate-400 font-medium leading-relaxed max-w-2xl mx-auto">
+                    Steuerreports sind nur so gut wie die zugrundeliegende Datenbasis. Wir analysieren die Ursache
+                    hinter jeder Fehlermeldung.
                 </p>
             </div>
 
             <!-- Cards Grid -->
             <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
-                
+
                 <!-- Card 1 -->
-                <div class="group relative p-8 md:p-10 rounded-card bg-white dark:bg-[#0F0F0F] border border-slate-200 dark:border-white/5 hover:border-brand-teal/30 transition-all duration-300 hover:shadow-[0_20px_50px_-12px_rgba(30,58,95,0.12)] overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-br from-brand-teal/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div
+                    class="group relative p-8 md:p-10 rounded-card bg-white dark:bg-[#0F0F0F] border border-slate-200 dark:border-white/5 hover:border-brand-teal/30 transition-all duration-300 hover:shadow-[0_20px_50px_-12px_rgba(30,58,95,0.12)] overflow-hidden">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-brand-teal/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    </div>
                     <div class="relative z-10">
-                        <div class="w-14 h-14 rounded-button bg-brand-navy/5 dark:bg-white/5 border border-brand-navy/10 dark:border-white/10 flex items-center justify-center mb-8 group-hover:scale-110 group-hover:bg-brand-teal/10 group-hover:border-brand-teal/20 transition-all duration-300">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-slate-600 dark:text-slate-300 group-hover:text-brand-teal transition-colors">
+                        <div
+                            class="w-14 h-14 rounded-button bg-brand-navy/5 dark:bg-white/5 border border-brand-navy/10 dark:border-white/10 flex items-center justify-center mb-8 group-hover:scale-110 group-hover:bg-brand-teal/10 group-hover:border-brand-teal/20 transition-all duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="text-slate-600 dark:text-slate-300 group-hover:text-brand-teal transition-colors">
                                 <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
                                 <path d="M3 5V19A9 3 0 0 0 21 19V5"></path>
                                 <path d="M3 12A9 3 0 0 0 21 12"></path>
                             </svg>
                         </div>
-                        <h3 class="text-xl md:text-2xl font-semibold text-brand-navy dark:text-white mb-4 tracking-tight group-hover:text-brand-teal transition-colors">Inkonsistente Imports</h3>
+                        <h3
+                            class="text-xl md:text-2xl font-semibold text-brand-navy dark:text-white mb-4 tracking-tight group-hover:text-brand-teal transition-colors">
+                            Inkonsistente Imports</h3>
                         <p class="text-slate-500 dark:text-slate-400 leading-relaxed">
-                            CSV-Imports unterschiedlicher Börsen überlappen sich, Duplikate schleichen sich ein. CoinTracking kann nicht automatisch erkennen, welche Daten korrekt sind.
+                            CSV-Imports unterschiedlicher Börsen überlappen sich, Duplikate schleichen sich ein.
+                            CoinTracking kann nicht automatisch erkennen, welche Daten korrekt sind.
                         </p>
                     </div>
                 </div>
 
                 <!-- Card 2 -->
-                <div class="group relative p-8 md:p-10 rounded-card bg-white dark:bg-dark-surface border border-slate-200 dark:border-white/5 hover:border-brand-teal/30 transition-all duration-300 hover:shadow-xl overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-br from-brand-teal/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div
+                    class="group relative p-8 md:p-10 rounded-card bg-white dark:bg-dark-surface border border-slate-200 dark:border-white/5 hover:border-brand-teal/30 transition-all duration-300 hover:shadow-xl overflow-hidden">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-brand-teal/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    </div>
                     <div class="relative z-10">
-                        <div class="w-14 h-14 rounded-button bg-brand-navy/5 dark:bg-white/5 border border-brand-navy/10 dark:border-white/10 flex items-center justify-center mb-8 group-hover:scale-110 group-hover:bg-brand-teal/10 group-hover:border-brand-teal/20 transition-all duration-300">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-slate-600 dark:text-slate-300 group-hover:text-brand-teal transition-colors">
-                                <path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l5 5a2 2 0 0 0 2.828 0l7-7a2 2 0 0 0 0-2.828l-5-5z"></path>
+                        <div
+                            class="w-14 h-14 rounded-button bg-brand-navy/5 dark:bg-white/5 border border-brand-navy/10 dark:border-white/10 flex items-center justify-center mb-8 group-hover:scale-110 group-hover:bg-brand-teal/10 group-hover:border-brand-teal/20 transition-all duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="text-slate-600 dark:text-slate-300 group-hover:text-brand-teal transition-colors">
+                                <path
+                                    d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l5 5a2 2 0 0 0 2.828 0l7-7a2 2 0 0 0 0-2.828l-5-5z">
+                                </path>
                                 <circle cx="7.5" cy="7.5" r=".5"></circle>
                             </svg>
                         </div>
-                        <h3 class="text-xl md:text-2xl font-semibold text-brand-navy dark:text-white mb-4 tracking-tight group-hover:text-brand-teal transition-colors">Manuelle Fehleingaben</h3>
+                        <h3
+                            class="text-xl md:text-2xl font-semibold text-brand-navy dark:text-white mb-4 tracking-tight group-hover:text-brand-teal transition-colors">
+                            Manuelle Fehleingaben</h3>
                         <p class="text-slate-500 dark:text-slate-400 leading-relaxed">
-                            Falsche Zeitstempel, Tippfehler bei Beträgen, Exchange-Namen vertauscht – manuelle Eingaben sind fehleranfällig und führen zu falschen Ergebnissen.
+                            Falsche Zeitstempel, Tippfehler bei Beträgen, Exchange-Namen vertauscht – manuelle Eingaben
+                            sind fehleranfällig und führen zu falschen Ergebnissen.
                         </p>
                     </div>
                 </div>
 
                 <!-- Card 3 -->
-                <div class="group relative p-8 md:p-10 rounded-card bg-white dark:bg-dark-surface border border-slate-200 dark:border-white/5 hover:border-brand-teal/30 transition-all duration-300 hover:shadow-xl overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-br from-brand-teal/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div
+                    class="group relative p-8 md:p-10 rounded-card bg-white dark:bg-dark-surface border border-slate-200 dark:border-white/5 hover:border-brand-teal/30 transition-all duration-300 hover:shadow-xl overflow-hidden">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-brand-teal/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    </div>
                     <div class="relative z-10">
-                        <div class="w-14 h-14 rounded-button bg-brand-navy/5 dark:bg-white/5 border border-brand-navy/10 dark:border-white/10 flex items-center justify-center mb-8 group-hover:scale-110 group-hover:bg-brand-teal/10 group-hover:border-brand-teal/20 transition-all duration-300">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-slate-600 dark:text-slate-300 group-hover:text-brand-teal transition-colors">
+                        <div
+                            class="w-14 h-14 rounded-button bg-brand-navy/5 dark:bg-white/5 border border-brand-navy/10 dark:border-white/10 flex items-center justify-center mb-8 group-hover:scale-110 group-hover:bg-brand-teal/10 group-hover:border-brand-teal/20 transition-all duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="text-slate-600 dark:text-slate-300 group-hover:text-brand-teal transition-colors">
                                 <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
                                 <path d="M3 3v5h5"></path>
                                 <path d="M12 7v5l4 2"></path>
                             </svg>
                         </div>
-                        <h3 class="text-xl md:text-2xl font-semibold text-brand-navy dark:text-white mb-4 tracking-tight group-hover:text-brand-teal transition-colors">API-Limitierungen</h3>
+                        <h3
+                            class="text-xl md:text-2xl font-semibold text-brand-navy dark:text-white mb-4 tracking-tight group-hover:text-brand-teal transition-colors">
+                            API-Limitierungen</h3>
                         <p class="text-slate-500 dark:text-slate-400 leading-relaxed">
-                            Exchange-APIs sind oft unvollständig. Alte Transaktionen fehlen, DeFi-Swaps werden nicht exportiert. Was die API nicht liefert, erscheint auch in CoinTracking nicht.
+                            Exchange-APIs sind oft unvollständig. Alte Transaktionen fehlen, DeFi-Swaps werden nicht
+                            exportiert. Was die API nicht liefert, erscheint auch in CoinTracking nicht.
                         </p>
                     </div>
                 </div>
 
                 <!-- Card 4 -->
-                <div class="group relative p-8 md:p-10 rounded-card bg-white dark:bg-dark-surface border border-slate-200 dark:border-white/5 hover:border-brand-teal/30 transition-all duration-300 hover:shadow-xl overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-br from-brand-teal/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div
+                    class="group relative p-8 md:p-10 rounded-card bg-white dark:bg-dark-surface border border-slate-200 dark:border-white/5 hover:border-brand-teal/30 transition-all duration-300 hover:shadow-xl overflow-hidden">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-brand-teal/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    </div>
                     <div class="relative z-10">
-                        <div class="w-14 h-14 rounded-button bg-brand-navy/5 dark:bg-white/5 border border-brand-navy/10 dark:border-white/10 flex items-center justify-center mb-8 group-hover:scale-110 group-hover:bg-brand-teal/10 group-hover:border-brand-teal/20 transition-all duration-300">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-slate-600 dark:text-slate-300 group-hover:text-brand-teal transition-colors">
+                        <div
+                            class="w-14 h-14 rounded-button bg-brand-navy/5 dark:bg-white/5 border border-brand-navy/10 dark:border-white/10 flex items-center justify-center mb-8 group-hover:scale-110 group-hover:bg-brand-teal/10 group-hover:border-brand-teal/20 transition-all duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="text-slate-600 dark:text-slate-300 group-hover:text-brand-teal transition-colors">
                                 <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path>
                                 <path d="M12 9v4"></path>
                                 <path d="M12 17h.01"></path>
                             </svg>
                         </div>
-                        <h3 class="text-xl md:text-2xl font-semibold text-brand-navy dark:text-white mb-4 tracking-tight group-hover:text-brand-teal transition-colors">Fehlinterpretationen</h3>
+                        <h3
+                            class="text-xl md:text-2xl font-semibold text-brand-navy dark:text-white mb-4 tracking-tight group-hover:text-brand-teal transition-colors">
+                            Fehlinterpretationen</h3>
                         <p class="text-slate-500 dark:text-slate-400 leading-relaxed">
-                            CoinTracking klassifiziert Transaktionen automatisch, liegt aber oft falsch. Ein "Transfer" wird als "Trade" gewertet. Das verfälscht die Steuerlast massiv.
+                            CoinTracking klassifiziert Transaktionen automatisch, liegt aber oft falsch. Ein "Transfer"
+                            wird als "Trade" gewertet. Das verfälscht die Steuerlast massiv.
                         </p>
                     </div>
                 </div>
@@ -749,54 +998,81 @@
     <!-- FAQ Section -->
     <section class="dark:bg-[#080808] border-y dark:border-white/5 bg-slate-50 border-slate-200 pt-24 pb-24">
         <div class="container mx-auto px-6 max-w-4xl">
-            
-            <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-brand-navy dark:text-white mb-12 text-center" style="letter-spacing: -0.02em">
+
+            <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-brand-navy dark:text-white mb-12 text-center"
+                style="letter-spacing: -0.02em">
                 Häufige Fragen zu CoinTracking
             </h2>
 
             <div class="space-y-6">
-                
+
                 <!-- FAQ 1 -->
-                <div class="bg-white dark:bg-white/5 rounded-card p-6 border border-slate-200 dark:border-white/5 fade-in-up">
-                    <h3 class="text-lg font-bold text-brand-navy dark:text-white mb-3">Ich brauche sofort Hilfe bei einem spezifischen CoinTracking-Fehler. Was mache ich?</h3>
-                    <p class="dark:text-slate-400 leading-relaxed text-sm text-slate-500">Für akute oder klar eingrenzbare CoinTracking-Probleme empfehlen wir unsere <a href="leistungen.html" class="text-brand-teal hover:underline font-medium">Expertenprüfung</a>. Dort lösen und erklären wir deine Probleme direkt via Screenshare innerhalb einer gebuchten Session.</p>
+                <div
+                    class="bg-white dark:bg-white/5 rounded-card p-6 border border-slate-200 dark:border-white/5 fade-in-up">
+                    <h3 class="text-lg font-bold text-brand-navy dark:text-white mb-3">Ich brauche sofort Hilfe bei
+                        einem spezifischen CoinTracking-Fehler. Was mache ich?</h3>
+                    <p class="dark:text-slate-400 leading-relaxed text-sm text-slate-500">Für akute oder klar
+                        eingrenzbare CoinTracking-Probleme empfehlen wir unsere <a href="leistungen.html"
+                            class="text-brand-teal hover:underline font-medium">Expertenprüfung</a>. Dort lösen und
+                        erklären wir deine Probleme direkt via Screenshare innerhalb einer gebuchten Session.</p>
                 </div>
 
                 <!-- FAQ 2 -->
-                <div class="bg-white dark:bg-white/5 rounded-card p-6 border border-slate-200 dark:border-white/5 fade-in-up">
-                    <h3 class="text-lg font-bold text-brand-navy dark:text-white mb-3">Seid ihr der offizielle Support von CoinTracking?</h3>
+                <div
+                    class="bg-white dark:bg-white/5 rounded-card p-6 border border-slate-200 dark:border-white/5 fade-in-up">
+                    <h3 class="text-lg font-bold text-brand-navy dark:text-white mb-3">Seid ihr der offizielle Support
+                        von CoinTracking?</h3>
                     <p class="dark:text-slate-400 leading-relaxed text-sm text-slate-500">
-                        Nein. Wir sind ein unabhängiger Dokumentationsservice. Für technische Tool-Fragen (z.B. Software-Bugs oder Login-Probleme) kontaktiere bitte support@cointracking.info.
+                        Nein. Wir sind ein unabhängiger Dokumentationsservice. Für technische Tool-Fragen (z.B.
+                        Software-Bugs oder Login-Probleme) kontaktiere bitte support@cointracking.info.
                     </p>
                 </div>
 
                 <!-- FAQ 3 -->
-                <div class="dark:bg-white/5 dark:border-white/5 fade-in-up bg-white border-slate-200 border rounded-card p-6">
-                    <h3 class="text-lg font-bold text-brand-navy dark:text-white mb-3">Wie lange dauert die CoinTracking-Datenbereinigung?</h3>
-                    <p class="dark:text-slate-400 leading-relaxed text-sm text-slate-500">Je nach Portfolio-Größe und Komplexität dauert eine vollständige Aufarbeitung in der Regel 2 bis 6 Wochen. Wir erstellen dir vorab einen genauen Zeitplan. Für kleinere Anliegen empfehlen wir unsere <a href="leistungen.html" class="text-brand-teal hover:underline font-medium">Expertenprüfung</a>.</p>
+                <div
+                    class="dark:bg-white/5 dark:border-white/5 fade-in-up bg-white border-slate-200 border rounded-card p-6">
+                    <h3 class="text-lg font-bold text-brand-navy dark:text-white mb-3">Wie lange dauert die
+                        CoinTracking-Datenbereinigung?</h3>
+                    <p class="dark:text-slate-400 leading-relaxed text-sm text-slate-500">Je nach Portfolio-Größe und
+                        Komplexität dauert eine vollständige Aufarbeitung in der Regel 2 bis 6 Wochen. Wir erstellen dir
+                        vorab einen genauen Zeitplan. Für kleinere Anliegen empfehlen wir unsere <a
+                            href="leistungen.html"
+                            class="text-brand-teal hover:underline font-medium">Expertenprüfung</a>.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Final CTA (FIXED: Changed to "Dokumentation prüfen") -->
+    <!-- Final CTA (FIXED: Changed to "Kostenloser Doku-Check") -->
     <section class="py-20 px-4 bg-white dark:bg-dark-bg">
         <div class="container mx-auto max-w-6xl">
-            <div class="relative rounded-card overflow-hidden text-center py-24 px-6 md:px-20 bg-brand-navy shadow-2xl shadow-brand-navy/30">
-                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] md:w-[500px] lg:w-[600px] h-[300px] md:h-[500px] lg:h-[600px] bg-brand-teal opacity-20 blur-[120px] rounded-full pointer-events-none"></div>
-                <div class="absolute inset-0 opacity-20 mix-blend-overlay bg-[url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22/%3E%3C/svg%3E')]"></div>
+            <div
+                class="relative rounded-card overflow-hidden text-center py-24 px-6 md:px-20 bg-brand-navy shadow-2xl shadow-brand-navy/30">
+                <div
+                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] md:w-[500px] lg:w-[600px] h-[300px] md:h-[500px] lg:h-[600px] bg-brand-teal opacity-20 blur-[120px] rounded-full pointer-events-none">
+                </div>
+                <div
+                    class="absolute inset-0 opacity-20 mix-blend-overlay bg-[url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22/%3E%3C/svg%3E')]">
+                </div>
 
                 <div class="relative z-10 fade-in-up">
-                    <h2 class="md:text-4xl lg:text-5xl leading-tight text-3xl font-bold text-white tracking-tight mb-8" style="letter-spacing: -0.02em">
+                    <h2 class="md:text-4xl lg:text-5xl leading-tight text-3xl font-bold text-white tracking-tight mb-8"
+                        style="letter-spacing: -0.02em">
                         CoinTracking-Fehler
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-teal to-white">nachhaltig beheben</span>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-teal to-white">nachhaltig
+                            beheben</span>
                     </h2>
                     <p class="text-xl font-medium text-slate-200 max-w-xl mr-auto mb-12 ml-auto">
-                        Starte mit einer strukturierten Erstprüfung deiner CoinTracking-Daten, als Grundlage für saubere Reports.
+                        Starte mit einem kostenlosen Doku-Check deiner CoinTracking-Daten, als Grundlage für saubere
+                        Reports.
                     </p>
-                    <a href="https://app.cal.eu/johannesanderl-tx-partner/30min" target="_blank" rel="noopener noreferrer" class="btn-primary inline-flex items-center justify-center bg-white text-brand-navy text-lg font-semibold rounded-button px-10 py-5 hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(255,255,255,0.3)] transition-all duration-300 group">
-                        Dokumentation prüfen
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2 text-brand-teal group-hover:translate-x-1 transition-transform">
+                    <a href="https://app.cal.eu/johannesanderl-tx-partner/dokumentation-prüfen" target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn-primary inline-flex items-center justify-center bg-white text-brand-navy text-lg font-semibold rounded-button px-10 py-5 hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(255,255,255,0.3)] transition-all duration-300 group">
+                        Kostenloser Doku-Check
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="ml-2 text-brand-teal group-hover:translate-x-1 transition-transform">
                             <path d="M5 12h14"></path>
                             <path d="m12 5 7 7-7 7"></path>
                         </svg>
@@ -810,7 +1086,7 @@
     <footer class="pt-24 pb-12 bg-white dark:bg-dark-bg border-t border-slate-200 dark:border-white/5">
         <div class="container mx-auto px-6 max-w-7xl">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12 lg:gap-16 mb-20">
-                
+
                 <!-- Column 1: Brand -->
                 <div class="space-y-6">
                     <a href="index.html" class="flex items-center gap-3">
@@ -820,65 +1096,102 @@
                             <div class="w-1.5 h-6 rounded-full bg-brand-navy dark:bg-slate-200"></div>
                             <div class="w-1.5 h-6 rounded-full bg-brand-teal"></div>
                         </div>
-                        <span class="text-brand-navy dark:text-white text-lg font-bold tracking-wider font-sans">TX-Partner</span>
+                        <span
+                            class="text-brand-navy dark:text-white text-lg font-bold tracking-wider font-sans">TX-Partner</span>
                     </a>
-                    <p class="dark:text-slate-400 leading-relaxed text-sm text-slate-500">Pre-Tax Infrastruktur für Krypto. Professionelle Dokumentation für Steuertools, Steuerberater und Finanzverwaltung.</p>
+                    <p class="dark:text-slate-400 leading-relaxed text-sm text-slate-500">Pre-Tax Infrastruktur für
+                        Krypto. Professionelle Dokumentation für Steuertools, Steuerberater und Finanzverwaltung.</p>
                     <div class="flex gap-4">
-                        <a href="https://x.com/TX_Partner" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-brand-navy dark:hover:text-white transition-colors" aria-label="TX-Partner auf X (Twitter)">
+                        <a href="https://x.com/TX_Partner" target="_blank" rel="noopener noreferrer"
+                            class="text-slate-400 hover:text-brand-navy dark:hover:text-white transition-colors"
+                            aria-label="TX-Partner auf X (Twitter)">
                             <span class="sr-only">X (Twitter)</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
                                 <path d="M4 4l16 16"></path>
                                 <path d="M20 4L4 20"></path>
                             </svg>
                         </a>
-                        <a href="https://www.linkedin.com/company/tx-partner/" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-brand-navy dark:hover:text-white transition-colors" aria-label="TX-Partner auf LinkedIn">
+                        <a href="https://www.linkedin.com/company/tx-partner/" target="_blank" rel="noopener noreferrer"
+                            class="text-slate-400 hover:text-brand-navy dark:hover:text-white transition-colors"
+                            aria-label="TX-Partner auf LinkedIn">
                             <span class="sr-only">LinkedIn</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                </path>
                                 <rect width="4" height="12" x="2" y="9"></rect>
                                 <circle cx="4" cy="4" r="2"></circle>
                             </svg>
                         </a>
                     </div>
-                    
+
                 </div>
 
                 <!-- Column 2: Leistungen -->
                 <div>
-                    <h4 class="font-bold mb-6 text-xs uppercase tracking-widest text-brand-navy dark:text-white">Leistungen</h4>
+                    <h4 class="font-bold mb-6 text-xs uppercase tracking-widest text-brand-navy dark:text-white">
+                        Leistungen</h4>
                     <ul class="space-y-4">
-                        <li><a href="leistungen.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Leistungen</a></li>
-                        <li><a href="blockpit-hinweise.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Blockpit Hinweise</a></li>
-                        <li><a href="cointracking-fehler.html" class="text-brand-teal text-sm font-bold">CoinTracking Fehler</a></li>
+                        <li><a href="leistungen.html"
+                                class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Leistungen</a>
+                        </li>
+                        <li><a href="blockpit-hinweise.html"
+                                class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Blockpit
+                                Hinweise</a></li>
+                        <li><a href="cointracking-fehler.html" class="text-brand-teal text-sm font-bold">CoinTracking
+                                Fehler</a></li>
                     </ul>
                 </div>
 
                 <!-- Column 3: Unternehmen -->
                 <div>
-                    <h4 class="font-bold mb-6 text-xs uppercase tracking-widest text-brand-navy dark:text-white">Unternehmen</h4>
+                    <h4 class="font-bold mb-6 text-xs uppercase tracking-widest text-brand-navy dark:text-white">
+                        Unternehmen</h4>
                     <ul class="space-y-4">
-                        <li><a href="ueber-uns.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Über uns</a></li>
-                        <li><a href="dokumentationsstandard.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Dokumentationsstandard</a></li>
-                        <li><a href="faq.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">FAQ</a></li>
-                        <li><a href="kontakt.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Kontakt</a></li>
+                        <li><a href="ueber-uns.html"
+                                class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Über
+                                uns</a></li>
+                        <li><a href="dokumentationsstandard.html"
+                                class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Dokumentationsstandard</a>
+                        </li>
+                        <li><a href="faq.html"
+                                class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">FAQ</a>
+                        </li>
+                        <li><a href="kontakt.html"
+                                class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Kontakt</a>
+                        </li>
                     </ul>
                 </div>
 
                 <!-- Column 4: Rechtliches -->
                 <div>
-                    <h4 class="font-bold mb-6 text-xs uppercase tracking-widest text-brand-navy dark:text-white">Rechtliches</h4>
+                    <h4 class="font-bold mb-6 text-xs uppercase tracking-widest text-brand-navy dark:text-white">
+                        Rechtliches</h4>
                     <ul class="space-y-4">
-                        <li><a href="agb.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">AGB</a></li>
-                        <li><a href="datenschutz.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Datenschutz</a></li>
-                        <li><a href="impressum.html" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Impressum</a></li>
+                        <li><a href="agb.html"
+                                class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">AGB</a>
+                        </li>
+                        <li><a href="datenschutz.html"
+                                class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Datenschutz</a>
+                        </li>
+                        <li><a href="impressum.html"
+                                class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Impressum</a>
+                        </li>
                     </ul>
                 </div>
             </div>
 
-            <div class="border-t border-slate-200 dark:border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
-                <p class="text-xs font-medium text-slate-400 dark:text-slate-500">© 2026 TX-Partner – eine Geschäftsbezeichnung der Solvum GmbH. Alle Rechte vorbehalten.</p>
+            <div
+                class="border-t border-slate-200 dark:border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-xs font-medium text-slate-400 dark:text-slate-500">© 2026 TX-Partner – eine
+                    Geschäftsbezeichnung der Solvum GmbH. Alle Rechte vorbehalten.</p>
                 <div class="flex gap-8">
-                    <a href="sitemap.html" class="text-xs font-medium text-slate-400 dark:text-slate-500 hover:text-brand-navy dark:hover:text-white transition-colors">Sitemap</a>
+                    <a href="sitemap.html"
+                        class="text-xs font-medium text-slate-400 dark:text-slate-500 hover:text-brand-navy dark:hover:text-white transition-colors">Sitemap</a>
                 </div>
             </div>
         </div>
@@ -888,13 +1201,13 @@
         // Dark Mode Toggle
         const themeToggle = document.getElementById('theme-toggle');
         const html = document.documentElement;
-        
+
         if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             html.classList.add('dark');
         } else {
             html.classList.remove('dark');
         }
-        
+
         themeToggle.addEventListener('click', () => {
             html.classList.toggle('dark');
             localStorage.theme = html.classList.contains('dark') ? 'dark' : 'light';
@@ -919,9 +1232,77 @@
                 }
             });
         }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-        
+
         document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
     </script>
 
+    <!-- Sticky CTA with Cal.com Integration -->
+    <div id="sticky-cta"
+        class="fixed bottom-6 left-6 right-6 lg:bottom-8 lg:left-auto lg:right-6 lg:translate-x-0 z-40 translate-y-32 opacity-0 transition-all duration-500 ease-out lg:max-w-md lg:mx-auto pb-[env(safe-area-inset-bottom)]"
+        style="transform: translateY(8rem); opacity: 0;">
+        <div class="relative">
+            <button onclick="dismissStickyCTA()"
+                class="absolute -top-2 -right-2 z-10 w-6 h-6 flex items-center justify-center bg-slate-800 text-white rounded-full shadow-lg hover:bg-slate-700 transition-colors"
+                aria-label="Schließen">
+                <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+
+            <a href="https://app.cal.eu/johannesanderl-tx-partner/dokumentation-prufen" target="_blank"
+                rel="noopener noreferrer"
+                class="w-full flex items-center justify-between gap-4 px-6 py-4 bg-brand-navy border border-brand-teal/30 text-white rounded-button shadow-2xl shadow-brand-navy/50 backdrop-blur-lg hover:shadow-3xl hover:bg-brand-navy/90 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 group">
+                <div class="flex flex-col items-start gap-1">
+                    <span class="font-bold text-base flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-brand-teal animate-pulse"></span>
+                        Kostenloser Doku-Check
+                    </span>
+                    <span class="text-xs opacity-70">30 Min. · Unverbindlich · Expert Call</span>
+                </div>
+                <div
+                    class="h-8 w-8 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-brand-teal group-hover:text-white transition-colors duration-300">
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                            d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        window.dismissStickyCTA = function () {
+            const cta = document.getElementById('sticky-cta');
+            if (!cta) return;
+            cta.style.setProperty('transform', 'translateY(8rem)', 'important');
+            cta.style.setProperty('opacity', '0', 'important');
+            sessionStorage.setItem('stickyDismissed', 'true');
+        };
+
+        function checkScrollPosition() {
+            if (sessionStorage.getItem('stickyDismissed') === 'true') return;
+
+            const heroSection = document.getElementById('hero-section');
+            const cta = document.getElementById('sticky-cta');
+            if (!heroSection || !cta) return;
+
+            const heroRect = heroSection.getBoundingClientRect();
+            const heroTop = heroRect.top;
+
+            if (heroTop < -100) {
+                cta.style.setProperty('transform', 'translateY(0)', 'important');
+                cta.style.setProperty('opacity', '1', 'important');
+            } else {
+                cta.style.setProperty('transform', 'translateY(8rem)', 'important');
+                cta.style.setProperty('opacity', '0', 'important');
+            }
+        }
+
+        window.addEventListener('scroll', checkScrollPosition);
+        setTimeout(checkScrollPosition, 100);
+    </script>
+    <!-- Sticky CTA Ende -->
+
 </body>
+
 </html>

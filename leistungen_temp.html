@@ -112,10 +112,12 @@
     @keyframes pageLoad {
       from {
         opacity: 0;
+        transform: translateY(8px);
       }
 
       to {
         opacity: 1;
+        transform: translateY(0);
       }
     }
 
@@ -465,6 +467,13 @@
           class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 font-semibold text-sm text-slate-600 dark:text-slate-300 transition-colors">FAQ</a>
         <a href="kontakt.html"
           class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 font-semibold text-sm text-slate-600 dark:text-slate-300 transition-colors">Kontakt</a>
+
+        <div class="h-px bg-slate-100 dark:bg-white/5 my-1 mx-2"></div>
+
+        <a href="https://app.cal.eu/johannesanderl-tx-partner/dokumentation-prüfen" target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center justify-center px-4 py-3 rounded-button bg-brand-navy text-white text-sm font-semibold hover:bg-brand-navy/90 transition-colors mt-1">Kostenloser
+          Fehler-Check</a>
       </div>
     </div>
   </nav>
@@ -472,7 +481,7 @@
   <section id="hero-section" class="overflow-hidden pt-20 sm:pt-28 md:pt-32 lg:pt-40 pb-20 relative">
     <!-- Grid Pattern -->
     <div
-      class="absolute inset-0 -z-20 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none">
+      class="absolute inset-0 -z-20 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none">
     </div>
 
     <!-- Ambient Background -->
@@ -502,87 +511,15 @@
       </h1>
 
       <p
-        class="md:text-xl dark:text-slate-400 leading-relaxed fade-in-up text-lg font-medium text-slate-500 max-w-2xl mr-auto mb-10 ml-auto visible">
+        class="md:text-xl dark:text-slate-400 leading-relaxed fade-in-up text-lg font-medium text-slate-500 max-w-2xl mr-auto mb-12 ml-auto visible">
         TX-Partner schließt die strukturelle Lücke zwischen unvollständiger Transaktionshistorie und belastbaren
         Krypto-Steuerreports.
       </p>
-
-      <!-- Hero CTA -->
-      <a href="https://app.cal.eu/johannesanderl-tx-partner/dokumentation-prufen" target="_blank"
-        rel="noopener noreferrer"
-        class="btn-primary inline-flex items-center justify-center px-8 py-4 bg-brand-navy dark:bg-white text-white dark:text-brand-navy text-base font-bold rounded-button shadow-xl shadow-brand-navy/20 hover:shadow-2xl hover:shadow-brand-navy/30 hover:scale-[1.02] transition-all duration-300 group fade-in-up delay-100 visible">
-        <span class="flex items-center gap-2">
-          Kostenloser Doku-Check
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-            class="group-hover:translate-x-1 transition-transform text-brand-teal">
-            <path d="M5 12h14m-7-7l7 7-7 7"></path>
-          </svg>
-        </span>
-      </a>
-    </div>
-
-    <!-- Floating Data Animation Elements (Desktop) -->
-    <div class="absolute inset-0 pointer-events-none hidden lg:block overflow-hidden -z-5">
-      <!-- Element 1: Raw Data Block (Left) -->
-      <div
-        class="absolute top-[20%] left-[5%] xl:left-[10%] w-48 p-4 rounded-2xl bg-white/40 dark:bg-white/5 backdrop-blur-md border border-slate-200 dark:border-white/10 shadow-lg animate-float"
-        style="animation-duration: 8s;">
-        <div class="space-y-2 opacity-50">
-          <div class="h-2 w-2/3 bg-slate-400 dark:bg-slate-600 rounded"></div>
-          <div class="h-2 w-full bg-slate-300 dark:bg-slate-700 rounded"></div>
-          <div class="h-2 w-1/2 bg-slate-300 dark:bg-slate-700 rounded"></div>
-        </div>
-        <div class="absolute -right-2 -top-2 w-6 h-6 bg-amber-400/20 rounded-full flex items-center justify-center">
-          <div class="w-1.5 h-1.5 bg-amber-400 rounded-full animate-pulse"></div>
-        </div>
-      </div>
-
-      <!-- Element 2: Verified Valid Block (Right) -->
-      <div
-        class="absolute top-[30%] right-[5%] xl:right-[10%] w-56 p-4 rounded-2xl bg-white/60 dark:bg-white/10 backdrop-blur-md border border-brand-teal/30 shadow-xl animate-float"
-        style="animation-duration: 9s; animation-delay: 1s;">
-        <div class="flex items-center gap-3 mb-3">
-          <div class="w-8 h-8 rounded-lg bg-brand-teal/10 flex items-center justify-center text-brand-teal">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="20 6 9 17 4 12"></polyline>
-            </svg>
-          </div>
-          <div class="h-2 w-20 bg-slate-800 dark:bg-white rounded opacity-80"></div>
-        </div>
-        <div class="px-2 py-1 rounded bg-brand-teal/10 inline-block">
-          <div class="h-1.5 w-12 bg-brand-teal rounded"></div>
-        </div>
-      </div>
-
-      <!-- Element 3: Connected Node (Bottom Left) -->
-      <div
-        class="absolute bottom-[15%] left-[15%] w-16 h-16 rounded-2xl bg-white/30 dark:bg-white/5 backdrop-blur-sm border border-slate-200 dark:border-white/10 flex items-center justify-center animate-float shadow-lg"
-        style="animation-duration: 7s; animation-delay: 2s;">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-          class="text-slate-400 dark:text-slate-500">
-          <circle cx="12" cy="12" r="10"></circle>
-          <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
-          <path d="M2 12h20"></path>
-        </svg>
-      </div>
-
-      <!-- Element 4: Secure Shield (Bottom Right) -->
-      <div
-        class="absolute bottom-[20%] right-[20%] w-12 h-12 rounded-xl bg-gradient-to-br from-brand-navy to-brand-teal flex items-center justify-center animate-float shadow-xl shadow-brand-navy/20"
-        style="animation-duration: 10s; animation-delay: 0.5s;">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white">
-          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"></path>
-        </svg>
-      </div>
     </div>
   </section>
 
   <!-- Services Grid -->
-  <section id="services-grid" class="overflow-hidden pr-4 pb-24 pl-4 relative">
+  <section class="overflow-hidden pr-4 pb-24 pl-4 relative">
     <!-- Engaging Background Effects -->
     <div class="absolute inset-0 -z-10 pointer-events-none">
       <div class="absolute inset-0 bg-slate-50 dark:bg-[#050505]"></div>
@@ -606,7 +543,7 @@
     </div>
 
     <div class="container mx-auto max-w-7xl relative z-10">
-      <div id="services-grid" class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
 
         <!-- Service 1: PROJEKT_DFY -->
         <div class="card-spotlight group p-1 rounded-[32px] fade-in-up h-full visible"
@@ -717,7 +654,7 @@
                   <span class="text-[9px] text-brand-teal font-bold uppercase tracking-widest">· Verifiziert</span>
                 </div>
               </div>
-            </div>
+             </div>
 
             <a href="https://app.cal.eu/johannesanderl-tx-partner/dokumentation-prufen" target="_blank"
               rel="noopener noreferrer"
@@ -1710,148 +1647,70 @@
 
     document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
 
-  </script>
+    </script>
 
-  <!-- Sticky CTA - Komplett via JavaScript injiziert -->
-  <script>
-    (function () {
-      // Bereits dismissed?
-      if (sessionStorage.getItem('stickyCTADismissed') === 'true') return;
+          <!-- Sticky CTA with Cal.com Integration -->
+    <div id="sticky-cta"
+        class="fixed bottom-6 left-6 right-6 lg:bottom-6 lg:left-auto lg:right-6 lg:translate-x-0 z-40 translate-y-32 opacity-0 transition-all duration-500 ease-out lg:max-w-md lg:mx-auto"
+        style="transform: translateY(8rem); opacity: 0;">
+        <div class="relative">
+            <button onclick="dismissStickyCTA()"
+                class="absolute -top-2 -right-2 z-10 w-6 h-6 flex items-center justify-center bg-slate-800 text-white rounded-full shadow-lg hover:bg-slate-700 transition-colors"
+                aria-label="Schließen">
+                <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                        d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
 
-      // CTA HTML erstellen
-      var ctaHTML = `
-          <div id="injected-sticky-cta" style="
-              position: fixed !important;
-              bottom: 24px !important;
-              right: 24px !important;
-              left: 24px !important;
-              z-index: 99999 !important;
-              max-width: 420px !important;
-              margin-left: auto !important;
-              opacity: 0;
-              transform: translateY(100px);
-              transition: opacity 0.4s ease, transform 0.4s ease;
-              pointer-events: none;
-          ">
-              <div style="position: relative;">
-                  <button id="cta-close-btn" style="
-                      position: absolute;
-                      top: -8px;
-                      right: -8px;
-                      width: 24px;
-                      height: 24px;
-                      border-radius: 50%;
-                      background: #1e293b;
-                      color: white;
-                      border: none;
-                      cursor: pointer;
-                      display: flex;
-                      align-items: center;
-                      justify-content: center;
-                      z-index: 10;
-                      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-                  ">
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                          <path d="M6 18L18 6M6 6l12 12"/>
-                      </svg>
-                  </button>
-                  <a href="https://app.cal.eu/johannesanderl-tx-partner/dokumentation-prufen" target="_blank" rel="noopener noreferrer" style="
-                      display: flex;
-                      align-items: center;
-                      justify-content: space-between;
-                      gap: 16px;
-                      padding: 16px 24px;
-                      background: #1E3A5F;
-                      border: 1px solid rgba(58, 158, 175, 0.3);
-                      border-radius: 16px;
-                      color: white;
-                      text-decoration: none;
-                      box-shadow: 0 25px 50px -12px rgba(30, 58, 95, 0.5);
-                  ">
-                      <div style="display: flex; flex-direction: column; gap: 4px;">
-                          <span style="font-weight: 700; font-size: 16px; display: flex; align-items: center; gap: 8px;">
-                              <span style="width: 8px; height: 8px; border-radius: 50%; background: #3A9EAF; animation: pulse 2s infinite;"></span>
-                              Kostenloser Doku-Check
-                          </span>
-                          <span style="font-size: 12px; opacity: 0.7;">30 Min. · Unverbindlich · Expert Call</span>
-                      </div>
-                      <div style="
-                          width: 32px;
-                          height: 32px;
-                          border-radius: 50%;
-                          background: rgba(255,255,255,0.1);
-                          display: flex;
-                          align-items: center;
-                          justify-content: center;
-                      ">
-                          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                              <path d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-                          </svg>
-                      </div>
-                  </a>
-              </div>
-          </div>
-          <style>
-              @keyframes pulse {
-                  0%, 100% { opacity: 1; }
-                  50% { opacity: 0.5; }
-              }
-          </style>
-      `;
+            <button data-cal-link="johannesanderl-tx-partner/dokumentation-prufen"
+                data-cal-config='{"layout":"week_view"}'
+                class="w-full flex items-center justify-between gap-4 px-6 py-4 bg-brand-teal text-white rounded-button shadow-2xl shadow-brand-navy/30 backdrop-blur-lg hover:shadow-3xl hover:scale-[1.02] active:scale-[0.98] transition-all duration-300">
+                <div class="flex flex-col items-start gap-1">
+                    <span class="font-bold text-base">Kostenloser Doku-Check</span>
+                    <span class="text-xs opacity-90">30 Min. · Unverbindlich</span>
+                </div>
+                <svg class="w-6 h-6 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+            </button>
+        </div>
+    </div>
 
-      // Warte bis DOM ready
-      function init() {
-        // CTA in body einfügen
-        var wrapper = document.createElement('div');
-        wrapper.innerHTML = ctaHTML;
-        document.body.appendChild(wrapper.firstElementChild);
+    <script type="text/javascript">
+        window.dismissStickyCTA = function () {
+            const cta = document.getElementById('sticky-cta');
+            if (!cta) return;
+            cta.style.setProperty('transform', 'translateY(8rem)', 'important');
+            cta.style.setProperty('opacity', '0', 'important');
+            stickyDismissed = true;
+        };
 
-        var cta = document.getElementById('injected-sticky-cta');
-        var closeBtn = document.getElementById('cta-close-btn');
-        var servicesGrid = document.getElementById('services-grid');
-        var isVisible = false;
+        let stickyDismissed = false;
 
-        // Close Button
-        closeBtn.addEventListener('click', function (e) {
-          e.preventDefault();
-          e.stopPropagation();
-          cta.style.opacity = '0';
-          cta.style.transform = 'translateY(100px)';
-          cta.style.pointerEvents = 'none';
-          sessionStorage.setItem('stickyCTADismissed', 'true');
-        });
+        function checkScrollPosition() {
+            const heroSection = document.getElementById('hero-section');
+            const cta = document.getElementById('sticky-cta');
+            if (!heroSection || !cta) return;
 
-        // Scroll Handler
-        function onScroll() {
-          if (!servicesGrid) return;
+            const heroRect = heroSection.getBoundingClientRect();
+            const heroTop = heroRect.top;
 
-          var rect = servicesGrid.getBoundingClientRect();
-          var shouldShow = rect.top < -100;
+            console.log('checkScrollPosition - heroTop:', heroTop, 'should show:', heroTop < -100, 'cta exists:', !!cta);
 
-          if (shouldShow && !isVisible) {
-            cta.style.opacity = '1';
-            cta.style.transform = 'translateY(0)';
-            cta.style.pointerEvents = 'auto';
-            isVisible = true;
-          } else if (!shouldShow && isVisible) {
-            cta.style.opacity = '0';
-            cta.style.transform = 'translateY(100px)';
-            cta.style.pointerEvents = 'none';
-            isVisible = false;
-          }
+            if (heroTop < -100) {
+                cta.style.setProperty('transform', 'translateY(0)', 'important');
+                cta.style.setProperty('opacity', '1', 'important');
+            } else {
+                cta.style.setProperty('transform', 'translateY(8rem)', 'important');
+                cta.style.setProperty('opacity', '0', 'important');
+            }
         }
 
-        window.addEventListener('scroll', onScroll, { passive: true });
-        onScroll(); // Initial check
-      }
-
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', init);
-      } else {
-        init();
-      }
-    })();
-  </script>
+        window.addEventListener('scroll', checkScrollPosition);
+        setTimeout(checkScrollPosition, 100);
+    </script>
 
 </body>
 

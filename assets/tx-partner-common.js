@@ -14,23 +14,58 @@ function debounce(func, wait) {
 
 // Mobile Menu Toggle with ARIA
 function initMobileMenu() {
+    console.log('initMobileMenu() called');
     const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const mobileMenuClose = document.getElementById('mobile-menu-close');
     const mobileMenu = document.getElementById('mobile-menu');
-    
-    if (!mobileMenuToggle || !mobileMenu) return;
-    
-    mobileMenuToggle.addEventListener('click', () => {
+
+    console.log('mobileMenuToggle:', mobileMenuToggle);
+    console.log('mobileMenuClose:', mobileMenuClose);
+    console.log('mobileMenu:', mobileMenu);
+
+    if (!mobileMenuToggle || !mobileMenu) {
+        console.log('Mobile menu elements not found, returning early');
+        return;
+    }
+
+    // Toggle menu open/close
+    const toggleMenu = () => {
         const isOpen = mobileMenu.classList.contains('open');
+        console.log('Toggling menu, current open state:', isOpen);
         mobileMenu.classList.toggle('open');
-        
+        console.log('Menu classList after toggle:', mobileMenu.classList.toString());
+
         // Update ARIA
         mobileMenuToggle.setAttribute('aria-expanded', !isOpen);
         mobileMenuToggle.setAttribute('aria-label', !isOpen ? 'Menü schließen' : 'Menü öffnen');
+    };
+
+    mobileMenuToggle.addEventListener('click', (e) => {
+        console.log('Mobile menu toggle clicked');
+        toggleMenu();
     });
-    
+
+    // Close button functionality
+    if (mobileMenuClose) {
+        mobileMenuClose.addEventListener('click', () => {
+            mobileMenu.classList.remove('open');
+            mobileMenuToggle.setAttribute('aria-expanded', 'false');
+            mobileMenuToggle.setAttribute('aria-label', 'Menü öffnen');
+        });
+    }
+
     // Close mobile menu when clicking outside
     document.addEventListener('click', (e) => {
         if (!mobileMenu.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+            mobileMenu.classList.remove('open');
+            mobileMenuToggle.setAttribute('aria-expanded', 'false');
+            mobileMenuToggle.setAttribute('aria-label', 'Menü öffnen');
+        }
+    });
+
+    // ESC key to close
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
             mobileMenu.classList.remove('open');
             mobileMenuToggle.setAttribute('aria-expanded', 'false');
             mobileMenuToggle.setAttribute('aria-label', 'Menü öffnen');
@@ -82,7 +117,8 @@ function initContactForm() {
         buttonText.textContent = 'Wird gesendet...';
         
         try {
-            const response = await fetch('https://formspree.io/f/TX-Partner-Contact', {
+            // TODO: Replace 'YOUR_FORMSPREE_ID' with actual Formspree form ID from formspree.io
+            const response = await fetch('https://formspree.io/f/YOUR_FORMSPREE_ID', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -181,9 +217,9 @@ function initGlassmorphicTilt() {
 document.addEventListener('DOMContentLoaded', () => {
     initMobileMenu();
     initKeyboardNav();
-    // initContactForm(); // Uncomment if using Formspree or similar service
+    initContactForm(); // ✅ ACTIVATED - Contact form now functional
     initDynamicYear();
-    initMagneticButtons();
+    // initMagneticButtons(); // DEAKTIVIERT: Zu playful für professional B2B service
     initParallax();
     // initGlassmorphicTilt(); // Deaktiviert: Zu aggressive 3D-Tilt-Animation auf Leistungskarten
 });
