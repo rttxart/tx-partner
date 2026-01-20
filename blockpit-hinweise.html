@@ -14,7 +14,7 @@
 
     <script src="assets/tx-partner-common.js"></script>
 
-    <script src="assets/tailwind-playcdn.js"></script>
+    <link rel="stylesheet" href="assets/css/tailwind.css">
     <!-- Schema.org HowTo for Blockpit Error Resolution -->
     <script type="application/ld+json">
     {
@@ -40,63 +40,6 @@
             }
         ]
     }
-    </script>
-
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    },
-                    colors: {
-                        brand: {
-                            navy: '#1E3A5F',
-                            teal: '#3A9EAF',
-                            tealDark: '#2C7A87',
-                        },
-                        dark: {
-                            bg: '#050505',
-                            surface: '#0F0F0F',
-                            border: 'rgba(255,255,255,0.08)',
-                        },
-                    },
-                    borderRadius: {
-                        'card': '32px',
-                        'button': '16px',
-                    },
-                    letterSpacing: {
-                        tight: '-0.02em',
-                        tighter: '-0.04em',
-                    },
-                    animation: {
-                        'fade-in': 'fadeIn 0.6s ease-out forwards',
-                        'float': 'float 6s ease-in-out infinite',
-                        'shimmer': 'shimmer 1.5s infinite',
-                        'aurora-pulse': 'aurora-pulse 8s ease-in-out infinite',
-                    },
-                    keyframes: {
-                        fadeIn: {
-                            '0%': { opacity: '0', transform: 'translateY(8px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' },
-                        },
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-10px)' },
-                        },
-                        shimmer: {
-                            '100%': { transform: 'translateX(100%)' }
-                        },
-                        'aurora-pulse': {
-                            '0%, 100%': { opacity: '0.5', transform: 'scale(1)' },
-                            '50%': { opacity: '0.9', transform: 'scale(1.2)' },
-                        }
-                    }
-                }
-            }
-        }
     </script>
 
     <style>
@@ -490,7 +433,6 @@
             class="absolute inset-0 -z-20 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none">
         </div>
 
-        <div class="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('assets/noise.svg')]"></div>
 
         <div class="container text-center max-w-7xl mr-auto ml-auto pr-6 pl-6">
             <!-- Tag -->
@@ -728,7 +670,6 @@
     <!-- Solution Standard Section -->
     <section
         class="py-24 bg-slate-50 dark:bg-[#050505] border-y border-slate-200 dark:border-white/5 overflow-hidden relative">
-        <div class="absolute inset-0 opacity-[0.4] pointer-events-none bg-[url('assets/noise.svg')]"></div>
         <div
             class="absolute right-0 top-0 w-[500px] h-[500px] bg-brand-teal/10 rounded-full blur-[100px] pointer-events-none mix-blend-multiply dark:mix-blend-screen">
         </div>
@@ -1085,7 +1026,6 @@
                 <div
                     class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] md:w-[500px] lg:w-[600px] h-[300px] md:h-[500px] lg:h-[600px] bg-brand-teal opacity-20 blur-[120px] rounded-full pointer-events-none">
                 </div>
-                <div class="absolute inset-0 opacity-20 mix-blend-overlay bg-[url('assets/noise.svg')]"></div>
 
                 <div class="relative z-10 fade-in-up">
                     <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-white mb-8 leading-tight"

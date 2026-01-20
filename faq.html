@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="assets/css/fonts.css">
 
     <script src="assets/tx-partner-common.js"></script>
-    <script src="assets/tailwind-playcdn.js"></script>
+    <link rel="stylesheet" href="assets/css/tailwind.css">
 
     <!-- FAQPage Schema.org for Google Rich Snippets -->
     <script type="application/ld+json">
@@ -113,51 +113,6 @@
     }
     </script>
 
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    },
-                    colors: {
-                        brand: {
-                            navy: '#1E3A5F',
-                            teal: '#3A9EAF',
-                            tealDark: '#2C7A87',
-                        },
-                        dark: {
-                            bg: '#050505',
-                            surface: '#0F0F0F',
-                            border: 'rgba(255,255,255,0.08)',
-                        },
-                    },
-                    borderRadius: {
-                        'card': '32px',
-                        'button': '16px',
-                    },
-                    boxShadow: {
-                        'glow': '0 0 20px rgba(58, 158, 175, 0.15)',
-                    },
-                    letterSpacing: {
-                        tight: '-0.02em',
-                        tighter: '-0.04em',
-                    },
-                    animation: {
-                        'aurora-pulse': 'aurora-pulse 8s ease-in-out infinite',
-                    },
-                    keyframes: {
-                        'aurora-pulse': {
-                            '0%, 100%': { opacity: '0.5', transform: 'scale(1)' },
-                            '50%': { opacity: '0.9', transform: 'scale(1.2)' },
-                        }
-                    }
-                }
-            }
-        }
-    </script>
     <style>
         /* Page Transition */
         html {
@@ -1841,9 +1796,6 @@
                     <!-- Background Effects -->
                     <div
                         class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] md:w-[500px] lg:w-[600px] h-[300px] md:h-[500px] lg:h-[600px] bg-brand-teal opacity-20 blur-[120px] rounded-full pointer-events-none">
-                    </div>
-                    <div
-                        class="absolute inset-0 contrast-150 opacity-20 mix-blend-overlay bg-[url('assets/noise.svg')] brightness-100">
                     </div>
 
                     <div class="relative z-10 fade-in-up visible">

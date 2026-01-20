@@ -13,63 +13,7 @@
     <link rel="stylesheet" href="assets/css/fonts.css">
 
     <script src="assets/tx-partner-common.js"></script>
-    <script src="assets/tailwind-playcdn.js"></script>
-
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    },
-                    colors: {
-                        brand: {
-                            navy: '#1E3A5F',
-                            teal: '#3A9EAF',
-                            tealDark: '#2C7A87',
-                        },
-                        dark: {
-                            bg: '#050505',
-                            surface: '#0F0F0F',
-                            border: 'rgba(255,255,255,0.08)',
-                        },
-                    },
-                    borderRadius: {
-                        'card': '32px',
-                        'button': '16px',
-                    },
-                    letterSpacing: {
-                        'tight': '-0.02em',
-                        'tighter': '-0.04em',
-                    },
-                    animation: {
-                        'fade-in': 'fadeIn 0.6s ease-out forwards',
-                        'float': 'float 6s ease-in-out infinite',
-                        'shimmer': 'shimmer 1.5s infinite',
-                    },
-                    keyframes: {
-                        fadeIn: {
-                            '0%': { opacity: '0', transform: 'translateY(8px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' },
-                        },
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-10px)' },
-                        },
-                        shimmer: {
-                            '100%': { transform: 'translateX(100%)' }
-                        },
-                        'aurora-pulse': {
-                            '0%, 100%': { opacity: '0.5', transform: 'scale(1)' },
-                            '50%': { opacity: '0.9', transform: 'scale(1.2)' },
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="assets/css/tailwind.css">
 
     <style>
         /* Page Transition */
@@ -470,7 +414,6 @@
         <div class="absolute top-0 right-0 w-[400px] md:w-[600px] lg:w-[800px] h-[400px] md:h-[600px] lg:h-[800px] bg-brand-teal/15 dark:bg-brand-teal/20 rounded-full blur-[100px] -z-10 mix-blend-multiply dark:mix-blend-screen animate-aurora-pulse translate-x-1/4 md:translate-x-0"
             style="animation-delay: 2s;"></div>
 
-        <div class="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('assets/noise.svg')]"></div>
 
         <div class="container text-center max-w-7xl mr-auto ml-auto pr-6 pl-6 relative z-10">
             <!-- Tag -->
@@ -690,7 +633,6 @@
     <!-- Solution Standard Section -->
     <section
         class="py-24 bg-slate-50 dark:bg-[#050505] border-y border-slate-200 dark:border-white/5 overflow-hidden relative">
-        <div class="absolute inset-0 opacity-[0.4] pointer-events-none bg-[url('assets/noise.svg')]"></div>
         <div
             class="absolute right-0 top-0 w-[500px] h-[500px] bg-brand-teal/10 rounded-full blur-[100px] pointer-events-none mix-blend-multiply dark:mix-blend-screen">
         </div>

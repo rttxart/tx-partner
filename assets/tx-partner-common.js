@@ -14,26 +14,18 @@ function debounce(func, wait) {
 
 // Mobile Menu Toggle with ARIA
 function initMobileMenu() {
-    console.log('initMobileMenu() called');
     const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
     const mobileMenuClose = document.getElementById('mobile-menu-close');
     const mobileMenu = document.getElementById('mobile-menu');
 
-    console.log('mobileMenuToggle:', mobileMenuToggle);
-    console.log('mobileMenuClose:', mobileMenuClose);
-    console.log('mobileMenu:', mobileMenu);
-
     if (!mobileMenuToggle || !mobileMenu) {
-        console.log('Mobile menu elements not found, returning early');
         return;
     }
 
     // Toggle menu open/close
     const toggleMenu = () => {
         const isOpen = mobileMenu.classList.contains('open');
-        console.log('Toggling menu, current open state:', isOpen);
         mobileMenu.classList.toggle('open');
-        console.log('Menu classList after toggle:', mobileMenu.classList.toString());
 
         // Update ARIA
         mobileMenuToggle.setAttribute('aria-expanded', !isOpen);
@@ -41,7 +33,6 @@ function initMobileMenu() {
     };
 
     mobileMenuToggle.addEventListener('click', (e) => {
-        console.log('Mobile menu toggle clicked');
         toggleMenu();
     });
 

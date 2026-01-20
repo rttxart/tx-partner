@@ -1,0 +1,11 @@
+# robots.txt for TX-Partner
+# https://tx-partner.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://tx-partner.com/sitemap.xml
+
+# Disallow admin/private paths (none currently)
+# Disallow: /admin/

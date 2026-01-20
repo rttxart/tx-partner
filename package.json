@@ -1,0 +1,12 @@
+{
+  "name": "tx-partner",
+  "version": "2.0.0",
+  "description": "TX-Partner Website - Pre-Tax Infrastruktur für Krypto",
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./assets/css/tailwind.css --minify",
+    "watch": "tailwindcss -i ./src/input.css -o ./assets/css/tailwind.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  }
+}

@@ -53,64 +53,7 @@
 }
 </script>
 
-    <script src="assets/tailwind-playcdn.js"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    },
-                    colors: {
-                        brand: {
-                            navy: '#1E3A5F',
-                            teal: '#3A9EAF',
-                            tealDark: '#2C7A87',
-                        },
-                        dark: {
-                            bg: '#050505',
-                            surface: '#0F0F0F',
-                            border: 'rgba(255,255,255,0.08)',
-                        },
-                    },
-                    borderRadius: {
-                        'container': '32px',
-                        'card': '32px',
-                        'button': '16px',
-                    },
-                    letterSpacing: {
-                        'tight': '-0.02em',
-                        'tighter': '-0.04em',
-                    },
-                    animation: {
-                        'fade-in': 'fadeIn 0.6s ease-out forwards',
-                        'aurora-pulse': 'aurora-pulse 8s ease-in-out infinite',
-                        'float': 'float 6s ease-in-out infinite',
-                        'shimmer': 'shimmer 1.5s infinite',
-                    },
-                    keyframes: {
-                        fadeIn: {
-                            '0%': { opacity: '0', transform: 'translateY(8px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' },
-                        },
-                        'aurora-pulse': {
-                            '0%, 100%': { opacity: '0.5', transform: 'scale(1)' },
-                            '50%': { opacity: '0.9', transform: 'scale(1.2)' },
-                        },
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-10px)' },
-                        },
-                        shimmer: {
-                            '100%': { transform: 'translateX(100%)' }
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="assets/css/tailwind.css">
     <style>
         /* Page Transition */
         html {
@@ -630,7 +573,7 @@
                             <!-- Image Frame -->
                             <div
                                 class="relative w-64 h-64 drop-shadow-[0_20px_50px_rgba(30,58,95,0.15)] group-hover:scale-105 transition-transform duration-700">
-                                <img src="https://www.tx-partner.com/assets/Robert_Thorn2.png" alt="Robert Thorn"
+                                <img src="assets/Robert_Thorn2.webp" alt="Robert Thorn"
                                     class="w-full h-full object-contain object-bottom scale-110">
                             </div>
                         </div>
@@ -773,7 +716,7 @@
                             <!-- Image Frame -->
                             <div
                                 class="relative w-64 h-64 drop-shadow-[0_20px_50px_rgba(30,58,95,0.15)] group-hover:scale-105 transition-transform duration-700">
-                                <img src="https://www.tx-partner.com/assets/Johannes_Anderl2.png" alt="Johannes Anderl"
+                                <img src="assets/Johannes_Anderl2.webp" alt="Johannes Anderl"
                                     class="w-full h-full object-contain object-bottom scale-110">
                             </div>
                         </div>
@@ -896,7 +839,6 @@
 
     <!-- Philosophy & Stats Section -->
     <section class="relative py-24 bg-brand-navy overflow-hidden">
-        <div class="absolute inset-0 bg-[url('assets/noise.svg')] opacity-10 mix-blend-overlay"></div>
         <div
             class="absolute top-0 right-0 w-[200px] md:w-[300px] lg:w-[400px] h-[200px] md:h-[300px] lg:h-[400px] bg-brand-teal rounded-full blur-[100px] opacity-20">
         </div>
@@ -1058,7 +1000,6 @@
                 <div
                     class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] md:w-[500px] lg:w-[600px] h-[300px] md:h-[500px] lg:h-[600px] bg-brand-teal opacity-20 blur-[120px] rounded-full pointer-events-none">
                 </div>
-                <div class="absolute inset-0 bg-[url('assets/noise.svg')] opacity-20 mix-blend-overlay"></div>
 
                 <div class="relative z-10 fade-in-up">
                     <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-6 leading-tight text-white">
