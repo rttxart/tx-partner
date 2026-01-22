@@ -54,6 +54,29 @@
             background: #475569;
         }
 
+        /* Performance: Skip rendering for below-fold sections */
+        .below-fold {
+            content-visibility: auto;
+            contain-intrinsic-size: auto 500px;
+        }
+
+        /* GPU acceleration for animated elements */
+        .animate-aurora-pulse,
+        .animate-float {
+            will-change: transform, opacity;
+        }
+
+        /* Reduce motion */
+        @media (prefers-reduced-motion: reduce) {
+            .animate-aurora-pulse,
+            .animate-float,
+            .animate-shimmer,
+            .animate-pulse {
+                animation: none !important;
+                transform: none !important;
+            }
+        }
+
         /* Focus States for Accessibility (WCAG AA) */
         :focus-visible {
             outline: 2px solid #3A9EAF;
@@ -529,7 +552,7 @@
     </section>
 
     <!-- Problems Grid Section -->
-    <section class="py-24 bg-white dark:bg-dark-bg border-t border-slate-200 dark:border-white/5">
+    <section class="below-fold py-24 bg-white dark:bg-dark-bg border-t border-slate-200 dark:border-white/5">
         <div class="container max-w-7xl mr-auto ml-auto pr-6 pl-6">
 
             <div class="mb-16 fade-in-up visible">
@@ -628,7 +651,7 @@
 
     <!-- Solution Standard Section -->
     <section
-        class="py-24 bg-slate-50 dark:bg-[#050505] border-y border-slate-200 dark:border-white/5 overflow-hidden relative">
+        class="below-fold py-24 bg-slate-50 dark:bg-[#050505] border-y border-slate-200 dark:border-white/5 overflow-hidden relative">
         <div
             class="absolute right-0 top-0 w-[500px] h-[500px] bg-brand-teal/10 rounded-full blur-[100px] pointer-events-none mix-blend-multiply dark:mix-blend-screen">
         </div>
@@ -780,7 +803,7 @@
     </section>
 
     <!-- Why Errors Happen Section -->
-    <section class="py-32 bg-slate-50 dark:bg-[#050505] relative overflow-hidden">
+    <section class="below-fold py-32 bg-slate-50 dark:bg-[#050505] relative overflow-hidden">
         <div
             class="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none">
         </div>
@@ -934,7 +957,7 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="dark:bg-[#080808] border-y dark:border-white/5 bg-slate-50 border-slate-200 pt-24 pb-24">
+    <section class="below-fold dark:bg-[#080808] border-y dark:border-white/5 bg-slate-50 border-slate-200 pt-24 pb-24">
         <div class="container mx-auto px-6 max-w-4xl">
 
             <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-brand-navy dark:text-white mb-12 text-center"
@@ -982,7 +1005,7 @@
     </section>
 
     <!-- Final CTA (FIXED: Changed to "Kostenloser Doku-Check") -->
-    <section class="py-20 bg-white dark:bg-dark-bg">
+    <section class="below-fold py-20 bg-white dark:bg-dark-bg">
         <div class="container mx-auto max-w-6xl px-4 sm:px-6">
             <div
                 class="relative rounded-card overflow-hidden text-center py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-12 lg:px-20 bg-brand-navy shadow-2xl shadow-brand-navy/30">

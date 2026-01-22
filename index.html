@@ -88,6 +88,31 @@
     <link rel="stylesheet" href="assets/css/tailwind.css">
 
     <style>
+        /* Performance: Skip rendering for below-fold sections */
+        .below-fold {
+            content-visibility: auto;
+            contain-intrinsic-size: auto 500px;
+        }
+
+        /* GPU acceleration for animated elements */
+        .animate-aurora-pulse,
+        .animate-float,
+        .hero-floating-element {
+            will-change: transform, opacity;
+        }
+
+        /* Reduce motion for accessibility & performance */
+        @media (prefers-reduced-motion: reduce) {
+            .animate-aurora-pulse,
+            .animate-float,
+            .animate-shimmer,
+            .animate-pulse,
+            .animate-bounce {
+                animation: none !important;
+                transform: none !important;
+            }
+        }
+
         /* Page Transition */
         @keyframes pageLoad {
             from {
@@ -798,7 +823,7 @@
 
 
         <!-- Solutions Section -->
-        <section class="bg-white dark:bg-dark-bg py-32 relative" id="leistungen">
+        <section class="below-fold bg-white dark:bg-dark-bg py-32 relative" id="leistungen">
             <div class="container mx-auto px-6 max-w-7xl">
 
                 <!-- Header -->
@@ -943,7 +968,7 @@
         </section>
         <!-- Gap Architecture Section -->
         <section
-            class="bg-slate-50 dark:bg-[#050505] border-y border-slate-200 dark:border-white/5 pt-20 pb-20 relative overflow-hidden">
+            class="below-fold bg-slate-50 dark:bg-[#050505] border-y border-slate-200 dark:border-white/5 pt-20 pb-20 relative overflow-hidden">
             <div
                 class="absolute inset-0 opacity-[0.4] bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)] dark:opacity-[0.1]">
             </div>
@@ -1105,7 +1130,7 @@
 
 
         <!-- Stats Section -->
-        <section class="bg-white dark:bg-dark-bg pt-32 pb-32 relative overflow-hidden group/section" id="ueber-uns">
+        <section class="below-fold bg-white dark:bg-dark-bg pt-32 pb-32 relative overflow-hidden group/section" id="ueber-uns">
             <div
                 class="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.02)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.02)_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none">
             </div>
@@ -1287,7 +1312,7 @@
 
 
         <!-- Final CTA -->
-        <section class="bg-white dark:bg-dark-bg pt-20 pb-32">
+        <section class="below-fold bg-white dark:bg-dark-bg pt-20 pb-32">
             <div class="mx-auto max-w-6xl px-6">
                 <div
                     class="relative rounded-[32px] overflow-hidden text-center py-24 px-6 md:px-20 bg-brand-navy shadow-2xl shadow-brand-navy/30">

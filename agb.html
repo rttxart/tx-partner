@@ -31,6 +31,29 @@
     <link rel="stylesheet" href="assets/css/tailwind.css">
 
     <style>
+        /* Performance: Skip rendering for below-fold sections */
+        .below-fold {
+            content-visibility: auto;
+            contain-intrinsic-size: auto 500px;
+        }
+
+        /* GPU acceleration for animated elements */
+        .animate-aurora-pulse,
+        .animate-float {
+            will-change: transform, opacity;
+        }
+
+        /* Reduce motion */
+        @media (prefers-reduced-motion: reduce) {
+            .animate-aurora-pulse,
+            .animate-float,
+            .animate-shimmer,
+            .animate-pulse {
+                animation: none !important;
+                transform: none !important;
+            }
+        }
+
         /* Page Transition */
         html {
             scroll-behavior: smooth;
@@ -395,7 +418,7 @@
     </header>
 
     <!-- Content Section -->
-    <section class="pb-32 relative">
+    <section class="below-fold pb-32 relative">
         <div class="container mx-auto px-6 max-w-3xl">
             <div class="bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-card p-8 text-center">
                 <h2 class="text-xl font-bold tracking-tight text-brand-navy dark:text-white mb-4">Allgemeine Geschäftsbedingungen folgen</h2>

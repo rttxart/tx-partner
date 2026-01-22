@@ -31,6 +31,29 @@
     <link rel="stylesheet" href="assets/css/tailwind.css">
 
     <style>
+        /* Performance: Skip rendering for below-fold sections */
+        .below-fold {
+            content-visibility: auto;
+            contain-intrinsic-size: auto 500px;
+        }
+
+        /* GPU acceleration for animated elements */
+        .animate-aurora-pulse,
+        .animate-float {
+            will-change: transform, opacity;
+        }
+
+        /* Reduce motion */
+        @media (prefers-reduced-motion: reduce) {
+            .animate-aurora-pulse,
+            .animate-float,
+            .animate-shimmer,
+            .animate-pulse {
+                animation: none !important;
+                transform: none !important;
+            }
+        }
+
         html {
             scroll-behavior: smooth;
         }
@@ -389,7 +412,7 @@
     </header>
 
     <!-- Main Content -->
-    <main class="container mx-auto px-6 max-w-4xl pb-32">
+    <main class="below-fold container mx-auto px-6 max-w-4xl pb-32">
         <div class="space-y-12 fade-in-up" style="animation-delay: 0.3s;">
 
             <!-- Verantwortlicher und allgemeine Hinweise -->
