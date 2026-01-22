@@ -58,6 +58,7 @@
 
         /* Reduce motion */
         @media (prefers-reduced-motion: reduce) {
+
             .animate-aurora-pulse,
             .animate-float,
             .animate-shimmer,
@@ -245,8 +246,28 @@
         .btn-secondary:hover {
             transform: translateY(-1px);
         }
+
+        /* 2026 Narrative Connectors */
+        .narrative-connector {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1px;
+            height: 100px;
+            background: linear-gradient(to bottom, var(--connector-color, #3A9EAF), transparent);
+            z-index: 5;
+            opacity: 0.3;
+        }
+
+        .dark .narrative-connector {
+            opacity: 0.15;
+        }
+
+        .connector-bottom {
+            bottom: 0;
+        }
     </style>
-</head>
+<style> .narrative-connector { position: absolute; left: 50%; transform: translateX(-50%); width: 1px; height: 120px; background: linear-gradient(to bottom, #3A9EAF, transparent); z-index: 5; opacity: 0.3; transition: height 0.6s ease; } .aurora-card { position: relative; overflow: hidden; transition: all 0.5s ease; } .aurora-card::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(58, 158, 175, 0.12), transparent 80%); opacity: 0; transition: opacity 0.5s; pointer-events: none; } .aurora-card:hover::before { opacity: 1; } .aurora-card:hover { transform: translateY(-4px); } </style></head>
 
 <body
     class="antialiased bg-white dark:bg-dark-bg text-slate-900 dark:text-white font-sans selection:bg-brand-teal selection:text-white">
@@ -442,7 +463,8 @@
     </nav>
 
     <!-- Hero Section -->
-        <section id="hero-section" class="hero-section relative min-h-[50vh] flex flex-col items-center justify-center pt-20 sm:pt-28 md:pt-32 lg:pt-40 pb-20 overflow-hidden">
+    <section id="hero-section"
+        class="hero-section relative min-h-[50vh] flex flex-col items-center justify-center pt-20 sm:pt-28 md:pt-32 lg:pt-40 pb-20 overflow-hidden">
         <!-- Ambient Background -->
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[400px] md:w-[600px] lg:w-[800px] xl:w-[1000px] h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] xl:h-[600px] bg-brand-navy/25 rounded-full blur-[60px] sm:blur-[80px] md:blur-[100px] lg:blur-[120px] xl:blur-[140px] -z-10 mix-blend-multiply dark:mix-blend-screen animate-aurora-pulse"
             style="animation-delay: 2s;">
@@ -516,7 +538,8 @@
                         class="relative inline-flex h-14 w-full md:min-w-[280px] items-center justify-center gap-3 rounded-2xl border border-slate-200 bg-slate-100 px-6 text-base font-bold text-slate-400 cursor-not-allowed opacity-60 dark:border-white/10 dark:bg-white/5 dark:text-slate-500">
                         <span class="flex items-center gap-2 relative z-10">
                             Expertenprüfung (Live)
-                            <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-semibold bg-slate-200 text-slate-500 dark:bg-white/10 dark:text-slate-400">
+                            <span
+                                class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-semibold bg-slate-200 text-slate-500 dark:bg-white/10 dark:text-slate-400">
                                 Demnächst
                             </span>
                         </span>
@@ -596,6 +619,37 @@
                         <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
                             Transaktionen ohne klare Zuordnung. Wir identifizieren die Gegenpartei und labeln korrekt.
                         </p>
+                    </div>
+                </div>
+
+                <!-- Deep Dive Break (Contextual Pacing) -->
+                <div class="md:col-span-2 lg:col-span-3 mt-12 mb-12 fade-in-up">
+                    <div class="relative p-8 md:p-12 rounded-[32px] bg-brand-navy overflow-hidden">
+                        <div
+                            class="absolute top-0 right-0 w-64 h-64 bg-brand-teal/20 blur-[80px] rounded-full -mr-20 -mt-20">
+                        </div>
+                        <div class="relative z-10 flex flex-col md:flex-row items-center gap-8">
+                            <div class="flex-1">
+                                <span
+                                    class="inline-block px-3 py-1 rounded-full bg-brand-teal/20 text-brand-teal text-[10px] font-bold uppercase tracking-widest mb-4">Deep
+                                    Dive</span>
+                                <h3 class="text-2xl md:text-3xl font-bold text-white mb-4">Das "Abweichende Bilanz"
+                                    Phänomen
+                                </h3>
+                                <p class="text-slate-300 leading-relaxed">
+                                    In Blockpit entstehen viele Hinweise durch eine falsche Kostenbasis-Vererbung. Eine
+                                    falsche Bilanz
+                                    in 2023 kann hunderte "Hinweise" in 2026 auslösen. Wir lösen nicht die
+                                    Blockpit-Hinweise, wir korrigieren die Historie.
+                                </p>
+                            </div>
+                            <div class="w-full md:w-auto shrink-0">
+                                <a href="https://app.cal.eu/johannesanderl-tx-partner/dokumentation-prufen"
+                                    target="_blank"
+                                    class="px-8 py-4 bg-white text-brand-navy font-bold rounded-xl hover:scale-105 transition-transform inline-block">Check
+                                    anfordern</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -1055,7 +1109,8 @@
                         <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-teal to-white">endgültig
                             beheben</span>
                     </h2>
-                    <p class="text-base sm:text-lg md:text-xl font-medium text-slate-200 max-w-xl mr-auto mb-8 sm:mb-10 md:mb-12 ml-auto">
+                    <p
+                        class="text-base sm:text-lg md:text-xl font-medium text-slate-200 max-w-xl mr-auto mb-8 sm:mb-10 md:mb-12 ml-auto">
                         Starte mit einem kostenlosen Doku-Check deiner Blockpit-Daten, als Grundlage für
                         saubere Reports.
                     </p>
@@ -1063,8 +1118,9 @@
                         rel="noopener noreferrer"
                         class="btn-primary inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-white text-brand-navy text-base sm:text-lg font-semibold rounded-[16px] hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(255,255,255,0.3)] transition-all duration-300 group">
                         Kostenloser Doku-Check
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" sm:width="20" height="18" sm:height="20" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" sm:width="20" height="18" sm:height="20"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
                             class="ml-2 text-brand-teal group-hover:translate-x-1 transition-transform">
                             <path d="M5 12h14"></path>
                             <path d="m12 5 7 7-7 7"></path>
@@ -1074,6 +1130,9 @@
             </div>
         </div>
     </section>
+
+    <!-- Connector to next section -->
+    <div class="narrative-connector" style="--connector-color: #3A9EAF; margin-top: -50px;"></div>
 
     <!-- Footer -->
     <footer class="bg-white dark:bg-dark-bg border-t border-slate-200 dark:border-white/5 pt-24 pb-12">
@@ -1296,6 +1355,6 @@
     </script>
     <!-- Sticky CTA Ende -->
 
-</body>
+<script> document.addEventListener('DOMContentLoaded', () => { const cards = document.querySelectorAll('.aurora-card'); cards.forEach(c => { c.addEventListener('mousemove', e => { const r = c.getBoundingClientRect(); c.style.setProperty('--mouse-x', ((e.clientX - r.left)/r.width*100) + '%'); c.style.setProperty('--mouse-y', ((e.clientY - r.top)/r.height*100) + '%'); }); }); const connectors = document.querySelectorAll('.narrative-connector'); window.addEventListener('scroll', () => { connectors.forEach(cn => { const r = cn.getBoundingClientRect(); if(r.top < window.innerHeight) { cn.style.height = Math.min(120, (window.innerHeight - r.top)/5) + 'px'; } }); }); }); </script></body>
 
 </html>

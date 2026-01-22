@@ -199,6 +199,35 @@
             transform: translateY(-2px);
             box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.12);
         }
+
+        /* 2026 Narrative Connectors */
+        .narrative-connector {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1px;
+            height: 100px;
+            background: linear-gradient(to bottom, var(--connector-color, #3A9EAF), transparent);
+            z-index: 5;
+            opacity: 0.3;
+        }
+
+        .dark .narrative-connector {
+            opacity: 0.15;
+        }
+
+        /* Pillar Path Animation */
+        .pillar-path {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(to right, transparent, var(--brand-teal), transparent);
+            opacity: 0.1;
+            z-index: 0;
+            pointer-events: none;
+        }
     </style>
 </head>
 
@@ -436,258 +465,257 @@
 
             <p class="hero-subheadline fade-in-up hero-subheadline-margin text-slate-500 dark:text-slate-400 max-w-2xl mx-auto visible"
                 style="animation-delay: 0.2s">
-                Wir verwandeln unübersichtliche Transaktionshistorien in eine lückenlose, prüfungssichere Beweiskette –
+                Wir verwandeln unübersichtliche Transaktionshistorien in eine lückenlose, Audit-Ready Beweiskette –
                 als Basis für jeden Steuerreport.
             </p>
         </div>
 
-        <!-- Premium Floating Badges (The 4 Pillars) -->
-        <div class="absolute inset-0 pointer-events-none hidden lg:block overflow-hidden">
-            <!-- Pillar 1: Vollständigkeit -->
-            <div class="absolute top-[12%] left-[5%] animate-float opacity-90 dark:opacity-80"
-                style="animation-duration: 8s; animation-delay: 0s;">
-                <div
-                    class="flex items-center gap-3 px-5 py-3.5 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/40 dark:border-white/10 shadow-xl shadow-brand-navy/5 dark:shadow-black/20 ring-1 ring-white/40 dark:ring-white/5">
-                    <div
-                        class="w-10 h-10 rounded-xl bg-slate-100 dark:bg-white/10 flex items-center justify-center text-brand-teal border border-slate-200 dark:border-white/10 shadow-inner">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2.5">
-                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                        </svg>
-                    </div>
-                    <div class="flex flex-col">
-                        <span
-                            class="text-[10px] font-bold uppercase tracking-widest text-slate-500/80 dark:text-slate-400 font-mono mb-0.5">01_Scope</span>
-                        <span
-                            class="text-sm font-bold tracking-tight text-brand-navy dark:text-white">Vollständigkeit</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Pillar 2: Transparenz -->
-            <div class="absolute top-[18%] right-[5%] animate-float opacity-90 dark:opacity-80"
-                style="animation-duration: 11s; animation-delay: 1.5s;">
-                <div
-                    class="flex items-center gap-3 px-5 py-3.5 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/40 dark:border-white/10 shadow-xl shadow-brand-navy/5 dark:shadow-black/20 ring-1 ring-white/40 dark:ring-white/5">
-                    <div
-                        class="w-10 h-10 rounded-xl bg-slate-100 dark:bg-white/10 flex items-center justify-center text-brand-teal border border-slate-200 dark:border-white/10 shadow-inner">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2.5">
-                            <polyline points="4 17 10 11 14 15 20 9"></polyline>
-                            <line x1="20" y1="9" x2="20" y2="15"></line>
-                            <line x1="20" y1="9" x2="14" y2="9"></line>
-                        </svg>
-                    </div>
-                    <div class="flex flex-col">
-                        <span
-                            class="text-[10px] font-bold uppercase tracking-widest text-slate-500/80 dark:text-slate-400 font-mono mb-0.5">02_Trace</span>
-                        <span
-                            class="text-sm font-bold tracking-tight text-brand-navy dark:text-white">Transparenz</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Pillar 3: Fachliche Korrektheit -->
-            <div class="absolute top-[35%] left-[2%] xl:left-[6%] animate-float opacity-90 dark:opacity-80"
-                style="animation-duration: 10s; animation-delay: 0.8s;">
-                <div
-                    class="flex items-center gap-3 px-5 py-3.5 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/40 dark:border-white/10 shadow-xl shadow-brand-navy/5 dark:shadow-black/20 ring-1 ring-white/40 dark:ring-white/5 scale-90 md:scale-100">
-                    <div
-                        class="w-10 h-10 rounded-xl bg-slate-100 dark:bg-white/10 flex items-center justify-center text-brand-teal border border-slate-200 dark:border-white/10 shadow-inner">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                        </svg>
-                    </div>
-                    <div class="flex flex-col">
-                        <span
-                            class="text-[10px] font-bold uppercase tracking-widest text-slate-500/80 dark:text-slate-400 font-mono mb-0.5">03_Tax</span>
-                        <span class="text-sm font-bold tracking-tight text-brand-navy dark:text-white">Fachlich
-                            korrekt</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Pillar 4: Verwertbarkeit -->
-            <div class="absolute top-[40%] right-[2%] xl:right-[6%] animate-float opacity-90 dark:opacity-80"
-                style="animation-duration: 12s; animation-delay: 2.2s;">
-                <div
-                    class="flex items-center gap-3 px-5 py-3.5 rounded-2xl bg-white/70 dark:bg-white/5 backdrop-blur-xl border border-white/40 dark:border-white/10 shadow-xl shadow-brand-navy/5 dark:shadow-black/20 ring-1 ring-white/40 dark:ring-white/5 scale-90 md:scale-100">
-                    <div
-                        class="w-10 h-10 rounded-xl bg-slate-100 dark:bg-white/10 flex items-center justify-center text-brand-teal border border-slate-200 dark:border-white/10 shadow-inner">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                            <polyline points="14 2 14 8 20 8"></polyline>
-                            <line x1="16" y1="13" x2="8" y2="13"></line>
-                        </svg>
-                    </div>
-                    <div class="flex flex-col">
-                        <span
-                            class="text-[10px] font-bold uppercase tracking-widest text-slate-500/80 dark:text-slate-400 font-mono mb-0.5">04_Proof</span>
-                        <span
-                            class="text-sm font-bold tracking-tight text-brand-navy dark:text-white">Verwertbarkeit</span>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <!-- 4 Pillars Grid -->
-        <div
-            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-6 max-w-7xl mx-auto relative z-10 mt-12 md:mt-24 mb-20">
-            <!-- Pillar 1: Vollständigkeit -->
-            <div class="card-spotlight group p-1 fade-in-up visible" onmousemove="handleMouseMove(event)"
-                style="animation-delay: 0.1s;">
-                <div class="card-border-glow"></div>
-                <div
-                    class="relative h-full bg-white dark:bg-dark-surface rounded-[32px] p-8 border border-slate-200 dark:border-white/5 flex flex-col shadow-lg shadow-slate-100/50 dark:shadow-none transition-all duration-500 hover:-translate-y-2">
-                    <div class="flex justify-between items-start mb-8">
-                        <div
-                            class="w-12 h-12 rounded-2xl bg-slate-50 dark:bg-white/5 border border-slate-100 dark:border-white/10 flex items-center justify-center text-brand-navy dark:text-white font-mono font-bold text-lg group-hover:scale-110 group-hover:bg-brand-teal group-hover:text-white transition-all duration-300">
-                            01</div>
-                        <div
-                            class="p-2 rounded-xl bg-brand-teal/5 text-brand-teal group-hover:rotate-12 transition-transform">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                            </svg>
+        <div class="relative">
+            <div class="pillar-path hidden lg:block"></div>
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-6 max-w-7xl mx-auto relative z-10 mt-12 md:mt-24 mb-20">
+                <!-- Pillar 1: Vollständigkeit -->
+                <div class="card-spotlight group p-1 fade-in-up visible" onmousemove="handleMouseMove(event)"
+                    style="animation-delay: 0.1s;">
+                    <div class="card-border-glow"></div>
+                    <div
+                        class="relative h-full bg-white dark:bg-dark-surface rounded-[32px] p-8 border border-slate-200 dark:border-white/5 flex flex-col shadow-lg shadow-slate-100/50 dark:shadow-none transition-all duration-500 hover:-translate-y-2">
+                        <div class="flex justify-between items-start mb-8">
+                            <div
+                                class="w-12 h-12 rounded-2xl bg-slate-50 dark:bg-white/5 border border-slate-100 dark:border-white/10 flex items-center justify-center text-brand-navy dark:text-white font-mono font-bold text-lg group-hover:scale-110 group-hover:bg-brand-teal group-hover:text-white transition-all duration-300">
+                                01</div>
+                            <div
+                                class="p-2 rounded-xl bg-brand-teal/5 text-brand-teal group-hover:rotate-12 transition-transform">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold tracking-tight text-brand-navy dark:text-white mb-3">
+                            Vollständigkeit
+                        </h3>
+                        <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-6 flex-grow">
+                            Keine Wallet wird vergessen. Wo APIs versagen, greift unsere manuelle Daten-Rekonstruktion.
+                        </p>
+                        <div class="space-y-3 pt-6 border-t border-slate-100 dark:border-white/5">
+                            <div
+                                class="flex items-center gap-2.5 text-[11px] font-bold uppercase tracking-wider text-brand-teal">
+                                <span class="w-1.5 h-1.5 rounded-full bg-brand-teal"></span>
+                                Exchange API & CSV Abgleich
+                            </div>
+                            <div
+                                class="flex items-center gap-2.5 text-[11px] font-bold uppercase tracking-wider text-brand-teal">
+                                <span class="w-1.5 h-1.5 rounded-full bg-brand-teal"></span>
+                                Non-Custodial Tracing
+                            </div>
                         </div>
                     </div>
-                    <h3 class="text-xl font-bold tracking-tight text-brand-navy dark:text-white mb-3">Vollständigkeit
-                    </h3>
-                    <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-6 flex-grow">
-                        Keine Wallet wird vergessen. Wo APIs versagen, greift unsere manuelle Daten-Rekonstruktion.
-                    </p>
-                    <div class="space-y-3 pt-6 border-t border-slate-100 dark:border-white/5">
-                        <div
-                            class="flex items-center gap-2.5 text-[11px] font-bold uppercase tracking-wider text-brand-teal">
-                            <span class="w-1.5 h-1.5 rounded-full bg-brand-teal"></span>
-                            Exchange API & CSV Abgleich
+                </div>
+
+                <!-- Pillar 2: Transparenz -->
+                <div class="card-spotlight group p-1 fade-in-up visible" onmousemove="handleMouseMove(event)"
+                    style="animation-delay: 0.2s;">
+                    <div class="card-border-glow"></div>
+                    <div
+                        class="relative h-full bg-white dark:bg-dark-surface rounded-[32px] p-8 border border-slate-200 dark:border-white/5 flex flex-col shadow-lg shadow-slate-100/50 dark:shadow-none transition-all duration-500 hover:-translate-y-2">
+                        <div class="flex justify-between items-start mb-8">
+                            <div
+                                class="w-12 h-12 rounded-2xl bg-slate-50 dark:bg-white/5 border border-slate-100 dark:border-white/10 flex items-center justify-center text-brand-navy dark:text-white font-mono font-bold text-lg group-hover:scale-110 group-hover:bg-brand-teal group-hover:text-white transition-all duration-300">
+                                02</div>
+                            <div
+                                class="p-2 rounded-xl bg-brand-teal/5 text-brand-teal group-hover:rotate-12 transition-transform">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="4 17 10 11 14 15 20 9"></polyline>
+                                    <line x1="20" y1="9" x2="20" y2="15"></line>
+                                    <line x1="20" y1="9" x2="14" y2="9"></line>
+                                </svg>
+                            </div>
                         </div>
-                        <div
-                            class="flex items-center gap-2.5 text-[11px] font-bold uppercase tracking-wider text-brand-teal">
-                            <span class="w-1.5 h-1.5 rounded-full bg-brand-teal"></span>
-                            Non-Custodial Tracing
+                        <h3 class="text-xl font-bold tracking-tight text-brand-navy dark:text-white mb-3">Transparenz
+                        </h3>
+                        <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-6 flex-grow">
+                            Jede Buchung erzählt eine Geschichte. Wir machen sie für das Finanzamt lesbar.
+                        </p>
+                        <div class="space-y-3 pt-6 border-t border-slate-100 dark:border-white/5">
+                            <div
+                                class="flex items-center gap-2.5 text-[11px] font-bold uppercase tracking-wider text-brand-teal">
+                                <span class="w-1.5 h-1.5 rounded-full bg-brand-teal"></span>
+                                Kontext für jeden Swap
+                            </div>
+                            <div
+                                class="flex items-center gap-2.5 text-[11px] font-bold uppercase tracking-wider text-brand-teal">
+                                <span class="w-1.5 h-1.5 rounded-full bg-brand-teal"></span>
+                                Interne Transferketten
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pillar 3: Fachliche Korrektheit -->
+                <div class="card-spotlight group p-1 fade-in-up visible" onmousemove="handleMouseMove(event)"
+                    style="animation-delay: 0.3s;">
+                    <div class="card-border-glow"></div>
+                    <div
+                        class="relative h-full bg-white dark:bg-dark-surface rounded-[32px] p-8 border border-slate-200 dark:border-white/5 flex flex-col shadow-lg shadow-slate-100/50 dark:shadow-none transition-all duration-500 hover:-translate-y-2">
+                        <div class="flex justify-between items-start mb-8">
+                            <div
+                                class="w-12 h-12 rounded-2xl bg-slate-50 dark:bg-white/5 border border-slate-100 dark:border-white/10 flex items-center justify-center text-brand-navy dark:text-white font-mono font-bold text-lg group-hover:scale-110 group-hover:bg-brand-teal group-hover:text-white transition-all duration-300">
+                                03</div>
+                            <div
+                                class="p-2 rounded-xl bg-brand-teal/5 text-brand-teal group-hover:rotate-12 transition-transform">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold tracking-tight text-brand-navy dark:text-white mb-3">Fachlich
+                            korrekt
+                        </h3>
+                        <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-6 flex-grow">
+                            DeFi ist komplex. Wir übersetzen technische On-Chain-Daten in steuerliche Sachverhalte.
+                        </p>
+                        <div class="space-y-3 pt-6 border-t border-slate-100 dark:border-white/5">
+                            <div
+                                class="flex items-center gap-2.5 text-[11px] font-bold uppercase tracking-wider text-brand-teal">
+                                <span class="w-1.5 h-1.5 rounded-full bg-brand-teal"></span>
+                                Steuerneutrale Swaps
+                            </div>
+                            <div
+                                class="flex items-center gap-2.5 text-[11px] font-bold uppercase tracking-wider text-brand-teal">
+                                <span class="w-1.5 h-1.5 rounded-full bg-brand-teal"></span>
+                                LP-Tokens & Staking
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pillar 4: Verwertbarkeit -->
+                <div class="card-spotlight group p-1 fade-in-up visible" onmousemove="handleMouseMove(event)"
+                    style="animation-delay: 0.4s;">
+                    <div class="card-border-glow"></div>
+                    <div
+                        class="relative h-full bg-white dark:bg-dark-surface rounded-[32px] p-8 border border-slate-200 dark:border-white/5 flex flex-col shadow-lg shadow-slate-100/50 dark:shadow-none transition-all duration-500 hover:-translate-y-2">
+                        <div class="flex justify-between items-start mb-8">
+                            <div
+                                class="w-12 h-12 rounded-2xl bg-brand-teal text-white flex items-center justify-center font-mono font-bold text-lg shadow-lg shadow-brand-teal/30 group-hover:scale-110 transition-all duration-300">
+                                04</div>
+                            <div
+                                class="p-2 rounded-xl bg-brand-teal text-white group-hover:rotate-12 transition-transform">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                    <polyline points="14 2 14 8 20 8"></polyline>
+                                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold tracking-tight text-brand-navy dark:text-white mb-3">Verwertbarkeit
+                        </h3>
+                        <p
+                            class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-6 flex-grow font-medium">
+                            Das Ziel ist Sicherheit. Unsere Daten halten auch in 5 Jahren noch jeder Prüfung stand.
+                        </p>
+                        <div class="space-y-3 pt-6 border-t border-brand-teal/20">
+                            <div
+                                class="flex items-center gap-2.5 text-[11px] font-bold uppercase tracking-wider text-brand-teal">
+                                <span class="w-1.5 h-1.5 rounded-full bg-brand-teal animate-pulse"></span>
+                                Konsistente Datenstruktur
+                            </div>
+                            <div
+                                class="flex items-center gap-2.5 text-[11px] font-bold uppercase tracking-wider text-brand-teal">
+                                <span class="w-1.5 h-1.5 rounded-full bg-brand-teal animate-pulse"></span>
+                                Revisionssicheres Archiv
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+    </section>
 
-            <!-- Pillar 2: Transparenz -->
-            <div class="card-spotlight group p-1 fade-in-up visible" onmousemove="handleMouseMove(event)"
-                style="animation-delay: 0.2s;">
-                <div class="card-border-glow"></div>
-                <div
-                    class="relative h-full bg-white dark:bg-dark-surface rounded-[32px] p-8 border border-slate-200 dark:border-white/5 flex flex-col shadow-lg shadow-slate-100/50 dark:shadow-none transition-all duration-500 hover:-translate-y-2">
-                    <div class="flex justify-between items-start mb-8">
-                        <div
-                            class="w-12 h-12 rounded-2xl bg-slate-50 dark:bg-white/5 border border-slate-100 dark:border-white/10 flex items-center justify-center text-brand-navy dark:text-white font-mono font-bold text-lg group-hover:scale-110 group-hover:bg-brand-teal group-hover:text-white transition-all duration-300">
-                            02</div>
-                        <div
-                            class="p-2 rounded-xl bg-brand-teal/5 text-brand-teal group-hover:rotate-12 transition-transform">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="4 17 10 11 14 15 20 9"></polyline>
-                                <line x1="20" y1="9" x2="20" y2="15"></line>
-                                <line x1="20" y1="9" x2="14" y2="9"></line>
-                            </svg>
-                        </div>
-                    </div>
-                    <h3 class="text-xl font-bold tracking-tight text-brand-navy dark:text-white mb-3">Transparenz</h3>
-                    <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-6 flex-grow">
-                        Jede Buchung erzählt eine Geschichte. Wir machen sie für das Finanzamt lesbar.
-                    </p>
-                    <div class="space-y-3 pt-6 border-t border-slate-100 dark:border-white/5">
-                        <div
-                            class="flex items-center gap-2.5 text-[11px] font-bold uppercase tracking-wider text-brand-teal">
-                            <span class="w-1.5 h-1.5 rounded-full bg-brand-teal"></span>
-                            Kontext für jeden Swap
-                        </div>
-                        <div
-                            class="flex items-center gap-2.5 text-[11px] font-bold uppercase tracking-wider text-brand-teal">
-                            <span class="w-1.5 h-1.5 rounded-full bg-brand-teal"></span>
-                            Interne Transferketten
-                        </div>
-                    </div>
-                </div>
+    <!-- Deep Dive: Anatomie einer TX-Partner Dokumentation -->
+    <section
+        class="py-24 bg-slate-50 dark:bg-dark-bg-alt border-y border-slate-200 dark:border-white/5 overflow-hidden">
+        <div class="container mx-auto px-6 max-w-6xl relative">
+            <div class="text-center mb-16">
+                <span
+                    class="inline-block px-3 py-1 rounded-full bg-brand-teal/10 text-brand-teal text-[10px] font-bold uppercase tracking-widest mb-4">Inside
+                    Look</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-navy dark:text-white mb-6">Anatomie einer
+                    Dokumentation</h2>
+                <p class="text-slate-500 dark:text-slate-400 max-w-2xl mx-auto font-medium">
+                    Pre-Tax Infrastruktur bedeutet mehr als nur ein PDF. Wir liefern eine lückenlose, digitale
+                    Beweiskette.
+                </p>
             </div>
 
-            <!-- Pillar 3: Fachliche Korrektheit -->
-            <div class="card-spotlight group p-1 fade-in-up visible" onmousemove="handleMouseMove(event)"
-                style="animation-delay: 0.3s;">
-                <div class="card-border-glow"></div>
-                <div
-                    class="relative h-full bg-white dark:bg-dark-surface rounded-[32px] p-8 border border-slate-200 dark:border-white/5 flex flex-col shadow-lg shadow-slate-100/50 dark:shadow-none transition-all duration-500 hover:-translate-y-2">
-                    <div class="flex justify-between items-start mb-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Visual Mockup (Represented by Glass Card Breakdown) -->
+                <div class="relative fade-in-up flex justify-center lg:justify-start">
+                    <div
+                        class="min-h-[380px] sm:aspect-[4/3] rounded-[32px] bg-white dark:bg-dark-surface p-1 shadow-2xl overflow-hidden border border-slate-200 dark:border-white/10 w-full max-w-md lg:max-w-none">
                         <div
-                            class="w-12 h-12 rounded-2xl bg-slate-50 dark:bg-white/5 border border-slate-100 dark:border-white/10 flex items-center justify-center text-brand-navy dark:text-white font-mono font-bold text-lg group-hover:scale-110 group-hover:bg-brand-teal group-hover:text-white transition-all duration-300">
-                            03</div>
-                        <div
-                            class="p-2 rounded-xl bg-brand-teal/5 text-brand-teal group-hover:rotate-12 transition-transform">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                            </svg>
+                            class="h-full w-full rounded-[30px] bg-slate-50 dark:bg-[#0A0A0A] p-6 sm:p-8 flex flex-col">
+                            <div class="h-4 w-32 bg-slate-200 dark:bg-white/5 rounded-full mb-8"></div>
+                            <div class="space-y-4">
+                                <div
+                                    class="h-12 w-full bg-white dark:bg-white/5 rounded-2xl border border-slate-100 dark:border-white/10 flex items-center px-4">
+                                    <div class="w-2 h-2 rounded-full bg-brand-teal mr-3"></div>
+                                    <div class="h-2 w-48 bg-slate-200 dark:bg-white/10 rounded-full"></div>
+                                </div>
+                                <div
+                                    class="h-32 w-full bg-brand-teal/5 dark:bg-brand-teal/10 rounded-2xl border border-brand-teal/20 p-4">
+                                    <div class="h-2 w-24 bg-brand-teal/40 rounded-full mb-3"></div>
+                                    <div class="h-2 w-full bg-brand-teal/20 rounded-full mb-2"></div>
+                                    <div class="h-2 w-full bg-brand-teal/20 rounded-full"></div>
+                                </div>
+                                <div
+                                    class="h-12 w-full bg-white dark:bg-white/5 rounded-2xl border border-slate-100 dark:border-white/10">
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <h3 class="text-xl font-bold tracking-tight text-brand-navy dark:text-white mb-3">Fachlich korrekt
-                    </h3>
-                    <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed mb-6 flex-grow">
-                        DeFi ist komplex. Wir übersetzen technische On-Chain-Daten in steuerliche Sachverhalte.
-                    </p>
-                    <div class="space-y-3 pt-6 border-t border-slate-100 dark:border-white/5">
-                        <div
-                            class="flex items-center gap-2.5 text-[11px] font-bold uppercase tracking-wider text-brand-teal">
-                            <span class="w-1.5 h-1.5 rounded-full bg-brand-teal"></span>
-                            Steuerneutrale Swaps
-                        </div>
-                        <div
-                            class="flex items-center gap-2.5 text-[11px] font-bold uppercase tracking-wider text-brand-teal">
-                            <span class="w-1.5 h-1.5 rounded-full bg-brand-teal"></span>
-                            LP-Tokens & Staking
-                        </div>
+                    <!-- Callouts (Hidden on mobile to avoid overflow) -->
+                    <div class="hidden lg:block absolute -right-4 top-1/4 p-4 rounded-2xl bg-white dark:bg-dark-bg border border-slate-200 dark:border-white/10 shadow-xl animate-float"
+                        style="animation-duration: 6s;">
+                        <span class="text-xs font-bold text-brand-teal">Beweis-IDs</span>
+                    </div>
+                    <div class="hidden lg:block absolute -left-8 bottom-1/4 p-4 rounded-2xl bg-white dark:bg-dark-bg border border-slate-200 dark:border-white/10 shadow-xl animate-float"
+                        style="animation-duration: 8s; animation-delay: 1s;">
+                        <span class="text-xs font-bold text-brand-teal">On-Chain Links</span>
                     </div>
                 </div>
-            </div>
 
-            <!-- Pillar 4: Verwertbarkeit -->
-            <div class="card-spotlight group p-1 fade-in-up visible" onmousemove="handleMouseMove(event)"
-                style="animation-delay: 0.4s;">
-                <div class="card-border-glow"></div>
-                <div
-                    class="relative h-full bg-white dark:bg-dark-surface rounded-[32px] p-8 border border-slate-200 dark:border-white/5 flex flex-col shadow-lg shadow-slate-100/50 dark:shadow-none transition-all duration-500 hover:-translate-y-2">
-                    <div class="flex justify-between items-start mb-8">
-                        <div
-                            class="w-12 h-12 rounded-2xl bg-brand-teal text-white flex items-center justify-center font-mono font-bold text-lg shadow-lg shadow-brand-teal/30 group-hover:scale-110 transition-all duration-300">
-                            04</div>
-                        <div class="p-2 rounded-xl bg-brand-teal text-white group-hover:rotate-12 transition-transform">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                                <polyline points="14 2 14 8 20 8"></polyline>
-                                <line x1="16" y1="13" x2="8" y2="13"></line>
-                                <line x1="16" y1="17" x2="8" y2="17"></line>
-                            </svg>
-                        </div>
+
+                <div class="space-y-8 text-center lg:text-left px-4 lg:px-0">
+                    <div class="fade-in-up" style="animation-delay: 0.1s;">
+                        <h4 class="text-lg font-bold text-brand-navy dark:text-white mb-3">Digitale Beweiskette</h4>
+                        <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed font-medium">Die
+                            vollständige und lückenlose Aufarbeitung liefert eine Beweiskette, die jegliche
+                            Transaktionen Ihrer Historie enthält und lückenlos belegbar ist.</p>
                     </div>
-                    <h3 class="text-xl font-bold tracking-tight text-brand-navy dark:text-white mb-3">Verwertbarkeit
-                    </h3>
-                    <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-6 flex-grow font-medium">
-                        Das Ziel ist Sicherheit. Unsere Daten halten auch in 5 Jahren noch jeder Prüfung stand.
-                    </p>
-                    <div class="space-y-3 pt-6 border-t border-brand-teal/20">
-                        <div
-                            class="flex items-center gap-2.5 text-[11px] font-bold uppercase tracking-wider text-brand-teal">
-                            <span class="w-1.5 h-1.5 rounded-full bg-brand-teal animate-pulse"></span>
-                            Konsistente Datenstruktur
-                        </div>
-                        <div
-                            class="flex items-center gap-2.5 text-[11px] font-bold uppercase tracking-wider text-brand-teal">
-                            <span class="w-1.5 h-1.5 rounded-full bg-brand-teal animate-pulse"></span>
-                            Revisionssicheres Archiv
-                        </div>
+                    <div class="fade-in-up" style="animation-delay: 0.2s;">
+                        <h4 class="text-lg font-bold text-brand-navy dark:text-white mb-3">Audit-Ready Dokumentation
+                        </h4>
+                        <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed font-medium">Wir liefern
+                            die Daten Blockpit- oder CoinTracking-ready. Ein Import, null Fehler. Das ist der
+                            Dokumentationsstandard.</p>
+                    </div>
+                    <div class="flex justify-center lg:justify-start">
+                        <a href="https://app.cal.eu/johannesanderl-tx-partner/dokumentation-prufen" target="_blank"
+                            class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 bg-brand-navy text-white font-bold rounded-xl hover:scale-105 transition-transform">
+                            Standard im Gespräch erfahren
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5">
+                                <path d="M5 12h14m-7-7 7 7-7 7" />
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </div>

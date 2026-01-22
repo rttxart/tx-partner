@@ -538,6 +538,30 @@
                 transform: translateX(100%);
             }
         }
+
+        /* 2026 Narrative Connectors */
+        .narrative-connector {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1px;
+            height: 100px;
+            background: linear-gradient(to bottom, var(--connector-color, #3A9EAF), transparent);
+            z-index: 5;
+            opacity: 0.3;
+        }
+
+        .dark .narrative-connector {
+            opacity: 0.15;
+        }
+
+        .connector-top {
+            top: 0;
+        }
+
+        .connector-bottom {
+            bottom: 0;
+        }
     </style>
 
     <!-- Defer non-critical CSS -->
@@ -546,6 +570,26 @@
     <noscript>
         <link rel="stylesheet" href="assets/css/tailwind.css">
     </noscript>
+    <style>
+        .aurora-card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .aurora-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(58, 158, 175, 0.12), transparent 80%);
+            opacity: 0;
+            transition: opacity 0.5s;
+            pointer-events: none;
+        }
+
+        .aurora-card:hover::before {
+            opacity: 1;
+        }
+    </style>
 </head>
 
 <body
@@ -975,6 +1019,9 @@
         </div>
     </section>
 
+    <!-- Connector to next section -->
+    <div class="narrative-connector" style="--connector-color: #3A9EAF; margin-top: -50px;"></div>
+
 
 
     <!-- Solutions Section -->
@@ -1124,6 +1171,9 @@
             </div>
         </div>
     </section>
+
+    <!-- Connector to next section -->
+    <div class="narrative-connector" style="--connector-color: #1e3a5f; margin-top: -40px;"></div>
     <!-- Gap Architecture Section -->
     <section
         class="below-fold bg-slate-50 dark:bg-dark-bg border-y border-slate-200 dark:border-white/5 pt-20 pb-20 relative overflow-hidden">
@@ -1286,6 +1336,9 @@
         </div>
     </section>
 
+    <!-- Connector to next section -->
+    <div class="narrative-connector" style="--connector-color: #3A9EAF; margin-top: -30px;"></div>
+
 
     <!-- Stats Section -->
     <section class="below-fold bg-white dark:bg-dark-bg-alt pt-32 pb-32 relative overflow-hidden group/section"
@@ -1337,11 +1390,12 @@
                         </div>
                         <span
                             class="relative text-6xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-brand-teal to-cyan-400 font-mono"
-                            style="letter-spacing: -0.04em;">15+</span>
+                            style="letter-spacing: -0.04em;"><span class="counter" data-target="15">0</span>+</span>
                         <span
                             class="text-xl font-semibold text-brand-navy dark:text-white transition-transform duration-500 group-hover:translate-x-3 group-hover:text-brand-teal">Jahre</span>
                     </div>
-                    <div class="text-lg font-semibold mb-3 text-brand-navy dark:text-white">Markterfahrung</div>
+                    <div class="text-lg font-semibold mb-3 text-brand-navy dark:text-white">Gemeinsame Markterfahrung
+                    </div>
                     <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed pr-8">
                         Wir kennen das Krypto-Ökosystem seit seinen Anfängen. Von frühen zentralen Börsen bis zu
                         komplexen DeFi-Protokollen.
@@ -1359,7 +1413,7 @@
                         </div>
                         <span
                             class="relative text-6xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-brand-teal to-cyan-400 font-mono"
-                            style="letter-spacing: -0.04em;">500+</span>
+                            style="letter-spacing: -0.04em;"><span class="counter" data-target="500">0</span>+</span>
                     </div>
                     <div class="text-lg font-semibold mb-3 text-brand-navy dark:text-white">Dokumentierte Fälle
                     </div>
@@ -1380,7 +1434,7 @@
                         </div>
                         <span
                             class="relative text-6xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-brand-teal to-cyan-400 font-mono"
-                            style="letter-spacing: -0.04em;">8+</span>
+                            style="letter-spacing: -0.04em;"><span class="counter" data-target="8">0</span></span>
                         <span
                             class="text-xl font-semibold text-brand-navy dark:text-white transition-transform duration-500 group-hover:translate-x-3 group-hover:text-brand-teal">Jahre</span>
                     </div>
@@ -1848,6 +1902,33 @@
             // Slower animation (8s) for a more "deliberate" feel
             setTimeout(() => animateValue(percentEl, barEl, 0, 100, 8000), 1000);
         }
+
+        // Scroll Triggered Counters
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const target = entry.target;
+                    const countTo = parseInt(target.getAttribute('data-target'));
+                    let currentCount = 0;
+                    const duration = 2000; // 2 seconds
+                    const increment = countTo / (duration / 16); // 60fps
+
+                    const updateCount = () => {
+                        currentCount += increment;
+                        if (currentCount < countTo) {
+                            target.innerText = Math.floor(currentCount);
+                            requestAnimationFrame(updateCount);
+                        } else {
+                            target.innerText = countTo;
+                        }
+                    };
+                    updateCount();
+                    counterObserver.unobserve(target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.counter').forEach(counter => counterObserver.observe(counter));
     </script>
 
     <!-- Sticky CTA with Cal.com Integration -->
@@ -1917,6 +1998,7 @@
         setTimeout(checkScrollPosition, 100);
     </script>
 
+    <script> document.addEventListener('DOMContentLoaded', () => { const cards = document.querySelectorAll('.aurora-card'); cards.forEach(c => { c.addEventListener('mousemove', e => { const r = c.getBoundingClientRect(); c.style.setProperty('--mouse-x', ((e.clientX - r.left) / r.width * 100) + '%'); c.style.setProperty('--mouse-y', ((e.clientY - r.top) / r.height * 100) + '%'); }); }); const connectors = document.querySelectorAll('.narrative-connector'); window.addEventListener('scroll', () => { connectors.forEach(cn => { const r = cn.getBoundingClientRect(); if (r.top < window.innerHeight) { cn.style.height = Math.min(120, (window.innerHeight - r.top) / 5) + 'px'; } }); }); }); </script>
 </body>
 
 </html>

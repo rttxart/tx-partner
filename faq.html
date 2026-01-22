@@ -298,7 +298,7 @@
             border-color: rgba(58, 158, 175, 0.2);
         }
     </style>
-</head>
+<style> .narrative-connector { position: absolute; left: 50%; transform: translateX(-50%); width: 1px; height: 120px; background: linear-gradient(to bottom, #3A9EAF, transparent); z-index: 5; opacity: 0.3; transition: height 0.6s ease; } .aurora-card { position: relative; overflow: hidden; transition: all 0.5s ease; } .aurora-card::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(58, 158, 175, 0.12), transparent 80%); opacity: 0; transition: opacity 0.5s; pointer-events: none; } .aurora-card:hover::before { opacity: 1; } .aurora-card:hover { transform: translateY(-4px); } </style></head>
 
 <body
     class="antialiased bg-white dark:bg-dark-bg text-slate-900 dark:text-white font-sans selection:bg-brand-teal selection:text-white">
@@ -576,7 +576,7 @@
 
                     <!-- FAQ Item: Was macht TX-Partner -->
                     <div id="faq-was-macht-tx-partner"
-                        class="group border-b border-slate-200 dark:border-white/5 hover:border-brand-teal/30 transition-all duration-300">
+                        class="aurora-card group border-b border-slate-200 dark:border-white/5 hover:border-brand-teal/30 transition-all duration-300">
                         <button
                             class="w-full py-6 flex justify-between items-center text-left focus:outline-none rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 px-2 -mx-2 transition-all duration-300"
                             onclick="toggleFaq(this)">
@@ -657,7 +657,7 @@
 
                     <!-- FAQ Item: Seid ihr Steuerberater -->
                     <div id="faq-steuerberater"
-                        class="group border-b border-slate-200 dark:border-white/5 hover:border-brand-teal/30 transition-all duration-300">
+                        class="aurora-card group border-b border-slate-200 dark:border-white/5 hover:border-brand-teal/30 transition-all duration-300">
                         <button
                             class="w-full py-6 flex justify-between items-center text-left focus:outline-none rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 px-2 -mx-2 transition-all duration-300"
                             onclick="toggleFaq(this)">
@@ -737,7 +737,7 @@
 
                     <!-- FAQ Item: Für wen ist TX-Partner -->
                     <div id="faq-zielgruppe"
-                        class="group border-b border-slate-200 dark:border-white/5 hover:border-brand-teal/30 transition-all duration-300">
+                        class="aurora-card group border-b border-slate-200 dark:border-white/5 hover:border-brand-teal/30 transition-all duration-300">
                         <button
                             class="w-full py-6 flex justify-between items-center text-left focus:outline-none rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 px-2 -mx-2 transition-all duration-300"
                             onclick="toggleFaq(this)">
@@ -814,7 +814,7 @@
 
                     <!-- FAQ Item: Was ist Krypto-Dokumentation -->
                     <div id="faq-definition-dokumentation"
-                        class="group border-b border-slate-200 dark:border-white/5 hover:border-brand-teal/30 transition-all duration-300">
+                        class="aurora-card group border-b border-slate-200 dark:border-white/5 hover:border-brand-teal/30 transition-all duration-300">
                         <button
                             class="w-full py-6 flex justify-between items-center text-left focus:outline-none rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 px-2 -mx-2 transition-all duration-300"
                             onclick="toggleFaq(this)">
@@ -892,7 +892,7 @@
 
                     <!-- FAQ Item: 4-Säulen-Standard -->
                     <div id="faq-dokumentationsstandard"
-                        class="group border-b border-slate-200 dark:border-white/5 hover:border-brand-teal/30 transition-all duration-300">
+                        class="aurora-card group border-b border-slate-200 dark:border-white/5 hover:border-brand-teal/30 transition-all duration-300">
                         <button
                             class="w-full py-6 flex justify-between items-center text-left focus:outline-none rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 px-2 -mx-2 transition-all duration-300"
                             onclick="toggleFaq(this)">
@@ -985,7 +985,7 @@
                     </div>
 
                     <!-- FAQ Item: Muss ich schon genau wissen -->
-                    <div id="faq-analyse-bedarf" class="group border-b border-slate-200 dark:border-white/5">
+                    <div id="faq-analyse-bedarf" class="aurora-card group border-b border-slate-200 dark:border-white/5">
                         <button
                             class="flex focus:outline-none text-left w-full pt-6 pb-6 items-center justify-between rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 px-2 -mx-2 transition-all duration-300"
                             onclick="toggleFaq(this)">
@@ -1069,7 +1069,7 @@
 
                     <!-- FAQ Item: Ablauf -->
                     <div id="faq-prozess-ablauf"
-                        class="group border-b border-slate-200 dark:border-white/5 hover:border-brand-teal/30 transition-all duration-300">
+                        class="aurora-card group border-b border-slate-200 dark:border-white/5 hover:border-brand-teal/30 transition-all duration-300">
                         <button
                             class="w-full py-6 flex justify-between items-center text-left focus:outline-none rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 px-2 -mx-2 transition-all duration-300"
                             onclick="toggleFaq(this)">
@@ -1162,7 +1162,7 @@
 
                     <!-- FAQ Item: Kosten -->
                     <div id="faq-kosten"
-                        class="group border-b border-slate-200 dark:border-white/5 hover:border-brand-teal/30 transition-all duration-300">
+                        class="aurora-card group border-b border-slate-200 dark:border-white/5 hover:border-brand-teal/30 transition-all duration-300">
                         <button
                             class="w-full py-6 flex justify-between items-center text-left focus:outline-none rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 px-2 -mx-2 transition-all duration-300"
                             onclick="toggleFaq(this)">
@@ -1239,7 +1239,7 @@
 
                     <!-- FAQ Item: Wallet Zugang -->
                     <div id="faq-wallet-zugang"
-                        class="group border-b border-slate-200 dark:border-white/5 hover:border-brand-teal/30 transition-all duration-300">
+                        class="aurora-card group border-b border-slate-200 dark:border-white/5 hover:border-brand-teal/30 transition-all duration-300">
                         <button
                             class="w-full py-6 flex justify-between items-center text-left focus:outline-none rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 px-2 -mx-2 transition-all duration-300"
                             onclick="toggleFaq(this)">
@@ -1323,7 +1323,7 @@
 
                     <!-- FAQ Item: DeFi -->
                     <div id="faq-defi"
-                        class="group border-b border-slate-200 dark:border-white/5 hover:border-brand-teal/30 transition-all duration-300">
+                        class="aurora-card group border-b border-slate-200 dark:border-white/5 hover:border-brand-teal/30 transition-all duration-300">
                         <button
                             class="w-full py-6 flex justify-between items-center text-left focus:outline-none rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 px-2 -mx-2 transition-all duration-300"
                             onclick="toggleFaq(this)">
@@ -1400,7 +1400,7 @@
 
                     <!-- FAQ Item: NFT Staking -->
                     <div id="faq-nft-staking"
-                        class="group border-b border-slate-200 dark:border-white/5 hover:border-brand-teal/30 transition-all duration-300">
+                        class="aurora-card group border-b border-slate-200 dark:border-white/5 hover:border-brand-teal/30 transition-all duration-300">
                         <button
                             class="w-full py-6 flex justify-between items-center text-left focus:outline-none rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 px-2 -mx-2 transition-all duration-300"
                             onclick="toggleFaq(this)">
@@ -1473,7 +1473,7 @@
 
                     <!-- FAQ Item: Blockpit -->
                     <div id="faq-blockpit-fehler"
-                        class="group border-b border-slate-200 dark:border-white/5 hover:border-brand-teal/30 transition-all duration-300">
+                        class="aurora-card group border-b border-slate-200 dark:border-white/5 hover:border-brand-teal/30 transition-all duration-300">
                         <button
                             class="w-full py-6 flex justify-between items-center text-left focus:outline-none rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 px-2 -mx-2 transition-all duration-300"
                             onclick="toggleFaq(this)">
@@ -1552,7 +1552,7 @@
 
                     <!-- FAQ Item: CoinTracking -->
                     <div id="faq-cointracking-probleme"
-                        class="group border-b border-slate-200 dark:border-white/5 hover:border-brand-teal/30 transition-all duration-300">
+                        class="aurora-card group border-b border-slate-200 dark:border-white/5 hover:border-brand-teal/30 transition-all duration-300">
                         <button
                             class="w-full py-6 flex justify-between items-center text-left focus:outline-none rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 px-2 -mx-2 transition-all duration-300"
                             onclick="toggleFaq(this)">
@@ -1639,7 +1639,7 @@
 
                     <!-- FAQ Item: Steuerberater Abgrenzung -->
                     <div id="faq-steuerberater-abgrenzung"
-                        class="group border-b border-slate-200 dark:border-white/5 hover:border-brand-teal/30 transition-all duration-300">
+                        class="aurora-card group border-b border-slate-200 dark:border-white/5 hover:border-brand-teal/30 transition-all duration-300">
                         <button
                             class="w-full py-6 flex justify-between items-center text-left focus:outline-none rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 px-2 -mx-2 transition-all duration-300"
                             onclick="toggleFaq(this)">
@@ -1713,7 +1713,7 @@
 
                     <!-- FAQ Item: Finanzamt Support -->
                     <div id="faq-finanzamt-support"
-                        class="group border-b border-slate-200 dark:border-white/5 hover:border-brand-teal/30 transition-all duration-300">
+                        class="aurora-card group border-b border-slate-200 dark:border-white/5 hover:border-brand-teal/30 transition-all duration-300">
                         <button
                             class="w-full py-6 flex justify-between items-center text-left focus:outline-none rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 px-2 -mx-2 transition-all duration-300"
                             onclick="toggleFaq(this)">
@@ -2111,6 +2111,6 @@
         });
     </script>
 
-</body>
+<script> document.addEventListener('DOMContentLoaded', () => { const cards = document.querySelectorAll('.aurora-card'); cards.forEach(c => { c.addEventListener('mousemove', e => { const r = c.getBoundingClientRect(); c.style.setProperty('--mouse-x', ((e.clientX - r.left)/r.width*100) + '%'); c.style.setProperty('--mouse-y', ((e.clientY - r.top)/r.height*100) + '%'); }); }); const connectors = document.querySelectorAll('.narrative-connector'); window.addEventListener('scroll', () => { connectors.forEach(cn => { const r = cn.getBoundingClientRect(); if(r.top < window.innerHeight) { cn.style.height = Math.min(120, (window.innerHeight - r.top)/5) + 'px'; } }); }); }); </script></body>
 
 </html>

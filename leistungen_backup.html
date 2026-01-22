@@ -235,17 +235,16 @@
       display: none;
     }
 
-    /* 2026 Narrative Evolution */
+    /* 2026 Narrative Connectors */
     .narrative-connector {
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
       width: 1px;
-      height: 120px;
+      height: 100px;
       background: linear-gradient(to bottom, var(--connector-color, #3A9EAF), transparent);
       z-index: 5;
       opacity: 0.3;
-      transition: height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .dark .narrative-connector {
@@ -254,40 +253,6 @@
 
     .connector-bottom {
       bottom: 0;
-    }
-
-    /* Aurora Card System */
-    .aurora-card {
-      position: relative;
-      background: rgba(255, 255, 255, 0.01);
-      border: 1px solid rgba(255, 255, 255, 0.05);
-      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-      overflow: hidden;
-    }
-
-    .aurora-card::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(58, 158, 175, 0.12), transparent 80%);
-      opacity: 0;
-      transition: opacity 0.5s;
-      pointer-events: none;
-    }
-
-    .aurora-card:hover::before {
-      opacity: 1;
-    }
-
-    .aurora-card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(58, 158, 175, 0.3);
-      box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.2);
-    }
-
-    .dark .aurora-card:hover {
-      background: rgba(255, 255, 255, 0.03);
-      box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.6);
     }
 
     /* Parallax Card Base */
@@ -637,7 +602,7 @@
       <div id="services-grid" class="grid grid-cols-1 lg:grid-cols-3 gap-6">
 
         <!-- Service 1: PROJEKT_DFY -->
-        <div class="aurora-card group p-1 rounded-[32px] fade-in-up h-full visible"
+        <div class="card-spotlight group p-1 rounded-[32px] fade-in-up h-full visible"
           onmousemove="handleMouseMove(event)">
           <div class="card-border-glow"></div>
           <div
@@ -755,7 +720,7 @@
 
         <!-- Service 2: FAST_LANE (Highlighted) -->
 
-        <div class="aurora-card group p-1 rounded-[32px] fade-in-up h-full visible"
+        <div class="card-spotlight group p-1 rounded-[32px] fade-in-up h-full visible"
           onmousemove="handleMouseMove(event)">
           <div class="card-border-glow"></div>
           <div
@@ -884,7 +849,7 @@
         </div>
 
         <!-- Service 3: B2B_PARTNER -->
-        <div class="aurora-card group p-1 rounded-[32px] fade-in-up h-full visible"
+        <div class="card-spotlight group p-1 rounded-[32px] fade-in-up h-full visible"
           onmousemove="handleMouseMove(event)">
           <div class="card-border-glow"></div>
           <div
@@ -1876,47 +1841,6 @@
     })();
   </script>
 
-  <script>
-    // Global 2026 Interaction Engine
-    document.addEventListener('DOMContentLoaded', () => {
-      // Aurora Card Mouse Tracking
-      const auroraCards = document.querySelectorAll('.aurora-card');
-      auroraCards.forEach(card => {
-        card.addEventListener('mousemove', e => {
-          const rect = card.getBoundingClientRect();
-          const x = ((e.clientX - rect.left) / rect.width) * 100;
-          const y = ((e.clientY - rect.top) / rect.height) * 100;
-          card.style.setProperty('--mouse-x', `${x}%`);
-          card.style.setProperty('--mouse-y', `${y}%`);
-        });
-      });
-
-      // Narrative Connector Scroll Expansion
-      const connectors = document.querySelectorAll('.narrative-connector');
-      const handleScroll = () => {
-        connectors.forEach(connector => {
-          const rect = connector.getBoundingClientRect();
-          const viewHeight = window.innerHeight;
-          if (rect.top < viewHeight && rect.bottom > 0) {
-            const progress = (viewHeight - rect.top) / viewHeight;
-            const height = Math.min(120, Math.max(0, progress * 120));
-            connector.style.height = `${height}px`;
-          }
-        });
-      };
-      window.addEventListener('scroll', handleScroll, { passive: true });
-      handleScroll();
-
-      // Theme toggle logic (already present in common but locally reinforced)
-      const themeToggle = document.getElementById('theme-toggle');
-      if (themeToggle) {
-        themeToggle.addEventListener('click', () => {
-          document.documentElement.classList.toggle('dark');
-          localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
-        });
-      }
-    });
-  </script>
 </body>
 
 </html>
