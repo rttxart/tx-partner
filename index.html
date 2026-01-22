@@ -7,6 +7,9 @@
     <link rel="icon" href="/favicon.png" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Cache-Control" content="public, max-age=31536000, immutable">
+    <!-- Preload critical fonts -->
+    <link rel="preload" href="assets/fonts/inter-v20-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/inter-v20-latin-600.woff2" as="font" type="font/woff2" crossorigin>
     <!-- Primary Meta Tags -->
     <title>Krypto-Steuerreports ohne Fehler | TX-Partner</title>
     <meta name="description"
@@ -374,6 +377,13 @@
             line-height: 1.625
         }
 
+        /* Hero GPU layer for faster LCP */
+        .hero-content {
+            transform: translateZ(0);
+            backface-visibility: hidden;
+            will-change: transform, opacity;
+        }
+
         .hidden {
             display: none
         }
@@ -443,9 +453,22 @@
             contain-intrinsic-size: auto 500px
         }
 
+        /* GPU acceleration for all animated elements - prevents layout thrashing */
         .animate-aurora-pulse,
-        .animate-float {
-            will-change: transform, opacity
+        .animate-float,
+        .animate-pulse,
+        .animate-ping,
+        .animate-shimmer,
+        .animate-hash-scroll {
+            will-change: transform, opacity;
+            transform: translateZ(0);
+            backface-visibility: hidden;
+        }
+
+        /* Ensure opacity animations are GPU-accelerated */
+        .animate-pulse,
+        .animate-ping {
+            transform: translateZ(0);
         }
 
         @media(prefers-reduced-motion:reduce) {
@@ -453,7 +476,9 @@
             .animate-aurora-pulse,
             .animate-float,
             .animate-shimmer,
-            .animate-pulse {
+            .animate-pulse,
+            .animate-ping,
+            .animate-hash-scroll {
                 animation: none !important;
                 transform: none !important
             }
@@ -822,7 +847,7 @@
             <div class="grid lg:grid-cols-2 gap-16 items-center">
 
                 <!-- Hero Content -->
-                <div class="fade-in-up max-w-2xl visible">
+                <div class="hero-content fade-in-up max-w-2xl visible">
                     <div
                         class="inline-flex items-center gap-2 border border-brand-teal/20 text-brand-teal text-xs font-bold tracking-widest uppercase rounded-full px-3.5 py-1.5 mb-8 backdrop-blur-sm">
                         <span class="w-1.5 h-1.5 rounded-full bg-brand-teal animate-pulse"></span>
