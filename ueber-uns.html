@@ -454,10 +454,10 @@
             class="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none">
         </div>
         <div
-            class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-[400px] bg-gradient-to-b from-brand-teal/10 via-brand-teal/5 to-transparent blur-[80px] -z-10 opacity-70 pointer-events-none">
+            class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-[250px] sm:h-[350px] md:h-[400px] bg-gradient-to-b from-brand-teal/10 via-brand-teal/5 to-transparent blur-[40px] sm:blur-[60px] md:blur-[80px] -z-10 opacity-70 pointer-events-none">
         </div>
         <div
-            class="absolute -top-20 -right-20 w-[300px] md:w-[500px] lg:w-[600px] h-[300px] md:h-[500px] lg:h-[600px] bg-brand-teal/20 rounded-full blur-[100px] -z-10 mix-blend-multiply dark:mix-blend-screen animate-aurora-pulse pointer-events-none">
+            class="absolute -top-20 -right-20 w-[200px] sm:w-[300px] md:w-[400px] lg:w-[500px] xl:w-[600px] h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] xl:h-[600px] bg-brand-teal/20 rounded-full blur-[60px] sm:blur-[80px] md:blur-[100px] lg:blur-[120px] xl:blur-[140px] -z-10 mix-blend-multiply dark:mix-blend-screen animate-aurora-pulse pointer-events-none">
         </div>
 
         <div class="container text-center max-w-7xl mr-auto ml-auto pr-6 pl-6 relative z-10">
@@ -490,7 +490,7 @@
         <!-- Floating Hero Elements: Synced with other pages -->
         <div class="absolute inset-0 pointer-events-none hidden xl:block overflow-hidden -z-5">
             <!-- Left side: Standard -->
-            <div class="absolute top-[25%] left-[5%] animate-float opacity-70 dark:opacity-40"
+            <div class="absolute top-[25%] left-[5%] animate-float opacity-90 dark:opacity-80"
                 style="animation-duration: 10s;">
                 <div
                     class="flex items-center gap-3 px-4 py-3 rounded-xl bg-white/60 dark:bg-[#1a1a1a]/60 backdrop-blur-md border border-brand-teal/20 shadow-lg shadow-brand-teal/5">
@@ -508,7 +508,7 @@
                 </div>
             </div>
             <!-- Right side: Track Record -->
-            <div class="absolute top-[30%] right-[5%] animate-float opacity-70 dark:opacity-40"
+            <div class="absolute top-[30%] right-[5%] animate-float opacity-90 dark:opacity-80"
                 style="animation-duration: 12s; animation-delay: 2s;">
                 <div
                     class="flex items-center gap-3 px-4 py-3 rounded-xl bg-white/60 dark:bg-[#1a1a1a]/60 backdrop-blur-md border border-brand-teal/20 shadow-lg shadow-brand-teal/5">
@@ -524,6 +524,43 @@
                         <div class="text-[10px] font-mono text-slate-500 uppercase tracking-wider">Track Record</div>
                         <div class="text-sm font-bold text-brand-navy dark:text-white uppercase tracking-tight">500+
                             Complex Cases</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Left middle: Robert Quote -->
+            <div class="absolute top-[70%] left-[8%] animate-float opacity-90 dark:opacity-80"
+                style="animation-duration: 11s; animation-delay: 4s;">
+                <div
+                    class="flex items-center gap-3 px-4 py-3 rounded-xl bg-white/60 dark:bg-[#1a1a1a]/60 backdrop-blur-md border border-brand-teal/20 shadow-lg shadow-brand-teal/5">
+                    <div class="w-8 h-8 rounded-lg bg-brand-navy/10 flex items-center justify-center text-brand-navy dark:text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        </svg>
+                    </div>
+                    <div class="flex flex-col">
+                        <div class="text-[10px] font-mono text-slate-500 uppercase tracking-wider">Robert</div>
+                        <div class="text-sm font-bold text-brand-navy dark:text-white italic tracking-tight">"Sauberkeit vor Schnelligkeit"</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Right middle: Johannes Quote -->
+            <div class="absolute top-[75%] right-[8%] animate-float opacity-90 dark:opacity-80"
+                style="animation-duration: 13s; animation-delay: 6s;">
+                <div
+                    class="flex items-center gap-3 px-4 py-3 rounded-xl bg-white/60 dark:bg-[#1a1a1a]/60 backdrop-blur-md border border-brand-teal/20 shadow-lg shadow-brand-teal/5">
+                    <div class="w-8 h-8 rounded-lg bg-brand-teal/10 flex items-center justify-center text-brand-teal">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                            <circle cx="9" cy="7" r="4" />
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg>
+                    </div>
+                    <div class="flex flex-col">
+                        <div class="text-[10px] font-mono text-slate-500 uppercase tracking-wider">Johannes</div>
+                        <div class="text-sm font-bold text-brand-navy dark:text-white italic tracking-tight">"Wir schaffen Struktur..."</div>
                     </div>
                 </div>
             </div>
@@ -872,11 +909,11 @@
                     </div>
                 </div>
 
-                <div class="grid grid-cols-2 gap-6 fade-in-up" style="animation-delay: 0.2s">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 fade-in-up" style="animation-delay: 0.2s">
                     <!-- Primary Stat: Dominant Visual Hierarchy -->
                     <div
                         class="relative bg-gradient-to-br from-brand-teal/20 to-brand-teal/5 backdrop-blur-md rounded-card p-8 border border-brand-teal/30 shadow-lg shadow-brand-teal/10 hover:scale-[1.02] transition-all duration-300 flex flex-col justify-center">
-                        <div class="font-mono text-6xl font-extrabold text-white mb-2 tracking-tighter drop-shadow-sm">
+                        <div class="font-mono text-4xl sm:text-5xl md:text-6xl font-extrabold text-white mb-2 tracking-tighter drop-shadow-sm">
                             500+</div>
                         <div class="text-base font-bold text-brand-teal uppercase tracking-widest">Bearbeitete Fälle
                         </div>
@@ -993,12 +1030,12 @@
     </section>
 
     <!-- Final CTA -->
-    <section class="py-20 px-4 bg-white dark:bg-dark-bg">
-        <div class="container mx-auto max-w-6xl">
+    <section class="py-20 bg-white dark:bg-dark-bg">
+        <div class="container mx-auto max-w-6xl px-4 sm:px-6">
             <div
-                class="relative rounded-card overflow-hidden text-center py-24 px-6 md:px-20 bg-brand-navy shadow-2xl shadow-brand-navy/30">
+                class="relative rounded-card overflow-hidden text-center py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-12 lg:px-20 bg-brand-navy shadow-2xl shadow-brand-navy/30">
                 <div
-                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] md:w-[500px] lg:w-[600px] h-[300px] md:h-[500px] lg:h-[600px] bg-brand-teal opacity-20 blur-[120px] rounded-full pointer-events-none">
+                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200px] sm:w-[300px] md:w-[400px] lg:w-[600px] h-[200px] sm:h-[300px] md:h-[400px] lg:h-[600px] bg-brand-teal opacity-20 blur-[60px] sm:blur-[80px] md:blur-[100px] lg:blur-[120px] rounded-full pointer-events-none">
                 </div>
 
                 <div class="relative z-10 fade-in-up">
@@ -1007,13 +1044,13 @@
                             class="text-transparent bg-clip-text bg-gradient-to-r from-brand-teal to-white">belastbare
                             Daten?</span>
                     </h2>
-                    <p class="text-lg md:text-xl font-medium text-slate-200 max-w-xl mx-auto mb-12">
+                    <p class="text-base sm:text-lg md:text-xl font-medium text-slate-200 max-w-xl mx-auto mb-8 sm:mb-10 md:mb-12">
                         Sicher dir einen Slot für ein Erstgespräch und sei einen Schritt näher an einer vollständigen
                         Krypto-Dokumentation.
                     </p>
                     <a href="https://app.cal.eu/johannesanderl-tx-partner/dokumentation-prüfen" target="_blank"
                         rel="noopener noreferrer"
-                        class="inline-flex items-center justify-center text-brand-navy btn-primary hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(255,255,255,0.3)] text-lg font-bold bg-white px-10 py-5">
+                        class="inline-flex items-center justify-center text-brand-navy btn-primary hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(255,255,255,0.3)] text-base sm:text-lg font-bold bg-white px-6 sm:px-8 py-3 sm:py-4">
                         Kostenloser Doku-Check
                     </a>
                 </div>

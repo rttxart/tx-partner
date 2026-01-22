@@ -413,8 +413,8 @@
       </div>
     </div>
   </nav>
-  <!-- Hero Section -->
-  <section id="hero-section" class="overflow-hidden pt-20 sm:pt-28 md:pt-32 lg:pt-40 pb-20 relative">
+    <!-- Hero Section -->
+  <section id="hero-section" class="hero-section relative min-h-[50vh] flex flex-col items-center justify-center pt-20 sm:pt-28 md:pt-32 lg:pt-40 pb-20 overflow-hidden">
     <!-- Grid Pattern -->
     <div
       class="absolute inset-0 -z-20 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none">
@@ -422,10 +422,10 @@
 
     <!-- Ambient Background -->
     <div
-      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] md:w-[800px] lg:w-[1000px] h-[300px] md:h-[500px] lg:h-[600px] bg-brand-navy/15 dark:bg-brand-navy/20 rounded-full blur-[120px] -z-10 mix-blend-multiply dark:mix-blend-screen animate-aurora-pulse">
+      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[400px] md:w-[600px] lg:w-[800px] xl:w-[1000px] h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] xl:h-[600px] bg-brand-navy/15 dark:bg-brand-navy/20 rounded-full blur-[60px] sm:blur-[80px] md:blur-[100px] lg:blur-[120px] xl:blur-[140px] -z-10 mix-blend-multiply dark:mix-blend-screen animate-aurora-pulse">
     </div>
     <div
-      class="absolute top-0 right-0 w-[400px] md:w-[600px] lg:w-[800px] h-[400px] md:h-[600px] lg:h-[800px] bg-brand-teal/15 dark:bg-brand-teal/20 rounded-full blur-[100px] -z-10 mix-blend-multiply dark:mix-blend-screen animate-aurora-pulse translate-x-1/4 md:translate-x-0"
+      class="absolute top-0 right-0 w-[250px] sm:w-[350px] md:w-[500px] lg:w-[700px] xl:w-[800px] h-[250px] sm:h-[350px] md:h-[500px] lg:h-[700px] xl:h-[800px] bg-brand-teal/15 dark:bg-brand-teal/20 rounded-full blur-[60px] sm:blur-[80px] md:blur-[100px] lg:blur-[120px] xl:blur-[140px] -z-10 mix-blend-multiply dark:mix-blend-screen animate-aurora-pulse translate-x-1/4 md:translate-x-0"
       style="animation-delay: 2s;"></div>
 
     <!-- Bottom Fade -->
@@ -441,13 +441,13 @@
       </div>
 
       <h1
-        class="md:text-6xl lg:text-7xl leading-snug pb-2 pt-2 dark:text-white fade-in-up text-5xl font-extrabold text-slate-900 tracking-tight mb-6 visible">
+        class="hero-h1 text-slate-900 dark:text-white mb-6 tracking-tight">
         Professionelle Dokumentation für belastbare <span
           class="text-transparent bg-clip-text bg-gradient-to-r from-brand-teal to-brand-navy dark:to-white">Krypto-Steuerreports</span>
       </h1>
 
       <p
-        class="md:text-xl dark:text-slate-400 leading-relaxed fade-in-up text-lg font-medium text-slate-500 max-w-2xl mr-auto mb-10 ml-auto visible">
+        class="hero-subheadline text-slate-500 dark:text-slate-400 leading-relaxed max-w-2xl mx-auto mb-10">
         TX-Partner schließt die strukturelle Lücke zwischen unvollständiger Transaktionshistorie und belastbaren
         Krypto-Steuerreports.
       </p>
@@ -527,7 +527,7 @@
   </section>
 
   <!-- Services Grid -->
-  <section id="services-grid" class="overflow-hidden pr-4 pb-24 pl-4 relative">
+  <section id="services-grid" class="overflow-hidden pb-24 relative">
     <!-- Engaging Background Effects -->
     <div class="absolute inset-0 -z-10 pointer-events-none">
       <div class="absolute inset-0 bg-slate-50 dark:bg-[#050505]"></div>
@@ -675,7 +675,7 @@
             <div class="absolute top-0 right-0 m-6">
               <span
                 class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide bg-slate-400 text-white shadow-lg shadow-slate-400/30 ring-2 ring-white dark:ring-[#121212]">
-                Demnächst verfügbar
+                Coming Soon
               </span>
             </div>
 
@@ -770,10 +770,10 @@
             </div>
 
             <button type="button" disabled
-              class="relative w-full inline-flex items-center justify-center px-6 py-3.5 rounded-[16px] bg-slate-300 dark:bg-slate-700 text-slate-500 dark:text-slate-400 font-bold text-sm cursor-not-allowed opacity-60">
+              class="relative w-full inline-flex items-center justify-center px-4 sm:px-6 py-3 sm:py-3.5 rounded-[16px] bg-slate-300 dark:bg-slate-700 text-slate-500 dark:text-slate-400 text-xs sm:text-sm font-bold cursor-not-allowed opacity-60">
               <span class="relative z-10 flex items-center gap-2">
                 Derzeit nicht verfügbar
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" sm:width="16" height="14" sm:height="16" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                   <circle cx="12" cy="12" r="10"></circle>
                   <line x1="12" y1="8" x2="12" y2="12"></line>
@@ -781,7 +781,7 @@
                 </svg>
               </span>
             </button>
-            <p class="text-xs text-slate-500 dark:text-slate-400 text-center mt-3">Dieser Service wird nach Abschluss der Unternehmensgründung verfügbar sein.</p>
+            <p class="text-xs text-slate-500 dark:text-slate-400 text-center mt-3 px-2">Dieser Service wird nach Abschluss der Unternehmensgründung verfügbar sein.</p>
           </div>
         </div>
 
@@ -1054,13 +1054,13 @@
       </div>
 
       <!-- Main Content Grid -->
-      <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20 items-start">
 
         <!-- Feature Grid (Now on left, unconnected to title) -->
-        <div class="grid sm:grid-cols-2 gap-5 fade-in-up delay-100">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 fade-in-up delay-100">
           <!-- Feature 1 -->
           <div
-            class="group p-6 rounded-2xl bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 hover:border-brand-teal/50 hover:shadow-xl hover:shadow-brand-teal/5 transition-all duration-300">
+            class="group p-4 sm:p-6 rounded-2xl bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 hover:border-brand-teal/50 hover:shadow-xl hover:shadow-brand-teal/5 transition-all duration-300">
             <div
               class="w-12 h-12 rounded-xl bg-brand-teal/10 flex items-center justify-center text-brand-teal mb-5 group-hover:scale-110 transition-transform duration-300">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -1077,7 +1077,7 @@
 
           <!-- Feature 2 -->
           <div
-            class="group p-6 rounded-2xl bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 hover:border-brand-teal/50 hover:shadow-xl hover:shadow-brand-teal/5 transition-all duration-300">
+            class="group p-4 sm:p-6 rounded-2xl bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 hover:border-brand-teal/50 hover:shadow-xl hover:shadow-brand-teal/5 transition-all duration-300">
             <div
               class="w-12 h-12 rounded-xl bg-brand-teal/10 flex items-center justify-center text-brand-teal mb-5 group-hover:scale-110 transition-transform duration-300">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -1097,7 +1097,7 @@
 
           <!-- Feature 3 -->
           <div
-            class="group p-6 rounded-2xl bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 hover:border-brand-teal/50 hover:shadow-xl hover:shadow-brand-teal/5 transition-all duration-300">
+            class="group p-4 sm:p-6 rounded-2xl bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 hover:border-brand-teal/50 hover:shadow-xl hover:shadow-brand-teal/5 transition-all duration-300">
             <div
               class="w-12 h-12 rounded-xl bg-brand-teal/10 flex items-center justify-center text-brand-teal mb-5 group-hover:scale-110 transition-transform duration-300">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -1114,7 +1114,7 @@
 
           <!-- Feature 4 -->
           <div
-            class="group p-6 rounded-2xl bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 hover:border-brand-teal/50 hover:shadow-xl hover:shadow-brand-teal/5 transition-all duration-300">
+            class="group p-4 sm:p-6 rounded-2xl bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 hover:border-brand-teal/50 hover:shadow-xl hover:shadow-brand-teal/5 transition-all duration-300">
             <div
               class="w-12 h-12 rounded-xl bg-brand-teal/10 flex items-center justify-center text-brand-teal mb-5 group-hover:scale-110 transition-transform duration-300">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -1131,18 +1131,18 @@
         </div>
 
         <!-- Right Content: Visual Card -->
-        <div class="relative fade-in-up delay-200">
+        <div class="relative fade-in-up delay-200 w-full hidden lg:block">
           <div
-            class="relative rounded-[32px] bg-white dark:bg-[#0A0A0A] border border-slate-200 dark:border-white/10 p-1 shadow-2xl shadow-slate-200/50 dark:shadow-brand-navy/30 overflow-hidden group hover:shadow-brand-teal/10 transition-shadow duration-500">
+            class="relative w-full rounded-[32px] bg-white dark:bg-[#0A0A0A] border border-slate-200 dark:border-white/10 p-1 shadow-2xl shadow-slate-200/50 dark:shadow-brand-navy/30 overflow-hidden group hover:shadow-brand-teal/10 transition-shadow duration-500">
             <div
               class="absolute inset-0 bg-gradient-to-br from-slate-50 via-white to-slate-100 dark:from-slate-800/50 dark:via-[#0A0A0A]/80 dark:to-black pointer-events-none">
             </div>
             <div
-              class="absolute top-0 right-0 w-64 h-64 bg-brand-teal/5 dark:bg-brand-teal/10 rounded-full blur-[80px] group-hover:bg-brand-teal/10 dark:group-hover:bg-brand-teal/20 transition-colors duration-500">
+              class="absolute top-0 right-0 w-32 sm:w-48 md:w-64 h-32 sm:h-48 md:h-64 bg-brand-teal/5 dark:bg-brand-teal/10 rounded-full blur-[40px] sm:blur-[60px] md:blur-[80px] group-hover:bg-brand-teal/10 dark:group-hover:bg-brand-teal/20 transition-colors duration-500">
             </div>
 
             <div
-              class="relative rounded-[30px] bg-white/80 dark:bg-dark-surface/90 backdrop-blur-xl border border-slate-200/60 dark:border-white/5 p-8 h-full flex flex-col justify-between overflow-hidden">
+              class="relative rounded-[30px] bg-white/80 dark:bg-dark-surface/90 backdrop-blur-xl border border-slate-200/60 dark:border-white/5 p-6 sm:p-8 h-full flex flex-col justify-between overflow-hidden">
               <!-- Header -->
               <div class="flex justify-between items-start mb-10">
                 <div>
@@ -1432,31 +1432,31 @@
   </section>
 
   <!-- Final CTA -->
-  <section class="dark:bg-dark-bg bg-white pt-20 pr-4 pb-20 pl-4">
-    <div class="container mx-auto max-w-6xl">
+  <section class="dark:bg-dark-bg bg-white pt-20 pb-20">
+    <div class="container mx-auto max-w-6xl px-4 sm:px-6">
       <div
-        class="relative rounded-[32px] overflow-hidden text-center py-24 px-6 md:px-20 bg-brand-navy shadow-2xl shadow-brand-navy/30">
+        class="relative rounded-[32px] overflow-hidden text-center py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-12 lg:px-20 bg-brand-navy shadow-2xl shadow-brand-navy/30">
         <div
-          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-teal opacity-20 blur-[120px] rounded-full pointer-events-none">
+          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[400px] md:w-[500px] lg:w-[600px] h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] bg-brand-teal opacity-20 blur-[60px] sm:blur-[80px] md:blur-[100px] lg:blur-[120px] rounded-full pointer-events-none">
         </div>
         <div
           class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noise%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noise)%22/%3E%3C/svg%3E')] opacity-20 mix-blend-overlay">
         </div>
 
         <div class="z-10 fade-in-up relative">
-          <h2 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-8 tracking-tight">
+          <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6 sm:mb-8 tracking-tight">
             Dokumentation
             <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-teal to-white">prüfen lassen.</span>
           </h2>
-          <p class="text-lg md:text-xl text-slate-200/90 mb-10 max-w-2xl mx-auto font-medium leading-relaxed">
+          <p class="text-base sm:text-lg md:text-xl text-slate-200/90 mb-8 sm:mb-10 max-w-2xl mx-auto font-medium leading-relaxed">
             Starte mit einem strukturierten Doku-Check deiner Krypto-Daten. Als Grundlage für eine belastbare
             Dokumentation und funktionierende Steuerreports.
           </p>
           <a href="https://app.cal.eu/johannesanderl-tx-partner/dokumentation-prufen" target="_blank"
             rel="noopener noreferrer"
-            class="btn-primary inline-flex items-center justify-center px-8 py-4 bg-white text-brand-navy text-lg font-semibold rounded-button hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(255,255,255,0.3)] transition-all duration-300 group">
+            class="btn-primary inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-white text-brand-navy text-base sm:text-lg font-semibold rounded-button hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(255,255,255,0.3)] transition-all duration-300 group">
             Kostenloser Doku-Check
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" sm:width="20" height="18" sm:height="20" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
               class="ml-2 text-brand-teal group-hover:translate-x-1 transition-transform">
               <path d="M5 12h14"></path>

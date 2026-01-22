@@ -418,14 +418,13 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="hero-section"
-        class="min-h-[85vh] flex flex-col overflow-hidden pt-20 sm:pt-28 md:pt-32 lg:pt-40 pb-20 relative justify-center">
+        <section id="hero-section" class="hero-section relative min-h-[50vh] flex flex-col items-center justify-center pt-20 sm:pt-28 md:pt-32 lg:pt-40 pb-20 overflow-hidden">
         <!-- Ambient Background -->
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] md:w-[800px] lg:w-[1000px] h-[300px] md:h-[500px] lg:h-[600px] bg-brand-navy/25 rounded-full blur-[120px] -z-10 mix-blend-multiply dark:mix-blend-screen animate-aurora-pulse"
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[400px] md:w-[600px] lg:w-[800px] xl:w-[1000px] h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] xl:h-[600px] bg-brand-navy/25 rounded-full blur-[60px] sm:blur-[80px] md:blur-[100px] lg:blur-[120px] xl:blur-[140px] -z-10 mix-blend-multiply dark:mix-blend-screen animate-aurora-pulse"
             style="animation-delay: 2s;">
         </div>
         <div
-            class="absolute top-0 right-0 w-[300px] md:w-[500px] lg:w-[600px] h-[300px] md:h-[500px] lg:h-[600px] bg-brand-teal/25 rounded-full blur-[100px] -z-10 translate-x-1/4 md:translate-x-0 mix-blend-multiply dark:mix-blend-screen animate-aurora-pulse">
+            class="absolute top-0 right-0 w-[200px] sm:w-[300px] md:w-[400px] lg:w-[500px] xl:w-[600px] h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] xl:h-[600px] bg-brand-teal/25 rounded-full blur-[60px] sm:blur-[80px] md:blur-[100px] lg:blur-[120px] xl:blur-[140px] -z-10 translate-x-1/4 md:translate-x-0 mix-blend-multiply dark:mix-blend-screen animate-aurora-pulse">
         </div>
 
         <!-- Grid Pattern -->
@@ -444,7 +443,7 @@
                 </div>
             </div>
             <!-- H1 - Einzige H1 auf der Seite -->
-            <h1 class="fade-in-up text-5xl md:text-6xl lg:text-7xl font-extrabold text-slate-900 dark:text-white mb-8 leading-snug visible pt-2 pb-2"
+            <h1 class="hero-h1 text-slate-900 dark:text-white mb-8 leading-snug pt-2 pb-2"
                 style="animation-delay: 0.1s">
                 <span
                     class="text-transparent bg-clip-text bg-gradient-to-r from-brand-teal to-brand-navy dark:to-white">
@@ -452,8 +451,9 @@
                 </span>
                 <br>
                 Wir beheben die Ursachen, bevor sie im Steuerreport landen.
-            </h1> <!-- Subheadline -->
-            <p class="fade-in-up md:text-xl dark:text-slate-400 leading-relaxed text-lg font-medium text-slate-500 max-w-2xl mr-auto mb-12 ml-auto visible"
+            </h1>
+            <!-- Subheadline -->
+            <p class="hero-subheadline text-slate-500 dark:text-slate-400 leading-relaxed max-w-2xl mx-auto mb-12 visible"
                 style="animation-delay: 0.2s">TX-Partner analysiert die Ursachen hinter Blockpit-Hinweisen und bereitet
                 deine Transaktionen fachlich korrekt auf.</p>
 
@@ -805,7 +805,7 @@
                                         TX-Partner Dokumentationsstandard</span>
                                 </div>
                                 <span
-                                    class="font-mono text-[10px] bg-brand-teal/10 text-brand-teal px-2 py-1 rounded shrink-0 animate-pulse">VERIFIED</span>
+                                    class="text-[10px] sm:text-xs font-mono bg-brand-teal/10 text-brand-teal px-2 py-1 rounded shrink-0 animate-pulse">VERIFIED</span>
                             </div>
                         </div>
                     </div>
@@ -1016,30 +1016,30 @@
     </section>
 
     <!-- Final CTA -->
-    <section class="dark:bg-dark-bg bg-white pt-20 pr-4 pb-20 pl-4">
-        <div class="container mx-auto max-w-6xl">
+    <section class="dark:bg-dark-bg bg-white pt-20 pb-20">
+        <div class="container mx-auto max-w-6xl px-4 sm:px-6">
             <div
-                class="relative rounded-card overflow-hidden text-center py-24 px-6 md:px-20 bg-brand-navy shadow-2xl shadow-brand-navy/30">
+                class="relative rounded-card overflow-hidden text-center py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-12 lg:px-20 bg-brand-navy shadow-2xl shadow-brand-navy/30">
                 <div
-                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] md:w-[500px] lg:w-[600px] h-[300px] md:h-[500px] lg:h-[600px] bg-brand-teal opacity-20 blur-[120px] rounded-full pointer-events-none">
+                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200px] sm:w-[300px] md:w-[400px] lg:w-[600px] h-[200px] sm:h-[300px] md:h-[400px] lg:h-[600px] bg-brand-teal opacity-20 blur-[60px] sm:blur-[80px] md:blur-[100px] lg:blur-[120px] rounded-full pointer-events-none">
                 </div>
 
                 <div class="relative z-10 fade-in-up">
-                    <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-white mb-8 leading-tight"
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white mb-6 sm:mb-8 leading-tight"
                         style="letter-spacing: -0.02em">
                         Blockpit-Hinweise
                         <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-teal to-white">endgültig
                             beheben</span>
                     </h2>
-                    <p class="text-xl font-medium text-slate-200 max-w-xl mr-auto mb-12 ml-auto">
+                    <p class="text-base sm:text-lg md:text-xl font-medium text-slate-200 max-w-xl mr-auto mb-8 sm:mb-10 md:mb-12 ml-auto">
                         Starte mit einem kostenlosen Doku-Check deiner Blockpit-Daten, als Grundlage für
                         saubere Reports.
                     </p>
                     <a href="https://app.cal.eu/johannesanderl-tx-partner/dokumentation-prufen" target="_blank"
                         rel="noopener noreferrer"
-                        class="btn-primary inline-flex items-center justify-center px-10 py-5 bg-white text-brand-navy text-lg font-semibold rounded-[16px] hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(255,255,255,0.3)] transition-all duration-300 group">
+                        class="btn-primary inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-white text-brand-navy text-base sm:text-lg font-semibold rounded-[16px] hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(255,255,255,0.3)] transition-all duration-300 group">
                         Kostenloser Doku-Check
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" sm:width="20" height="18" sm:height="20" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             class="ml-2 text-brand-teal group-hover:translate-x-1 transition-transform">
                             <path d="M5 12h14"></path>

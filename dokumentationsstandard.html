@@ -400,14 +400,14 @@
 
     <!-- Hero Section: 4 Pillars -->
     <section id="hero-section"
-        class="relative pt-20 sm:pt-28 md:pt-40 pb-28 md:pb-40 overflow-hidden bg-white dark:bg-[#050505] border-b border-slate-200 dark:border-white/5">
+        class="relative pt-20 sm:pt-28 md:pt-40 pb-28 md:pb-40 overflow-hidden bg-white dark:bg-dark-bg border-b border-slate-200 dark:border-white/5">
         <!-- Background Effects -->
         <div class="absolute inset-0 pointer-events-none">
             <div
                 class="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]">
             </div>
             <div
-                class="absolute top-[-20%] left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-brand-teal/20 blur-[140px] rounded-full animate-aurora-pulse mix-blend-multiply dark:mix-blend-screen">
+                class="absolute top-[-20%] left-1/2 -translate-x-1/2 w-[400px] sm:w-[600px] md:w-[700px] lg:w-[800px] h-[300px] sm:h-[500px] md:h-[600px] bg-brand-teal/20 blur-[60px] sm:blur-[100px] md:blur-[120px] lg:blur-[140px] rounded-full animate-aurora-pulse mix-blend-multiply dark:mix-blend-screen">
             </div>
             <div
                 class="absolute top-0 left-1/2 -translate-x-1/2 w-px h-[600px] bg-gradient-to-b from-brand-teal/30 via-transparent to-transparent">
@@ -694,7 +694,7 @@
     </section>
 
     <!-- Stats Section: Trust Band -->
-    <section class="py-20 bg-brand-navy dark:bg-[#030303] text-white overflow-hidden relative border-y border-white/5">
+    <section class="py-20 bg-brand-navy dark:bg-dark-bg text-white overflow-hidden relative border-y border-white/5">
         <div class="container mx-auto px-6 max-w-7xl relative z-10">
             <div
                 class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center divide-y md:divide-y-0 md:divide-x divide-white/10">
@@ -831,13 +831,13 @@
 
     <!-- Comparison Table Section -->
     <section
-        class="py-24 bg-slate-50 dark:bg-[#080808] border-t border-slate-200 dark:border-white/5 overflow-hidden relative">
+        class="py-24 bg-slate-50 dark:bg-dark-bg border-t border-slate-200 dark:border-white/5 overflow-hidden relative">
         <!-- Background -->
         <div
-            class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-brand-teal/10 rounded-full blur-[100px] pointer-events-none opacity-50">
+            class="absolute top-0 right-0 -mr-20 -mt-20 w-48 sm:w-64 md:w-80 lg:w-96 h-48 sm:h-64 md:h-80 lg:h-96 bg-brand-teal/10 rounded-full blur-[40px] sm:blur-[60px] md:blur-[80px] lg:blur-[100px] pointer-events-none opacity-50">
         </div>
         <div
-            class="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-brand-navy/15 dark:bg-brand-teal/15 rounded-full blur-[100px] pointer-events-none opacity-50">
+            class="absolute bottom-0 left-0 -ml-20 -mb-20 w-48 sm:w-64 md:w-80 lg:w-96 h-48 sm:h-64 md:h-80 lg:h-96 bg-brand-navy/15 dark:bg-brand-teal/15 rounded-full blur-[40px] sm:blur-[60px] md:blur-[80px] lg:blur-[100px] pointer-events-none opacity-50">
         </div>
 
         <div class="container mx-auto px-6 max-w-5xl relative z-10">
@@ -1031,6 +1031,28 @@
                     <p class="text-[11px] font-bold text-slate-400 uppercase tracking-widest font-mono">Status: Maximale
                         Prüfungsreife durch TX-Partner Standard</p>
                 </div>
+
+                <!-- Output: TX-Partner Dokumentationsstandard -->
+                <div class="mt-6">
+                    <div
+                        class="flex flex-wrap items-center gap-3 p-4 rounded-2xl bg-brand-teal/5 border border-brand-teal/20 shadow-sm">
+                        <div class="flex items-center gap-3 flex-1 min-w-0">
+                            <div
+                                class="w-8 h-8 shrink-0 rounded-full bg-brand-teal text-white flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                            </div>
+                            <span
+                                class="text-xs md:text-sm font-bold text-brand-navy dark:text-white break-words">Output:
+                                TX-Partner Dokumentationsstandard</span>
+                        </div>
+                        <span
+                            class="font-mono text-[10px] bg-brand-teal/10 text-brand-teal px-2 py-1 rounded shrink-0 animate-pulse">VERIFIED</span>
+                    </div>
+                </div>
+
             </div>
 
             <!-- Bottom Note -->
@@ -1053,7 +1075,7 @@
     </section>
 
     <!-- Final CTA -->
-    <section class="py-24 px-4 bg-white dark:bg-dark-bg relative overflow-hidden">
+    <section class="py-24 bg-white dark:bg-dark-bg relative overflow-hidden">
         <div class="container mx-auto max-w-6xl">
             <div
                 class="relative rounded-[40px] overflow-hidden text-center py-24 px-6 md:px-20 bg-brand-navy dark:bg-dark-surface shadow-[0_32px_64px_-16px_rgba(0,0,0,0.4)]">
@@ -1062,7 +1084,7 @@
                     class="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-brand-teal/20 via-transparent to-transparent pointer-events-none">
                 </div>
                 <div
-                    class="absolute -bottom-1/2 -right-1/4 w-[600px] h-[600px] bg-brand-teal/20 blur-[120px] rounded-full pointer-events-none">
+                    class="absolute -bottom-1/2 -right-1/4 w-[300px] sm:w-[400px] md:w-[500px] lg:w-[600px] h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] bg-brand-teal/20 blur-[60px] sm:blur-[80px] md:blur-[100px] lg:blur-[120px] rounded-full pointer-events-none">
                 </div>
 
                 <div class="relative z-10 fade-in-up">
