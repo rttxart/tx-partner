@@ -16,7 +16,9 @@ module.exports = {
         },
         dark: {
           bg: '#050505',
+          'bg-alt': '#111111',
           surface: '#0F0F0F',
+          'surface-hover': '#1A1A1A',
           border: 'rgba(255,255,255,0.08)',
         },
       },

@@ -414,8 +414,9 @@
       </div>
     </div>
   </nav>
-    <!-- Hero Section -->
-  <section id="hero-section" class="hero-section relative min-h-[50vh] flex flex-col items-center justify-center pt-20 sm:pt-28 md:pt-32 lg:pt-40 pb-20 overflow-hidden">
+  <!-- Hero Section -->
+  <section id="hero-section"
+    class="hero-section relative min-h-[50vh] flex flex-col items-center justify-center pt-20 sm:pt-28 md:pt-32 lg:pt-40 pb-20 overflow-hidden">
     <!-- Grid Pattern -->
     <div
       class="absolute inset-0 -z-20 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none">
@@ -441,14 +442,12 @@
         TX-Partner Leistungen
       </div>
 
-      <h1
-        class="hero-h1 text-slate-900 dark:text-white mb-6 tracking-tight">
+      <h1 class="hero-h1 text-slate-900 dark:text-white mb-6 tracking-tight">
         Professionelle Dokumentation für belastbare <span
           class="text-transparent bg-clip-text bg-gradient-to-r from-brand-teal to-brand-navy dark:to-white">Krypto-Steuerreports</span>
       </h1>
 
-      <p
-        class="hero-subheadline text-slate-500 dark:text-slate-400 leading-relaxed max-w-2xl mx-auto mb-10">
+      <p class="hero-subheadline text-slate-500 dark:text-slate-400 leading-relaxed max-w-2xl mx-auto mb-10">
         TX-Partner schließt die strukturelle Lücke zwischen unvollständiger Transaktionshistorie und belastbaren
         Krypto-Steuerreports.
       </p>
@@ -531,7 +530,7 @@
   <section id="services-grid" class="overflow-hidden pb-24 relative">
     <!-- Engaging Background Effects -->
     <div class="absolute inset-0 -z-10 pointer-events-none">
-      <div class="absolute inset-0 bg-slate-50 dark:bg-[#050505]"></div>
+      <div class="absolute inset-0 bg-slate-50 dark:bg-dark-bg-alt"></div>
       <div
         class="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-[0.4] dark:opacity-100">
       </div>
@@ -541,6 +540,9 @@
       <div
         class="absolute bottom-0 right-0 w-[600px] h-[600px] bg-brand-navy/20 blur-[120px] rounded-full mix-blend-multiply dark:mix-blend-screen opacity-50 animate-aurora-pulse"
         style="animation-delay: 2s;">
+      </div>
+      <div
+        class="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_50%_0%,rgba(58,158,175,0.05),transparent_70%)] opacity-0 dark:opacity-100">
       </div>
     </div>
 
@@ -631,16 +633,21 @@
             </div>
 
             <!-- Trust Symbols -->
-            <div class="flex items-center justify-center gap-6 text-xs text-slate-500 dark:text-slate-400 mb-4 pt-4 border-t border-slate-100 dark:border-white/5">
+            <div
+              class="flex items-center justify-center gap-6 text-xs text-slate-500 dark:text-slate-400 mb-4 pt-4 border-t border-slate-100 dark:border-white/5">
               <span class="flex items-center gap-1.5">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-teal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="text-brand-teal">
                   <rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect>
                   <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
                 </svg>
                 Read-only
               </span>
               <span class="flex items-center gap-1.5">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-teal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="text-brand-teal">
                   <path d="M20 6 9 17l-5-5"></path>
                 </svg>
                 500+ Fälle
@@ -684,7 +691,8 @@
               <span
                 class="inline-block text-xs font-mono font-medium text-brand-navy/60 dark:text-white/40 tracking-widest mb-2">SERVICE_02</span>
               <h3 class="font-mono text-sm font-semibold text-slate-400 uppercase tracking-widest mb-4">FAST_LANE</h3>
-              <h2 class="text-2xl font-bold text-brand-navy dark:text-white tracking-tight mb-2">Expertenprüfung (Live-Support)
+              <h2 class="text-2xl font-bold text-brand-navy dark:text-white tracking-tight mb-2">Expertenprüfung
+                (Live-Support)
               </h2>
               <div class="text-2xl font-mono font-semibold text-slate-400 mb-4 tracking-tight">
                 €150 <span class="text-sm font-sans font-medium text-slate-500">inkl. MwSt. / 30 Min.</span>
@@ -754,17 +762,24 @@
             </div>
 
             <!-- Trust Symbols -->
-            <div class="flex items-center justify-center gap-6 text-xs text-slate-500 dark:text-slate-400 mb-4 pt-4 border-t border-slate-100 dark:border-white/5">
+            <div
+              class="flex items-center justify-center gap-6 text-xs text-slate-500 dark:text-slate-400 mb-4 pt-4 border-t border-slate-100 dark:border-white/5">
               <span class="flex items-center gap-1.5">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-teal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="text-brand-teal">
                   <circle cx="12" cy="12" r="10"></circle>
                   <polyline points="12 6 12 12 16 14"></polyline>
                 </svg>
                 24h Antwort
               </span>
               <span class="flex items-center gap-1.5">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-teal">
-                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="text-brand-teal">
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                  </polygon>
                 </svg>
                 Senior Expert
               </span>
@@ -774,15 +789,17 @@
               class="relative w-full inline-flex items-center justify-center px-4 sm:px-6 py-3 sm:py-3.5 rounded-[16px] bg-slate-300 dark:bg-slate-700 text-slate-500 dark:text-slate-400 text-xs sm:text-sm font-bold cursor-not-allowed opacity-60">
               <span class="relative z-10 flex items-center gap-2">
                 Derzeit nicht verfügbar
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" sm:width="16" height="14" sm:height="16" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" sm:width="16" height="14" sm:height="16"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round">
                   <circle cx="12" cy="12" r="10"></circle>
                   <line x1="12" y1="8" x2="12" y2="12"></line>
                   <line x1="12" y1="16" x2="12.01" y2="16"></line>
                 </svg>
               </span>
             </button>
-            <p class="text-xs text-slate-500 dark:text-slate-400 text-center mt-3 px-2">Dieser Service wird nach Abschluss der Unternehmensgründung verfügbar sein.</p>
+            <p class="text-xs text-slate-500 dark:text-slate-400 text-center mt-3 px-2">Dieser Service wird zeitnahe
+              verfügbar sein.</p>
           </div>
         </div>
 
@@ -1445,11 +1462,13 @@
         </div>
 
         <div class="z-10 fade-in-up relative">
-          <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6 sm:mb-8 tracking-tight">
+          <h2
+            class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6 sm:mb-8 tracking-tight">
             Dokumentation
             <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-teal to-white">prüfen lassen.</span>
           </h2>
-          <p class="text-base sm:text-lg md:text-xl text-slate-200/90 mb-8 sm:mb-10 max-w-2xl mx-auto font-medium leading-relaxed">
+          <p
+            class="text-base sm:text-lg md:text-xl text-slate-200/90 mb-8 sm:mb-10 max-w-2xl mx-auto font-medium leading-relaxed">
             Starte mit einem strukturierten Doku-Check deiner Krypto-Daten. Als Grundlage für eine belastbare
             Dokumentation und funktionierende Steuerreports.
           </p>
@@ -1457,9 +1476,9 @@
             rel="noopener noreferrer"
             class="btn-primary inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-white text-brand-navy text-base sm:text-lg font-semibold rounded-button hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(255,255,255,0.3)] transition-all duration-300 group">
             Kostenloser Doku-Check
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" sm:width="20" height="18" sm:height="20" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-              class="ml-2 text-brand-teal group-hover:translate-x-1 transition-transform">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" sm:width="20" height="18" sm:height="20"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" class="ml-2 text-brand-teal group-hover:translate-x-1 transition-transform">
               <path d="M5 12h14"></path>
               <path d="m12 5 7 7-7 7"></path>
             </svg>
