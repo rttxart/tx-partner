@@ -18,7 +18,7 @@
 | **Website** | tx-partner.at |
 
 ### Mission
-Wir schaffen die Datengrundlage für fehlerfreie Krypto-Steuerreports. Als Bindeglied zwischen rohen Blockchain-Daten und dem Finanzamt liefern wir professionelle Dokumentation für Steuertools, Steuerberater und Finanzverwaltung.
+Wir schaffen die Datengrundlage für fehlerfreie Krypto-Steuerreports.Pre-Tax Infrastruktur für Krypto. Professionelle Dokumentation für private Krypto-Investoren und Steuerberater.
 
 ### Vision
 Jeder Krypto-Investor soll mit vollständigem Vertrauen in seine Daten seine Steuererklärung abgeben können.
