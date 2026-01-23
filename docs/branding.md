@@ -177,7 +177,7 @@ Unser Qualitätsversprechen basiert auf vier Säulen:
 
 4. **Nachgewiesene Expertise**
    - 500+ bearbeitete Fälle
-   - 15+ Jahre kombinierte Erfahrung
+   - 15+ Jahre gemeinsame Erfahrung
    - EUR 500+ Mio. Portfolio-Volumen betreut
 
 5. **Schnelle Bearbeitung**
