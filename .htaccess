@@ -11,8 +11,27 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
 RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
 
+# =====================================================
+# URL Rewriting - .html Endungen entfernen
+# =====================================================
+
+# Redirect .html URLs zu sauberen URLs (301 Permanent Redirect)
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^.]+)\.html\ HTTP/
+RewriteRule ^([^.]+)\.html$ /$1 [R=301,L]
+
+# Interne Umschreibung: Saubere URLs zu .html Dateien
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+)$ $1.html [L]
+
+# Spezialfall: index.html für Root-Verzeichnis
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^$ index.html [L]
+
 # Eigene Fehlerseiten
-ErrorDocument 404 /404.html
+ErrorDocument 404 /404
 
 # Sicherheitsheader
 <IfModule mod_headers.c>

@@ -1,0 +1,17 @@
+# Automatische Erkennung von Textdateien und Korrektur von Zeilenumbrüchen
+* text=auto
+
+# HTML, CSS und JS Dateien explizit als Text markieren
+*.html text
+*.css text
+*.js text
+*.json text
+
+# Bilder und andere Binärdateien nicht anfassen
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.webp binary
+*.pdf binary
