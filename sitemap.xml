@@ -10,25 +10,25 @@
 
   <!-- Hauptseiten -->
   <url>
-    <loc>https://tx-partner.com/leistungen.html</loc>
+    <loc>https://tx-partner.com/leistungen</loc>
     <lastmod>2026-01-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://tx-partner.com/ueber-uns.html</loc>
+    <loc>https://tx-partner.com/ueber-uns</loc>
     <lastmod>2026-01-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tx-partner.com/kontakt.html</loc>
+    <loc>https://tx-partner.com/kontakt</loc>
     <lastmod>2026-01-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tx-partner.com/faq.html</loc>
+    <loc>https://tx-partner.com/faq</loc>
     <lastmod>2026-01-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -36,25 +36,25 @@
 
   <!-- Service-Seiten -->
   <url>
-    <loc>https://tx-partner.com/blockpit-hinweise.html</loc>
+    <loc>https://tx-partner.com/blockpit-hinweise</loc>
     <lastmod>2026-01-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tx-partner.com/cointracking-fehler.html</loc>
+    <loc>https://tx-partner.com/cointracking-fehler</loc>
     <lastmod>2026-01-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tx-partner.com/dokumentationsstandard.html</loc>
+    <loc>https://tx-partner.com/dokumentationsstandard</loc>
     <lastmod>2026-01-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://tx-partner.com/kundenonboarding.html</loc>
+    <loc>https://tx-partner.com/kundenonboarding</loc>
     <lastmod>2026-01-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -62,19 +62,19 @@
 
   <!-- Rechtliche Seiten -->
   <url>
-    <loc>https://tx-partner.com/impressum.html</loc>
+    <loc>https://tx-partner.com/impressum</loc>
     <lastmod>2026-01-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://tx-partner.com/datenschutz.html</loc>
+    <loc>https://tx-partner.com/datenschutz</loc>
     <lastmod>2026-01-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://tx-partner.com/agb.html</loc>
+    <loc>https://tx-partner.com/agb</loc>
     <lastmod>2026-01-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
