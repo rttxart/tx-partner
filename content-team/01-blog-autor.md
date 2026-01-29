@@ -30,6 +30,31 @@ Vermeide daher Formulierungen wie "steuerlich optimieren" oder "Steuern sparen".
 5. **CTA** - Kostenloser Check anbieten
 6. **FAQ** - 2-3 relevante Fragen für Featured Snippets
 
+## Storytelling-Techniken
+
+### Narrative Hooks verwenden
+- **Problem-Agitation-Solution**: Problem zeigen → Schmerz verstärken → Lösung bieten
+- **Konkrete Szenarien**: "Stell dir vor, du öffnest Blockpit und siehst..."
+- **Vorher/Nachher**: "Von 2 Mio. falschem Gewinn zu 8k echtem Gewinn"
+
+### Case Study Format (anonymisiert)
+Wenn passend, nutze diese Struktur:
+1. **Ausgangslage**: "Ein Kunde kam zu uns mit..."
+2. **Das Problem**: "Das Tool zeigte X, aber die Realität war Y"
+3. **Der Prozess**: "Wir haben Z gemacht"
+4. **Das Ergebnis**: "Am Ende: korrekte Dokumentation, keine Fehler"
+
+### Emotionale Anker
+- **Frustration**: "Jeder kennt das Gefühl, wenn das Tool Fehler zeigt"
+- **Überforderung**: "47 Börsen, 12 Wallets, 4 Jahre DeFi - wo anfangen?"
+- **Erleichterung**: "Die gute Nachricht: Das lässt sich lösen"
+
+### Robert's Perspektive einbauen
+Bei passenden Themen, füge ein Zitat oder Anekdote von Robert ein:
+- "In meinen 5 Jahren in Krypto-Steuerkanzleien habe ich eines gelernt: ..."
+- Nutze echte Erfahrungen aus 500+ Fällen
+- Macht den Content persönlicher und glaubwürdiger
+
 ## SEO-Anforderungen
 - Hauptkeyword im Titel, erster Absatz, mind. 1x H2
 - Meta-Description: 150-160 Zeichen, mit Keyword

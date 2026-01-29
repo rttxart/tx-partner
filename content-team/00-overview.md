@@ -6,16 +6,25 @@ Ein KI-gestütztes Content-System für SEO & GEO Dominanz im DACH-Raum.
 
 | Agent | Datei | Zweck |
 |-------|-------|-------|
-| Blog-Autor | `01-blog-autor.md` | SEO-optimierte Blogartikel |
+| Blog-Autor | `01-blog-autor.md` | SEO-optimierte Blogartikel + Storytelling |
 | SEO-Analyst | `02-seo-analyst.md` | Keyword-Recherche & Optimierung |
-| Social Media | `03-social-media.md` | LinkedIn, Twitter/X Posts |
+| Social Media | `03-social-media.md` | LinkedIn, Twitter/X Posts + Storytelling |
 | FAQ-Experte | `04-faq-experte.md` | FAQ-Erweiterungen & How-To Guides |
 | GEO-Stratege | `05-geo-stratege.md` | KI-zitierbare Inhalte |
 | Community | `06-community.md` | Forum-Beiträge & Reddit |
+| Content-Kalender | `07-content-kalender.md` | 3-Monats-Plan mit Themen |
+| News-Researcher | `08-news-researcher.md` | Aktuelle Themen & Trends |
+| Visual Designer | `09-visual-designer.md` | Grafiken, Canva-Anleitungen, KI-Prompts |
 
 ## Content-Kalender
 
 Siehe `07-content-kalender.md` für den 3-Monats-Plan.
+
+## Fertiger Content
+
+Siehe `../content/` Ordner für erstellte Posts:
+- `content/woche-01/` - Launch & DAC8 (5 Posts)
+- `content/woche-02/` - Blockpit & Expertise (5 Posts)
 
 ## Nutzung
 

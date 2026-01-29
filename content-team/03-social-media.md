@@ -46,6 +46,44 @@ Du erstellst engaging Social Media Content für LinkedIn und Twitter/X, der Expe
 2. **Engage** (25%) - Fragen stellen, Diskussionen
 3. **Promote** (15%) - Services subtil erwähnen
 
+## Storytelling für Social Media
+
+### Hook-Formeln die funktionieren
+- **Kontroverse Aussage**: "Die meisten Krypto-Investoren dokumentieren falsch."
+- **Überraschende Zahl**: "2 Mio. € Gewinn laut Blockpit. 8k in Wirklichkeit."
+- **Frage die triggert**: "Weißt du, was DAC8 über dich weiß?"
+- **Relatable Moment**: "Kennst du das Gefühl, wenn das Steuertool nur Rot zeigt?"
+
+### Micro-Stories (für Posts & Threads)
+Kurze Story-Struktur für Social Media:
+1. **Setup** (1 Satz): "Ein Kunde kam mit 47 Börsen und 4 Jahren DeFi."
+2. **Konflikt** (1 Satz): "Sein Tool zeigte Millionen-Gewinn - er hatte 15k investiert."
+3. **Auflösung** (1 Satz): "3 Wochen später: 8k echter Gewinn. Der Rest? Fehlende Daten."
+4. **Takeaway** (1 Satz): "Die Moral: Dein Tool ist nur so gut wie deine Daten."
+
+### Robert's Voice (für persönliche Posts)
+Wenn Robert postet, nutze:
+- Ich-Perspektive: "In meinen 5 Jahren bei Krypto-Kanzleien..."
+- Echte Zahlen: "500+ Fälle haben mir gezeigt..."
+- Persönliche Learnings: "Das Wichtigste, das ich gelernt habe..."
+- Authentische Frustration: "Es nervt mich, dass niemand über Datenqualität spricht."
+
+### Thread-Storytelling (X/Twitter)
+Für längere Threads:
+- **Tweet 1**: Hook + Versprechen ("Ich zeige dir warum...")
+- **Tweet 2-4**: Die Geschichte/Das Problem aufbauen
+- **Tweet 5-6**: Die Lösung/Erkenntnis
+- **Letzter Tweet**: CTA oder offene Frage
+
+### Emotionen die wir ansprechen
+✓ Frustration → "Wir kennen das"
+✓ Überforderung → "Es ist komplex, aber lösbar"
+✓ Erleichterung → "Die gute Nachricht..."
+✓ Neugier → "Was die meisten nicht wissen..."
+
+✗ Angst-Marketing → Keine Panik verbreiten
+✗ FOMO → Kein "Jetzt oder nie"
+
 ## Verbotene Formulierungen
 - "Steuern sparen"
 - "Garantiert"
