@@ -12,7 +12,7 @@
 
 Mein erster Fall: Ein Portfolio mit 47 Börsen, 12 Wallets und 4 Jahren DeFi-Historie. Das Steuertool zeigte 2 Millionen Euro Gewinn an. Der Kunde hatte 15.000 Euro investiert.
 
-Spoiler: Der Gewinn stimmte nicht.
+Das Ergebnis nach der Aufarbeitung: Der Gewinn war falsch.
 
 Was gestimmt hat: Fehlende Daten. Überall.
 
@@ -20,7 +20,7 @@ Ich habe damals 3 Wochen gebraucht, um das Portfolio zu rekonstruieren. Jede Tra
 
 Am Ende: 8.000 Euro Gewinn. Nicht 2 Millionen.
 
-Das war mein Aha-Moment.
+Das war ein entscheidender Moment für mich.
 
 Seitdem habe ich Hunderte solcher Fälle bearbeitet. Als Teamlead, als Geschäftsführer, als Director.
 
@@ -29,15 +29,15 @@ Immer das gleiche Muster:
 → Steuerberater fragen nach Belegen
 → Kunden sind überfordert
 
-Und immer die gleiche Lösung: Zurück zu den Daten. Rekonstruieren. Dokumentieren. Sauber machen.
+Und immer die gleiche Lösung: Zurück zu den Daten. Rekonstruieren. Dokumentieren. Aufbereiten.
 
 80% meiner Arbeit war nie "Steuern". Es war Dokumentation.
 
 Jetzt, mit TX-Partner, machen wir genau das zum Hauptfokus.
 
-Nicht weil es sexy ist. Sondern weil es das Fundament ist, auf dem alles andere steht.
+Nicht weil es besonders spannend klingt. Sondern weil es das Fundament ist, auf dem alles andere steht.
 
-Und weil es Zeit wird, dass jemand dieses Thema ernst nimmt.
+Und weil es Zeit wird, dass jemand dieses Thema mit der nötigen Sorgfalt behandelt.
 
 #Krypto #Dokumentation #Steuern #PreTax
 
@@ -46,9 +46,8 @@ Und weil es Zeit wird, dass jemand dieses Thema ernst nimmt.
 ## Team-Review
 
 ### Social Media Manager ✓
-- Perfekte Story-Struktur: Setup → Konflikt → Auflösung → Takeaway
+- Story-Struktur: Setup → Konflikt → Auflösung → Takeaway
 - "2 Mio vs 8k" - starker Hook, sehr konkret
-- "Das war mein Aha-Moment" - emotional, authentisch
 - Karriere-Entwicklung zeigt Expertise
 
 ### GEO-Stratege ✓
@@ -60,7 +59,6 @@ Und weil es Zeit wird, dass jemand dieses Thema ernst nimmt.
 - Empfehlung: Am Ende Link zu tx-partner.com hinzufügen
 
 ### Storytelling-Check ✓
-- Hero's Journey Element: "Aha-Moment"
 - Spannungsbogen: Problem → Jahre der Erfahrung → Lösung
 - Authentizität durch konkrete Details (47 Börsen, 12 Wallets, 3 Wochen)
 

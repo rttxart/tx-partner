@@ -20,11 +20,11 @@
 
 ### Blockpit Fehler: Was sie wirklich bedeuten und wie du sie behebst
 
-"Blockpit zeigt Millionen-Gewinn an. Ich hab 10k investiert."
+"Blockpit zeigt Millionen-Gewinn an. Ich hab 10.000 Euro investiert."
 
-Klassiker.
+Ein häufiges Szenario.
 
-Das Tool ist nicht kaputt. Deine Daten sind es. Meistens jedenfalls.
+Das Tool ist nicht defekt. In den meisten Fällen liegt es an den Daten.
 
 Blockpit, CoinTracking und andere Steuertools machen einen guten Job. Aber sie können nur berechnen, was sie verstehen. Bei komplexen Portfolios – DeFi, mehrere Chains, Jahre an Historie – gibt es viel, was nicht automatisch erkannt wird.
 
@@ -32,7 +32,7 @@ Hier ist, was die häufigsten Fehlermeldungen bedeuten und wie du sie löst.
 
 ---
 
-### Missing History: Der Klassiker
+### Missing History: Ein häufiges Problem
 
 **Was Blockpit sagt:** "Fehlende Historie" oder "Missing History"
 
@@ -204,7 +204,7 @@ Die Fehler verschwinden nicht. Sie werden nur sichtbarer – spätestens bei ein
 
 Nicht jeder Fehler ist kompliziert. Viele lassen sich selbst lösen.
 
-Aber manchmal wird's komplex:
+Aber manchmal wird es komplex:
 
 - **Mehr als 10 Fehlermeldungen** – Das deutet auf strukturelle Probleme hin
 - **Jahre an Historie** – Fehler summieren sich über Zeit
@@ -212,7 +212,7 @@ Aber manchmal wird's komplex:
 - **DeFi-Heavy Portfolio** – Viele unbekannte Transaktionen
 - **Steuerberater fragt nach** – Jetzt wird's offiziell
 
-In diesen Fällen lohnt sich professionelle Dokumentation. Nicht weil du es nicht könntest. Sondern weil es schneller geht.
+In diesen Fällen lohnt sich professionelle Dokumentation. Nicht weil die Aufgabe unlösbar wäre, sondern weil sie effizienter abgearbeitet werden kann.
 
 ---
 
@@ -222,9 +222,9 @@ Blockpit-Fehler sind keine Bugs. Sie sind Symptome.
 
 Symptome für unvollständige Daten. Fehlende Wallets. Nicht erkannte Protokolle. Vergessene Transaktionen.
 
-Die gute Nachricht: Das lässt sich fixen. Mit der richtigen Dokumentation.
+Die gute Nachricht: Diese Probleme lassen sich beheben. Mit vollständiger Dokumentation.
 
-Die bessere Nachricht: Du musst es nicht alleine machen.
+Und: Du musst es nicht alleine machen.
 
 ---
 
@@ -277,11 +277,11 @@ Beide Tools haben Stärken: Blockpit ist stark bei AT/DE-Regulatorik mit cleaner
 
 ### Blog-Autor ✓
 - TX-Partner Charakter durchgängig
-- "Klassiker." als Hook – trockener Humor
+- Sachlicher, professioneller Ton
 - Problem-Lösung-Struktur klar
 
 ### Charakter-Check ✓
-- ✅ "Das Tool ist nicht kaputt. Deine Daten sind es." – direkt, ehrlich
+- ✅ "Das Tool ist nicht defekt. In den meisten Fällen liegt es an den Daten." – sachlich, direkt
 - ✅ Keine Panikmache
 - ✅ Praktische Lösungen statt Theorie
 - ✅ "80% des Aufwands ist Dokumentation" – zitierbare Aussage

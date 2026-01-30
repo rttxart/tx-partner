@@ -6,27 +6,27 @@ Dieser Guide definiert die Persönlichkeit und den Ton für ALLE TX-Partner Inha
 
 ## Wer ist TX-Partner?
 
-**Der erfahrene Handwerker, der auch ein kluger Freund ist.**
+**Der erfahrene Spezialist, der auch ein verlässlicher Partner ist.**
 
-- Macht nicht viel Aufhebens, liefert einfach saubere Arbeit
-- Erklärt komplexe Dinge einfach, ohne herablassend zu sein
-- Praktisch: Probleme erklären und lösen, kein Theoretisieren
-- Kommunikation mit Kunden ist Top-Priorität
+- Liefert saubere, gründliche Arbeit ohne großes Aufheben
+- Erklärt komplexe Sachverhalte verständlich, ohne herablassend zu sein
+- Fokus auf Praxis: Probleme erkennen und lösen, nicht theoretisieren
+- Transparente und direkte Kommunikation
 
 ---
 
 ## Tonalität
 
 ### So klingen wir:
-- **Ruhig & souverän** - Keine Aufregung, keine Hypes, keine Panik
-- **Nahbar & auf Augenhöhe** - Duzen, wie ein Gespräch mit einem Bekannten
-- **Autorität durch Inhalt** - Expertise spricht für sich, wir müssen nicht angeben
+- **Ruhig & kompetent** - Sachlich, ohne Aufregung oder Hypes
+- **Nahbar & auf Augenhöhe** - Duzen, direkter Austausch
+- **Autorität durch Substanz** - Expertise zeigt sich im Inhalt, nicht in Superlativen
 
 ### So klingen wir NICHT:
 - Aufgeregt oder übertrieben enthusiastisch
 - Herablassend oder belehrend
 - Wie ein Verkäufer oder Marketer
-- Wie jeder andere LinkedIn-Post
+- Zu locker oder flapsig
 
 ---
 
@@ -34,66 +34,78 @@ Dieser Guide definiert die Persönlichkeit und den Ton für ALLE TX-Partner Inha
 
 ### Grundregeln
 - **Duzen** - Immer
-- **Kurze Sätze** - Maximal 15-20 Wörter
+- **Klare Sätze** - Kurz und präzise, aber vollständig
 - **Neutral/Hochdeutsch** - Für DE/AT/CH passend
 - **Aktiv statt passiv** - "Wir dokumentieren" statt "Es wird dokumentiert"
 
-### Trockener Humor
-Subtil, zwischen den Zeilen. Nicht offensichtlich witzig.
+### Stil
+Professionell, aber nicht steif. Direkt, aber nicht flapsig.
 
-**Beispiele:**
+**Gut:**
+- "Diese Lücke sehen wir in der Praxis regelmäßig."
+- "Das ist ein häufiges Problem."
+- "Die Fehler lassen sich beheben."
+
+**Zu locker:**
 - "Gute Frage. Hat uns auch gewundert."
-- "Spoiler: Der Gewinn stimmte nicht."
-- "Das klingt kompliziert. Ist es auch."
+- "Klassiker."
+- "Lässt sich fixen."
 
-### Selbstironie erlaubt
-- "Nicht weil es sexy ist. Sondern weil es wichtig ist."
-- "Klingt langweilig? Ist es manchmal auch."
+### Keine Ein-Wort-Sätze als Stilmittel
+Vermeide fragmentarische Aussagen wie "Klassiker." oder "Spoiler:".
+Stattdessen vollständige, sachliche Formulierungen verwenden.
 
 ---
 
 ## Anti-Muster (was wir NIEMALS machen)
 
-### ❌ Übertriebene Emojis & Hypes
+### Übertriebene Emojis & Hypes
 ```
-SCHLECHT: 🚀💰 Bereit für die Krypto-Revolution?!
-GUT: Bereit für saubere Daten?
+SCHLECHT: Bereit für die Krypto-Revolution?!
+GUT: Bereit für strukturierte Daten?
 ```
 
-### ❌ Fake Bescheidenheit / Humble-Bragging
+### Fake Bescheidenheit / Humble-Bragging
 ```
 SCHLECHT: Ich bin so dankbar für diese unglaubliche Reise...
-GUT: Wir machen das jetzt seit 5 Jahren. Hier ist, was wir gelernt haben.
+GUT: Wir arbeiten seit 5 Jahren in diesem Bereich. Hier ist, was wir gelernt haben.
 ```
 
-### ❌ Leere Buzzwords
+### Leere Buzzwords
 ```
 SCHLECHT: Wir disrupted die Krypto-Steuer-Industrie mit unserem Game-Changing Ansatz!
-GUT: Wir dokumentieren Krypto-Transaktionen. Das ist alles.
+GUT: Wir dokumentieren Krypto-Transaktionen. Das ist unser Fokus.
 ```
 
-### ❌ Typischer LinkedIn-Cringe
+### Typischer LinkedIn-Cringe
 ```
 SCHLECHT:
 Ich wurde gefeuert.
 Dann habe ich mein eigenes Unternehmen gegründet.
 Heute bin ich CEO.
 
-Was ich gelernt habe:
-1. Glaub an dich
-2. Steh früh auf
-3. ...
-
 GUT:
-Ich hab 5 Jahre in Krypto-Kanzleien gearbeitet.
-Dabei ist mir was aufgefallen: 80% der Arbeit ist Dokumentation, nicht Steuern.
-Jetzt machen wir genau das zum Fokus.
+Nach 5 Jahren in Krypto-Kanzleien haben wir eine Lücke erkannt:
+80% des Aufwands ist Dokumentation, nicht Steuerberechnung.
+Darauf haben wir uns spezialisiert.
 ```
 
-### ❌ FOMO & Angst-Marketing
+### FOMO & Angst-Marketing
 ```
 SCHLECHT: DAC8 kommt! Bist du vorbereitet oder wird das Finanzamt DICH finden?!
-GUT: DAC8 ist seit Januar aktiv. Hier ist, was das konkret bedeutet.
+GUT: DAC8 ist seit Januar aktiv. Das sind die konkreten Auswirkungen.
+```
+
+### Zu lockere Sprache
+```
+SCHLECHT: "Gute Frage. Hat uns auch gewundert."
+GUT: "Diese Frage stellen sich viele Anleger."
+
+SCHLECHT: "Klassiker."
+GUT: "Ein häufiges Szenario."
+
+SCHLECHT: "Das klingt kompliziert. Ist es auch."
+GUT: "Die Materie ist komplex."
 ```
 
 ---
@@ -102,9 +114,9 @@ GUT: DAC8 ist seit Januar aktiv. Hier ist, was das konkret bedeutet.
 
 Nach dem Lesen soll jemand denken:
 
-1. **"Die wissen wovon sie reden"** - Expertise spürbar
-2. **"Endlich sagt's mal jemand"** - Ehrlichkeit, Klartext
-3. **"Das war hilfreich"** - Konkreter Mehrwert, nicht nur heiße Luft
+1. **"Die wissen wovon sie reden"** - Fachliche Kompetenz spürbar
+2. **"Endlich eine sachliche Erklärung"** - Klarheit ohne Drama
+3. **"Das war hilfreich"** - Konkreter Mehrwert, praktisch anwendbar
 
 ---
 
@@ -112,17 +124,7 @@ Nach dem Lesen soll jemand denken:
 
 ### Launch-Post
 
-**Vorher (generisch):**
-```
-Steuertools berechnen.
-Steuerberater beraten.
-
-Aber wer stellt sicher, dass deine Krypto-Daten überhaupt stimmen?
-
-Diese Frage hat uns jahrelang beschäftigt. In Kanzleien. Bei der Arbeit mit Hunderten komplexer Portfolios.
-```
-
-**Nachher (TX-Partner):**
+**Zu locker:**
 ```
 Blockpit rechnet. Dein Steuerberater erklärt.
 
@@ -131,28 +133,37 @@ Und wer schaut, ob die Zahlen überhaupt stimmen?
 Gute Frage. Hat uns auch gewundert.
 ```
 
-### Expertise-Post
+**Professionell:**
+```
+Steuertools berechnen. Steuerberater beraten.
 
-**Vorher (generisch):**
-```
-Wir sehen das täglich bei Kunden, die schon aufgeben wollten.
-```
+Aber wer stellt sicher, dass die Daten korrekt sind?
 
-**Nachher (TX-Partner):**
-```
-Wir sehen das ständig. Die meisten denken, ihr Portfolio ist kaputt. Ist es meistens nicht.
+Diese Lücke haben wir in der Praxis immer wieder gesehen.
 ```
 
 ### Problem-Erklärung
 
-**Vorher (generisch):**
-```
-Der Fehler ist behebbar - mit der richtigen Dokumentation.
-```
-
-**Nachher (TX-Partner):**
+**Zu locker:**
 ```
 Lässt sich fixen. Meistens schneller als du denkst.
+```
+
+**Professionell:**
+```
+Das Problem lässt sich beheben. In den meisten Fällen mit überschaubarem Aufwand.
+```
+
+### Expertise zeigen
+
+**Zu locker:**
+```
+Wir sehen das ständig. Die meisten denken, ihr Portfolio ist kaputt. Ist es meistens nicht.
+```
+
+**Professionell:**
+```
+Diese Situation begegnet uns regelmäßig. In den meisten Fällen sind die Daten nicht verloren – nur unvollständig erfasst.
 ```
 
 ---
@@ -161,16 +172,16 @@ Lässt sich fixen. Meistens schneller als du denkst.
 
 Vor dem Veröffentlichen prüfen:
 
-- [ ] Klingt es wie ein Mensch oder wie Marketing?
-- [ ] Würde ich das so einem Freund erzählen?
-- [ ] Gibt es unnötige Buzzwords?
-- [ ] Sind die Sätze kurz genug?
-- [ ] Gibt es einen Moment zum Schmunzeln (wo passend)?
-- [ ] Ist der Mehrwert klar?
-- [ ] Kein FOMO, keine Panik, keine Hypes?
+- [ ] Klingt es professionell, aber nicht steif?
+- [ ] Ist der Ton sachlich und direkt?
+- [ ] Gibt es unnötige Buzzwords oder Hypes?
+- [ ] Sind die Sätze klar und vollständig?
+- [ ] Keine flapsigen Ein-Wort-Sätze?
+- [ ] Ist der Mehrwert klar erkennbar?
+- [ ] Kein FOMO, keine Panik, keine übertriebenen Versprechen?
 
 ---
 
 ## Zusammenfassung in einem Satz
 
-**TX-Partner klingt wie der erfahrene Kollege, der dir beim Kaffee erklärt, wie du dein Krypto-Chaos löst – ohne Drama, ohne Buzzwords, einfach geradeaus.**
+**TX-Partner klingt wie der kompetente Spezialist, der dir sachlich erklärt, wie du dein Krypto-Portfolio in Ordnung bringst – professionell, direkt und ohne Drama.**

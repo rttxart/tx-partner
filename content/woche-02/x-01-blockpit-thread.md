@@ -9,9 +9,9 @@
 ## Thread (5 Tweets)
 
 ### Tweet 1 (Hook)
-"Mein Blockpit zeigt 2 Mio. € Gewinn an. Ich hab 10k investiert."
+"Mein Blockpit zeigt 2 Mio. Euro Gewinn an. Ich hab 10.000 Euro investiert."
 
-Klassiker.
+Ein häufiges Szenario.
 
 Kein Bug. Fehlende Daten.
 
@@ -57,7 +57,7 @@ Lösung: On-Chain recherchieren, manuell klassifizieren.
 
 Tools können nur berechnen, was sie verstehen.
 
-Bei komplexen Portfolios braucht's manuelle Dokumentation.
+Bei komplexen Portfolios braucht es manuelle Dokumentation.
 
 Rote Hinweise? Kostenloser Check: tx-partner.com
 
@@ -71,6 +71,6 @@ Rote Hinweise? Kostenloser Check: tx-partner.com
 **Hashtags:** Keine
 
 ### Charakter-Check ✓
-- ✅ "Klassiker." - trockener Humor
-- ✅ Kurz und knapp
-- ✅ Hilft wirklich, kein leeres Versprechen
+- ✅ "Ein häufiges Szenario." - sachlich statt flapsig
+- ✅ Kurz und prägnant
+- ✅ Hilft konkret, kein leeres Versprechen

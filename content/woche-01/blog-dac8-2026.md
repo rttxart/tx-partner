@@ -20,7 +20,7 @@
 
 ### DAC8 2026: Was das für dich als Krypto-Anleger bedeutet
 
-Seit 1. Januar 2026 ist DAC8 in Kraft. Die EU-Richtlinie zur Meldepflicht von Krypto-Transaktionen. Klingt trocken. Ist es auch. Aber relevant.
+Seit 1. Januar 2026 ist DAC8 in Kraft. Die EU-Richtlinie zur Meldepflicht von Krypto-Transaktionen. Das Thema mag technisch wirken, ist aber für jeden Krypto-Anleger relevant.
 
 Hier ist, was du wissen musst.
 
@@ -84,11 +84,11 @@ Stell dir vor: Das Finanzamt sieht einen Transfer von 2 BTC an eine externe Wall
 
 Frage: Wohin ging das Geld?
 
-Wenn du keine Dokumentation hast, wird's schwierig. Verkauft? Verschenkt? Auf eigene Cold Wallet transferiert? Das Finanzamt weiß es nicht. Und du musst es belegen können.
+Wenn du keine Dokumentation hast, wird es schwierig. Verkauft? Verschenkt? Auf eigene Cold Wallet transferiert? Das Finanzamt weiß es nicht. Und du musst es belegen können.
 
 Bei einfachen Portfolios – ein paar Käufe, ein paar Verkäufe – ist das kein Problem.
 
-Bei komplexen Portfolios wird's interessant:
+Bei komplexen Portfolios wird es anspruchsvoller:
 
 - **DeFi-Aktivitäten** werden nicht gemeldet (keine zentrale Börse)
 - **Wallet-Transfers** erscheinen ohne Kontext
@@ -110,7 +110,7 @@ Das Finanzamt sieht: "Coins raus, Ziel unbekannt."
 
 Ohne Dokumentation könnte das interpretiert werden als: Verkauf? Schenkung? Steuerflucht?
 
-Klingt dramatisch? Ist es meistens nicht. Aber du brauchst Belege. Nachvollziehbar. Lückenlos.
+In der Praxis ist das selten problematisch. Voraussetzung ist allerdings eine nachvollziehbare, lückenlose Dokumentation.
 
 ---
 
@@ -131,7 +131,7 @@ Blockpit, CoinTracking oder Ähnliches. Aber: Die Tools sind nur so gut wie dein
 
 **3. Lücken schließen**
 
-Die meisten Portfolios haben Lücken. Fehlende Importe, nicht erkannte Protokolle, vergessene Wallets. Jetzt ist die Zeit, das zu fixen.
+Die meisten Portfolios haben Lücken. Fehlende Importe, nicht erkannte Protokolle, vergessene Wallets. Jetzt ist der richtige Zeitpunkt, diese zu schließen.
 
 **4. Self-Custody dokumentieren**
 
@@ -212,7 +212,7 @@ Wenn deine Krypto-Dokumentation vollständig und korrekt ist, ändert sich wenig
 ### Blog-Autor ✓
 - TX-Partner Charakter durchgängig
 - Keine Panikmache, sachlich
-- Trockener Humor: "Klingt trocken. Ist es auch. Aber relevant."
+- Professioneller, sachlicher Ton
 
 ### Charakter-Check ✓
 - ✅ Ruhig & souverän

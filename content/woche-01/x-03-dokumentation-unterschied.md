@@ -16,9 +16,9 @@ Steuerberater: Erklärt Gesetze, berät, erstellt Erklärungen.
 
 Dokumentation: Stellt sicher, dass die Daten stimmen.
 
-Wir machen Letzteres. Nur das.
+Wir machen Letzteres. Das ist unser Fokus.
 
-Nicht weil's sexy ist. Sondern weil's wichtig ist.
+Nicht glamourös. Aber notwendig.
 
 ---
 
@@ -31,5 +31,5 @@ Nicht weil's sexy ist. Sondern weil's wichtig ist.
 
 ### Charakter-Check ✓
 - ✅ Klare Abgrenzung ohne Überheblichkeit
-- ✅ Selbstironie: "Nicht weil's sexy ist"
+- ✅ "Nicht glamourös. Aber notwendig." – sachlich, nicht flapsig
 - ✅ Direkt und ehrlich

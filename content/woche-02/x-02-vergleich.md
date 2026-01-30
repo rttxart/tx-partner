@@ -8,18 +8,18 @@
 
 ## Tweet
 
-"Blockpit oder CoinTracking – welches ist besser?"
+"Blockpit oder CoinTracking – welches Tool ist besser?"
 
-Kommt drauf an.
+Kommt auf den Anwendungsfall an.
 
-Blockpit: Stark bei AT-Regulatorik, cleanes UI
-CoinTracking: Mehr manuelle Kontrolle, größere Coin-Abdeckung
+Blockpit: Stark bei AT/DE-Regulatorik, übersichtliches Interface.
+CoinTracking: Mehr manuelle Kontrolle, größere Coin-Abdeckung.
 
 Aber:
 
-Beide nur so gut wie die Daten, die du reinfütterst.
+Beide Tools sind nur so gut wie die Daten, die du importierst.
 
-Müll rein, Müll raus. So einfach ist das.
+Unvollständige Daten führen zu falschen Ergebnissen. Bei beiden.
 
 ---
 
@@ -32,5 +32,5 @@ Müll rein, Müll raus. So einfach ist das.
 
 ### Charakter-Check ✓
 - ✅ Ehrliche Antwort, kein Favorit
-- ✅ "Müll rein, Müll raus" - direkt, kein Marketing-Sprech
+- ✅ Sachlich formuliert
 - ✅ Klingt wie ein Experte, nicht wie ein Verkäufer

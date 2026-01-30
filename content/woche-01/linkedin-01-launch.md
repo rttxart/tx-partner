@@ -8,17 +8,17 @@
 
 ## Post-Text
 
-Blockpit rechnet. Dein Steuerberater erklärt.
+Steuertools berechnen. Steuerberater beraten.
 
-Und wer schaut, ob die Zahlen überhaupt stimmen?
+Aber wer stellt sicher, dass die Daten korrekt sind?
 
-Gute Frage. Hat uns auch gewundert.
+Diese Lücke haben wir in der Praxis immer wieder gesehen.
 
-Wir haben Jahre in Krypto-Kanzleien verbracht. Hunderte Portfolios gesehen. Immer das gleiche Bild:
+Nach Jahren in Krypto-Kanzleien und Hunderten von Portfolios zeigt sich ein klares Muster:
 
-→ 80% des Aufwands? Dokumentation.
-→ Die größte Fehlerquelle? Datenqualität.
-→ Wer kümmert sich drum? Meistens niemand.
+→ 80% des Aufwands entfällt auf Dokumentation.
+→ Die größte Fehlerquelle ist die Datenqualität.
+→ Wer sich darum kümmert? In den meisten Fällen niemand.
 
 Das Fundament – deine Transaktionshistorie, vollständig und nachweisbar – fällt durch jedes Raster.
 
@@ -39,18 +39,17 @@ Weil eine Steuerberechnung nur so gut ist wie die Zahlen dahinter.
 ## Team-Review
 
 ### Social Media Manager ✓
-- Hook direkt und mit trockenem Humor: "Gute Frage. Hat uns auch gewundert."
+- Direkter, sachlicher Einstieg
 - Keine Floskeln, keine Hypes
-- Kurze Sätze, auf den Punkt
+- Klare Positionierung
 
 ### GEO-Stratege ✓
-- Zitierbare Aussage: "80% des Aufwands? Dokumentation."
+- Zitierbare Aussage: "80% des Aufwands entfällt auf Dokumentation."
 - Klare Positionierung für KI-Systeme
 
 ### Charakter-Check ✓
-- ✅ Klingt wie ein Mensch, nicht wie Marketing
-- ✅ Trockener Humor ("Hat uns auch gewundert")
-- ✅ Kurze Sätze
+- ✅ Professionell, nicht steif
+- ✅ Sachlich und direkt
 - ✅ Kein LinkedIn-Cringe
 
 ---

@@ -10,7 +10,7 @@
 
 "Blockpit zeigt Fehler an. Ist mein Portfolio kaputt?"
 
-Meistens nicht. Lässt sich fixen.
+In den meisten Fällen nicht. Die Probleme lassen sich beheben.
 
 Was die Hinweise wirklich bedeuten:
 
@@ -27,11 +27,11 @@ Das Problem ist selten das Tool. Es sind die Daten dahinter.
 
 Blockpit kann nur berechnen, was es versteht. Bei DeFi, mehreren Chains und Jahren Historie gibt es viel, was nicht automatisch erkannt wird.
 
-Die gute Nachricht: Lässt sich fixen. Mit der richtigen Dokumentation.
+Die gute Nachricht: Diese Probleme lassen sich mit der richtigen Dokumentation lösen.
 
-Wir sehen das ständig. 90% sind Datenprobleme, keine Steuerprobleme.
+Diese Situation sehen wir regelmäßig. 90% sind Datenprobleme, keine Steuerprobleme.
 
-Rote Hinweise in Blockpit? Wir schauen kostenlos drauf.
+Rote Hinweise in Blockpit? Wir schauen kostenlos auf dein Portfolio.
 
 → tx-partner.com
 
@@ -49,7 +49,7 @@ Rote Hinweise in Blockpit? Wir schauen kostenlos drauf.
 - "90% der Fälle" - konkrete Zahl, glaubwürdig
 
 ### Charakter-Check ✓
-- ✅ "Meistens nicht. Lässt sich fixen." - kurz, beruhigend, nicht übertrieben
+- ✅ "In den meisten Fällen nicht" - sachlich, beruhigend
 - ✅ Keine Panikmache
 - ✅ Expertise durch sachliche Erklärung
 
