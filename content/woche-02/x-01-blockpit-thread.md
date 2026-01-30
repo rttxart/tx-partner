@@ -9,57 +9,57 @@
 ## Thread (5 Tweets)
 
 ### Tweet 1 (Hook)
-"Mein Blockpit zeigt 2 Mio. € Gewinn an, aber ich hab nur 10k investiert."
+"Mein Blockpit zeigt 2 Mio. € Gewinn an. Ich hab 10k investiert."
 
 Klassiker.
 
-Das ist kein Bug. Das sind fehlende Daten.
+Kein Bug. Fehlende Daten.
 
-🧵 Die 5 häufigsten Blockpit-Fehler und was sie wirklich bedeuten:
+🧵 Die häufigsten Blockpit-Fehler und was sie bedeuten:
 
 ---
 
 ### Tweet 2
-1. **Missing History**
+**Missing History**
 
 Blockpit: "Woher kommt diese Coin?"
 
-Die Ursache: Unvollständiger Import, Wallet nicht verknüpft, oder DeFi-Protokoll nicht erkannt.
+Ursache: Import unvollständig, Wallet fehlt, DeFi nicht erkannt.
 
-Die Lösung: Ursprung finden und dokumentieren.
+Lösung: Ursprung finden, dokumentieren.
 
 ---
 
 ### Tweet 3
-2. **Negative Balance**
+**Negative Balance**
 
 Blockpit: "Du hast mehr ausgegeben als du hattest."
 
-Die Ursache: Fehlende Eingangs-Transaktion oder falsche Klassifizierung.
+Ursache: Eingangs-Transaktion fehlt oder falsch klassifiziert.
 
-Die Lösung: Fehlende Transaktion finden und nachtragen.
+Lösung: Fehlende Transaktion finden, nachtragen.
 
 ---
 
 ### Tweet 4
-3. **Unbekannte Transaktion**
+**Unbekannte Transaktion**
 
 Blockpit: "Was ist das?"
 
-Die Ursache: DeFi zu komplex, Bridge nicht erkannt, Airdrop ohne klare Quelle.
+Ursache: DeFi zu komplex, Bridge nicht erkannt, Airdrop unklar.
 
-Die Lösung: On-Chain recherchieren und manuell klassifizieren.
+Lösung: On-Chain recherchieren, manuell klassifizieren.
 
 ---
 
 ### Tweet 5 (CTA)
-90% dieser Fehler sind Datenprobleme, keine Steuerprobleme.
+90% dieser Fehler = Datenprobleme.
 
-Die Tools können nur berechnen, was sie verstehen.
+Tools können nur berechnen, was sie verstehen.
 
-Bei komplexen Portfolios braucht es manuelle Dokumentation.
+Bei komplexen Portfolios braucht's manuelle Dokumentation.
 
-Hast du rote Hinweise? Kostenloser Check: tx-partner.com
+Rote Hinweise? Kostenloser Check: tx-partner.com
 
 ---
 
@@ -68,4 +68,9 @@ Hast du rote Hinweise? Kostenloser Check: tx-partner.com
 **Ziel:** Expertise zeigen + Leads
 **CTA:** Kostenloser Check
 **Thread-Länge:** 5 Tweets
-**Hashtags:** Keine (organischer)
+**Hashtags:** Keine
+
+### Charakter-Check ✓
+- ✅ "Klassiker." - trockener Humor
+- ✅ Kurz und knapp
+- ✅ Hilft wirklich, kein leeres Versprechen

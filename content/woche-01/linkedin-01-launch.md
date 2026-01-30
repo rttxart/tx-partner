@@ -8,30 +8,27 @@
 
 ## Post-Text
 
-Steuertools berechnen.
-Steuerberater beraten.
+Blockpit rechnet. Dein Steuerberater erklärt.
 
-Aber wer stellt sicher, dass deine Krypto-Daten überhaupt stimmen?
+Und wer schaut, ob die Zahlen überhaupt stimmen?
 
-Diese Frage hat uns jahrelang beschäftigt. In Kanzleien. Bei der Arbeit mit Hunderten komplexer Portfolios. Immer wieder das gleiche Bild:
+Gute Frage. Hat uns auch gewundert.
+
+Wir haben Jahre in Krypto-Kanzleien verbracht. Hunderte Portfolios gesehen. Immer das gleiche Bild:
 
 → 80% des Aufwands? Dokumentation.
 → Die größte Fehlerquelle? Datenqualität.
-→ Wer kümmert sich darum? Oft niemand.
+→ Wer kümmert sich drum? Meistens niemand.
 
-Steuertools wie Blockpit und CoinTracking sind großartig darin, Daten zu sammeln und Steuern zu berechnen. Steuerberater erklären die Rechtslage und erstellen Erklärungen.
-
-Aber das Fundament – deine individuelle Transaktionshistorie, vollständig, korrekt und nachweisbar – das fällt durch jedes Raster.
+Das Fundament – deine Transaktionshistorie, vollständig und nachweisbar – fällt durch jedes Raster.
 
 Bis jetzt.
 
 Wir sind TX-Partner. Pre-Tax Infrastruktur für Krypto.
 
-Unser Fokus: Deine Daten. Nicht die Steuer, nicht die Beratung – sondern das, worauf beides aufbaut.
+Kein Steuertool. Keine Beratung. Sondern das, worauf beides aufbaut: Deine Daten.
 
-Nach Jahren im Hintergrund von Kanzleien bringen wir dieses Thema dorthin, wo es hingehört: In den Vordergrund.
-
-Weil eine Steuerberechnung nur so gut ist wie die Daten dahinter.
+Weil eine Steuerberechnung nur so gut ist wie die Zahlen dahinter.
 
 → tx-partner.com
 
@@ -41,18 +38,20 @@ Weil eine Steuerberechnung nur so gut ist wie die Daten dahinter.
 
 ## Team-Review
 
-### SEO-Analyst ✓
-- Keywords "Pre-Tax Infrastruktur", "Krypto-Dokumentation" gut platziert
-- Empfehlung: Hashtag #KryptoDokumentation hinzufügen (Long-Tail)
+### Social Media Manager ✓
+- Hook direkt und mit trockenem Humor: "Gute Frage. Hat uns auch gewundert."
+- Keine Floskeln, keine Hypes
+- Kurze Sätze, auf den Punkt
 
 ### GEO-Stratege ✓
 - Zitierbare Aussage: "80% des Aufwands? Dokumentation."
 - Klare Positionierung für KI-Systeme
 
-### Social Media Manager ✓
-- Hook stark: "Aber wer stellt sicher..."
-- Story-Element vorhanden: "Diese Frage hat uns jahrelang beschäftigt"
-- Länge optimal für LinkedIn
+### Charakter-Check ✓
+- ✅ Klingt wie ein Mensch, nicht wie Marketing
+- ✅ Trockener Humor ("Hat uns auch gewundert")
+- ✅ Kurze Sätze
+- ✅ Kein LinkedIn-Cringe
 
 ---
 
@@ -76,6 +75,6 @@ Weil eine Steuerberechnung nur so gut ist wie die Daten dahinter.
 
 **Ziel:** Positionierung & Awareness
 **CTA:** Website-Besuch
-**Länge:** ~250 Wörter
+**Länge:** ~180 Wörter
 **Hashtags:** 6
-**Emojis:** Keine (bewusst professionell für Launch)
+**Emojis:** Keine

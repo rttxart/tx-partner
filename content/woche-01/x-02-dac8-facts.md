@@ -8,16 +8,18 @@
 
 ## Tweet
 
-DAC8 ist live. Was das Finanzamt ab 2027 über dich weiß:
+DAC8 ist live.
+
+Was das Finanzamt ab 2027 über dich weiß:
 
 → Name, Adresse, Steuer-ID
 → Jeder Kauf, jeder Verkauf
 → Alle Transfers
-→ Deine Bestände zum Jahresende
+→ Bestände zum Jahresende
 
 Die Börsen melden automatisch.
 
-Frage: Kannst du alles davon auch belegen?
+Die Frage: Kannst du alles davon auch belegen?
 
 ---
 
@@ -25,5 +27,10 @@ Frage: Kannst du alles davon auch belegen?
 
 **Ziel:** Awareness / Relevanz schaffen
 **CTA:** Implizit
-**Länge:** 1 Tweet (280 Zeichen optimiert)
-**Hashtags:** Keine (kann optional #DAC8 hinzugefügt werden)
+**Länge:** 1 Tweet
+**Hashtags:** Keine (optional #DAC8)
+
+### Charakter-Check ✓
+- ✅ Sachlich, nicht alarmistisch
+- ✅ Keine Panikmache ("BIST DU VORBEREITET?!")
+- ✅ Offene Frage statt Angst-Marketing

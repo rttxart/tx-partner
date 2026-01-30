@@ -6,40 +6,38 @@
 
 ---
 
-## Thread (6 Tweets)
+## Thread (5 Tweets)
 
 ### Tweet 1 (Hook)
-Steuertools berechnen.
+Blockpit rechnet.
 Steuerberater beraten.
 
-Aber wer stellt sicher, dass deine Krypto-Daten überhaupt stimmen?
+Wer schaut, ob die Zahlen stimmen?
 
-Niemand.
-
-Bis jetzt. 🧵
+Meistens niemand. 🧵
 
 ---
 
 ### Tweet 2 (Problem)
-Das Problem:
+Das sehen wir ständig:
 
-→ Blockpit zeigt "Missing History"
-→ CoinTracking hat Balance-Fehler
-→ Der Steuerberater fragt nach Belegen
+→ "Missing History" Fehler
+→ Balance stimmt nicht
+→ Steuerberater fragt nach Belegen
 
-80% des Aufwands bei Krypto-Steuern ist nicht die Steuer selbst.
+80% des Aufwands bei Krypto-Steuern ist nicht die Steuer.
 
 Es ist die Dokumentation.
 
 ---
 
 ### Tweet 3 (Die Lücke)
-Steuertools sind großartig im Daten sammeln.
-Steuerberater sind großartig im Beraten.
+Tools sammeln Daten.
+Berater erklären Gesetze.
 
-Aber das Fundament – deine individuelle Transaktionshistorie – fällt durch jedes Raster.
+Aber das Fundament – deine Transaktionshistorie, vollständig und nachweisbar?
 
-Wer prüft, ob alles vollständig, korrekt und nachweisbar ist?
+Fällt durch jedes Raster.
 
 ---
 
@@ -48,33 +46,20 @@ Wir sind TX-Partner.
 
 Pre-Tax Infrastruktur für Krypto.
 
-Kein Steuertool. Keine Steuerberatung.
+Kein Tool. Keine Beratung.
 
 Sondern das, worauf beides aufbaut: Deine Daten.
 
 ---
 
-### Tweet 5 (Credentials)
-Unser Hintergrund:
-
-→ 5+ Jahre in spezialisierten Krypto-Steuerkanzleien
-→ 500+ komplexe Fälle dokumentiert
-→ EUR 500 Mio.+ Transaktionsvolumen aufbereitet
-
-Wir haben das Problem jahrelang im Hintergrund gelöst.
-
-Jetzt machen wir es zum Hauptfokus.
-
----
-
-### Tweet 6 (CTA)
-DAC8 ist seit Januar 2026 aktiv.
+### Tweet 5 (CTA)
+DAC8 ist seit Januar aktiv.
 
 Das Finanzamt bekommt bald mehr Daten als je zuvor.
 
-Die Frage ist: Kannst du deine Seite belegen?
+Die Frage: Kannst du deine Seite belegen?
 
-Kostenloser Doku-Check: tx-partner.com
+Kostenloser Check: tx-partner.com
 
 ---
 
@@ -82,5 +67,10 @@ Kostenloser Doku-Check: tx-partner.com
 
 **Ziel:** Launch Awareness
 **CTA:** Website / Doku-Check
-**Thread-Länge:** 6 Tweets
-**Hashtags:** Keine im Thread (wirkt organischer)
+**Thread-Länge:** 5 Tweets
+**Hashtags:** Keine (wirkt organischer)
+
+### Charakter-Check ✓
+- ✅ Kurze, direkte Sätze
+- ✅ Kein Marketing-Sprech
+- ✅ Fakten statt Hype

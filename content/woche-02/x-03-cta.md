@@ -14,7 +14,9 @@ Steuerberater fragt nach Belegen?
 
 Wir schauen kostenlos auf dein Portfolio.
 
-30 Min. Kein Verkaufsgespräch. Nur Klarheit.
+30 Min. Kein Verkaufsgespräch.
+
+Nur Klarheit.
 
 → tx-partner.com
 
@@ -26,3 +28,8 @@ Wir schauen kostenlos auf dein Portfolio.
 **CTA:** Direkter Link zum Doku-Check
 **Länge:** 1 Tweet
 **Hashtags:** Keine
+
+### Charakter-Check ✓
+- ✅ "Kein Verkaufsgespräch. Nur Klarheit." - ehrlich, kein Hype
+- ✅ Direkte Ansprache der Probleme
+- ✅ Kein FOMO, keine Dringlichkeit

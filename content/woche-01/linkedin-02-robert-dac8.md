@@ -8,75 +8,62 @@
 
 ## Post-Text
 
-DAC8 ist seit 1. Januar 2026 in Kraft.
+DAC8 ist seit Januar aktiv.
 
-Was bedeutet das konkret?
+Kurze Zusammenfassung: Krypto-Börsen melden ab sofort an die Finanzbehörden. Name, Adresse, Steuer-ID. Jede Transaktion. Bestände zum Jahresende.
 
-Ab jetzt melden Krypto-Börsen und Broker automatisch an die Finanzbehörden:
-→ Deine Identität (Name, Adresse, Steuer-ID)
-→ Jede Transaktion (Käufe, Verkäufe, Transfers)
-→ Deine Bestände zum Jahresende
+Das Finanzamt weiß bald mehr über dein Portfolio als du selbst.
 
-Das Finanzamt weiß also bald mehr über dein Portfolio als du selbst.
+Ist das schlimm? Nicht unbedingt.
 
-Die Frage ist: Kannst du das, was gemeldet wird, auch belegen?
+Die eigentliche Frage: Kannst du das, was gemeldet wird, auch belegen?
 
-Ich sehe seit Jahren, wie Krypto-Investoren ihre Daten unterschätzen. "Das Tool macht das schon." "Der Steuerberater regelt das."
+Nach 500+ Fällen in Krypto-Kanzleien sehe ich immer das Gleiche:
 
-Aber wenn das Finanzamt 2027 die ersten DAC8-Daten erhält und Rückfragen stellt – dann zählt nur eins:
+"Das Tool macht das schon."
+"Der Steuerberater regelt das."
 
-Kannst du jede Transaktion nachvollziehbar dokumentieren?
+Und dann kommen die Rückfragen. Dann zählt nur eins: Dokumentation.
 
-Nicht "ungefähr". Nicht "sollte passen". Sondern lückenlos.
+Nicht "ungefähr". Nicht "sollte passen". Lückenlos.
 
-Genau das ist der Grund, warum wir TX-Partner gegründet haben. Nicht Steuerberatung. Nicht noch ein Tool. Sondern: Daten-Infrastruktur.
+DAC8 ist kein Grund zur Panik. Aber ein guter Grund, jetzt Ordnung zu schaffen.
 
-DAC8 ist kein Grund zur Panik. Aber ein sehr guter Grund, jetzt Ordnung zu schaffen.
+Wie sieht's bei dir aus?
 
-Wie gut ist dein Portfolio dokumentiert?
-
-#DAC8 #Krypto #Dokumentation #Steuern2026 #DACH
+#DAC8 #Krypto #Dokumentation #Steuern2026
 
 ---
 
 ## Team-Review
 
-### SEO-Analyst ✓
-- DAC8 Keyword prominent
-- Empfehlung: "Krypto Meldepflicht 2026" als Alternative-Hashtag
+### Social Media Manager ✓
+- Direkter Einstieg, keine Umwege
+- "Ist das schlimm? Nicht unbedingt." - souverän, nicht alarmistisch
+- Kurze, knackige Sätze
 
 ### News-Researcher ✓
 - Fakten korrekt: DAC8 seit 01.01.2026 in Kraft
-- Meldungen an Behörden ab 2027 - stimmt
+- Keine Panikmache, sachlich
 
-### Social Media Manager ✓
-- Thought Leadership Ton passt zu Robert
-- Offene Frage am Ende gut für Engagement
-- "Ich sehe seit Jahren..." - authentisch
-
-### Verbesserungsvorschlag
-Zeile 24 stärker machen:
-- Alt: "Ich sehe seit Jahren, wie Krypto-Investoren ihre Daten unterschätzen."
-- Neu: "Nach 500+ Fällen in Krypto-Kanzleien sehe ich immer wieder das Gleiche:"
+### Charakter-Check ✓
+- ✅ Ruhig & souverän - keine Aufregung
+- ✅ "Nach 500+ Fällen" - Expertise durch Erfahrung, nicht durch Angeben
+- ✅ Offene Frage am Ende, nicht aufdringlich
 
 ---
 
 ## Visual-Empfehlung
 
-**Grafik-Typ:** Data Visual
-**Größe:** 1200 x 627 px
+**Grafik-Typ:** Kein Bild (empfohlen)
 
-**Canva-Anleitung:**
+Persönliche Thought-Leadership Posts performen auf LinkedIn oft besser ohne Grafik. Der Text ist stark genug.
+
+**Alternative - Data Visual:**
 1. Hintergrund: Dunkel (#0F172A)
-2. Große Headline: "DAC8 ist live." (Weiß)
-3. 3 Icons mit Text:
-   - 👤 Identität
-   - 📊 Transaktionen
-   - 💰 Bestände
-4. Footer: "Was das Finanzamt ab 2027 weiß"
-5. Akzentfarbe: #3A9EAF
-
-**Alternativ:** Ohne Grafik posten (persönliche Posts performen oft besser text-only)
+2. Große Headline: "DAC8 ist live."
+3. 3 Zeilen: Was gemeldet wird
+4. Footer: "Kannst du alles belegen?"
 
 ---
 
@@ -84,6 +71,6 @@ Zeile 24 stärker machen:
 
 **Ziel:** Thought Leadership + DAC8 Relevanz
 **CTA:** Implizit (Bewusstsein schaffen)
-**Länge:** ~220 Wörter
-**Hashtags:** 5
+**Länge:** ~170 Wörter
+**Hashtags:** 4
 **Emojis:** Keine

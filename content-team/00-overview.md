@@ -20,11 +20,17 @@ Ein KI-gestütztes Content-System für SEO & GEO Dominanz im DACH-Raum.
 
 Siehe `07-content-kalender.md` für den 3-Monats-Plan.
 
+## Charakter-Guide
+
+Siehe `10-charakter-guide.md` für die TX-Partner Persönlichkeit. Alle Agenten und Content müssen diesem Guide folgen.
+
+**Kurzfassung:** TX-Partner = Der erfahrene Handwerker, der auch ein kluger Freund ist. Ruhig & souverän, nahbar, trockener Humor, kurze Sätze.
+
 ## Fertiger Content
 
 Siehe `../content/` Ordner für erstellte Posts:
-- `content/woche-01/` - Launch & DAC8 (5 Posts)
-- `content/woche-02/` - Blockpit & Expertise (5 Posts)
+- `content/woche-01/` - Launch & DAC8 (5 Social Posts + 1 Blog)
+- `content/woche-02/` - Blockpit & Expertise (5 Social Posts + 1 Blog)
 
 ## Nutzung
 

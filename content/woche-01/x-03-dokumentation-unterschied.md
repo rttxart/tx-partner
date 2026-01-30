@@ -12,13 +12,13 @@
 
 Nein.
 
-Dokumentation ≠ Steuerberatung
+Steuerberater: Erklärt Gesetze, berät, erstellt Erklärungen.
 
-Steuerberater: Erklärt die Rechtslage, berät, erstellt Erklärungen.
+Dokumentation: Stellt sicher, dass die Daten stimmen.
 
-Dokumentation: Stellt sicher, dass die Daten stimmen, auf denen alles basiert.
+Wir machen Letzteres. Nur das.
 
-Wir machen Letzteres. Und nur das.
+Nicht weil's sexy ist. Sondern weil's wichtig ist.
 
 ---
 
@@ -28,3 +28,8 @@ Wir machen Letzteres. Und nur das.
 **CTA:** Keiner (Klarstellung)
 **Länge:** 1 Tweet
 **Hashtags:** Keine
+
+### Charakter-Check ✓
+- ✅ Klare Abgrenzung ohne Überheblichkeit
+- ✅ Selbstironie: "Nicht weil's sexy ist"
+- ✅ Direkt und ehrlich
