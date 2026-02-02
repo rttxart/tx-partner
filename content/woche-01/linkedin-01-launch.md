@@ -18,7 +18,7 @@ Nach Jahren in Krypto-Kanzleien und Hunderten von Portfolios zeigt sich ein klar
 
 → 80% des Aufwands entfällt auf Dokumentation.
 → Die größte Fehlerquelle ist die Datenqualität.
-→ Wer sich darum kümmert? In den meisten Fällen niemand.
+→ Wer darüber spricht? Fast niemand. Das Thema "Steuer" überschattet alles.
 
 Das Fundament – deine Transaktionshistorie, vollständig und nachweisbar – fällt durch jedes Raster.
 

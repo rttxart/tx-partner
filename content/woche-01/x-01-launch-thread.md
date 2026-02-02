@@ -14,7 +14,7 @@ Steuerberater beraten.
 
 Wer schaut, ob die Zahlen stimmen?
 
-Meistens niemand. 🧵
+Fast niemand. Das Thema "Steuer" überschattet alles. 🧵
 
 ---
 
