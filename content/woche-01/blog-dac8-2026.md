@@ -163,6 +163,28 @@ Eine Steuerberechnung ist nur so gut wie die Daten dahinter. Das war schon immer
 
 ---
 
+### Quellen & Referenzen
+
+1. **Council Directive (EU) 2023/2226** – Offizielle EU-Richtlinie DAC8
+   [EUR-Lex](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32023L2226)
+
+2. **DAC8 Overview** – EU-Kommission, Taxation and Customs Union
+   [European Commission](https://taxation-customs.ec.europa.eu/dac8_en)
+
+3. **Kryptowerte-Steuertransparenzgesetz (KStTG)** – Deutscher Bundestag
+   [bundestag.de](https://www.bundestag.de/dokumente/textarchiv/2025/kw45-de-kryptowerte-1118558)
+
+4. **Gesetz zur Umsetzung der Richtlinie (EU) 2023/2226** – Bundesfinanzministerium
+   [bundesfinanzministerium.de](https://www.bundesfinanzministerium.de/Content/DE/Gesetzestexte/Gesetze_Gesetzesvorhaben/Abteilungen/Abteilung_IV/21_Legislaturperiode/2025-11-05-DAC8-G/0-Gesetz.html)
+
+5. **Umsetzungsfragen DAC8 Implementierung** – BMF Österreich
+   [bmf.gv.at](https://www.bmf.gv.at/rechtsnews/steuern-rechtsnews/aktuelle-infos-und-erlaesse/Fachinformationen---Internationales-Steuerrecht/Umsetzungsfragen-DAC8-Implementierung.html)
+
+6. **Krypto-Meldepflichtgesetz im Betrugsbekämpfungsgesetz 2025** – KPMG Austria
+   [kpmg.com/at](https://kpmg.com/at/de/media/newsletter/tax-news/2025/12/tn-krypto-meldepflichtgesetz-im-betrugsbekaempfungsgesetz-2025.html)
+
+---
+
 ### Dein nächster Schritt
 
 Unsicher, wie gut deine Dokumentation ist?
