@@ -240,3 +240,53 @@
     }
   }
 }
+
+/* ===================================
+   MOBILE PERFORMANCE OPTIMIERUNG
+   Deaktiviert aufwendige Animationen auf Mobile
+   TX-Partner Website Team - 02.02.2026
+   =================================== */
+
+@media (max-width: 767px) {
+  /* Aurora Pulse: Statisch statt animiert */
+  .animate-aurora-pulse {
+    animation: none !important;
+    opacity: 0.25 !important;
+  }
+
+  /* Float Animation: Deaktivieren */
+  .animate-float {
+    animation: none !important;
+    transform: none !important;
+  }
+
+  /* Spotlight Container: Auf Mobile ausblenden (zu rechenintensiv) */
+  .hero-spotlight-container {
+    display: none !important;
+  }
+
+  /* Hash-Scroll Animation: Vereinfachen */
+  .animate-hash-scroll {
+    animation: none !important;
+  }
+}
+
+/* Respektiere System-Präferenz für reduzierte Bewegung */
+@media (prefers-reduced-motion: reduce) {
+  .animate-aurora-pulse,
+  .animate-float,
+  .animate-pulse,
+  .animate-ping,
+  .animate-shimmer,
+  .animate-hash-scroll {
+    animation: none !important;
+  }
+}
+
+/* Navbar: disable backdrop-blur on mobile for GPU performance */
+@media (max-width: 767px) {
+    nav {
+        -webkit-backdrop-filter: none !important;
+        backdrop-filter: none !important;
+    }
+}

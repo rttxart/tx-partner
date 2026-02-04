@@ -163,18 +163,45 @@ function initMagneticButtons() {
     });
 }
 
-// Modern UI Enhancement: Scroll-Linked Parallax
+// Modern UI Enhancement: Scroll-Linked Parallax (RAF-throttled)
 function initParallax() {
     const parallaxElements = document.querySelectorAll('.parallax');
-    
+    if (!parallaxElements.length) return;
+
+    let ticking = false;
     window.addEventListener('scroll', () => {
-        const scrolled = window.scrollY;
-        parallaxElements.forEach(el => {
-            const speed = parseFloat(el.dataset.speed) || 0.5;
-            el.style.transform = `translateY(${scrolled * speed}px)`;
-        });
+        if (!ticking) {
+            requestAnimationFrame(() => {
+                const scrolled = window.scrollY;
+                parallaxElements.forEach(el => {
+                    const speed = parseFloat(el.dataset.speed) || 0.5;
+                    el.style.transform = `translateY(${scrolled * speed}px)`;
+                });
+                ticking = false;
+            });
+            ticking = true;
+        }
+    }, { passive: true });
+}
+
+// Spotlight Card Effect (RAF-throttled, disabled on touch devices)
+function handleMouseMove(e) {
+    if (handleMouseMove._isTouch) return;
+    if (handleMouseMove._ticking) return;
+    handleMouseMove._ticking = true;
+    requestAnimationFrame(() => {
+        const card = e.currentTarget || e.target.closest('.card-spotlight');
+        if (!card) { handleMouseMove._ticking = false; return; }
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        card.style.setProperty('--mouse-x', `${x}px`);
+        card.style.setProperty('--mouse-y', `${y}px`);
+        handleMouseMove._ticking = false;
     });
 }
+handleMouseMove._ticking = false;
+handleMouseMove._isTouch = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
 
 // Modern UI Enhancement: Glassmorphic Tilt
 function initGlassmorphicTilt() {
