@@ -17,14 +17,16 @@ RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
 # =====================================================
 
 # Redirect .html URLs zu sauberen URLs (301 Permanent Redirect)
+# Absolute URL verhindert Interpretationsprobleme
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^.]+)\.html\ HTTP/
-RewriteRule ^([^.]+)\.html$ /$1 [R=301,L]
+RewriteRule ^([^.]+)\.html$ https://tx-partner.com/$1 [R=301,L]
 
 # Interne Umschreibung: Saubere URLs zu .html Dateien
+# [^.]+ verhindert Umschreibung von URLs mit Punkt (z.B. .css, .js, .png)
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^(.+)$ $1.html [L]
+RewriteRule ^([^.]+)$ $1.html [L]
 
 # Spezialfall: index.html für Root-Verzeichnis
 RewriteCond %{REQUEST_FILENAME} !-f

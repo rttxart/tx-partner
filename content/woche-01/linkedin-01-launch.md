@@ -1,79 +1,92 @@
 # LinkedIn Post #1 - Launch Post
 **Absender:** TX-Partner (Firmen-Account)
-**Typ:** Launch / Einführung
+**Typ:** Launch / Positionierung
 **Posting-Tag:** Montag
-**Involvierte Agenten:** Social Media Manager, GEO-Stratege
+**Involvierte Agenten:** Social Media Manager, Charakter-Guide
 
 ---
 
 ## Post-Text
 
-Steuertools berechnen. Steuerberater beraten.
+Krypto-Steuertools berechnen.
+Steuerberater beraten.
 
-Aber wer stellt sicher, dass die Daten korrekt sind?
+Aber worauf basiert beides?
 
-Diese Lücke haben wir in der Praxis immer wieder gesehen.
+Auf der Datengrundlage – der Krypto-Transaktionshistorie, die ins Tool importiert wird. On-Chain Transaktionen, Börsen-Trades, DeFi-Aktivitäten. Alles gesammelt an einem Ort.
 
-Nach Jahren in Krypto-Kanzleien und Hunderten von Portfolios zeigt sich ein klares Muster:
+Die Reihenfolge ist entscheidend:
+1. Datengrundlage
+2. Steuerberechnung
+3. Compliance
 
-→ 80% des Aufwands entfällt auf Dokumentation.
-→ Die größte Fehlerquelle ist die Datenqualität.
-→ Wer darüber spricht? Fast niemand. Das Thema "Steuer" überschattet alles.
+Wenn diese Datengrundlage unvollständig ist, wird jede Steuerberechnung auf dieser Basis falsch sein und jede Compliance-Prüfung wird Widersprüche zeigen.
 
-Das Fundament – deine Transaktionshistorie, vollständig und nachweisbar – fällt durch jedes Raster.
+Wir sind TX-Partner.
+Wir sorgen dafür, dass die Datengrundlage stimmt.
 
-Bis jetzt.
-
-Wir sind TX-Partner. Pre-Tax Infrastruktur für Krypto.
-
-Kein Steuertool. Keine Beratung. Sondern das, worauf beides aufbaut: Deine Daten.
-
-Weil eine Steuerberechnung nur so gut ist wie die Zahlen dahinter.
+Krypto-Dokumentation einfach richtig.
 
 → tx-partner.com
 
-#Krypto #Dokumentation #PreTax #Blockchain #Steuern #DACH
+#Krypto #Dokumentation #DAC8 #Steuern
 
 ---
 
 ## Team-Review
 
 ### Social Media Manager ✓
-- Direkter, sachlicher Einstieg
-- Keine Floskeln, keine Hypes
-- Klare Positionierung
-
-### GEO-Stratege ✓
-- Zitierbare Aussage: "80% des Aufwands entfällt auf Dokumentation."
-- Klare Positionierung für KI-Systeme
+- Klare Logik-Kette erkennbar
+- Launch-Post ohne Hype
+- CTA am Ende
 
 ### Charakter-Check ✓
-- ✅ Professionell, nicht steif
-- ✅ Sachlich und direkt
-- ✅ Kein LinkedIn-Cringe
+- ✅ "Der versierte Freund" - sachlich, kompetent
+- ✅ Keine Superlative
+- ✅ Keine proprietären Statistiken
+- ✅ Konsequenz-Logik statt What-Aboutism
+
+### Feedback-Learnings Check ✓
+- ✅ Logik-Kette vorhanden (Daten → Steuer → Compliance)
+- ✅ "Krypto-Steuertools" (nicht nur "Steuertools")
+- ✅ Slogan korrekt
+- ✅ Max 4 Hashtags
+- ✅ "Datengrundlage" konkret erklärt (Transaktionshistorie im Tool)
 
 ---
 
 ## Visual-Empfehlung
 
-**Grafik-Typ:** LinkedIn Post Header
-**Größe:** 1200 x 627 px
+**Größe:** 1080 x 1350 px
 
-**Canva-Anleitung:**
-1. Hintergrund: Gradient #1E3A5F → #0F172A
-2. Headline: "Pre-Tax Infrastruktur für Krypto" (Weiß, Bold, zentriert)
-3. Subline: "TX-Partner" in #3A9EAF
-4. Subtiles Grid-Muster im Hintergrund (10% Opacity)
-5. Keine Bilder - clean & professional
+### Canva:
+1. Hintergrund: Navy (#1A2B4A)
+2. Titel: "Die Logik-Kette" – Weiß, bold
+3. Text (vertikal):
+   - "1. Datengrundlage" – Teal (#3A9EAF)
+   - "↓"
+   - "2. Steuerberechnung" – Teal
+   - "↓"
+   - "3. Compliance" – Teal
+4. Untertitel: "Wenn 1 falsch ist, sind 2 und 3 automatisch falsch." – Weiß, klein
+5. Logo: TX-Partner unten rechts
 
-**Oder ohne Grafik:** Post funktioniert auch text-only für Launch
+### Text:
+```
+Die Logik-Kette
+
+1. Datengrundlage
+      ↓
+2. Steuerberechnung
+      ↓
+3. Compliance
+```
 
 ---
 
 ## Meta-Infos
 
-**Ziel:** Positionierung & Awareness
+**Ziel:** Positionierung etablieren + Logik-Kette einführen
 **CTA:** Website-Besuch
-**Länge:** ~180 Wörter
-**Hashtags:** 6
-**Emojis:** Keine
+**Länge:** ~150 Wörter
+**Hashtags:** 4

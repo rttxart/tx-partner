@@ -1,76 +1,121 @@
 # X/Twitter Thread #1 - Launch Thread
 **Absender:** TX-Partner (@TX_Partner)
-**Typ:** Launch / Einführung
+**Typ:** Launch / Positionierung
 **Posting-Tag:** Montag
-**Involvierte Agenten:** Social Media Manager, GEO-Stratege
+**Involvierte Agenten:** Social Media Manager, Charakter-Guide
 
 ---
 
-## Thread (5 Tweets)
+## Thread (6 Tweets)
 
 ### Tweet 1 (Hook)
-Blockpit rechnet.
+Krypto-Steuertools berechnen.
 Steuerberater beraten.
 
-Wer schaut, ob die Zahlen stimmen?
+Worauf basiert beides?
 
-Fast niemand. Das Thema "Steuer" überschattet alles. 🧵
-
----
-
-### Tweet 2 (Problem)
-Das sehen wir ständig:
-
-→ "Missing History" Fehler
-→ Balance stimmt nicht
-→ Steuerberater fragt nach Belegen
-
-80% des Aufwands bei Krypto-Steuern ist nicht die Steuer.
-
-Es ist die Dokumentation.
+Auf deiner Datengrundlage – deiner Transaktionshistorie im Krypto-Steuertool. 🧵
 
 ---
 
-### Tweet 3 (Die Lücke)
-Tools sammeln Daten.
-Berater erklären Gesetze.
+### Tweet 2 (Was ist Datengrundlage)
+Die Datengrundlage = alles, was du ins Krypto-Steuertool importierst:
 
-Aber das Fundament – deine Transaktionshistorie, vollständig und nachweisbar?
+→ On-Chain Transaktionen (Wallets, DeFi, NFTs)
+→ Börsen-Trades (Binance, Kraken, etc.)
+→ Staking, Airdrops, Mining
 
-Fällt durch jedes Raster.
+Wenn hier etwas fehlt, rechnet das Tool falsch.
 
 ---
 
-### Tweet 4 (Die Lösung)
+### Tweet 3 (Die Logik)
+Die Reihenfolge bei Krypto-Steuern:
+
+1. Datengrundlage (Transaktionshistorie im Tool)
+2. Steuerberechnung (Tool/Berater)
+3. Compliance (DAC8, Finanzamt)
+
+Wenn Schritt 1 falsch ist, sind 2 und 3 automatisch falsch.
+
+---
+
+### Tweet 4 (Die Konsequenz)
+Was passiert bei unvollständiger Datengrundlage?
+
+→ Steuerberechnung basiert auf falschen Zahlen
+→ Steuererklärung enthält Fehler
+→ DAC8-Meldung passt nicht zu deiner Deklaration
+→ Finanzamt sieht Widersprüche
+
+---
+
+### Tweet 5 (Die Lücke)
+Das Tool macht die Berechnung.
+Der Berater macht die Beratung.
+
+Wer stellt sicher, dass deine Transaktionshistorie im Tool vollständig ist?
+
+Das ist die Lücke.
+
+---
+
+### Tweet 6 (CTA)
 Wir sind TX-Partner.
 
-Pre-Tax Infrastruktur für Krypto.
+Wir berechnen keine Steuern.
+Wir beraten nicht steuerlich.
 
-Kein Tool. Keine Beratung.
+Wir sorgen dafür, dass die Datengrundlage stimmt.
 
-Sondern das, worauf beides aufbaut: Deine Daten.
+Krypto-Dokumentation. Einfach richtig.
+→ tx-partner.com
 
 ---
 
-### Tweet 5 (CTA)
-DAC8 ist seit Januar aktiv.
+## Team-Review
 
-Das Finanzamt bekommt bald mehr Daten als je zuvor.
+### Social Media Manager ✓
+- Thread-Struktur: Hook → Logik → Konsequenz → Lücke → Lösung
+- Kurze, prägnante Tweets
+- Kein Hashtag im Thread (cleaner)
 
-Die Frage: Kannst du deine Seite belegen?
+### Charakter-Check ✓
+- ✅ Sachlich, keine Hypes
+- ✅ Logik statt Emotion
+- ✅ Klare Positionierung
 
-Kostenloser Check: tx-partner.com
+### Feedback-Learnings Check ✓
+- ✅ Logik-Kette ist der rote Faden
+- ✅ Konsequenz wird erklärt (nicht nur "Daten sind wichtig")
+- ✅ "Krypto-Steuertools" verwendet
+- ✅ Keine proprietären Statistiken
 
 ---
 
 ## Meta-Infos
 
-**Ziel:** Launch Awareness
-**CTA:** Website / Doku-Check
-**Thread-Länge:** 5 Tweets
-**Hashtags:** Keine (wirkt organischer)
+**Ziel:** Positionierung etablieren
+**CTA:** Website-Besuch
+**Thread-Länge:** 6 Tweets
+**Hashtags:** Keine (im Thread)
 
-### Charakter-Check ✓
-- ✅ Kurze, direkte Sätze
-- ✅ Kein Marketing-Sprech
-- ✅ Fakten statt Hype
+---
+
+## Visual-Empfehlung (Tweet 1)
+
+**Größe:** 1600 x 900 px
+
+### Canva:
+1. Hintergrund: Navy (#1A2B4A)
+2. Titel: "Die Datengrundlage" – Weiß, bold
+3. Untertitel: "Worauf alles aufbaut" – Teal (#3A9EAF)
+4. Logo: TX-Partner unten rechts
+
+### Text:
+```
+Die Datengrundlage
+Worauf alles aufbaut
+```
+
+### Alternativ: Kein Bild

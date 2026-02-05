@@ -1,6 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./*.html"],
+  // Blog-Erweiterung 02.02.2026: Pfade für Blog und Templates hinzugefügt
+  content: [
+    "./*.html",
+    "./blog/**/*.html",
+    "./templates/**/*.html"
+  ],
   darkMode: 'class',
   theme: {
     extend: {
@@ -62,5 +67,8 @@ module.exports = {
       }
     }
   },
-  plugins: [],
+  // Blog-Erweiterung 02.02.2026: Typography Plugin für Artikel-Content
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }

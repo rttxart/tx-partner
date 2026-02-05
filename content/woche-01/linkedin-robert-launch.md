@@ -1,60 +1,63 @@
-# LinkedIn Post - Robert's Launch Repost
+# LinkedIn Post - Robert's Repost
 **Absender:** Robert Thorn (Persönlicher Account)
-**Typ:** Launch / Persönlich
-**Posting-Tag:** Montag (nach TX-Partner Post)
+**Typ:** Repost mit Kommentar
+**Posting-Tag:** Montag (zeitgleich mit TX-Partner Launch)
 **Involvierte Agenten:** Social Media Manager
 
 ---
 
 ## Post-Text
 
-Nach 5 Jahren in Krypto-Kanzleien – davon die letzten als Teamlead und Director – starte ich jetzt etwas Eigenes.
+Nach fünf Jahren in Krypto-Kanzleien starte ich jetzt etwas Eigenes.
 
-TX-Partner. Pre-Tax Infrastruktur für Krypto.
+Der Grund: Ich habe gesehen, was passiert, wenn die Datengrundlage nicht stimmt – die Transaktionshistorie im Krypto-Steuertool, auf der alles aufbaut.
 
-Warum?
+Fehlende Wallets. Nicht erkannte DeFi-Protokolle. Lücken bei Börsen-Importen.
 
-Weil ich in Hunderten von Fällen gesehen habe: 80% des Aufwands ist nicht die Steuer. Es ist die Dokumentation.
-
-Das Thema bekommt kaum Aufmerksamkeit – weil "Steuer" alles überschattet. Dabei ist saubere Dokumentation das Fundament, auf dem alles andere steht.
+Die Steuerberechnung wird falsch.
+Die Compliance scheitert.
+Alles, was darauf aufbaut, hat ein Problem.
 
 Das ändern wir jetzt.
 
-→ [Repost TX-Partner Launch Post]
+[Repost TX-Partner Launch Post]
 
-#Krypto #Dokumentation #PreTax #Startup
-
----
-
-## Posting-Hinweis
-
-Diesen Post als **Repost mit Kommentar** des TX-Partner Launch Posts veröffentlichen. Auf LinkedIn: "Repost" klicken → "Repost with your thoughts".
+#Krypto #Dokumentation #Startup
 
 ---
 
 ## Team-Review
 
 ### Social Media Manager ✓
-- Persönliche Geschichte, nicht nur Firmen-Announcement
-- "5 Jahre" + "Hunderte Fälle" = Glaubwürdigkeit
-- Keine übertriebene Selbstdarstellung
+- Kurz und persönlich
+- Verknüpft Erfahrung mit Mission
+- Leitet Traffic zum Hauptpost
 
 ### Charakter-Check ✓
-- ✅ Sachlich, nicht emotional überladen
-- ✅ "Das ändern wir jetzt" – selbstbewusst, nicht arrogant
-- ✅ Korrigierte Formulierung: "bekommt kaum Aufmerksamkeit" statt "niemand kümmert sich"
+- ✅ Persönliche Motivation, kein Humble-Bragging
+- ✅ Konsequenz-Logik in Kurzform
+- ✅ Authentisch, nicht übertrieben
 
 ---
 
 ## Visual-Empfehlung
 
-**Kein eigenes Bild nötig** – der Repost zeigt automatisch das TX-Partner Visual.
+**Empfehlung:** Kein Bild (Repost bringt TX-Partner Visual mit)
+
+### Alternativ (falls eigenständiger Post):
+**Größe:** 1080 x 1080 px
+
+### Canva:
+1. Hintergrund: Navy (#1A2B4A)
+2. Zitat: "Nach fünf Jahren in Krypto-Kanzleien starte ich jetzt etwas Eigenes." – Weiß
+3. Name: "– Robert Thorn" – Teal (#3A9EAF)
+4. Logo: TX-Partner unten rechts
 
 ---
 
 ## Meta-Infos
 
-**Ziel:** Persönliche Reichweite für Launch nutzen
-**CTA:** Implizit (Repost)
-**Länge:** ~100 Wörter
-**Hashtags:** 4
+**Ziel:** Persönliche Verbindung zum Launch herstellen
+**CTA:** Implizit (Repost lesen)
+**Länge:** ~60 Wörter
+**Hashtags:** 3

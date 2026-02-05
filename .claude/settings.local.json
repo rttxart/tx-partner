@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep:*)",
+      "Bash(python:*)",
+      "Bash(powershell -Command \"Select-String -Path ''.\\\\*.html'',''.\\\\blog\\\\*.html'' -Pattern ''M4 4l16 16''\")",
+      "Bash(powershell -Command \"Select-String -Path ''.\\\\ueber-uns.html'' -Pattern ''aria-hidden'' -Context 2,1\")",
+      "Bash(npx --yes sharp-cli:*)",
+      "Bash(npx sharp-cli:*)",
+      "Bash(for f in agb.html blockpit-hinweise.html cointracking-fehler.html dokumentationsstandard.html faq.html impressum.html kontakt.html)",
+      "Bash(do sed -i 's/class=\"\"lg:hidden text-slate-600 dark:text-slate-300 p-2\"\"/class=\"\"lg:hidden text-slate-600 dark:text-slate-300 p-3\"\"/g' \"$f\")",
+      "Bash(done)",
+      "Bash(npm run build:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(npx http-server:*)"
+    ]
+  }
+}
