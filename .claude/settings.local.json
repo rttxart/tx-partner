@@ -15,7 +15,9 @@
       "Bash(git commit:*)",
       "Bash(npx http-server:*)",
       "Bash(git push:*)",
-      "Bash(git stash:*)"
+      "Bash(git stash:*)",
+      "Bash(git pull:*)",
+      "mcp__Claude_in_Chrome__tabs_context_mcp"
     ]
   }
 }
