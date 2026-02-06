@@ -653,7 +653,7 @@
     <nav class="sticky top-6 z-50 pt-6">
         <div class="mx-auto w-[95%] max-w-6xl">
             <div
-                class="glass-nav rounded-full px-6 py-3 flex items-center justify-between shadow-2xl shadow-black/5 dark:shadow-black/20">
+                class="glass-nav rounded-full px-6 py-3 flex items-center justify-between shadow-2xl shadow-black/5 dark:shadow-black/20 relative">
                 <!-- Logo (Logo-Lock) -->
                 <a href="/" class="flex items-center gap-3 shrink-0">
                     <div class="flex gap-1 h-6 items-center">
@@ -777,12 +777,14 @@
 
                 <!-- Mobile Menu -->
                 <div id="mobile-menu"
-                    class="mobile-menu absolute top-full left-0 w-full mt-2 bg-white dark:bg-[#0F0F0F] rounded-card border border-slate-100 dark:border-white/10 shadow-xl p-2">
+                    class="mobile-menu absolute top-full left-0 w-full mt-2 bg-white dark:bg-[#0F0F0F] rounded-card border border-slate-100 dark:border-white/10 shadow-xl p-2"
+                    role="dialog" aria-label="Hauptmenü">
+                    <!-- Close Button Header -->
                     <div
                         class="flex items-center justify-between px-4 py-2 mb-2 border-b border-slate-100 dark:border-white/10">
                         <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Menü</span>
                         <button id="mobile-menu-close"
-                            class="p-2 rounded-lg hover:bg-slate-50 dark:hover:bg-white/5 transition-all duration-200"
+                            class="p-2 rounded-lg hover:bg-slate-50 dark:hover:bg-white/5 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-teal"
                             aria-label="Menü schließen">
                             <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -790,21 +792,42 @@
                             </svg>
                         </button>
                     </div>
+
                     <div class="px-4 pt-3 pb-1 text-[11px] font-bold text-slate-400 uppercase tracking-widest">
                         Leistungen</div>
                     <a href="/leistungen"
                         class="block px-4 py-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
                         <div class="text-sm font-semibold text-slate-700 dark:text-white">Leistungen</div>
+                        <div class="text-xs text-slate-500 dark:text-slate-500 font-mono">Übersicht aller Services</div>
                     </a>
                     <a href="/blockpit-hinweise"
                         class="block px-4 py-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
                         <div class="text-sm font-semibold text-slate-700 dark:text-white">Blockpit Hinweise</div>
+                        <div class="text-xs text-slate-500 dark:text-slate-500 font-mono">Korrektur & Optimierung</div>
                     </a>
                     <a href="/cointracking-fehler"
                         class="block px-4 py-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
                         <div class="text-sm font-semibold text-slate-700 dark:text-white">CoinTracking Fehler</div>
+                        <div class="text-xs text-slate-500 dark:text-slate-500 font-mono">Datenbereinigung</div>
                     </a>
+
                     <div class="h-px bg-slate-100 dark:bg-white/5 my-1 mx-4"></div>
+
+                    <div class="px-4 pt-3 pb-1 text-[11px] font-bold text-slate-400 uppercase tracking-widest">Über uns
+                    </div>
+                    <a href="/ueber-uns"
+                        class="block px-4 py-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                        <div class="text-sm font-semibold text-slate-700 dark:text-white">Über uns</div>
+                        <div class="text-xs text-slate-500 dark:text-slate-500 font-mono">Wer wir sind</div>
+                    </a>
+                    <a href="/dokumentationsstandard"
+                        class="block px-4 py-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                        <div class="text-sm font-semibold text-slate-700 dark:text-white">Dokumentationsstandard</div>
+                        <div class="text-xs text-slate-500 dark:text-slate-500 font-mono">Unsere Qualitätsrichtlinien</div>
+                    </a>
+
+                    <div class="h-px bg-slate-100 dark:bg-white/5 my-1 mx-4"></div>
+
                     <a href="/blog"
                         class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 font-semibold text-sm text-brand-navy dark:text-white transition-colors">Blog</a>
                     <a href="/faq"
@@ -1479,22 +1502,7 @@
                 });
             }
 
-            // Mobile Menu Toggle
-            const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-            const mobileMenuClose = document.getElementById('mobile-menu-close');
-            const mobileMenu = document.getElementById('mobile-menu');
-
-            if (mobileMenuToggle && mobileMenu) {
-                mobileMenuToggle.addEventListener('click', () => {
-                    mobileMenu.classList.toggle('open');
-                });
-            }
-
-            if (mobileMenuClose && mobileMenu) {
-                mobileMenuClose.addEventListener('click', () => {
-                    mobileMenu.classList.remove('open');
-                });
-            }
+            // Mobile Menu: handled by tx-partner-common.js
 
             // Reading Progress Bar
             const progressBar = document.getElementById('reading-progress');
