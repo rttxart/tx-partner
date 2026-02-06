@@ -57,30 +57,26 @@ Krypto-Dokumentation einfach richtig.
 
 ## Visual-Empfehlung
 
-**Größe:** 1080 x 1350 px
+**Größe:** 1080 x 1350 px (Portrait) oder 1080 x 1080 px (Square)
 
-### Canva:
-1. Hintergrund: Navy (#1A2B4A)
-2. Titel: "Die Logik-Kette" – Weiß, bold
-3. Text (vertikal):
-   - "1. Datengrundlage" – Teal (#3A9EAF)
-   - "↓"
-   - "2. Steuerberechnung" – Teal
-   - "↓"
-   - "3. Compliance" – Teal
-4. Untertitel: "Wenn 1 falsch ist, sind 2 und 3 automatisch falsch." – Weiß, klein
-5. Logo: TX-Partner unten rechts
+**Strategie:** Simpel, Text-basiert, Wiedererkennungswert durch Farbe.
 
-### Text:
-```
-Die Logik-Kette
+### Option 1: "Die Liste" (Sehr einfach)
+1.  **Hintergrund:** Navy (#1A2B4A)
+2.  **Text (Zentriert, Weiß, Bold):**
+    *   1. Datengrundlage
+    *   2. Steuerberechnung
+    *   3. Compliance
+3.  **Akzent:** "Datengrundlage" in Teal (#3A9EAF) einfärben.
+4.  **Logo:** TX-Partner unten rechts.
 
-1. Datengrundlage
-      ↓
-2. Steuerberechnung
-      ↓
-3. Compliance
-```
+### Option 2: "Das Statement" (Quote-Style)
+1.  **Hintergrund:** Navy (#1A2B4A)
+2.  **Text (Mittig):** "Wenn das Fundament wackelt, wackelt das ganze Haus."
+3.  **Subtext:** "Die Datengrundlage muss stimmen." (Teal)
+4.  **Logo:** TX-Partner unten rechts.
+
+*Keine Icons, keine Pfeile notwendig. Der Text wirkt für sich.*
 
 ---
 

@@ -42,7 +42,7 @@ All das, gesammelt an einem Ort im Krypto-Steuertool, ist die Datengrundlage. Au
 
 ### Die Reihenfolge ist entscheidend
 
-Bei Krypto-Steuern gibt es eine klare Reihenfolge:
+Bei Krypto-Steuern und Compliance gibt es eine klare Reihenfolge:
 
 1. **Datengrundlage** – deine vollständige Transaktionshistorie im Krypto-Steuertool
 2. **Steuerberechnung** – was das Tool oder der Steuerberater auf Basis dieser Daten macht
@@ -58,11 +58,11 @@ Das klingt offensichtlich. Aber in der Praxis wird es oft übersehen.
 
 ### Was passiert, wenn die Datengrundlage nicht stimmt
 
-Stell dir vor, dein Krypto-Steuertool zeigt 2 Millionen Euro Gewinn an. Du hast aber nur 15.000 Euro investiert.
+Stell dir vor, dein Krypto-Steuertool zeigt 300.000 Euro Gewinn an, obwohl du ausschließen kannst, dass du diese Summe erreicht hast.
 
 Das ist kein Bug im Tool.
 
-Das Problem: Die Datengrundlage ist unvollständig. Das Tool sieht Verkäufe, aber nicht alle Käufe. Also berechnet es Gewinne, die es nie gab.
+Das Problem: Die Datengrundlage ist unvollständig oder fehlerhaft. Das Tool sieht Verkäufe ohne Kostenbasis oder verrechnet fälschlicherweise Auszahlungen als Verkäufe. Also berechnet es Gewinne, die es so nie gab.
 
 Die Konsequenzen:
 
@@ -86,7 +86,7 @@ Das ist die Frage, die sich viele nicht stellen:
 
 Das ist die Lücke.
 
-Tools können nicht wissen, welche Wallets du vergessen hast zu importieren. Steuerberater können nicht prüfen, ob deine DeFi-Aktivitäten vollständig erfasst sind.
+Tools können nicht wissen, welche Wallets du vergessen hast zu importieren. Steuerberatungen können nicht prüfen, ob deine DeFi-Aktivitäten vollständig erfasst sind.
 
 Die Datengrundlage – deine vollständige, korrekte Transaktionshistorie – ist deine Verantwortung.
 
@@ -105,7 +105,7 @@ Du hast 5 Wallets, aber nur 3 importiert. Die Transaktionen der anderen 2 fehlen
 Liquidity Mining, Staking, Bridges – viele Protokolle werden von Tools nicht vollständig erkannt.
 
 **Vergessene Börsen**
-Du hast 2019 auf einer Börse gekauft, die es nicht mehr gibt. Die Daten fehlen.
+Du hast 2021 auf einer Börse gekauft, die es nicht mehr gibt. Die Daten fehlen.
 
 **Falsche Klassifizierungen**
 Ein Transfer wurde als Verkauf erfasst. Die Balance stimmt nicht mehr.

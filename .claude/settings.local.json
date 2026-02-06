@@ -13,7 +13,9 @@
       "Bash(npm run build:*)",
       "Bash(git add:*)",
       "Bash(git commit:*)",
-      "Bash(npx http-server:*)"
+      "Bash(npx http-server:*)",
+      "Bash(git push:*)",
+      "Bash(git stash:*)"
     ]
   }
 }

@@ -42,16 +42,18 @@ Das ändern wir jetzt.
 
 ## Visual-Empfehlung
 
-**Empfehlung:** Kein Bild (Repost bringt TX-Partner Visual mit)
+**Strategie:** Repost steht im Fokus. Falls Visual nötig: Simpel bleiben.
+
+**Empfehlung:** Kein Bild (Repost bringt das TX-Partner Visual automatisch mit).
 
 ### Alternativ (falls eigenständiger Post):
-**Größe:** 1080 x 1080 px
+**Größe:** 1080 x 1080 px (Square)
 
-### Canva:
-1. Hintergrund: Navy (#1A2B4A)
-2. Zitat: "Nach fünf Jahren in Krypto-Kanzleien starte ich jetzt etwas Eigenes." – Weiß
-3. Name: "– Robert Thorn" – Teal (#3A9EAF)
-4. Logo: TX-Partner unten rechts
+**Visual:** "Das Announcement" (Canva)
+1.  **Hintergrund:** Navy (#1A2B4A)
+2.  **Text:** "Nach fünf Jahren in Krypto-Kanzleien starte ich jetzt etwas Eigenes." – Weiß, groß.
+3.  **Name:** "– Robert Thorn" (Teal)
+4.  **Logo:** TX-Partner unten rechts.
 
 ---
 

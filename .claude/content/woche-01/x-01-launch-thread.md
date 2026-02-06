@@ -104,18 +104,17 @@ Krypto-Dokumentation. Einfach richtig.
 
 ## Visual-Empfehlung (Tweet 1)
 
-**Größe:** 1600 x 900 px
+**Größe:** 1600 x 900 px (Landscape)
 
-### Canva:
-1. Hintergrund: Navy (#1A2B4A)
-2. Titel: "Die Datengrundlage" – Weiß, bold
-3. Untertitel: "Worauf alles aufbaut" – Teal (#3A9EAF)
-4. Logo: TX-Partner unten rechts
+**Strategie:** Simpler Header, der Aufmerksamkeit im Feed weckt.
 
-### Text:
-```
-Die Datengrundlage
-Worauf alles aufbaut
-```
+### Option 1: "Der Header" (Canva)
+1.  **Hintergrund:** Navy (#1A2B4A)
+2.  **Titel:** "Die Datengrundlage" – Weiß, Bold, sehr groß.
+3.  **Subline:** "Worauf alles aufbaut" – Teal (#3A9EAF)
+4.  **Logo:** TX-Partner unten rechts.
 
-### Alternativ: Kein Bild
+### Option 2: Kein Bild
+*   Threads funktionieren oft besser ohne Bild, um den "Lese-Flow" sofort zu starten.
+
+

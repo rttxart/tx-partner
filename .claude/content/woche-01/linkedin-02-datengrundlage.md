@@ -66,23 +66,18 @@ Wir sorgen dafür, dass die Datengrundlage stimmt.
 
 ## Visual-Empfehlung
 
-**Größe:** 1080 x 1080 px
+**Größe:** 1080 x 1080 px (Square)
 
-### Canva:
-1. Hintergrund: Navy (#1A2B4A)
-2. Zitat: "Wenn das Fundament wackelt, wackelt das ganze Haus." – Weiß, groß
-3. Name: "– Robert Thorn, TX-Partner" – Teal (#3A9EAF)
-4. Logo: TX-Partner unten rechts
+**Strategie:** Simpel, Fokus auf das Zitat.
 
-### Text:
-```
-„Wenn das Fundament wackelt,
-wackelt das ganze Haus."
+### Option 1: "Das Zitat" (Canva)
+1.  **Hintergrund:** Navy (#1A2B4A)
+2.  **Zitat:** "Wenn das Fundament wackelt, wackelt das ganze Haus." – Weiß, groß, Serif oder Sans-Serif Bold.
+3.  **Name:** "– Robert Thorn" (Teal #3A9EAF)
+4.  **Logo:** TX-Partner unten rechts.
 
-– Robert Thorn
-```
-
-### Alternativ: Kein Bild
+### Option 2: Kein Bild (Text-Only Post)
+*   LinkedIn priorisiert oft Text-Only Posts. Ein Bild ist hier optional.
 
 ---
 
