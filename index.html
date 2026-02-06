@@ -12,7 +12,7 @@
     <!-- Primary Meta Tags -->
     <title>Lückenlose Krypto-Dokumentation | TX-Partner</title>
     <meta name="description"
-        content="Fehler in Blockpit oder CoinTracking? Wir korrigieren deine Datengrundlage für saubere Steuerreports & Compliance.">
+        content="Fehler in Blockpit oder CoinTracking? Wir korrigieren deine Datengrundlage für saubere Steuerreports & DAC8-Compliance. Kostenloser Doku-Check für DE/AT.">
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://tx-partner.com/">
@@ -28,9 +28,16 @@
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@TX_Partner">
     <meta name="twitter:title" content="Krypto-Dokumentation: Blockpit & CoinTracking Fehler beheben">
     <meta name="twitter:description"
         content="Professionelle Dokumentation für komplexe Krypto-Portfolios im DACH-Raum.">
+    <meta name="twitter:image" content="https://tx-partner.com/assets/og-image.jpg">
+
+    <!-- hreflang für DE/AT -->
+    <link rel="alternate" hreflang="de-AT" href="https://tx-partner.com/">
+    <link rel="alternate" hreflang="de-DE" href="https://tx-partner.com/">
+    <link rel="alternate" hreflang="x-default" href="https://tx-partner.com/">
 
     <!-- Schema.org for Search Engines & LLMs -->
     <script type="application/ld+json">
@@ -41,15 +48,33 @@
         "description": "Professionelle Krypto-Dokumentation für Deutschland und Österreich. Krypto-Dokumentation einfach richtig.",
         "url": "https://tx-partner.com",
         "logo": "https://tx-partner.com/assets/logo.svg",
+        "image": "https://tx-partner.com/assets/og-image.jpg",
+        "email": "info@tx-partner.com",
         "address": {
             "@type": "PostalAddress",
             "addressLocality": "Graz",
             "addressCountry": "AT"
         },
-        "areaServed": ["DE", "AT", "CH"],
+        "areaServed": ["DE", "AT"],
         "serviceType": "Krypto-Dokumentation",
-        "knowsAbout": ["Blockpit", "CoinTracking", "DeFi Dokumentation", "Krypto-Steuer"],
-        "slogan": "Krypto-Dokumentation einfach richtig"
+        "knowsAbout": ["Blockpit", "CoinTracking", "DeFi Dokumentation", "Krypto-Steuer", "DAC8"],
+        "slogan": "Krypto-Dokumentation einfach richtig",
+        "founder": [
+            {
+                "@type": "Person",
+                "name": "Robert Thorn",
+                "jobTitle": "Co-Founder & Dokumentations-Spezialist"
+            },
+            {
+                "@type": "Person",
+                "name": "Johannes Anderl",
+                "jobTitle": "Co-Founder & Onboarding Spezialist"
+            }
+        ],
+        "sameAs": [
+            "https://www.linkedin.com/company/tx-partner/",
+            "https://x.com/TX_Partner"
+        ]
     }
     </script>
 
@@ -1091,8 +1116,8 @@
                     </div>
 
                     <div
-                        class="flex flex-col lg:flex-row lg:flex-wrap gap-3 text-sm font-medium text-slate-600 dark:text-slate-400 border-t border-slate-200 dark:border-white/10 mt-12 pt-8">
-                        <span class="flex items-center gap-3">
+                        class="flex flex-col lg:flex-row lg:flex-wrap gap-2 sm:gap-3 text-sm font-medium text-slate-600 dark:text-slate-400 border-t border-slate-200 dark:border-white/10 mt-8 sm:mt-12 pt-6 sm:pt-8">
+                        <span class="flex items-center gap-2 sm:gap-3">
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
                                 stroke-linejoin="round" style="color: #3A9EAF; flex-shrink: 0;">
@@ -1101,7 +1126,7 @@
                             </svg>
                             Rekonstruktion deiner Historie – auch bei lückenhaften Daten
                         </span>
-                        <span class="flex items-center gap-3">
+                        <span class="flex items-center gap-2 sm:gap-3">
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
                                 stroke-linejoin="round" style="color: #3A9EAF; flex-shrink: 0;">
@@ -1110,7 +1135,7 @@
                             </svg>
                             Unabhängig vom Steuertool, optimiert für Blockpit, CoinTracking & Co
                         </span>
-                        <span class="flex items-center gap-3">
+                        <span class="flex items-center gap-2 sm:gap-3">
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
                                 stroke-linejoin="round" style="color: #3A9EAF; flex-shrink: 0;">
@@ -1123,7 +1148,7 @@
                 </div>
 
                 <!-- Hero Visual -->
-                <div class="relative h-[500px] lg:h-[600px] w-full select-none fade-in-up visible"
+                <div class="relative h-[350px] sm:h-[450px] lg:h-[600px] w-full select-none fade-in-up visible"
                     style="animation-delay: 0.2s;">
                     <div id="reveal-container"
                         class="reveal-container absolute inset-0 rounded-[32px] overflow-hidden border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-[#080808] shadow-2xl dark:shadow-none group">
@@ -1237,7 +1262,7 @@
 
 
     <!-- Solutions Section -->
-    <section class="below-fold bg-white dark:bg-dark-bg py-32 relative overflow-hidden" id="leistungen">
+    <section class="below-fold bg-white dark:bg-dark-bg py-16 sm:py-24 md:py-32 relative overflow-hidden" id="leistungen">
         <div
             class="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_50%_0%,rgba(58,158,175,0.05),transparent_70%)] opacity-0 dark:opacity-100">
         </div>
@@ -1393,11 +1418,11 @@
             class="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none">
         </div>
         <div class="container mx-auto px-6 max-w-7xl">
-            <div class="grid lg:grid-cols-2 gap-8 lg:gap-12">
+            <div class="grid lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-12">
 
                 <!-- The Problem -->
                 <div
-                    class="flex flex-col p-10 md:p-14 bg-white dark:bg-[#0C0C0C] border border-slate-200 dark:border-white/5 rounded-[32px] h-full justify-between overflow-hidden fade-in-up">
+                    class="flex flex-col p-6 sm:p-8 md:p-10 lg:p-14 bg-white dark:bg-[#0C0C0C] border border-slate-200 dark:border-white/5 rounded-[20px] sm:rounded-[28px] md:rounded-[32px] h-full justify-between overflow-hidden fade-in-up">
                     <!-- Top Content -->
                     <div>
                         <span
@@ -1420,7 +1445,7 @@
 
                     <!-- Bottom Result Box -->
                     <div
-                        class="flex gap-4 items-start bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/5 rounded-[16px] p-6">
+                        class="flex gap-3 sm:gap-4 items-start bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/5 rounded-[12px] sm:rounded-[16px] p-4 sm:p-6">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
                             class="text-red-500 mt-0.5 shrink-0">
@@ -1438,7 +1463,7 @@
                 </div>
 
                 <!-- The Solution -->
-                <div class="relative p-10 md:p-14 rounded-[32px] flex flex-col justify-between bg-brand-navy overflow-hidden group fade-in-up h-full"
+                <div class="relative p-6 sm:p-8 md:p-10 lg:p-14 rounded-[20px] sm:rounded-[28px] md:rounded-[32px] flex flex-col justify-between bg-brand-navy overflow-hidden group fade-in-up h-full"
                     style="animation-delay: 0.2s;">
                     <!-- Background Elements -->
                     <div class="absolute top-0 right-0 bottom-0 left-0 opacity-30 pointer-events-none"></div>
@@ -1529,7 +1554,7 @@
 
                     <!-- Bottom Result Box -->
                     <div class="relative z-10 mt-10">
-                        <div class="flex items-start gap-4 bg-white/5 border border-white/10 rounded-[16px] p-6">
+                        <div class="flex items-start gap-3 sm:gap-4 bg-white/5 border border-white/10 rounded-[12px] sm:rounded-[16px] p-4 sm:p-6">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
                                 stroke-linejoin="round" class="text-brand-teal mt-0.5 shrink-0">
@@ -1600,7 +1625,7 @@
                             class="absolute -left-4 -top-4 w-32 h-32 bg-brand-teal/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
                         </div>
                         <span
-                            class="relative text-6xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-brand-teal to-cyan-400 font-mono"
+                            class="relative text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-brand-teal to-cyan-400 font-mono"
                             style="letter-spacing: -0.04em;"><span class="counter" data-target="15">0</span>+</span>
                         <span
                             class="text-xl font-semibold text-brand-navy dark:text-white transition-transform duration-500 group-hover:translate-x-3 group-hover:text-brand-teal">Jahre</span>
@@ -1623,7 +1648,7 @@
                             class="absolute -left-4 -top-4 w-32 h-32 bg-brand-teal/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
                         </div>
                         <span
-                            class="relative text-6xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-brand-teal to-cyan-400 font-mono"
+                            class="relative text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-brand-teal to-cyan-400 font-mono"
                             style="letter-spacing: -0.04em;"><span class="counter" data-target="500">0</span>+</span>
                     </div>
                     <div class="text-lg font-semibold mb-3 text-brand-navy dark:text-white">Dokumentierte Fälle
@@ -1644,7 +1669,7 @@
                             class="absolute -left-4 -top-4 w-32 h-32 bg-brand-teal/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
                         </div>
                         <span
-                            class="relative text-6xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-brand-teal to-cyan-400 font-mono"
+                            class="relative text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-brand-teal to-cyan-400 font-mono"
                             style="letter-spacing: -0.04em;"><span class="counter" data-target="8">0</span></span>
                         <span
                             class="text-xl font-semibold text-brand-navy dark:text-white transition-transform duration-500 group-hover:translate-x-3 group-hover:text-brand-teal">Jahre</span>
@@ -1734,10 +1759,10 @@
 
 
     <!-- Final CTA -->
-    <section class="below-fold bg-white dark:bg-dark-bg pt-20 pb-32">
+    <section class="below-fold bg-white dark:bg-dark-bg pt-12 sm:pt-16 md:pt-20 pb-16 sm:pb-24 md:pb-32">
         <div class="mx-auto max-w-6xl px-6">
             <div
-                class="relative rounded-[32px] overflow-hidden text-center py-24 px-6 md:px-20 bg-brand-navy shadow-2xl shadow-brand-navy/30">
+                class="relative rounded-[24px] sm:rounded-[32px] overflow-hidden text-center py-12 sm:py-16 md:py-24 px-4 sm:px-6 md:px-20 bg-brand-navy shadow-2xl shadow-brand-navy/30">
                 <div
                     class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] md:w-[500px] lg:w-[600px] h-[300px] md:h-[500px] lg:h-[600px] bg-brand-teal opacity-20 blur-[120px] rounded-full pointer-events-none">
                 </div>
@@ -1963,15 +1988,16 @@
                         ? 'text-brand-navy dark:text-white bg-brand-teal/10 px-2 py-1 rounded'
                         : 'text-slate-400 border border-slate-200 dark:border-white/10 px-2 py-1 rounded';
 
-                    // Full width grid layout with more data columns to fill the space
-                    // Grid: Type | Date | Hash | Amount | Status
+                    // Responsive grid layout
+                    // Mobile: Type | Hash | Status (3 cols)
+                    // Desktop: Type | Date | Hash | Amount | Status (5 cols)
                     return `
-                            <div class="grid grid-cols-[80px_90px_1fr_90px_100px] gap-4 items-center w-full font-mono text-xs md:text-sm h-10 border-b border-transparent">
-                                <span class="${typeClass} uppercase tracking-tight whitespace-nowrap">${data.type}</span>
-                                <span class="${textClass} whitespace-nowrap text-[10px] md:text-xs">${data.date}</span>
-                                <span class="truncate ${textClass} text-[10px] md:text-xs tracking-wider opacity-80">${data.hash}</span>
-                                <span class="${textClass} text-right whitespace-nowrap text-[10px] md:text-xs">${data.amount}</span>
-                                <span class="text-[10px] font-bold tracking-widest text-right uppercase whitespace-nowrap ${statusClass}">${data.status}</span>
+                            <div class="grid grid-cols-[60px_1fr_70px] sm:grid-cols-[80px_90px_1fr_90px_100px] gap-2 sm:gap-4 items-center w-full font-mono text-xs md:text-sm h-10 border-b border-transparent">
+                                <span class="${typeClass} uppercase tracking-tight whitespace-nowrap text-[9px] sm:text-xs">${data.type}</span>
+                                <span class="${textClass} whitespace-nowrap text-[10px] md:text-xs hidden sm:block">${data.date}</span>
+                                <span class="truncate ${textClass} text-[9px] sm:text-[10px] md:text-xs tracking-wider opacity-80">${data.hash}</span>
+                                <span class="${textClass} text-right whitespace-nowrap text-[10px] md:text-xs hidden sm:block">${data.amount}</span>
+                                <span class="text-[8px] sm:text-[10px] font-bold tracking-widest text-right uppercase whitespace-nowrap ${statusClass}">${data.status}</span>
                             </div>
                         `;
                 };
@@ -2166,7 +2192,7 @@
 
             <a href="https://app.cal.eu/johannesanderl-tx-partner/dokumentation-prufen" target="_blank"
                 rel="noopener noreferrer"
-                class="w-full flex items-center justify-between gap-4 px-6 py-4 bg-brand-navy border border-brand-teal/30 text-white rounded-button shadow-2xl shadow-brand-navy/50 backdrop-blur-lg hover:shadow-3xl hover:bg-brand-navy/90 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 group">
+                class="w-full flex items-center justify-between gap-3 sm:gap-4 px-4 sm:px-6 py-3 sm:py-4 bg-brand-navy border border-brand-teal/30 text-white rounded-button shadow-2xl shadow-brand-navy/50 backdrop-blur-lg hover:shadow-3xl hover:bg-brand-navy/90 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 group">
                 <div class="flex flex-col items-start gap-1">
                     <span class="font-bold text-base flex items-center gap-2">
                         <span class="w-2 h-2 rounded-full bg-brand-teal animate-pulse"></span>
