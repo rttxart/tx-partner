@@ -14,12 +14,12 @@ Die Börse meldet an das Finanzamt.
 Dein Krypto-Steuertool rechnet.
 Dein Steuerberater deklariert.
 
-Alles basiert auf deiner Datengrundlage – der Transaktionshistorie in deinem Tool.
+Alles basiert auf deiner Krypto-Dokumentation – der Transaktionshistorie in deinem Tool.
 
 On-Chain, Börsen, DeFi. Wenn da etwas fehlt, stimmt nichts überein.
 
 Die Frage ist nicht: Was wird gemeldet?
-Die Frage ist: Ist deine Transaktionshistorie vollständig?
+Die Frage ist: Ist deine Krypto-Dokumentation vollständig?
 
 ---
 
@@ -34,6 +34,7 @@ Die Frage ist: Ist deine Transaktionshistorie vollständig?
 - ✅ Sachlich, informativ
 - ✅ Keine Panikmache
 - ✅ Konsequenz-Logik klar
+- ✅ "Krypto-Dokumentation" (NICHT "Datengrundlage")
 
 ### Feedback-Learnings Check ✓
 - ✅ "Krypto-Steuertool" verwendet
@@ -44,7 +45,7 @@ Die Frage ist: Ist deine Transaktionshistorie vollständig?
 
 ## Meta-Infos
 
-**Ziel:** DAC8 Kontext + Datengrundlage verbinden
+**Ziel:** DAC8 Kontext + Krypto-Dokumentation verbinden
 **CTA:** Implizit (Frage)
 **Länge:** 1 Tweet
 **Hashtags:** Optional #DAC8
@@ -58,5 +59,5 @@ Die Frage ist: Ist deine Transaktionshistorie vollständig?
 ### Alternativ (Größe: 1600 x 900 px):
 1. Hintergrund: Navy (#1E3A5F)
 2. Titel: "DAC8 ist aktiv" – Weiß, bold
-3. Untertitel: "Ist deine Datengrundlage vollständig?" – Teal (#3A9EAF)
+3. Untertitel: "Ist deine Krypto-Dokumentation vollständig?" – Teal (#3A9EAF)
 4. Logo: TX-Partner unten rechts

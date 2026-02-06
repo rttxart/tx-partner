@@ -10,7 +10,7 @@
 
 Nach fünf Jahren in Krypto-Kanzleien starte ich jetzt etwas Eigenes.
 
-Der Grund: Ich habe gesehen, was passiert, wenn die Datengrundlage nicht stimmt – die Transaktionshistorie im Krypto-Steuertool, auf der alles aufbaut.
+Der Grund: Ich habe gesehen, was passiert, wenn die Krypto-Dokumentation nicht stimmt – die Transaktionshistorie im Krypto-Steuertool, auf der alles aufbaut.
 
 Fehlende Wallets. Nicht erkannte DeFi-Protokolle. Lücken bei Börsen-Importen.
 
@@ -37,6 +37,7 @@ Das ändern wir jetzt.
 - ✅ Persönliche Motivation, kein Humble-Bragging
 - ✅ Konsequenz-Logik in Kurzform
 - ✅ Authentisch, nicht übertrieben
+- ✅ "Krypto-Dokumentation" (NICHT "Datengrundlage")
 
 ---
 

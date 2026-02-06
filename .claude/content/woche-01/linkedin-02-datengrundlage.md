@@ -18,7 +18,7 @@ Dein Steuerberater arbeitet mit den Daten, die du ihm gibst.
 Dein Krypto-Steuertool rechnet mit den Daten, die du importierst.
 DAC8 vergleicht das, was die Börse meldet, mit dem, was du deklarierst.
 
-Die Datengrundlage – deine Transaktionshistorie im Krypto-Steuertool – ist das Fundament für alles.
+Die Krypto-Dokumentation – deine Transaktionshistorie im Krypto-Steuertool – ist das Fundament für alles.
 
 On-Chain Transaktionen, Börsen-Trades, DeFi, Staking. Alles muss vollständig erfasst sein.
 
@@ -28,12 +28,12 @@ Nach fünf Jahren in Krypto-Kanzleien habe ich das regelmäßig gesehen:
 
 Nicht das Steuerrecht war das Problem.
 Nicht das Tool war das Problem.
-Die Datengrundlage war das Problem.
+Die Krypto-Dokumentation war das Problem.
 
 Wenn das Fundament wackelt, wackelt das ganze Haus.
 
 Deshalb gibt es jetzt TX-Partner.
-Wir sorgen dafür, dass die Datengrundlage stimmt.
+TX-Partner sorgt für korrekte Krypto-Dokumentation.
 
 #Krypto #DAC8 #Dokumentation #Steuern
 
@@ -55,12 +55,14 @@ Wir sorgen dafür, dass die Datengrundlage stimmt.
 - ✅ Konsequenz-Logik durchgängig
 - ✅ Fundament-Analogie einfach und verständlich
 - ✅ Keine proprietären Statistiken
+- ✅ "Krypto-Dokumentation" durchgängig (NICHT "Datengrundlage")
 
 ### Feedback-Learnings Check ✓
 - ✅ Logik-Kette vorhanden
 - ✅ "Krypto-Steuertool" (nicht nur "Steuertool")
 - ✅ Keine What-Aboutisms
 - ✅ Funktioniert für Anfänger UND Profis
+- ✅ TX-Partner als Lösung positioniert
 
 ---
 

@@ -13,17 +13,17 @@ Steuerberater beraten.
 
 Aber worauf basiert beides?
 
-Auf der Datengrundlage – der Krypto-Transaktionshistorie, die ins Tool importiert wird. On-Chain Transaktionen, Börsen-Trades, DeFi-Aktivitäten. Alles gesammelt an einem Ort.
+Auf deiner Krypto-Dokumentation – eine individuelle Krypto-Historie, die ins Tool importiert wird. On-Chain Transaktionen, Börsen-Trades, DeFi-Aktivitäten. Alles gesammelt an einem Ort.
 
-Die Reihenfolge ist entscheidend:
-1. Datengrundlage
+Die Reihenfolge ist im Optimalfall entscheidend:
+1. Krypto-Dokumentation
 2. Steuerberechnung
 3. Compliance
 
-Wenn diese Datengrundlage unvollständig ist, wird jede Steuerberechnung auf dieser Basis falsch sein und jede Compliance-Prüfung wird Widersprüche zeigen.
+Eine unvollständige Krypto-Dokumentation führt zwangsläufig zu fehlerhaften Steuerberechnungen und birgt Risiken bei Compliance-Prüfungen.
 
 Wir sind TX-Partner.
-Wir sorgen dafür, dass die Datengrundlage stimmt.
+TX-Partner sorgt für korrekte Krypto-Dokumentation.
 
 Krypto-Dokumentation einfach richtig.
 
@@ -45,13 +45,14 @@ Krypto-Dokumentation einfach richtig.
 - ✅ Keine Superlative
 - ✅ Keine proprietären Statistiken
 - ✅ Konsequenz-Logik statt What-Aboutism
+- ✅ "Krypto-Dokumentation" durchgängig (NICHT "Datengrundlage")
 
 ### Feedback-Learnings Check ✓
-- ✅ Logik-Kette vorhanden (Daten → Steuer → Compliance)
+- ✅ Logik-Kette vorhanden (Dokumentation → Steuer → Compliance)
 - ✅ "Krypto-Steuertools" (nicht nur "Steuertools")
 - ✅ Slogan korrekt
 - ✅ Max 4 Hashtags
-- ✅ "Datengrundlage" konkret erklärt (Transaktionshistorie im Tool)
+- ✅ TX-Partner als Lösung positioniert
 
 ---
 
@@ -64,16 +65,16 @@ Krypto-Dokumentation einfach richtig.
 ### Option 1: "Die Liste" (Sehr einfach)
 1.  **Hintergrund:** Navy (#1E3A5F)
 2.  **Text (Zentriert, Weiß, Bold):**
-    *   1. Datengrundlage
+    *   1. Krypto-Dokumentation
     *   2. Steuerberechnung
     *   3. Compliance
-3.  **Akzent:** "Datengrundlage" in Teal (#3A9EAF) einfärben.
+3.  **Akzent:** "Krypto-Dokumentation" in Teal (#3A9EAF) einfärben.
 4.  **Logo:** TX-Partner unten rechts.
 
 ### Option 2: "Das Statement" (Quote-Style)
 1.  **Hintergrund:** Navy (#1E3A5F)
 2.  **Text (Mittig):** "Wenn das Fundament wackelt, wackelt das ganze Haus."
-3.  **Subtext:** "Die Datengrundlage muss stimmen." (Teal)
+3.  **Subtext:** "Krypto-Dokumentation muss stimmen." (Teal)
 4.  **Logo:** TX-Partner unten rechts.
 
 *Keine Icons, keine Pfeile notwendig. Der Text wirkt für sich.*

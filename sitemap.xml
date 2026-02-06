@@ -63,15 +63,15 @@
   <!-- Blog (hinzugefügt 02.02.2026) -->
   <url>
     <loc>https://tx-partner.com/blog</loc>
-    <lastmod>2026-02-02</lastmod>
+    <lastmod>2026-02-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- Blog-Artikel -->
   <url>
-    <loc>https://tx-partner.com/blog/dac8-2026</loc>
-    <lastmod>2026-02-02</lastmod>
+    <loc>https://tx-partner.com/blog/krypto-dokumentation</loc>
+    <lastmod>2026-02-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

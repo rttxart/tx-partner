@@ -14,12 +14,12 @@ Steuerberater beraten.
 
 Worauf basiert beides?
 
-Auf deiner Datengrundlage – deiner Transaktionshistorie im Krypto-Steuertool. 🧵
+Auf deiner Krypto-Dokumentation – deiner Transaktionshistorie im Krypto-Steuertool. 🧵
 
 ---
 
-### Tweet 2 (Was ist Datengrundlage)
-Die Datengrundlage = alles, was du ins Krypto-Steuertool importierst:
+### Tweet 2 (Was ist Krypto-Dokumentation)
+Krypto-Dokumentation = alles, was du ins Krypto-Steuertool importierst:
 
 → On-Chain Transaktionen (Wallets, DeFi, NFTs)
 → Börsen-Trades (Binance, Kraken, etc.)
@@ -32,7 +32,7 @@ Wenn hier etwas fehlt, rechnet das Tool falsch.
 ### Tweet 3 (Die Logik)
 Die Reihenfolge bei Krypto-Steuern:
 
-1. Datengrundlage (Transaktionshistorie im Tool)
+1. Krypto-Dokumentation (Transaktionshistorie im Tool)
 2. Steuerberechnung (Tool/Berater)
 3. Compliance (DAC8, Finanzamt)
 
@@ -41,7 +41,7 @@ Wenn Schritt 1 falsch ist, sind 2 und 3 automatisch falsch.
 ---
 
 ### Tweet 4 (Die Konsequenz)
-Was passiert bei unvollständiger Datengrundlage?
+Was passiert bei unvollständiger Krypto-Dokumentation?
 
 → Steuerberechnung basiert auf falschen Zahlen
 → Steuererklärung enthält Fehler
@@ -54,19 +54,17 @@ Was passiert bei unvollständiger Datengrundlage?
 Das Tool macht die Berechnung.
 Der Berater macht die Beratung.
 
-Hier entsteht die Lücke: Niemand prüft, ob die Datengrundlage vollständig ist.
-
-Genau hier setzen wir an.
+TX-Partner hat sich auf Krypto-Dokumentation spezialisiert.
 
 ---
 
 ### Tweet 6 (CTA)
 Wir sind TX-Partner.
 
-Wir berechnen keine Steuern.
-Wir beraten nicht steuerlich.
+TX-Partner berechnet keine Steuern.
+TX-Partner berät nicht steuerlich.
 
-Wir sorgen dafür, dass die Datengrundlage stimmt.
+TX-Partner sorgt für korrekte Krypto-Dokumentation.
 
 Krypto-Dokumentation. Einfach richtig.
 → tx-partner.com
@@ -84,12 +82,14 @@ Krypto-Dokumentation. Einfach richtig.
 - ✅ Sachlich, keine Hypes
 - ✅ Logik statt Emotion
 - ✅ Klare Positionierung
+- ✅ "Krypto-Dokumentation" durchgängig (NICHT "Datengrundlage")
 
 ### Feedback-Learnings Check ✓
 - ✅ Logik-Kette ist der rote Faden
 - ✅ Konsequenz wird erklärt (nicht nur "Daten sind wichtig")
 - ✅ "Krypto-Steuertools" verwendet
 - ✅ Keine proprietären Statistiken
+- ✅ TX-Partner als Lösung positioniert
 
 ---
 
@@ -110,11 +110,9 @@ Krypto-Dokumentation. Einfach richtig.
 
 ### Option 1: "Der Header" (Canva)
 1.  **Hintergrund:** Navy (#1E3A5F)
-2.  **Titel:** "Die Datengrundlage" – Weiß, Bold, sehr groß.
+2.  **Titel:** "Krypto-Dokumentation" – Weiß, Bold, sehr groß.
 3.  **Subline:** "Worauf alles aufbaut" – Teal (#3A9EAF)
 4.  **Logo:** TX-Partner unten rechts.
 
 ### Option 2: Kein Bild
 *   Threads funktionieren oft besser ohne Bild, um den "Lese-Flow" sofort zu starten.
-
-

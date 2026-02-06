@@ -1,4 +1,4 @@
-# Blog Post Woche 1 - Warum die Datengrundlage bei Krypto alles entscheidet
+# Blog Post Woche 1 - Warum Krypto-Dokumentation essentiell ist
 
 **Autor:** TX-Partner
 **Kategorie:** Grundlagen
@@ -9,46 +9,46 @@
 
 ## Meta-Daten
 
-**Title Tag:** Krypto Datengrundlage: Warum sie alles entscheidet | TX-Partner
-**Meta Description:** Krypto Datengrundlage falsch? Dann ist jede Steuerberechnung und DAC8-Compliance falsch. Erfahre, warum sie das Fundament für alles ist.
-**Hauptkeyword:** Krypto Datengrundlage
+**Title Tag:** Krypto-Dokumentation: Warum sie essentiell ist | TX-Partner
+**Meta Description:** Krypto-Dokumentation falsch? Dann ist jede Steuerberechnung und DAC8-Compliance falsch. Erfahre, warum sie das Fundament für alles ist.
+**Hauptkeyword:** Krypto-Dokumentation
 **Sekundäre Keywords:** Krypto Dokumentation, DAC8, Transaktionshistorie, Krypto Steuern
 
 ---
 
 ## Artikel
 
-### Warum die Datengrundlage bei Krypto alles entscheidet
+### Warum Krypto-Dokumentation essentiell ist
 
 Seit Januar 2026 ist DAC8 aktiv. Krypto-Börsen melden Transaktionen an Finanzbehörden.
 
 Aber das ist nicht die eigentliche Frage.
 
-Die eigentliche Frage ist: **Stimmt deine Datengrundlage?**
+Die eigentliche Frage ist: **Stimmt deine Krypto-Dokumentation?**
 
 ---
 
-### Was ist die Datengrundlage?
+### Was ist Krypto-Dokumentation?
 
-Die Datengrundlage ist deine **Krypto-Transaktionshistorie im Krypto-Steuertool** – also alles, was du in Blockpit, CoinTracking oder ein anderes Tool importiert hast:
+Krypto-Dokumentation ist deine **Transaktionshistorie im Krypto-Steuertool** – also alles, was du in Blockpit, CoinTracking oder ein anderes Tool importiert hast:
 
 - **On-Chain Transaktionen** – Wallet-Aktivitäten, DeFi-Interaktionen, NFTs, Bridges
 - **Börsen-Transaktionen** – Trades auf Binance, Kraken, Coinbase und anderen Plattformen
 - **Weitere Aktivitäten** – Staking-Rewards, Airdrops, Mining-Erträge
 
-All das, gesammelt an einem Ort im Krypto-Steuertool, ist die Datengrundlage. Auf ihr basiert jede weitere Berechnung.
+All das, gesammelt an einem Ort im Krypto-Steuertool, ist deine Krypto-Dokumentation. Auf ihr basiert jede weitere Berechnung.
 
 ---
 
 ### Die Reihenfolge ist entscheidend
 
-Bei Krypto-Steuern und Compliance gibt es eine klare Reihenfolge:
+Bei Krypto-Steuern und Compliance gibt es im Optimalfall eine klare Reihenfolge:
 
-1. **Datengrundlage** – deine vollständige Transaktionshistorie im Krypto-Steuertool
+1. **Krypto-Dokumentation** – deine vollständige Transaktionshistorie im Krypto-Steuertool
 2. **Steuerberechnung** – was das Tool oder der Steuerberater auf Basis dieser Daten macht
 3. **Compliance** – DAC8-Meldungen, Finanzamt, Steuererklärung
 
-Diese Reihenfolge ist nicht verhandelbar. Jeder Schritt baut auf dem vorherigen auf.
+Jeder Schritt baut auf dem vorherigen auf.
 
 **Wenn Schritt 1 falsch ist, sind Schritt 2 und 3 automatisch falsch.**
 
@@ -56,13 +56,13 @@ Das klingt offensichtlich. Aber in der Praxis wird es oft übersehen.
 
 ---
 
-### Was passiert, wenn die Datengrundlage nicht stimmt
+### Was passiert, wenn die Krypto-Dokumentation nicht stimmt
 
 Stell dir vor, dein Krypto-Steuertool zeigt 300.000 Euro Gewinn an, obwohl du ausschließen kannst, dass du diese Summe erreicht hast.
 
-Das ist kein Bug im Tool.
+Das ist vermutlich kein Bug im Tool.
 
-Das Problem: Die Datengrundlage ist unvollständig oder fehlerhaft. Das Tool sieht Verkäufe ohne Kostenbasis oder verrechnet fälschlicherweise Auszahlungen als Verkäufe. Also berechnet es Gewinne, die es so nie gab.
+Das Problem: Die Krypto-Dokumentation ist unvollständig oder fehlerhaft. Das Tool sieht Verkäufe ohne Kostenbasis oder verrechnet fälschlicherweise Transfers als Verkäufe. Also berechnet es Gewinne, die es so nie gab.
 
 Die Konsequenzen:
 
@@ -78,28 +78,26 @@ All das, weil die Basis nicht stimmt.
 
 Das ist die Frage, die sich viele nicht stellen:
 
-**Krypto-Steuertools** berechnen Gewinne und Verluste. Sie sind gut darin – solange die Daten stimmen.
+**Krypto-Steuertools** tracken deine Aktivität und berechnen Gewinne & Verluste. Sie sind meist gut darin – solange die Daten stimmen.
 
 **Steuerberater** beraten zu Steuerrecht und erstellen Steuererklärungen. Sie arbeiten mit den Daten, die sie bekommen.
 
-**Die Datengrundlage?** Die stellt niemand sicher.
+**Krypto-Dokumentation?** Genau hier setzt TX-Partner an.
 
-Das ist die Lücke.
+TX-Partner hat sich auf Krypto-Dokumentation spezialisiert.
 
-Tools können nicht wissen, welche Wallets du vergessen hast zu importieren. Steuerberatungen können nicht prüfen, ob deine DeFi-Aktivitäten vollständig erfasst sind.
+In der Praxis ist es oft schwierig, die Vollständigkeit aller Wallets und DeFi-Aktivitäten selbst zu überprüfen – besonders bei komplexen Portfolios.
 
-Die Datengrundlage – deine vollständige, korrekte Transaktionshistorie – ist deine Verantwortung.
-
-Oder du übergibst sie an Spezialisten.
+Deine Krypto-Dokumentation ist deine Verantwortung. TX-Partner unterstützt dich dabei, dieser Verantwortung nachzukommen.
 
 ---
 
-### Was "falsche Datengrundlage" konkret bedeutet
+### Was "unvollständige Krypto-Dokumentation" konkret bedeutet
 
 In der Praxis sehen wir diese Probleme:
 
 **Fehlende Wallets**
-Du hast 5 Wallets, aber nur 3 importiert. Die Transaktionen der anderen 2 fehlen komplett.
+Du hast 9 Wallets, aber nur 7 importiert. Die Transaktionen der anderen 2 fehlen komplett.
 
 **Unvollständige DeFi-Dokumentation**
 Liquidity Mining, Staking, Bridges – viele Protokolle werden von Tools nicht vollständig erkannt.
@@ -108,7 +106,7 @@ Liquidity Mining, Staking, Bridges – viele Protokolle werden von Tools nicht v
 Du hast 2021 auf einer Börse gekauft, die es nicht mehr gibt. Die Daten fehlen.
 
 **Falsche Klassifizierungen**
-Ein Transfer wurde als Verkauf erfasst. Die Balance stimmt nicht mehr.
+Ein Airdrop wurde als Einnahme erfasst.
 
 Jedes dieser Probleme pflanzt sich durch die gesamte Kette fort. Falsche Daten → falsche Berechnung → falsche Steuererklärung → Compliance-Probleme.
 
@@ -120,44 +118,43 @@ Mit DAC8 werden Krypto-Transaktionen automatisch an Finanzbehörden gemeldet. Da
 
 Diese Daten werden mit deiner Steuererklärung verglichen.
 
-Wenn da Widersprüche auftauchen, gibt es Fragen. Und für Fragen brauchst du Belege. Dokumentation. Eine lückenlose Transaktionshistorie.
-
-Die Zeit unvollständiger Dokumentation ist vorbei.
+Wenn dort Widersprüche auftauchen, können Rückfragen entstehen. In diesem Fall ist eine lückenlose, belegbare Krypto-Dokumentation die beste Vorbereitung.
 
 ---
 
 ### Was TX-Partner macht
 
-Wir berechnen keine Steuern. Das machen Krypto-Steuertools.
+TX-Partner berechnet keine Steuern. Das machen Krypto-Steuertools.
 
-Wir beraten nicht steuerlich. Das machen Steuerberater.
+TX-Partner berät nicht steuerlich. Das machen Steuerberater.
 
-Wir sorgen dafür, dass die Datengrundlage stimmt.
+TX-Partner sorgt für korrekte Krypto-Dokumentation.
 
 Das bedeutet:
+
 - Alle Wallets und Börsen erfassen
 - DeFi-Aktivitäten vollständig dokumentieren
 - Fehlende Transaktionen rekonstruieren
 - Daten so aufbereiten, dass Tools und Berater damit arbeiten können
 
-Weil ohne korrekte Datengrundlage alles andere keinen Sinn macht.
+Denn korrekte Krypto-Dokumentation ist das Fundament für alles, was danach kommt.
 
 ---
 
 ### Dein nächster Schritt
 
-Unsicher, ob deine Datengrundlage stimmt?
+Du bist unsicher, ob deine Krypto-Dokumentation vollständig ist?
 
-Wir schauen kostenlos auf dein Portfolio. 30 Minuten. Kein Verkaufsgespräch. Nur Klarheit, wo du stehst.
+Wir analysieren deine Krypto-Historie in einem 30-minütigen Gespräch. Keine Verpflichtungen – nur Klarheit, wo du stehst.
 
-→ [Kostenlosen Check anfragen](https://tx-partner.com)
+→ [Unverbindlichen Doku-Check anfragen](https://tx-partner.com/kontakt)
 
 ---
 
 ## FAQ
 
-### Was ist eine Datengrundlage bei Krypto?
-Die Datengrundlage ist deine Krypto-Transaktionshistorie im Krypto-Steuertool – alle Käufe, Verkäufe, Transfers, DeFi-Aktivitäten, Staking-Rewards und mehr, die du importiert hast. On-Chain Transaktionen, Börsen-Trades, alles gesammelt an einem Ort. Sie ist das Fundament für jede Steuerberechnung und Compliance-Prüfung.
+### Was ist Krypto-Dokumentation?
+Krypto-Dokumentation ist die vollständige, nachvollziehbare Aufbereitung deiner Transaktionshistorie – alle Käufe, Verkäufe, Transfers, DeFi-Aktivitäten und mehr. Sie ist das Fundament für jede Steuerberechnung und Compliance-Prüfung.
 
 ### Warum reicht ein Krypto-Steuertool nicht aus?
 Krypto-Steuertools wie Blockpit oder CoinTracking berechnen gut – aber nur auf Basis der Daten, die du importierst. Wenn Wallets fehlen, DeFi nicht erkannt wird oder Transaktionen falsch klassifiziert sind, sind auch die Berechnungen falsch.
@@ -165,11 +162,11 @@ Krypto-Steuertools wie Blockpit oder CoinTracking berechnen gut – aber nur auf
 ### Was ist DAC8?
 DAC8 (Directive on Administrative Cooperation 8) ist die EU-Richtlinie, die Krypto-Börsen seit Januar 2026 verpflichtet, Transaktionsdaten automatisch an Finanzbehörden zu melden. Das Finanzamt erhält strukturierte Daten und vergleicht sie mit deiner Steuererklärung.
 
-### Was passiert bei DAC8, wenn meine Daten nicht stimmen?
-DAC8 bedeutet, dass Börsen automatisch an Finanzbehörden melden. Wenn diese Meldungen nicht zu deiner Steuererklärung passen, gibt es Rückfragen. Dann brauchst du Belege und eine lückenlose Krypto-Dokumentation.
+### Was passiert bei DAC8, wenn meine Dokumentation nicht stimmt?
+DAC8 bedeutet, dass Börsen automatisch an Finanzbehörden melden. Wenn diese Meldungen nicht zu deiner Steuererklärung passen, kann es Rückfragen geben. Dann brauchst du Belege und eine lückenlose Krypto-Dokumentation.
 
-### Wie erstelle ich eine vollständige Krypto Transaktionshistorie?
-Eine vollständige Transaktionshistorie entsteht, indem du alle Wallets, Börsen und DeFi-Protokolle in dein Krypto-Steuertool importierst. Wichtig: Auch inaktive Wallets und aufgelöste Börsen-Accounts müssen erfasst sein. Bei komplexen Portfolios empfiehlt sich professionelle Unterstützung.
+### Kann TX-Partner bei jeder Krypto-Dokumentation helfen?
+TX-Partner ist auf komplexe Krypto-Historien spezialisiert – besonders wenn DeFi-Aktivitäten, Multi-Chain-Transaktionen oder Fehlermeldungen in Blockpit/CoinTracking vorliegen.
 
 ---
 
@@ -177,7 +174,7 @@ Eine vollständige Transaktionshistorie entsteht, indem du alle Wallets, Börsen
 
 - [Unsere Leistungen](/leistungen) - Krypto-Dokumentation erklärt
 - [FAQ](/faq) - Häufige Fragen
-- [Kostenloser Check](/kostenloser-check) - Portfolio-Analyse anfragen
+- [Kontakt](/kontakt) - Unverbindlichen Doku-Check anfragen
 
 ---
 
@@ -203,20 +200,25 @@ Eine vollständige Transaktionshistorie entsteht, indem du alle Wallets, Börsen
 - ✅ Keine proprietären Statistiken
 - ✅ Konsequenz-Logik durchgängig
 - ✅ "Krypto-Steuertools" verwendet
+- ✅ "Krypto-Dokumentation" durchgängig (NICHT "Datengrundlage")
 
 ### Feedback-Learnings Check ✓
 - ✅ Logik-Kette ist der rote Faden des Artikels
-- ✅ Erklärt WARUM Datengrundlage wichtig ist
+- ✅ Erklärt WARUM Krypto-Dokumentation wichtig ist
 - ✅ Keine What-Aboutisms
 - ✅ Funktioniert für Anfänger UND Profis
-- ✅ "Datengrundlage" konkret erklärt (Transaktionshistorie im Krypto-Steuertool)
+- ✅ TX-Partner als Lösung positioniert
+- ✅ Kurze, prägnante Aussagen
+- ✅ Keine Angst-Rhetorik
+- ✅ "vermutlich", "meist", "kann" für Relativierung
+- ✅ CTA: "unverbindlich" statt "kostenlos"
 
 ---
 
 ## Meta-Infos
 
 **Ziel:** Positionierung etablieren + Logik-Kette erklären
-**CTA:** Kostenloser Portfolio-Check
+**CTA:** Unverbindlicher Doku-Check
 **Länge:** ~1.200 Wörter
 **Lesezeit:** ~6 Minuten
 
@@ -228,12 +230,12 @@ Eine vollständige Transaktionshistorie entsteht, indem du alle Wallets, Börsen
 
 ### Canva:
 1. Hintergrund: Navy (#1E3A5F)
-2. Titel: "Die Datengrundlage" – Weiß, bold
+2. Titel: "Krypto-Dokumentation" – Weiß, bold
 3. Untertitel: "Warum sie bei Krypto alles entscheidet" – Teal (#3A9EAF)
 4. Logo: TX-Partner unten rechts
 
 ### Text:
 ```
-Die Datengrundlage
+Krypto-Dokumentation
 Warum sie bei Krypto alles entscheidet
 ```
