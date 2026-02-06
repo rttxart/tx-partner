@@ -56,7 +56,7 @@ Die Frage ist: Ist deine Transaktionshistorie vollständig?
 **Empfehlung:** Kein Bild (kurzer Text-Post)
 
 ### Alternativ (Größe: 1600 x 900 px):
-1. Hintergrund: Navy (#1A2B4A)
+1. Hintergrund: Navy (#1E3A5F)
 2. Titel: "DAC8 ist aktiv" – Weiß, bold
 3. Untertitel: "Ist deine Datengrundlage vollständig?" – Teal (#3A9EAF)
 4. Logo: TX-Partner unten rechts

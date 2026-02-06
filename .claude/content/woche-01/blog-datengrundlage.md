@@ -9,8 +9,8 @@
 
 ## Meta-Daten
 
-**Title Tag:** Warum die Datengrundlage bei Krypto alles entscheidet | TX-Partner
-**Meta Description:** Krypto-Steuertools berechnen, Steuerberater beraten – aber beides basiert auf deiner Datengrundlage. Wenn die falsch ist, wird alles danach falsch.
+**Title Tag:** Krypto Datengrundlage: Warum sie alles entscheidet | TX-Partner
+**Meta Description:** Krypto Datengrundlage falsch? Dann ist jede Steuerberechnung und DAC8-Compliance falsch. Erfahre, warum sie das Fundament für alles ist.
 **Hauptkeyword:** Krypto Datengrundlage
 **Sekundäre Keywords:** Krypto Dokumentation, DAC8, Transaktionshistorie, Krypto Steuern
 
@@ -122,7 +122,7 @@ Diese Daten werden mit deiner Steuererklärung verglichen.
 
 Wenn da Widersprüche auftauchen, gibt es Fragen. Und für Fragen brauchst du Belege. Dokumentation. Eine lückenlose Transaktionshistorie.
 
-Die Zeit, in der man "irgendwie durchkam", ist vorbei.
+Die Zeit unvollständiger Dokumentation ist vorbei.
 
 ---
 
@@ -162,8 +162,14 @@ Die Datengrundlage ist deine Krypto-Transaktionshistorie im Krypto-Steuertool �
 ### Warum reicht ein Krypto-Steuertool nicht aus?
 Krypto-Steuertools wie Blockpit oder CoinTracking berechnen gut – aber nur auf Basis der Daten, die du importierst. Wenn Wallets fehlen, DeFi nicht erkannt wird oder Transaktionen falsch klassifiziert sind, sind auch die Berechnungen falsch.
 
+### Was ist DAC8?
+DAC8 (Directive on Administrative Cooperation 8) ist die EU-Richtlinie, die Krypto-Börsen seit Januar 2026 verpflichtet, Transaktionsdaten automatisch an Finanzbehörden zu melden. Das Finanzamt erhält strukturierte Daten und vergleicht sie mit deiner Steuererklärung.
+
 ### Was passiert bei DAC8, wenn meine Daten nicht stimmen?
 DAC8 bedeutet, dass Börsen automatisch an Finanzbehörden melden. Wenn diese Meldungen nicht zu deiner Steuererklärung passen, gibt es Rückfragen. Dann brauchst du Belege und eine lückenlose Krypto-Dokumentation.
+
+### Wie erstelle ich eine vollständige Krypto Transaktionshistorie?
+Eine vollständige Transaktionshistorie entsteht, indem du alle Wallets, Börsen und DeFi-Protokolle in dein Krypto-Steuertool importierst. Wichtig: Auch inaktive Wallets und aufgelöste Börsen-Accounts müssen erfasst sein. Bei komplexen Portfolios empfiehlt sich professionelle Unterstützung.
 
 ---
 
@@ -221,7 +227,7 @@ DAC8 bedeutet, dass Börsen automatisch an Finanzbehörden melden. Wenn diese Me
 **Größe:** 1920 x 1080 px
 
 ### Canva:
-1. Hintergrund: Navy (#1A2B4A)
+1. Hintergrund: Navy (#1E3A5F)
 2. Titel: "Die Datengrundlage" – Weiß, bold
 3. Untertitel: "Warum sie bei Krypto alles entscheidet" – Teal (#3A9EAF)
 4. Logo: TX-Partner unten rechts

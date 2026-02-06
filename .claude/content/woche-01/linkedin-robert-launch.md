@@ -50,7 +50,7 @@ Das ändern wir jetzt.
 **Größe:** 1080 x 1080 px (Square)
 
 **Visual:** "Das Announcement" (Canva)
-1.  **Hintergrund:** Navy (#1A2B4A)
+1.  **Hintergrund:** Navy (#1E3A5F)
 2.  **Text:** "Nach fünf Jahren in Krypto-Kanzleien starte ich jetzt etwas Eigenes." – Weiß, groß.
 3.  **Name:** "– Robert Thorn" (Teal)
 4.  **Logo:** TX-Partner unten rechts.

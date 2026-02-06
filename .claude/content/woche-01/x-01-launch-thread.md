@@ -54,9 +54,9 @@ Was passiert bei unvollständiger Datengrundlage?
 Das Tool macht die Berechnung.
 Der Berater macht die Beratung.
 
-Wer stellt sicher, dass deine Transaktionshistorie im Tool vollständig ist?
+Hier entsteht die Lücke: Niemand prüft, ob die Datengrundlage vollständig ist.
 
-Das ist die Lücke.
+Genau hier setzen wir an.
 
 ---
 
@@ -109,7 +109,7 @@ Krypto-Dokumentation. Einfach richtig.
 **Strategie:** Simpler Header, der Aufmerksamkeit im Feed weckt.
 
 ### Option 1: "Der Header" (Canva)
-1.  **Hintergrund:** Navy (#1A2B4A)
+1.  **Hintergrund:** Navy (#1E3A5F)
 2.  **Titel:** "Die Datengrundlage" – Weiß, Bold, sehr groß.
 3.  **Subline:** "Worauf alles aufbaut" – Teal (#3A9EAF)
 4.  **Logo:** TX-Partner unten rechts.

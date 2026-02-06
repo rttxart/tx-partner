@@ -24,7 +24,7 @@ On-Chain Transaktionen, Börsen-Trades, DeFi, Staking. Alles muss vollständig e
 
 Wenn das nicht stimmt, wird nichts davon stimmen.
 
-Nach fünf Jahren in Krypto-Kanzleien habe ich das hundertfach gesehen:
+Nach fünf Jahren in Krypto-Kanzleien habe ich das regelmäßig gesehen:
 
 Nicht das Steuerrecht war das Problem.
 Nicht das Tool war das Problem.
@@ -71,7 +71,7 @@ Wir sorgen dafür, dass die Datengrundlage stimmt.
 **Strategie:** Simpel, Fokus auf das Zitat.
 
 ### Option 1: "Das Zitat" (Canva)
-1.  **Hintergrund:** Navy (#1A2B4A)
+1.  **Hintergrund:** Navy (#1E3A5F)
 2.  **Zitat:** "Wenn das Fundament wackelt, wackelt das ganze Haus." – Weiß, groß, Serif oder Sans-Serif Bold.
 3.  **Name:** "– Robert Thorn" (Teal #3A9EAF)
 4.  **Logo:** TX-Partner unten rechts.

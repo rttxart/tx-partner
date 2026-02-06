@@ -62,7 +62,7 @@ Krypto-Dokumentation einfach richtig.
 **Strategie:** Simpel, Text-basiert, Wiedererkennungswert durch Farbe.
 
 ### Option 1: "Die Liste" (Sehr einfach)
-1.  **Hintergrund:** Navy (#1A2B4A)
+1.  **Hintergrund:** Navy (#1E3A5F)
 2.  **Text (Zentriert, Weiß, Bold):**
     *   1. Datengrundlage
     *   2. Steuerberechnung
@@ -71,7 +71,7 @@ Krypto-Dokumentation einfach richtig.
 4.  **Logo:** TX-Partner unten rechts.
 
 ### Option 2: "Das Statement" (Quote-Style)
-1.  **Hintergrund:** Navy (#1A2B4A)
+1.  **Hintergrund:** Navy (#1E3A5F)
 2.  **Text (Mittig):** "Wenn das Fundament wackelt, wackelt das ganze Haus."
 3.  **Subtext:** "Die Datengrundlage muss stimmen." (Teal)
 4.  **Logo:** TX-Partner unten rechts.

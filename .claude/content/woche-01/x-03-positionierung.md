@@ -53,6 +53,6 @@ Das ist unser Fokus.
 **Empfehlung:** Kein Bild (Statement-Post)
 
 ### Alternativ (Größe: 1600 x 900 px):
-1. Hintergrund: Navy (#1A2B4A)
+1. Hintergrund: Navy (#1E3A5F)
 2. Text: "Krypto-Dokumentation. Einfach richtig." – Weiß, groß
 3. Logo: TX-Partner unten rechts
