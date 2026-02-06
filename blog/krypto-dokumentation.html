@@ -1470,22 +1470,7 @@
                 });
             }
 
-            // Mobile Menu Toggle
-            const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-            const mobileMenuClose = document.getElementById('mobile-menu-close');
-            const mobileMenu = document.getElementById('mobile-menu');
-
-            if (mobileMenuToggle && mobileMenu) {
-                mobileMenuToggle.addEventListener('click', () => {
-                    mobileMenu.classList.toggle('open');
-                });
-            }
-
-            if (mobileMenuClose && mobileMenu) {
-                mobileMenuClose.addEventListener('click', () => {
-                    mobileMenu.classList.remove('open');
-                });
-            }
+            // Mobile Menu: handled by tx-partner-common.js
 
             // Reading Progress Bar
             const progressBar = document.getElementById('reading-progress');
