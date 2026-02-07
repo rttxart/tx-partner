@@ -17,7 +17,12 @@
       "Bash(git push:*)",
       "Bash(git stash:*)",
       "Bash(git pull:*)",
-      "mcp__Claude_in_Chrome__tabs_context_mcp"
+      "mcp__Claude_in_Chrome__tabs_context_mcp",
+      "Bash(timeout:*)",
+      "Bash(netstat:*)",
+      "Bash(findstr:*)",
+      "Bash(start cmd /k \"npx http-server -p 3001\")",
+      "Bash(powershell -Command:*)"
     ]
   }
 }
