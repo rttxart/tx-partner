@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <!-- Dark Mode: Sofort setzen um Flash zu vermeiden -->
+    <script>
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoinTracking Negative Bestände beheben | TX-Partner</title>
+    <meta name="description"
+        content="CoinTracking zeigt negative Bestände? Short (Warning) im Steuerreport? TX-Partner findet die Ursache: Scam-Tokens, DeFi-Swaps, manuelle Korrekturen.">
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <link rel="canonical" href="https://tx-partner.com/cointracking-fehler/negative-bestaende">
+    <meta http-equiv="Cache-Control" content="public, max-age=31536000, immutable">
+    <!-- Local Fonts Only (DSGVO-konform) -->
+    <link rel="stylesheet" href="/assets/css/fonts.css">
+
+    <script defer src="/assets/tx-partner-common.js"></script>
+    <link rel="stylesheet" href="/assets/css/tailwind.css">
+
+    <style>
+        /* Page Transition */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            opacity: 0;
+            animation: pageLoad 0.5s ease-out 0.1s forwards;
+        }
+
+        @keyframes pageLoad {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Scrollbar Light Mode */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+
+        /* Scrollbar Dark Mode */
+        .dark ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .dark ::-webkit-scrollbar-thumb {
+            background: #334155;
+        }
+
+        .dark ::-webkit-scrollbar-thumb:hover {
+            background: #475569;
+        }
+
+        /* Performance: Skip rendering for below-fold sections */
+        .below-fold {
+            content-visibility: auto;
+            contain-intrinsic-size: auto 500px;
+        }
+
+        /* GPU acceleration for animated elements */
+        .animate-aurora-pulse,
+        .animate-float {
+            will-change: transform, opacity;
+        }
+
+        /* Reduce motion */
+        @media (prefers-reduced-motion: reduce) {
+
+            .animate-aurora-pulse,
+            .animate-float,
+            .animate-shimmer,
+            .animate-pulse {
+                animation: none !important;
+                transform: none !important;
+            }
+        }
+
+        /* Focus States for Accessibility (WCAG AA) */
+        :focus-visible {
+            outline: 2px solid #3A9EAF;
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+
+        a:focus-visible,
+        button:focus-visible {
+            outline: 2px solid #3A9EAF;
+            outline-offset: 2px;
+        }
+
+        .glass a:focus-visible,
+        .glass button:focus-visible {
+            outline-color: #3A9EAF;
+            outline-offset: 4px;
+        }
+
+        /* Card Spotlight Effect */
+        .card-spotlight {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-spotlight::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(58, 158, 175, 0.06), transparent 40%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .card-spotlight:hover::before {
+            opacity: 1;
+        }
+
+        /* Animations */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Glass Effect */
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .dark .glass-nav {
+            background: rgba(10, 10, 10, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        /* Navigation Dropdown */
+        .nav-dropdown {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(8px);
+            transition: all 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        .group:hover .nav-dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        /* Mobile Menu Transition */
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+            transform: translateY(-10px);
+        }
+
+        .mobile-menu.open {
+            max-height: 600px;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Button Transitions */
+        .btn-primary {
+            transition: all 0.2s ease-out;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 10px 40px -10px rgba(58, 158, 175, 0.4);
+        }
+
+        /* Noise Overlay */
+        .bg-noise {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 50;
+            opacity: 0.03;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+        }
+
+        /* Screenshot Figure */
+        .screenshot-figure {
+            margin: 2rem 0;
+        }
+
+        .screenshot-figure img {
+            border-radius: 16px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+
+        .dark .screenshot-figure img {
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Stats Box */
+        .stats-box {
+            background: linear-gradient(135deg, rgba(58, 158, 175, 0.05), rgba(58, 158, 175, 0.1));
+            border: 1px solid rgba(58, 158, 175, 0.2);
+        }
+
+        .dark .stats-box {
+            background: linear-gradient(135deg, rgba(58, 158, 175, 0.1), rgba(58, 158, 175, 0.15));
+            border: 1px solid rgba(58, 158, 175, 0.3);
+        }
+    </style>
+
+    <!-- Schema.org FAQ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Was bedeutet 'Short (Warning)' in CoinTracking?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Short (Warning) erscheint, wenn CoinTracking einen Verkauf verbucht, obwohl laut Datenbasis kein entsprechender Bestand vorhanden ist. Das passiert oft durch Scam-Tokens oder fehlerhafte manuelle Einträge. Die Kostenbasis wird auf 0 EUR gesetzt, was zu fiktiven steuerpflichtigen Gewinnen führt."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Warum zeigt CoinTracking eine negative Bilanz?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Negative Bilanzen entstehen, wenn mehr Assets als Abgang verbucht werden, als Zugang vorhanden ist. Häufige Ursachen sind Scam-Tokens mit echten Tickernamen, unerkannte DeFi-Swaps oder fehlerhafte manuelle Korrekturen."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Wie finde ich die Ursache für negative Bestände in CoinTracking?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Nutze in CoinTracking den Pfad Analyse → Checks. Dort siehst du Warnungen zu negativen Beständen. Vergleiche dann deine On-Chain-Daten mit den CoinTracking-Einträgen und grenze zeitlich ein, wann die Abweichung entstanden ist."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Wie erkenne ich Scam-Tokens in CoinTracking?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Prüfe bei verdächtigen Tokens den Contract auf einem Blockchain-Explorer. Scam-Tokens tragen oft Namen echter Coins (USDC, ETH), haben aber einen anderen Contract. Wenn es ein Scam ist, kannst du den Contract in CoinTracking als Scam markieren oder den Ticker umbenennen."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Führen negative Bestände zu falschen Steuern?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ja. Negative Bestände führen zu 'Short (Warning)' Einträgen mit Kostenbasis 0,00 EUR. Jeder Verkauf eines 'nicht vorhandenen' Assets wird als 100% Gewinn berechnet. Das kann zu erheblichen fiktiven steuerpflichtigen Gewinnen führen."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Schema.org BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://tx-partner.com"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "CoinTracking Fehler",
+                "item": "https://tx-partner.com/cointracking-fehler"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Negative Bestände",
+                "item": "https://tx-partner.com/cointracking-fehler/negative-bestaende"
+            }
+        ]
+    }
+    </script>
+</head>
+
+<body
+    class="antialiased bg-white dark:bg-dark-bg text-slate-900 dark:text-white font-sans selection:bg-brand-teal selection:text-white">
+
+    <!-- Noise Overlay -->
+    <div class="bg-noise"></div>
+
+    <!-- Navigation -->
+    <nav class="sticky top-6 z-50 pt-6">
+        <div class="mx-auto w-[95%] max-w-6xl">
+            <div
+                class="glass-nav rounded-full px-6 py-3 flex items-center justify-between shadow-2xl shadow-black/5 dark:shadow-black/20 relative">
+                <!-- Logo (Logo-Lock) -->
+                <a href="/index" class="flex items-center gap-3 group shrink-0">
+                    <div class="flex items-center gap-1 h-6">
+                        <div class="w-1.5 h-6 rounded-full bg-brand-navy dark:bg-slate-200"></div>
+                        <div class="w-1.5 h-6 rounded-full bg-brand-navy dark:bg-slate-200"></div>
+                        <div class="w-1.5 h-6 rounded-full bg-brand-navy dark:bg-slate-200"></div>
+                        <div class="w-1.5 h-6 rounded-full bg-brand-teal"></div>
+                    </div>
+                    <span
+                        class="text-brand-navy dark:text-white text-lg font-bold tracking-wider font-sans">TX-Partner</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <ul class="hidden lg:flex items-center gap-1">
+                    <!-- Dropdown: Leistungen -->
+                    <li class="relative group">
+                        <button
+                            class="flex items-center gap-1 px-4 py-2 text-sm font-medium text-slate-500 hover:text-brand-navy dark:text-slate-400 dark:hover:text-white transition-colors">
+                            Leistungen
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="group-hover:rotate-180 transition-transform duration-300">
+                                <path d="m6 9 6 6 6-6"></path>
+                            </svg>
+                        </button>
+                        <div
+                            class="nav-dropdown absolute top-full left-0 mt-2 w-56 rounded-button bg-white dark:bg-[#0F0F0F] border border-slate-100 dark:border-white/10 shadow-xl p-2">
+                            <a href="/leistungen"
+                                class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                                <div class="text-sm font-semibold text-brand-navy dark:text-white mb-0.5">Leistungen
+                                </div>
+                                <div class="text-xs text-slate-500 dark:text-slate-500 font-mono">Übersicht aller
+                                    Services</div>
+                            </a>
+                            <a href="/blockpit-hinweise"
+                                class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                                <div class="text-sm font-semibold text-brand-navy dark:text-white mb-0.5">Blockpit
+                                    Hinweise</div>
+                                <div class="text-xs text-slate-500 dark:text-slate-500 font-mono">Korrektur &
+                                    Optimierung</div>
+                            </a>
+                            <a href="/cointracking-fehler"
+                                class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                                <div class="text-sm font-semibold text-brand-teal dark:text-brand-teal mb-0.5">
+                                    CoinTracking
+                                    Fehler</div>
+                                <div class="text-xs text-slate-500 dark:text-slate-500 font-mono">Datenbereinigung</div>
+                            </a>
+                        </div>
+                    </li>
+
+                    <!-- Dropdown: Über uns -->
+                    <li class="relative group">
+                        <button
+                            class="flex items-center gap-1 px-4 py-2 text-sm font-medium text-slate-500 hover:text-brand-navy dark:text-slate-400 dark:hover:text-white transition-colors">
+                            Über uns
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="group-hover:rotate-180 transition-transform duration-300">
+                                <path d="m6 9 6 6 6-6"></path>
+                            </svg>
+                        </button>
+                        <div
+                            class="nav-dropdown absolute top-full left-0 mt-2 w-56 rounded-button bg-white dark:bg-[#0F0F0F] border border-slate-100 dark:border-white/10 shadow-xl p-2">
+                            <a href="/ueber-uns"
+                                class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                                <div class="text-sm font-semibold text-brand-navy dark:text-white mb-0.5">Über uns</div>
+                                <div class="text-xs text-slate-500 dark:text-slate-500 font-mono">Wer wir sind</div>
+                            </a>
+                            <a href="/dokumentationsstandard"
+                                class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                                <div class="text-sm font-semibold text-brand-navy dark:text-white mb-0.5">
+                                    Dokumentationsstandard</div>
+                                <div class="text-xs text-slate-500 dark:text-slate-500 font-mono">Unsere
+                                    Qualitätsrichtlinien</div>
+                            </a>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="/blog"
+                            class="block px-4 py-2 text-sm font-medium text-slate-500 hover:text-brand-navy dark:text-slate-400 dark:hover:text-white transition-colors">Blog</a>
+                    </li>
+                    <li>
+                        <a href="/faq"
+                            class="block px-4 py-2 text-sm font-medium text-slate-500 hover:text-brand-navy dark:text-slate-400 dark:hover:text-white transition-colors">FAQ</a>
+                    </li>
+                    <li>
+                        <a href="/kontakt"
+                            class="block px-4 py-2 text-sm font-medium text-slate-500 hover:text-brand-navy dark:text-slate-400 dark:hover:text-white transition-colors">Kontakt</a>
+                    </li>
+                </ul>
+
+                <!-- Right Side -->
+                <div class="flex items-center gap-4">
+                    <button id="theme-toggle"
+                        class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-white/10 text-slate-500 dark:text-slate-400 transition-all duration-200 focus:outline-none"
+                        aria-label="Dark Mode umschalten" title="Dark Mode umschalten">
+                        <span class="block dark:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="4"></circle>
+                                <path
+                                    d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32l1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41">
+                                </path>
+                            </svg>
+                        </span>
+                        <span class="hidden dark:block">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                            </svg>
+                        </span>
+                    </button>
+
+                    <button id="mobile-menu-toggle" class="lg:hidden text-slate-600 dark:text-slate-300 p-3"
+                        aria-label="Menü öffnen" aria-expanded="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="4" x2="20" y1="12" y2="12"></line>
+                            <line x1="4" x2="20" y1="6" y2="6"></line>
+                            <line x1="4" x2="20" y1="18" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu"
+                class="mobile-menu absolute top-full left-0 w-full mt-2 bg-white dark:bg-[#0F0F0F] rounded-card border border-slate-100 dark:border-white/10 shadow-xl p-2"
+                role="dialog" aria-label="Hauptmenü">
+                <!-- Close Button Header -->
+                <div
+                    class="flex items-center justify-between px-4 py-2 mb-2 border-b border-slate-100 dark:border-white/10">
+                    <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Menü</span>
+                    <button id="mobile-menu-close"
+                        class="p-2 rounded-lg hover:bg-slate-50 dark:hover:bg-white/5 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-teal"
+                        aria-label="Menü schließen">
+                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="px-4 pt-3 pb-1 text-[11px] font-bold text-slate-400 uppercase tracking-widest">Leistungen
+                </div>
+                <a href="/leistungen"
+                    class="block px-4 py-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                    <div class="text-sm font-semibold text-slate-700 dark:text-white">Leistungen</div>
+                    <div class="text-xs text-slate-500 dark:text-slate-500 font-mono">Übersicht aller Services</div>
+                </a>
+                <a href="/blockpit-hinweise"
+                    class="block px-4 py-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                    <div class="text-sm font-semibold text-slate-700 dark:text-white">Blockpit Hinweise</div>
+                    <div class="text-xs text-slate-500 dark:text-slate-500 font-mono">Korrektur & Optimierung</div>
+                </a>
+                <a href="/cointracking-fehler"
+                    class="block px-4 py-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                    <div class="text-sm font-semibold text-brand-teal dark:text-brand-teal">CoinTracking Fehler</div>
+                    <div class="text-xs text-slate-500 dark:text-slate-500 font-mono">Datenbereinigung</div>
+                </a>
+
+                <div class="h-px bg-slate-100 dark:bg-white/5 my-1 mx-4"></div>
+
+                <div class="px-4 pt-3 pb-1 text-[11px] font-bold text-slate-400 uppercase tracking-widest">Über uns
+                </div>
+                <a href="/ueber-uns"
+                    class="block px-4 py-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                    <div class="text-sm font-semibold text-slate-700 dark:text-white">Über uns</div>
+                    <div class="text-xs text-slate-500 dark:text-slate-500 font-mono">Wer wir sind</div>
+                </a>
+                <a href="/dokumentationsstandard"
+                    class="block px-4 py-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                    <div class="text-sm font-semibold text-slate-700 dark:text-white">Dokumentationsstandard</div>
+                    <div class="text-xs text-slate-500 dark:text-slate-500 font-mono">Unsere Qualitätsrichtlinien</div>
+                </a>
+
+                <div class="h-px bg-slate-100 dark:bg-white/5 my-1 mx-4"></div>
+
+                <a href="/blog"
+                    class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 font-semibold text-sm text-slate-600 dark:text-slate-300 transition-colors">Blog</a>
+                <a href="/faq"
+                    class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 font-semibold text-sm text-slate-600 dark:text-slate-300 transition-colors">FAQ</a>
+                <a href="/kontakt"
+                    class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 font-semibold text-sm text-slate-600 dark:text-slate-300 transition-colors">Kontakt</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="container mx-auto px-6 max-w-7xl pt-8">
+        <nav aria-label="Breadcrumb" class="text-sm">
+            <ol class="flex items-center gap-2 text-slate-500 dark:text-slate-400">
+                <li><a href="/index" class="hover:text-brand-teal transition-colors">Home</a></li>
+                <li><span class="mx-1">/</span></li>
+                <li><a href="/cointracking-fehler" class="hover:text-brand-teal transition-colors">CoinTracking
+                        Fehler</a></li>
+                <li><span class="mx-1">/</span></li>
+                <li class="text-brand-navy dark:text-white font-medium">Negative Bestände</li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero-section"
+        class="hero-section relative min-h-[50vh] flex flex-col items-center justify-center pt-12 sm:pt-16 md:pt-20 lg:pt-24 pb-16 overflow-hidden">
+        <!-- Grid Pattern -->
+        <div
+            class="absolute inset-0 -z-20 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none">
+        </div>
+
+        <!-- Ambient Background -->
+        <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[400px] md:w-[600px] lg:w-[800px] xl:w-[1000px] h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] xl:h-[600px] bg-brand-teal/10 dark:bg-brand-teal/15 rounded-full blur-[60px] sm:blur-[80px] md:blur-[100px] lg:blur-[120px] xl:blur-[140px] -z-10 mix-blend-multiply dark:mix-blend-screen animate-aurora-pulse">
+        </div>
+
+        <div class="container text-center max-w-7xl mr-auto ml-auto pr-6 pl-6 relative z-10">
+            <!-- Tag -->
+            <div class="fade-in-up visible">
+                <div
+                    class="inline-flex items-center gap-2 border border-brand-teal/20 dark:border-brand-teal/30 text-brand-teal text-xs font-bold tracking-widest uppercase rounded-full px-3.5 py-1.5 mb-8 backdrop-blur-sm bg-white/50 dark:bg-white/5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-brand-teal animate-pulse"></span>
+                    CoinTracking Negative Bestände
+                </div>
+            </div>
+
+            <!-- H1 - Einzige H1 auf der Seite -->
+            <h1 class="hero-h1 text-brand-navy dark:text-white mb-6 tracking-tight">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-teal to-brand-navy dark:to-white">Negative Bestände</span><br>
+                in CoinTracking?
+            </h1>
+
+            <!-- Subheadline -->
+            <p class="hero-subheadline text-slate-500 dark:text-slate-400 leading-relaxed max-w-2xl mx-auto mb-10">
+                Das passiert, wenn CoinTracking mehr Abgänge als Zugänge für ein Asset verbucht. Im Steuerreport
+                erscheint dann "Short (Warning)" mit fiktiven Gewinnen. TX-Partner klärt die technische Ursache und
+                behebt das Problem.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="fade-in-up flex flex-col md:flex-row items-stretch justify-center gap-8 visible"
+                style="animation-delay: 0.3s">
+                <!-- Primary CTA -->
+                <div class="group flex flex-col gap-2 w-full md:w-auto">
+                    <a href="https://app.cal.eu/johannesanderl-tx-partner/dokumentation-prufen" target="_blank"
+                        rel="noopener noreferrer"
+                        class="relative inline-flex h-14 w-full md:min-w-[280px] items-center justify-center gap-2 rounded-2xl bg-brand-navy px-8 text-base font-bold text-white shadow-xl shadow-brand-navy/20 dark:shadow-brand-navy/40 ring-1 ring-white/10 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-brand-navy/30 hover:scale-[1.02]">
+                        <span class="flex items-center gap-2 relative z-10">
+                            Unverbindlicher Doku-Check
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="transition-transform duration-300 group-hover:translate-x-1 text-brand-teal">
+                                <path d="M5 12h14"></path>
+                                <path d="m12 5 7 7-7 7"></path>
+                            </svg>
+                        </span>
+                    </a>
+                    <p class="text-[11px] font-medium text-slate-400 dark:text-slate-500 text-center">
+                        Ersteinschätzung deiner CoinTracking-Daten - 30 Min.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshot Section 1: Dashboard Overview -->
+    <section class="py-16 bg-white dark:bg-dark-bg">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="mb-8">
+                <span
+                    class="inline-block px-3 py-1 rounded-full bg-brand-teal/10 text-brand-teal text-[10px] font-bold uppercase tracking-widest mb-4">Beispiel
+                    aus der Praxis</span>
+                <h2 class="text-2xl md:text-3xl font-bold text-brand-navy dark:text-white mb-4">So sieht das Problem im
+                    Dashboard aus</h2>
+                <p class="text-slate-500 dark:text-slate-400">Die Bilanzsumme zeigt extreme negative Werte. So
+                    ungewöhnlich die Zahlen erscheinen - sie haben eine technische Erklärung.</p>
+            </div>
+
+            <figure class="screenshot-figure">
+                <div class="relative max-w-2xl mx-auto group">
+                    <div class="rounded-[24px] overflow-hidden bg-slate-100 dark:bg-[#0F0F0F] border border-slate-200 dark:border-white/5 shadow-2xl shadow-brand-navy/10 dark:shadow-black/40">
+                        <img src="/assets/landingpages/negative bilanz dashboard cointracking.png"
+                            alt="CoinTracking Dashboard zeigt negative Bilanz"
+                            class="w-full transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+                            loading="lazy">
+                    </div>
+                    <!-- Border Glow -->
+                    <div class="absolute inset-0 rounded-[24px] border border-white/10 pointer-events-none"></div>
+                </div>
+                <figcaption class="text-sm text-slate-500 dark:text-slate-400 mt-4 text-center">
+                    CoinTracking Dashboard: Gesamtbilanz mit negativen Werten
+                </figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- Problem Cards Section -->
+    <section class="below-fold py-24 bg-slate-50 dark:bg-[#050505] border-y border-slate-200 dark:border-white/5">
+        <div class="container max-w-7xl mr-auto ml-auto pr-6 pl-6">
+
+            <div class="mb-16 fade-in-up visible">
+                <h2 class="md:text-4xl text-brand-navy dark:text-white text-3xl font-bold tracking-tight mb-4"
+                    style="letter-spacing: -0.02em">
+                    Die 3 häufigsten Ursachen für negative CoinTracking-Bestände
+                </h2>
+                <p class="dark:text-slate-400 text-slate-500 max-w-2xl">
+                    Negative Bilanzen sind kein Bug, sondern Symptom fehlender oder falsch interpretierter Daten. Diese
+                    Szenarien begegnen TX-Partner am häufigsten.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                <!-- Card 1: Scam-Token / Airdrop -->
+                <div class="card-spotlight group rounded-card fade-in-up visible" onmousemove="handleMouseMove(event)">
+                    <div
+                        class="h-full bg-white dark:bg-dark-surface rounded-[30px] p-8 border border-slate-200 dark:border-white/5 transition-all duration-300 group-hover:shadow-xl">
+                        <div class="w-12 h-12 rounded-xl bg-brand-teal/10 flex items-center justify-center mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" class="text-brand-teal">
+                                <path d="M12 9v4m0 4h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                            </svg>
+                        </div>
+                        <div class="text-brand-teal text-xs font-bold tracking-wider font-mono mb-4">
+                            01_SCAM_TOKEN</div>
+                        <h3 class="text-xl font-semibold text-brand-navy dark:text-white mb-3">Scam-Tokens / Airdrops
+                        </h3>
+                        <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+                            Tokens mit echten Tickernamen (z.B. "USDC") werden an dein Wallet gesendet. CoinTracking
+                            erkennt nur den Namen. Ob es sich tatsächlich um einen Scam handelt, muss erst durch Analyse
+                            des Contracts geklärt werden.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 2: DeFi Aggregator -->
+                <div class="card-spotlight group rounded-card fade-in-up visible" onmousemove="handleMouseMove(event)">
+                    <div
+                        class="h-full bg-white dark:bg-dark-surface rounded-[30px] p-8 border border-slate-200 dark:border-white/5 transition-all duration-300 group-hover:shadow-xl">
+                        <div class="w-12 h-12 rounded-xl bg-brand-teal/10 flex items-center justify-center mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" class="text-brand-teal">
+                                <path d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
+                            </svg>
+                        </div>
+                        <div class="text-brand-teal text-xs font-bold tracking-wider font-mono mb-4">
+                            02_DEFI_AGGREGATOR</div>
+                        <h3 class="text-xl font-semibold text-brand-navy dark:text-white mb-3">DeFi-Aggregator nicht
+                            erkannt</h3>
+                        <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+                            Swaps über Cowswap, Jupiter oder 1inch werden oft nicht korrekt interpretiert. Der Zufluss
+                            des neuen Assets fehlt, aber der Abfluss wird gebucht. Ergebnis: Negativer Bestand des
+                            erhaltenen Tokens.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 3: Manuelle Einträge -->
+                <div class="card-spotlight group rounded-card fade-in-up visible" onmousemove="handleMouseMove(event)">
+                    <div
+                        class="h-full bg-white dark:bg-dark-surface rounded-[30px] p-8 border border-slate-200 dark:border-white/5 transition-all duration-300 group-hover:shadow-xl">
+                        <div class="w-12 h-12 rounded-xl bg-brand-teal/10 flex items-center justify-center mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" class="text-brand-teal">
+                                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+                            </svg>
+                        </div>
+                        <div class="text-brand-teal text-xs font-bold tracking-wider font-mono mb-4">
+                            03_MANUAL_ENTRY</div>
+                        <h3 class="text-xl font-semibold text-brand-navy dark:text-white mb-3">Manuelle Korrekturen</h3>
+                        <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+                            Gut gemeinte manuelle Einträge können unbeabsichtigt Bestände verfälschen. Oft werden
+                            Börsen-Namen nicht korrekt geschrieben oder ganz ausgelassen – das führt zu
+                            Zuordnungsproblemen.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshot Section 2: Detail View -->
+    <section class="py-16 bg-white dark:bg-dark-bg">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="mb-8">
+                <span
+                    class="inline-block px-3 py-1 rounded-full bg-brand-teal/10 text-brand-teal text-[10px] font-bold uppercase tracking-widest mb-4">Detailansicht</span>
+                <h2 class="text-2xl md:text-3xl font-bold text-brand-navy dark:text-white mb-4">Der Blick in die Details
+                    zeigt die Ursache</h2>
+                <p class="text-slate-500 dark:text-slate-400">In der Detailansicht werden die betroffenen Assets
+                    sichtbar. Die Ticker müssen genau analysiert werden – erst dann lässt sich feststellen, ob es sich
+                    um Scam-Tokens handelt, die denselben Namen wie bekannte Coins tragen.</p>
+            </div>
+
+            <figure class="screenshot-figure">
+                <div class="relative max-w-2xl mx-auto group">
+                    <div class="rounded-[24px] overflow-hidden bg-slate-100 dark:bg-[#0F0F0F] border border-slate-200 dark:border-white/5 shadow-2xl shadow-brand-navy/10 dark:shadow-black/40">
+                        <img src="/assets/landingpages/aktuelle negative bilanz dashboard cointracking.png"
+                            alt="CoinTracking Detailansicht mit negativen Beständen"
+                            class="w-full transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+                            loading="lazy">
+                    </div>
+                    <div class="absolute inset-0 rounded-[24px] border border-white/10 pointer-events-none"></div>
+                </div>
+                <figcaption class="text-sm text-slate-500 dark:text-slate-400 mt-4 text-center">
+                    Detailansicht: Betroffene Assets mit negativen Beständen
+                </figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- Diagnose Section -->
+    <section class="py-16 bg-slate-50 dark:bg-[#050505] border-y border-slate-200 dark:border-white/5">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div class="relative p-8 md:p-12 rounded-[32px] bg-brand-navy overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-brand-teal/20 blur-[80px] rounded-full -mr-20 -mt-20">
+                </div>
+                <div class="relative z-10 flex flex-col md:flex-row items-start gap-8">
+                    <div class="flex-1">
+                        <span
+                            class="inline-block px-3 py-1 rounded-full bg-brand-teal/20 text-brand-teal text-[10px] font-bold uppercase tracking-widest mb-4">Diagnose</span>
+                        <h3 class="text-2xl md:text-3xl font-bold text-white mb-4">So findest du die Ursache</h3>
+                        <p class="text-slate-300 leading-relaxed mb-6">
+                            CoinTracking bietet unter <strong class="text-white">Analyse → Checks</strong> eine
+                            Übersicht aller Warnungen. Dort werden negative Bestände direkt angezeigt. Der nächste
+                            Schritt: Vergleiche deine On-Chain-Daten mit den CoinTracking-Einträgen.
+                        </p>
+                        <ul class="space-y-2 text-slate-300 text-sm">
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-brand-teal shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span><strong class="text-white">Analyse → Checks</strong> zeigt Warnungen zu negativen
+                                    Beständen</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-brand-teal shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                On-Chain-Daten mit CoinTracking-Einträgen vergleichen
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg class="w-5 h-5 text-brand-teal shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                Zeitlich eingrenzen, wann die Abweichung entstanden ist
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshot Section 3: Börsen-Ansicht -->
+    <section class="py-16 bg-white dark:bg-dark-bg">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="mb-8">
+                <span
+                    class="inline-block px-3 py-1 rounded-full bg-brand-teal/10 text-brand-teal text-[10px] font-bold uppercase tracking-widest mb-4">Pro
+                    Börse</span>
+                <h2 class="text-2xl md:text-3xl font-bold text-brand-navy dark:text-white mb-4">Welche Wallet verursacht
+                    das Problem?</h2>
+                <p class="text-slate-500 dark:text-slate-400">Die Ansicht "Bilanz pro Börse" zeigt, welches Wallet oder
+                    welche Integration betroffen ist. Das hilft bei der gezielten Eingrenzung.</p>
+            </div>
+
+            <figure class="screenshot-figure">
+                <div class="relative max-w-2xl mx-auto group">
+                    <div class="rounded-[24px] overflow-hidden bg-slate-100 dark:bg-[#0F0F0F] border border-slate-200 dark:border-white/5 shadow-2xl shadow-brand-navy/10 dark:shadow-black/40">
+                        <img src="/assets/landingpages/bilanz pro börse negative bilanz dashboard cointracking.png"
+                            alt="CoinTracking Bilanz pro Börse zeigt betroffenes Wallet"
+                            class="w-full transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+                            loading="lazy">
+                    </div>
+                    <div class="absolute inset-0 rounded-[24px] border border-white/10 pointer-events-none"></div>
+                </div>
+                <figcaption class="text-sm text-slate-500 dark:text-slate-400 mt-4 text-center">
+                    Bilanz pro Börse: Das betroffene Wallet ist identifizierbar
+                </figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="below-fold py-24 bg-slate-50 dark:bg-[#050505] border-y border-slate-200 dark:border-white/5">
+        <div class="container mx-auto px-6 max-w-7xl">
+
+            <!-- Section Header -->
+            <div class="max-w-3xl mb-16">
+                <div
+                    class="inline-flex items-center gap-2 text-brand-teal text-xs font-bold tracking-widest uppercase mb-6">
+                    <span class="w-1.5 h-1.5 rounded-full bg-brand-teal"></span>
+                    Lösungsansätze
+                </div>
+
+                <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-brand-navy dark:text-white mb-6"
+                    style="letter-spacing: -0.02em">
+                    So werden negative Bestände korrigiert
+                </h2>
+
+                <p class="text-lg text-slate-500 dark:text-slate-400 leading-relaxed">
+                    Je nach Ursache gibt es unterschiedliche Lösungswege. TX-Partner analysiert die Situation und wählt
+                    den passenden Ansatz.
+                </p>
+            </div>
+
+            <!-- Solution Cards -->
+            <div class="grid md:grid-cols-2 gap-8">
+
+                <!-- Card 1: Scam-Token Lösung -->
+                <div class="p-8 rounded-card bg-white dark:bg-dark-surface border border-slate-200 dark:border-white/5">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div
+                            class="w-8 h-8 rounded-full bg-brand-teal/10 flex items-center justify-center text-brand-teal font-bold text-sm">
+                            1</div>
+                        <h3 class="text-lg font-bold text-brand-navy dark:text-white">Bei Scam-Tokens</h3>
+                    </div>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-4">
+                        Zuerst den Contract auf einem Blockchain-Explorer prüfen. Wenn es sich um einen Scam handelt,
+                        nutze das <strong class="text-brand-navy dark:text-white">Spam Center</strong> in CoinTracking:
+                    </p>
+                    <ul class="space-y-2 text-slate-500 dark:text-slate-400 text-sm">
+                        <li class="flex items-start gap-2">
+                            <svg class="w-4 h-4 text-brand-teal shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            Im Spam Center den Contract als Scam markieren – CoinTracking entfernt alle Tokens mit
+                            diesem Contract
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <svg class="w-4 h-4 text-brand-teal shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            Ticker umbenennen, um Verwechslung mit echtem Coin zu vermeiden
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Card 2: DeFi-Aggregator Lösung -->
+                <div class="p-8 rounded-card bg-white dark:bg-dark-surface border border-slate-200 dark:border-white/5">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div
+                            class="w-8 h-8 rounded-full bg-brand-teal/10 flex items-center justify-center text-brand-teal font-bold text-sm">
+                            2</div>
+                        <h3 class="text-lg font-bold text-brand-navy dark:text-white">Bei DeFi-Aggregatoren</h3>
+                    </div>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-4">
+                        On-Chain-Daten mit CoinTracking vergleichen und fehlende Zuflüsse identifizieren:
+                    </p>
+                    <ul class="space-y-2 text-slate-500 dark:text-slate-400 text-sm">
+                        <li class="flex items-start gap-2">
+                            <svg class="w-4 h-4 text-brand-teal shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            Swap-Transaktion auf der Blockchain nachvollziehen
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <svg class="w-4 h-4 text-brand-teal shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            Fehlenden Zufluss manuell nachtragen oder Import korrigieren
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Card 3: Manuelle Einträge Lösung -->
+                <div class="p-8 rounded-card bg-white dark:bg-dark-surface border border-slate-200 dark:border-white/5">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div
+                            class="w-8 h-8 rounded-full bg-brand-teal/10 flex items-center justify-center text-brand-teal font-bold text-sm">
+                            3</div>
+                        <h3 class="text-lg font-bold text-brand-navy dark:text-white">Bei manuellen Einträgen</h3>
+                    </div>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-4">
+                        Zeitlich eingrenzen, wann die Abweichung entstanden ist, dann betroffene Einträge prüfen:
+                    </p>
+                    <ul class="space-y-2 text-slate-500 dark:text-slate-400 text-sm">
+                        <li class="flex items-start gap-2">
+                            <svg class="w-4 h-4 text-brand-teal shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            Manuelle Einträge identifizieren (erkennbar wenn TX keine ID wie Tx-Hash hat)
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <svg class="w-4 h-4 text-brand-teal shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            Fehlerhafte Korrekturen rückgängig machen oder anpassen
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Card 4: Generelle Vorgehensweise -->
+                <div class="p-8 rounded-card bg-white dark:bg-dark-surface border border-slate-200 dark:border-white/5">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div
+                            class="w-8 h-8 rounded-full bg-brand-teal/10 flex items-center justify-center text-brand-teal font-bold text-sm">
+                            4</div>
+                        <h3 class="text-lg font-bold text-brand-navy dark:text-white">Generelle Vorgehensweise</h3>
+                    </div>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-4">
+                        Die wichtigsten Schritte für jeden Fall:
+                    </p>
+                    <ul class="space-y-2 text-slate-500 dark:text-slate-400 text-sm">
+                        <li class="flex items-start gap-2">
+                            <svg class="w-4 h-4 text-brand-teal shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            On-Chain-Daten als Referenz verwenden (Blockchain lügt nicht)
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <svg class="w-4 h-4 text-brand-teal shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            Zeitlich eingrenzen, wann die Abweichung entstanden ist
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshot Section 4: Steuerreport -->
+    <section class="py-16 bg-white dark:bg-dark-bg">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="mb-8">
+                <span
+                    class="inline-block px-3 py-1 rounded-full bg-brand-teal/10 text-brand-teal text-[10px] font-bold uppercase tracking-widest mb-4">Steuerreport</span>
+                <h2 class="text-2xl md:text-3xl font-bold text-brand-navy dark:text-white mb-4">Das Problem im
+                    Steuerreport: "Short (Warning)"</h2>
+                <p class="text-slate-500 dark:text-slate-400">Negative Bestände führen zu "Short (Warning)" Einträgen.
+                    Die Kostenbasis wird auf 0,00 EUR gesetzt - jeder "Verkauf" wird als 100% Gewinn berechnet.</p>
+            </div>
+
+            <figure class="screenshot-figure">
+                <div class="relative max-w-2xl mx-auto group">
+                    <div class="rounded-[24px] overflow-hidden bg-slate-100 dark:bg-[#0F0F0F] border border-slate-200 dark:border-white/5 shadow-2xl shadow-brand-navy/10 dark:shadow-black/40">
+                        <img src="/assets/landingpages/negative bilanz fehler steuerreport cointracking.png"
+                            alt="CoinTracking Steuerreport zeigt Short Warning mit Kostenbasis 0 EUR"
+                            class="w-full transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+                            loading="lazy">
+                    </div>
+                    <div class="absolute inset-0 rounded-[24px] border border-white/10 pointer-events-none"></div>
+                </div>
+                <figcaption class="text-sm text-slate-500 dark:text-slate-400 mt-4 text-center">
+                    Steuerreport: "Short (Warning)" mit Cost Basis 0,00 EUR führt zu fiktiven Gewinnen
+                </figcaption>
+            </figure>
+
+            <!-- Info Box -->
+            <div
+                class="mt-8 p-6 rounded-2xl bg-brand-teal/5 dark:bg-brand-teal/10 border border-brand-teal/20 dark:border-brand-teal/20">
+                <div class="flex items-start gap-4">
+                    <div class="w-10 h-10 rounded-xl bg-brand-teal/20 flex items-center justify-center shrink-0">
+                        <svg class="w-5 h-5 text-brand-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-brand-navy dark:text-white mb-2">So entstehen fiktive Gewinne</h4>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                            "Short (Warning)" bedeutet: CoinTracking berechnet einen Verkauf ohne vorherigen Kauf. Die
+                            Kostenbasis ist 0,00 EUR - der gesamte Verkaufserlös wird als steuerpflichtiger Gewinn
+                            ausgewiesen.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="below-fold dark:bg-[#080808] border-y dark:border-white/5 bg-slate-50 border-slate-200 pt-24 pb-24">
+        <div class="container mx-auto px-6 max-w-4xl">
+
+            <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-brand-navy dark:text-white mb-12 text-center"
+                style="letter-spacing: -0.02em">
+                Häufige Fragen zu negativen CoinTracking-Beständen
+            </h2>
+
+            <div class="space-y-6">
+
+                <!-- FAQ 1 -->
+                <div
+                    class="bg-white dark:bg-white/5 rounded-card p-6 border border-slate-200 dark:border-white/5 fade-in-up">
+                    <h3 class="text-lg font-bold text-brand-navy dark:text-white mb-3">Was bedeutet "Short (Warning)" in
+                        CoinTracking?</h3>
+                    <p class="dark:text-slate-400 leading-relaxed text-sm text-slate-500">
+                        "Short (Warning)" erscheint, wenn CoinTracking einen Verkauf verbucht, obwohl laut Datenbasis
+                        kein entsprechender Bestand vorhanden ist. Die Kostenbasis wird auf 0,00 EUR gesetzt, was zu
+                        fiktiven steuerpflichtigen Gewinnen führt. Das passiert oft durch Scam-Tokens oder fehlerhafte
+                        manuelle Einträge.
+                    </p>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div
+                    class="bg-white dark:bg-white/5 rounded-card p-6 border border-slate-200 dark:border-white/5 fade-in-up">
+                    <h3 class="text-lg font-bold text-brand-navy dark:text-white mb-3">Warum zeigt CoinTracking negative
+                        Bilanzen?</h3>
+                    <p class="dark:text-slate-400 leading-relaxed text-sm text-slate-500">
+                        Negative Bilanzen entstehen, wenn mehr Assets als Abgang verbucht werden, als Zugang vorhanden
+                        ist. Die häufigsten Ursachen sind Tokens mit echten Tickernamen (die erst als Scam identifiziert
+                        werden müssen), unerkannte DeFi-Swaps oder fehlerhafte manuelle Korrekturen.
+                    </p>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div
+                    class="bg-white dark:bg-white/5 rounded-card p-6 border border-slate-200 dark:border-white/5 fade-in-up">
+                    <h3 class="text-lg font-bold text-brand-navy dark:text-white mb-3">Wie finde ich die Ursache meiner
+                        negativen Bestände?</h3>
+                    <p class="dark:text-slate-400 leading-relaxed text-sm text-slate-500">
+                        Nutze in CoinTracking den Pfad <strong>Analyse → Checks</strong>. Dort werden Warnungen zu
+                        negativen Beständen angezeigt. Dann On-Chain-Daten mit CoinTracking vergleichen und zeitlich
+                        eingrenzen, wann die Abweichung entstanden ist.
+                    </p>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div
+                    class="bg-white dark:bg-white/5 rounded-card p-6 border border-slate-200 dark:border-white/5 fade-in-up">
+                    <h3 class="text-lg font-bold text-brand-navy dark:text-white mb-3">Führen negative Bestände zu
+                        falschen Steuern?</h3>
+                    <p class="dark:text-slate-400 leading-relaxed text-sm text-slate-500">
+                        Ja. Negative Bestände führen zu "Short (Warning)" Einträgen mit Kostenbasis 0,00 EUR. Jeder
+                        Verkauf eines "nicht vorhandenen" Assets wird als 100% Gewinn berechnet. Das kann zu erheblichen
+                        fiktiven steuerpflichtigen Gewinnen führen.
+                    </p>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div
+                    class="bg-white dark:bg-white/5 rounded-card p-6 border border-slate-200 dark:border-white/5 fade-in-up">
+                    <h3 class="text-lg font-bold text-brand-navy dark:text-white mb-3">Kann ich negative Bestände selbst
+                        beheben?</h3>
+                    <p class="dark:text-slate-400 leading-relaxed text-sm text-slate-500">
+                        Die Identifikation der Ursache ist oft der schwierigste Teil. Wenn du weißt, welche
+                        Transaktionen problematisch sind, kannst du sie manuell korrigieren. Bei komplexen Fällen mit
+                        vielen Wallets und DeFi-Protokollen unterstützt TX-Partner bei der systematischen Analyse und
+                        Behebung.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="below-fold py-20 bg-white dark:bg-dark-bg">
+        <div class="container mx-auto max-w-6xl px-4 sm:px-6">
+            <div
+                class="relative rounded-card overflow-hidden text-center py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-12 lg:px-20 bg-brand-navy shadow-2xl shadow-brand-navy/30">
+                <div
+                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200px] sm:w-[300px] md:w-[400px] lg:w-[600px] h-[200px] sm:h-[300px] md:h-[400px] lg:h-[600px] bg-brand-teal opacity-20 blur-[60px] sm:blur-[80px] md:blur-[100px] lg:blur-[120px] rounded-full pointer-events-none">
+                </div>
+
+                <div class="relative z-10 fade-in-up">
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl leading-tight text-white font-bold tracking-tight mb-6 sm:mb-8"
+                        style="letter-spacing: -0.02em">
+                        Negative Bestände
+                        <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-brand-teal to-white">systematisch
+                            beheben</span>
+                    </h2>
+                    <p
+                        class="text-base sm:text-lg md:text-xl font-medium text-slate-200 max-w-xl mr-auto mb-8 sm:mb-10 md:mb-12 ml-auto">
+                        TX-Partner analysiert deine CoinTracking-Daten, identifiziert die Ursachen und bereitet deine
+                        Dokumentation für korrekte Steuerreports auf.
+                    </p>
+                    <a href="https://app.cal.eu/johannesanderl-tx-partner/dokumentation-prufen" target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn-primary inline-flex items-center justify-center bg-white text-brand-navy text-base sm:text-lg font-semibold rounded-button px-6 sm:px-8 py-3 sm:py-4 hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(255,255,255,0.3)] transition-all duration-300 group">
+                        Unverbindlicher Doku-Check
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="ml-2 text-brand-teal group-hover:translate-x-1 transition-transform">
+                            <path d="M5 12h14"></path>
+                            <path d="m12 5 7 7-7 7"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Overview Link -->
+    <section class="py-8 bg-white dark:bg-dark-bg">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <a href="/cointracking-fehler"
+                class="inline-flex items-center gap-2 text-brand-teal hover:text-brand-navy dark:hover:text-white font-medium transition-colors group">
+                <svg class="w-4 h-4 group-hover:-translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+                Zurück zur CoinTracking Fehler Übersicht
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="pt-24 pb-12 bg-white dark:bg-dark-bg border-t border-slate-200 dark:border-white/5">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 lg:gap-16 mb-20">
+
+                <!-- Column 1: Brand -->
+                <div class="space-y-6">
+                    <a href="/index" class="flex items-center gap-3">
+                        <div class="flex items-center gap-1 h-6">
+                            <div class="w-1.5 h-6 rounded-full bg-brand-navy dark:bg-slate-200"></div>
+                            <div class="w-1.5 h-6 rounded-full bg-brand-navy dark:bg-slate-200"></div>
+                            <div class="w-1.5 h-6 rounded-full bg-brand-navy dark:bg-slate-200"></div>
+                            <div class="w-1.5 h-6 rounded-full bg-brand-teal"></div>
+                        </div>
+                        <span
+                            class="text-brand-navy dark:text-white text-lg font-bold tracking-wider font-sans">TX-Partner</span>
+                    </a>
+                    <p class="dark:text-slate-400 leading-relaxed text-sm text-slate-500">Krypto-Dokumentation einfach
+                        richtig. Die Grundlage für Steuern, Compliance und Ruhe im Kopf.</p>
+                    <div class="flex gap-4">
+                        <a href="https://x.com/TX_Partner" target="_blank" rel="noopener noreferrer"
+                            class="text-slate-400 hover:text-brand-navy dark:hover:text-white transition-colors"
+                            aria-label="TX-Partner auf X (Twitter)">
+                            <span class="sr-only">X (Twitter)</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/company/tx-partner/" target="_blank" rel="noopener noreferrer"
+                            class="text-slate-400 hover:text-brand-navy dark:hover:text-white transition-colors"
+                            aria-label="TX-Partner auf LinkedIn">
+                            <span class="sr-only">LinkedIn</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                </path>
+                                <rect width="4" height="12" x="2" y="9"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Leistungen -->
+                <div>
+                    <h4 class="font-bold mb-6 text-xs uppercase tracking-widest text-brand-navy dark:text-white">
+                        Leistungen</h4>
+                    <ul class="space-y-4">
+                        <li><a href="/leistungen"
+                                class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Leistungen</a>
+                        </li>
+                        <li><a href="/blockpit-hinweise"
+                                class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Blockpit
+                                Hinweise</a></li>
+                        <li><a href="/cointracking-fehler"
+                                class="text-sm font-medium text-brand-teal transition-colors">CoinTracking Fehler</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Unternehmen -->
+                <div>
+                    <h4 class="font-bold mb-6 text-xs uppercase tracking-widest text-brand-navy dark:text-white">
+                        Unternehmen</h4>
+                    <ul class="space-y-4">
+                        <li><a href="/ueber-uns"
+                                class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Über
+                                uns</a></li>
+                        <li><a href="/dokumentationsstandard"
+                                class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Dokumentationsstandard</a>
+                        </li>
+                        <li><a href="/blog"
+                                class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Blog</a>
+                        </li>
+                        <li><a href="/faq"
+                                class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">FAQ</a>
+                        </li>
+                        <li><a href="/kontakt"
+                                class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Kontakt</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Rechtliches -->
+                <div>
+                    <h4 class="font-bold mb-6 text-xs uppercase tracking-widest text-brand-navy dark:text-white">
+                        Rechtliches</h4>
+                    <ul class="space-y-4">
+                        <li><a href="/agb"
+                                class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">AGB</a>
+                        </li>
+                        <li><a href="/datenschutz"
+                                class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Datenschutz</a>
+                        </li>
+                        <li><a href="/impressum"
+                                class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Impressum</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="border-t border-slate-200 dark:border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-xs font-medium text-slate-400 dark:text-slate-500">© 2026 TX-Partner – eine
+                    Geschäftsbezeichnung der Solvum GmbH i.G. Alle Rechte vorbehalten.</p>
+                <div class="flex gap-8">
+                    <a href="/sitemap"
+                        class="text-xs font-medium text-slate-400 dark:text-slate-500 hover:text-brand-navy dark:hover:text-white transition-colors">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Card Spotlight Effect
+        function handleMouseMove(e) {
+            const card = e.currentTarget;
+            const rect = card.getBoundingClientRect();
+            card.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
+            card.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
+        }
+
+        // Intersection Observer for Animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+
+        // Dark Mode Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+
+        themeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            localStorage.theme = html.classList.contains('dark') ? 'dark' : 'light';
+        });
+    </script>
+</body>
+
+</html>

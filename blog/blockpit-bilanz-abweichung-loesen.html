@@ -1,0 +1,1582 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <!-- Dark Mode: Sofort setzen um Flash zu vermeiden -->
+    <script>
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Meta -->
+    <title>Abweichende Bilanz in Blockpit lösen: Ursachen & Korrektur | TX-Partner</title>
+    <meta name="description"
+        content="Blockpit zeigt 'Abweichende Balance'? Erfahre, warum Synced vs. Berechnete Balance abweicht und wie das automatische Balancing mit Kostenbasis 0 EUR zu fiktiven Gewinnen führt.">
+    <link rel="canonical" href="https://tx-partner.com/blog/blockpit-bilanz-abweichung-lösen">
+
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <meta http-equiv="Cache-Control" content="public, max-age=31536000, immutable">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://tx-partner.com/blog/blockpit-bilanz-abweichung-lösen">
+    <meta property="og:title" content="Abweichende Bilanz in Blockpit lösen: Ursachen & Korrektur | TX-Partner">
+    <meta property="og:description"
+        content="Blockpit zeigt 'Abweichende Balance'? Erfahre, warum Synced vs. Berechnete Balance abweicht und wie das automatische Balancing fiktive Gewinne erzeugt.">
+    <meta property="og:image" content="https://tx-partner.com/assets/blog/blockpit-bilanz-abweichung-loesen.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="article:published_time" content="2026-02-07">
+    <meta property="article:author" content="TX-Partner">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Abweichende Bilanz in Blockpit lösen: Ursachen & Korrektur">
+    <meta name="twitter:description"
+        content="Blockpit zeigt 'Abweichende Balance'? Erfahre, warum die Bilanz abweicht und wie du fiktive Gewinne vermeidest.">
+    <meta name="twitter:image" content="https://tx-partner.com/assets/blog/blockpit-abweichende-bilanz.png">
+
+    <!-- Local Fonts Only (DSGVO-konform) -->
+    <link rel="stylesheet" href="/assets/css/fonts.css">
+    <script defer src="/assets/tx-partner-common.js"></script>
+    <link rel="stylesheet" href="/assets/css/tailwind.css">
+
+    <!-- Schema.org BlogPosting -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Abweichende Bilanz in Blockpit lösen: Ursachen & Korrektur",
+        "description": "Blockpit zeigt 'Abweichende Balance'? Erfahre, warum Synced vs. Berechnete Balance abweicht und wie das automatische Balancing mit Kostenbasis 0 EUR zu fiktiven Gewinnen führt.",
+        "datePublished": "2026-02-07",
+        "dateModified": "2026-02-07",
+        "author": {
+            "@type": "Organization",
+            "name": "TX-Partner",
+            "url": "https://tx-partner.com/über-uns"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "TX-Partner",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://tx-partner.com/assets/logo-signature2.png"
+            }
+        },
+        "image": "https://tx-partner.com/assets/blog/blockpit-abweichende-bilanz.png",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://tx-partner.com/blog/blockpit-bilanz-abweichung-lösen"
+        },
+        "articleSection": "Blockpit",
+        "inLanguage": "de-DE",
+        "keywords": ["Blockpit abweichende Balance", "Blockpit Hinweise lösen", "Krypto Dokumentation", "Fehlende Historie", "Balancing"]
+    }
+    </script>
+
+    <!-- FAQ Schema für Featured Snippets -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Was bedeutet 'Abweichende Balance' in Blockpit?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "'Abweichende Balance' zeigt an, dass der On-Chain-Bestand (Synced Balance) nicht mit dem von Blockpit berechneten Bestand übereinstimmt. Blockpit sieht z.B. 0,00056 ETH on-chain, berechnet aber -1,28 ETH basierend auf den importierten Transaktionen."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Was ist das '+ Balancing' in Blockpit?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Blockpit gleicht fehlende Historie automatisch mit einem '+ Balancing' Eintrag aus. Das Problem: Diese Einträge haben eine Kostenbasis von 0,00 EUR. Wenn du später verkaufst, wird der gesamte Verkaufserlös als steuerpflichtiger Gewinn berechnet."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Was ist der Unterschied zwischen Synced und Berechneter Balance?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Die 'Synced Balance' ist der tatsächliche On-Chain-Bestand deines Wallets. Die 'Berechnete Balance' ergibt sich aus allen Transaktionen, die Blockpit importiert hat. Wenn diese abweichen, fehlen Transaktionen in der Dokumentation."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Wie finde ich die Ursache für abweichende Bilanzen in Blockpit?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Nutze den 'Ledger Mode' in Blockpit. Er zeigt den Bestandsverlauf pro Asset und du kannst exakt sehen, ab welcher Transaktion die Berechnung von der Realität abweicht. Oft sind es Bridge-Transaktionen oder nicht erkannte DeFi-Swaps."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Warum führt 'Fehlende Historie' zu falschen Steuern?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Wenn Blockpit die ursprüngliche Kauftransaktion nicht kennt, setzt es die Kostenbasis auf 0 EUR. Bei einem späteren Verkauf wird dann der gesamte Erlös als Gewinn versteuert - auch wenn du beim Kauf bereits bezahlt hast."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        /* Page Transition */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            opacity: 0;
+            animation: pageLoad 0.5s ease-out 0.1s forwards;
+            overflow-x: hidden;
+            background-color: #f8fafc;
+        }
+
+        .dark body,
+        html.dark body {
+            background-color: #0C0E14;
+        }
+
+        footer {
+            background-color: white;
+        }
+
+        .dark footer,
+        html.dark footer {
+            background-color: #0C0E14;
+        }
+
+        .author-bio {
+            background-color: white;
+        }
+
+        .dark .author-bio,
+        html.dark .author-bio {
+            background-color: #111318;
+        }
+
+        .internal-links {
+            background-color: white;
+        }
+
+        .dark .internal-links,
+        html.dark .internal-links {
+            background-color: #0C0C0C;
+        }
+
+        .sources-box {
+            background-color: #f8fafc;
+        }
+
+        .dark .sources-box,
+        html.dark .sources-box {
+            background-color: #0A0A0A;
+        }
+
+        @keyframes pageLoad {
+            from {
+                opacity: 0;
+                transform: translateY(8px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Noise Overlay */
+        .bg-noise {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 50;
+            opacity: 0.03;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
+        .dark .bg-noise {
+            opacity: 0.015;
+        }
+
+        /* Glass Effect for Navigation */
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .dark .glass-nav {
+            background: rgba(15, 15, 15, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Dropdown Animation */
+        .nav-dropdown {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-8px);
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .group:hover .nav-dropdown,
+        .group:focus-within .nav-dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        /* Mobile Menu Animation */
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 0.3s ease-out, opacity 0.2s ease;
+        }
+
+        .mobile-menu.open {
+            max-height: 600px;
+            opacity: 1;
+        }
+
+        /* Prose Customization */
+        .prose h2 {
+            scroll-margin-top: 100px;
+        }
+
+        .prose a {
+            color: #3A9EAF;
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 4px;
+            transition: all 0.2s;
+        }
+
+        .prose a:hover {
+            color: #2C7A87;
+            text-decoration-thickness: 2px;
+        }
+
+        /* Info Box Premium */
+        .info-box {
+            background: rgba(58, 158, 175, 0.08);
+            border: 1px solid rgba(58, 158, 175, 0.25);
+            border-radius: 24px;
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+
+        .dark .info-box {
+            background: rgba(58, 158, 175, 0.08);
+            border: 1px solid rgba(58, 158, 175, 0.2);
+        }
+
+        .info-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle at 100% 0%, rgba(58, 158, 175, 0.15), transparent 70%);
+            pointer-events: none;
+        }
+
+        /* Prose Overrides */
+        .prose {
+            max-width: 65ch;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .prose h2 {
+            scroll-margin-top: 120px;
+            color: #1E3A5F;
+            font-weight: 800;
+            margin-top: 3rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(58, 158, 175, 0.2);
+        }
+
+        .dark .prose h2 {
+            color: white;
+        }
+
+        .prose h3 {
+            color: #1E3A5F;
+            font-weight: 700;
+        }
+
+        .dark .prose h3 {
+            color: #cbd5e1;
+        }
+
+        .prose strong {
+            color: #1E3A5F;
+            font-weight: 700;
+        }
+
+        .dark .prose strong {
+            color: #fff;
+        }
+
+        .prose ul>li::marker {
+            color: #3A9EAF;
+        }
+
+        /* FAQ Box Style */
+        .faq-box {
+            background-color: rgba(255, 255, 255, 0.95);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.08);
+        }
+
+        @media (min-width: 640px) {
+            .faq-box {
+                border-radius: 16px;
+                padding: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        .dark .faq-box {
+            background-color: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: none;
+        }
+
+        .faq-box h4 {
+            margin-top: 0 !important;
+            color: #1E3A5F;
+            font-weight: 700;
+            font-size: 1.1em;
+        }
+
+        .dark .faq-box h4 {
+            color: white;
+        }
+
+        /* Reading Progress Bar */
+        .reading-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: rgba(0, 0, 0, 0.08);
+            z-index: 60;
+        }
+
+        .dark .reading-progress {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .reading-progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #3A9EAF, #1E3A5F);
+            width: 0%;
+            transition: width 0.1s ease-out;
+        }
+
+        /* Premium Article Container */
+        .article-container {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: 32px;
+            padding: 2rem;
+            margin-top: 2rem;
+            box-shadow: 0 4px 30px -10px rgba(0, 0, 0, 0.08);
+        }
+
+        @media (min-width: 768px) {
+            .article-container {
+                padding: 3rem;
+            }
+        }
+
+        .dark .article-container {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            box-shadow: none;
+        }
+
+        /* Section Numbers */
+        .section-number {
+            display: inline-block;
+            font-family: ui-monospace, SFMono-Regular, monospace;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #3A9EAF;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Pull Quote Style */
+        .pull-quote {
+            position: relative;
+            margin: 2.5rem 0;
+            padding: 1.5rem 2rem;
+            background: linear-gradient(135deg, rgba(58, 158, 175, 0.12), rgba(30, 58, 95, 0.08));
+            border-left: 4px solid #3A9EAF;
+            border-radius: 0 16px 16px 0;
+            font-size: 1.15rem;
+            font-style: italic;
+            color: #1E3A5F;
+        }
+
+        .dark .pull-quote {
+            background: linear-gradient(135deg, rgba(58, 158, 175, 0.12), rgba(30, 58, 95, 0.1));
+            color: #e2e8f0;
+        }
+
+        .pull-quote::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            font-size: 4rem;
+            font-family: Georgia, serif;
+            color: rgba(58, 158, 175, 0.3);
+            line-height: 1;
+        }
+
+        /* Enhanced Lists */
+        .prose ul {
+            background: rgba(58, 158, 175, 0.06);
+            border-radius: 16px;
+            padding: 1.25rem 1.25rem 1.25rem 2.5rem;
+            border-left: 3px solid #3A9EAF;
+            margin: 1.5rem 0;
+        }
+
+        .dark .prose ul {
+            background: rgba(58, 158, 175, 0.08);
+        }
+
+        .prose li {
+            padding: 0.375rem 0;
+        }
+
+        /* Table of Contents - Sticky Sidebar */
+        .toc-sidebar {
+            position: sticky;
+            top: 120px;
+            width: 200px;
+            max-height: calc(100vh - 160px);
+            overflow-y: auto;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.98);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px -8px rgba(0, 0, 0, 0.15);
+            z-index: 40;
+            align-self: flex-start;
+        }
+
+        .dark .toc-sidebar {
+            background: rgba(15, 17, 23, 0.98);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px -8px rgba(0, 0, 0, 0.5);
+        }
+
+        .article-with-toc {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            align-items: flex-start;
+        }
+
+        .article-main-content {
+            width: 100%;
+            max-width: 768px;
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 1100px) {
+            .toc-sidebar {
+                display: none !important;
+            }
+
+            .article-with-toc {
+                max-width: 768px;
+            }
+        }
+
+        .toc-sidebar h4 {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #1E3A5F;
+            margin-bottom: 1rem;
+        }
+
+        .dark .toc-sidebar h4 {
+            color: #64748b;
+        }
+
+        .toc-sidebar a {
+            display: block;
+            padding: 0.5rem 0;
+            font-size: 0.8rem;
+            color: #64748b;
+            text-decoration: none;
+            border-left: 2px solid transparent;
+            padding-left: 0.75rem;
+            margin-left: -0.75rem;
+            transition: all 0.2s;
+        }
+
+        .toc-sidebar a:hover,
+        .toc-sidebar a.active {
+            color: #3A9EAF;
+            border-left-color: #3A9EAF;
+        }
+
+        .dark .toc-sidebar a {
+            color: #94a3b8;
+        }
+
+        .dark .toc-sidebar a:hover,
+        .dark .toc-sidebar a.active {
+            color: #3A9EAF;
+        }
+
+        /* Aurora Card for CTA */
+        .aurora-card {
+            position: relative;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .aurora-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            background: radial-gradient(800px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+                    rgba(58, 158, 175, 0.1), transparent 60%);
+            opacity: 0;
+            transition: opacity 0.5s;
+            pointer-events: none;
+        }
+
+        .aurora-card:hover::before {
+            opacity: 1;
+        }
+
+        .card-border-glow {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            border-radius: inherit;
+            padding: 1px;
+            background: radial-gradient(400px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+                    rgba(58, 158, 175, 0.5), transparent 40%);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .aurora-card:hover .card-border-glow {
+            opacity: 1;
+        }
+
+        /* Screenshot Figure */
+        .screenshot-figure {
+            margin: 2rem 0;
+        }
+
+        .screenshot-figure img {
+            border-radius: 16px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 32px -8px rgba(0, 0, 0, 0.15);
+        }
+
+        .dark .screenshot-figure img {
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .screenshot-figure figcaption {
+            margin-top: 0.75rem;
+            font-size: 0.875rem;
+            color: #64748b;
+            text-align: center;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.9rem;
+        }
+
+        .comparison-table th {
+            background: rgba(58, 158, 175, 0.1);
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-weight: 700;
+            color: #1E3A5F;
+            border-bottom: 2px solid rgba(58, 158, 175, 0.3);
+        }
+
+        .dark .comparison-table th {
+            background: rgba(58, 158, 175, 0.15);
+            color: white;
+        }
+
+        .comparison-table td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .dark .comparison-table td {
+            border-bottom-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Image Placeholder */
+        .image-placeholder {
+            background: linear-gradient(135deg, rgba(58, 158, 175, 0.1), rgba(30, 58, 95, 0.05));
+            border: 2px dashed rgba(58, 158, 175, 0.3);
+            border-radius: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 300px;
+        }
+
+        .dark .image-placeholder {
+            background: linear-gradient(135deg, rgba(58, 158, 175, 0.08), rgba(30, 58, 95, 0.04));
+            border-color: rgba(58, 158, 175, 0.2);
+        }
+    </style>
+</head>
+
+<body class="antialiased font-sans bg-slate-50 dark:bg-[#0C0E14] text-slate-900 dark:text-slate-100">
+
+    <!-- Reading Progress Bar -->
+    <div class="reading-progress">
+        <div class="reading-progress-bar" id="reading-progress"></div>
+    </div>
+
+    <!-- Noise Overlay -->
+    <div class="bg-noise"></div>
+
+    <!-- Navigation -->
+    <nav class="sticky top-6 z-50 pt-6">
+        <div class="mx-auto w-[95%] max-w-6xl">
+            <div
+                class="glass-nav rounded-full px-6 py-3 flex items-center justify-between shadow-2xl shadow-black/5 dark:shadow-black/20 relative">
+                <!-- Logo -->
+                <a href="/" class="flex items-center gap-3 shrink-0">
+                    <div class="flex gap-1 h-6 items-center">
+                        <div class="w-1.5 h-6 rounded-full bg-brand-navy dark:bg-slate-200"></div>
+                        <div class="w-1.5 h-6 rounded-full bg-brand-navy dark:bg-slate-200"></div>
+                        <div class="w-1.5 h-6 rounded-full bg-brand-navy dark:bg-slate-200"></div>
+                        <div class="w-1.5 h-6 rounded-full bg-brand-teal"></div>
+                    </div>
+                    <span class="text-brand-navy dark:text-white text-lg font-bold tracking-wider">TX-Partner</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <ul class="hidden lg:flex items-center gap-1">
+                    <li class="relative group">
+                        <button
+                            class="flex items-center gap-1 px-4 py-2 text-sm font-medium text-slate-500 hover:text-brand-navy dark:text-slate-400 dark:hover:text-white transition-colors">
+                            Leistungen
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="group-hover:rotate-180 transition-transform duration-300">
+                                <path d="m6 9 6 6 6-6"></path>
+                            </svg>
+                        </button>
+                        <div
+                            class="nav-dropdown absolute top-full left-0 mt-2 w-56 rounded-button bg-white dark:bg-[#0F0F0F] border border-slate-100 dark:border-white/10 shadow-xl p-2">
+                            <a href="/leistungen"
+                                class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                                <div class="text-sm font-semibold text-brand-navy dark:text-white mb-0.5">Leistungen
+                                </div>
+                                <div class="text-xs text-slate-500 font-mono">übersicht aller Services</div>
+                            </a>
+                            <a href="/blockpit-hinweise"
+                                class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                                <div class="text-sm font-semibold text-brand-navy dark:text-white mb-0.5">Blockpit
+                                    Hinweise</div>
+                                <div class="text-xs text-slate-500 font-mono">Korrektur & Optimierung</div>
+                            </a>
+                            <a href="/cointracking-fehler"
+                                class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                                <div class="text-sm font-semibold text-brand-navy dark:text-white mb-0.5">CoinTracking
+                                    Fehler</div>
+                                <div class="text-xs text-slate-500 font-mono">Datenbereinigung</div>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="relative group">
+                        <button
+                            class="flex items-center gap-1 px-4 py-2 text-sm font-medium text-slate-500 hover:text-brand-navy dark:text-slate-400 dark:hover:text-white transition-colors">
+                            über uns
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="group-hover:rotate-180 transition-transform duration-300">
+                                <path d="m6 9 6 6 6-6"></path>
+                            </svg>
+                        </button>
+                        <div
+                            class="nav-dropdown absolute top-full left-0 mt-2 w-56 rounded-button bg-white dark:bg-[#0F0F0F] border border-slate-100 dark:border-white/10 shadow-xl p-2">
+                            <a href="/über-uns"
+                                class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                                <div class="text-sm font-semibold text-brand-navy dark:text-white mb-0.5">über uns</div>
+                                <div class="text-xs text-slate-500 font-mono">Wer wir sind</div>
+                            </a>
+                            <a href="/dokumentationsstandard"
+                                class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                                <div class="text-sm font-semibold text-brand-navy dark:text-white mb-0.5">
+                                    Dokumentationsstandard</div>
+                                <div class="text-xs text-slate-500 font-mono">Unsere Qualitätsrichtlinien</div>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/blog"
+                            class="block px-4 py-2 text-sm font-medium text-brand-navy dark:text-white transition-colors">Blog</a>
+                    </li>
+                    <li>
+                        <a href="/faq"
+                            class="block px-4 py-2 text-sm font-medium text-slate-500 hover:text-brand-navy dark:text-slate-400 dark:hover:text-white transition-colors">FAQ</a>
+                    </li>
+                    <li>
+                        <a href="/kontakt"
+                            class="block px-4 py-2 text-sm font-medium text-slate-500 hover:text-brand-navy dark:text-slate-400 dark:hover:text-white transition-colors">Kontakt</a>
+                    </li>
+                </ul>
+
+                <!-- Right Side -->
+                <div class="flex items-center gap-4">
+                    <button id="theme-toggle"
+                        class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-white/10 text-slate-500 dark:text-slate-400 transition-all duration-300"
+                        aria-label="Dark Mode umschalten">
+                        <span class="block dark:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="4"></circle>
+                                <path
+                                    d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32l1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41">
+                                </path>
+                            </svg>
+                        </span>
+                        <span class="hidden dark:block">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+                            </svg>
+                        </span>
+                    </button>
+
+                    <button id="mobile-menu-toggle" class="lg:hidden text-slate-600 dark:text-slate-300 p-3"
+                        aria-label="Menü öffnen" aria-expanded="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="4" x2="20" y1="12" y2="12"></line>
+                            <line x1="4" x2="20" y1="6" y2="6"></line>
+                            <line x1="4" x2="20" y1="18" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu -->
+                <div id="mobile-menu"
+                    class="mobile-menu absolute top-full left-0 w-full mt-2 bg-white dark:bg-[#0F0F0F] rounded-card border border-slate-100 dark:border-white/10 shadow-xl p-2"
+                    role="dialog" aria-label="Hauptmenü">
+                    <div
+                        class="flex items-center justify-between px-4 py-2 mb-2 border-b border-slate-100 dark:border-white/10">
+                        <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Menü</span>
+                        <button id="mobile-menu-close"
+                            class="p-2 rounded-lg hover:bg-slate-50 dark:hover:bg-white/5 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-teal"
+                            aria-label="Menü schließen">
+                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="px-4 pt-3 pb-1 text-[11px] font-bold text-slate-400 uppercase tracking-widest">
+                        Leistungen</div>
+                    <a href="/leistungen"
+                        class="block px-4 py-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                        <div class="text-sm font-semibold text-slate-700 dark:text-white">Leistungen</div>
+                        <div class="text-xs text-slate-500 dark:text-slate-500 font-mono">übersicht aller Services</div>
+                    </a>
+                    <a href="/blockpit-hinweise"
+                        class="block px-4 py-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                        <div class="text-sm font-semibold text-slate-700 dark:text-white">Blockpit Hinweise</div>
+                        <div class="text-xs text-slate-500 dark:text-slate-500 font-mono">Korrektur & Optimierung</div>
+                    </a>
+                    <a href="/cointracking-fehler"
+                        class="block px-4 py-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                        <div class="text-sm font-semibold text-slate-700 dark:text-white">CoinTracking Fehler</div>
+                        <div class="text-xs text-slate-500 dark:text-slate-500 font-mono">Datenbereinigung</div>
+                    </a>
+
+                    <div class="h-px bg-slate-100 dark:bg-white/5 my-1 mx-4"></div>
+
+                    <div class="px-4 pt-3 pb-1 text-[11px] font-bold text-slate-400 uppercase tracking-widest">über uns
+                    </div>
+                    <a href="/über-uns"
+                        class="block px-4 py-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                        <div class="text-sm font-semibold text-slate-700 dark:text-white">über uns</div>
+                        <div class="text-xs text-slate-500 dark:text-slate-500 font-mono">Wer wir sind</div>
+                    </a>
+                    <a href="/dokumentationsstandard"
+                        class="block px-4 py-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                        <div class="text-sm font-semibold text-slate-700 dark:text-white">Dokumentationsstandard</div>
+                        <div class="text-xs text-slate-500 dark:text-slate-500 font-mono">Unsere Qualitätsrichtlinien</div>
+                    </a>
+
+                    <div class="h-px bg-slate-100 dark:bg-white/5 my-1 mx-4"></div>
+
+                    <a href="/blog"
+                        class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 font-semibold text-sm text-brand-navy dark:text-white transition-colors">Blog</a>
+                    <a href="/faq"
+                        class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 font-semibold text-sm text-slate-600 dark:text-slate-300 transition-colors">FAQ</a>
+                    <a href="/kontakt"
+                        class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 font-semibold text-sm text-slate-600 dark:text-slate-300 transition-colors">Kontakt</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Header -->
+    <header class="relative pt-32 sm:pt-40 md:pt-48 pb-16 overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute inset-0 pointer-events-none">
+            <div
+                class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-brand-teal/15 blur-[120px] rounded-full opacity-60 mix-blend-multiply dark:mix-blend-screen animate-aurora-pulse">
+            </div>
+            <div
+                class="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]">
+            </div>
+        </div>
+
+        <div class="container mx-auto px-4 sm:px-6 max-w-3xl relative z-10">
+            <!-- Breadcrumb -->
+            <nav class="flex items-center gap-2 text-sm mb-8 animate-fade-in" aria-label="Breadcrumb">
+                <a href="/" class="text-slate-400 hover:text-brand-teal transition-colors">Home</a>
+                <span class="text-slate-300">/</span>
+                <a href="/blog" class="text-slate-400 hover:text-brand-teal transition-colors">Blog</a>
+                <span class="text-slate-300">/</span>
+                <span class="text-slate-600 dark:text-slate-300 font-medium">Blockpit</span>
+            </nav>
+
+            <!-- Meta & Tags -->
+            <div class="flex flex-wrap items-center gap-4 mb-8">
+                <span
+                    class="inline-flex items-center gap-2 border border-brand-teal/20 text-brand-teal text-xs font-bold tracking-widest uppercase rounded-full px-3.5 py-1.5 backdrop-blur-sm bg-white/50 dark:bg-white/5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-brand-teal animate-pulse"></span>
+                    Blockpit
+                </span>
+                <span class="text-sm text-slate-500 dark:text-slate-400 font-mono">7. Februar 2026</span>
+                <span class="text-slate-300 dark:text-slate-600">|</span>
+                <span class="text-sm text-slate-500 dark:text-slate-400 flex items-center gap-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    12 Min. Lesezeit
+                </span>
+            </div>
+
+            <!-- Titel -->
+            <h1
+                class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-brand-navy dark:text-white mb-8 leading-tight tracking-tight">
+                Abweichende Bilanz in <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-brand-teal to-brand-navy dark:to-white">Blockpit</span>
+                lösen
+            </h1>
+
+            <!-- Author -->
+            <div class="flex items-center gap-4 py-6 border-y border-slate-200 dark:border-white/10">
+                <div class="flex gap-1 h-10 items-center shrink-0">
+                    <div class="w-2 h-10 rounded-full bg-brand-navy dark:bg-slate-200"></div>
+                    <div class="w-2 h-10 rounded-full bg-brand-navy dark:bg-slate-200"></div>
+                    <div class="w-2 h-10 rounded-full bg-brand-navy dark:bg-slate-200"></div>
+                    <div class="w-2 h-10 rounded-full bg-brand-teal"></div>
+                </div>
+                <div>
+                    <p class="font-bold text-brand-navy dark:text-white text-sm">TX-Partner Redaktion</p>
+                    <p class="text-xs text-slate-500 dark:text-slate-400">Experten für Krypto-Dokumentation</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Featured Image -->
+    <div class="container mx-auto px-4 sm:px-6 max-w-4xl mb-16">
+        <div class="aspect-[2/1] rounded-[32px] overflow-hidden bg-slate-100 dark:bg-[#0F0F0F] border border-slate-200 dark:border-white/5 shadow-2xl shadow-brand-navy/10 dark:shadow-black/40 relative group">
+            <img src="/assets/blog/blockpit-bilanz-abweichung-loesen.png"
+                alt="Abweichende Bilanz in Blockpit lösen: Ursachen und Korrektur"
+                loading="lazy" width="1200" height="630"
+                class="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-[1.02]">
+            <div class="absolute inset-0 border border-white/10 rounded-[32px] pointer-events-none"></div>
+        </div>
+    </div>
+
+    <!-- Article Content with Sticky ToC -->
+    <div class="article-with-toc pb-16">
+        <!-- Table of Contents -->
+        <aside class="toc-sidebar">
+            <h4>Inhalt</h4>
+            <nav>
+                <a href="#problem">Das Problem</a>
+                <a href="#unterschied">Synced vs. Berechnet</a>
+                <a href="#balancing">Das + Balancing</a>
+                <a href="#ursachen">Häufige Ursachen</a>
+                <a href="#merge">Merge-Probleme</a>
+                <a href="#neuberechnung">Die Neuberechnung</a>
+                <a href="#diagnose">Der Ledger Mode</a>
+                <a href="#vergleich">Blockpit vs. CoinTracking</a>
+                <a href="#loesung">Lösungsansätze</a>
+                <a href="#faq">FAQ</a>
+            </nav>
+        </aside>
+
+        <!-- Main Article Content -->
+        <article class="article-main-content">
+            <div class="article-container">
+                <div class="prose prose-lg dark:prose-invert max-w-none
+                        prose-headings:text-brand-navy dark:prose-headings:text-white
+                        prose-headings:font-bold prose-headings:tracking-tight
+                        prose-p:text-slate-600 dark:prose-p:text-slate-300
+                        prose-p:leading-relaxed
+                        prose-strong:text-brand-navy dark:prose-strong:text-white
+                        prose-ul:text-slate-600 dark:prose-ul:text-slate-300
+                        prose-li:marker:text-brand-teal">
+
+                    <!-- Einleitung -->
+                    <p class="text-xl leading-relaxed text-slate-700 dark:text-slate-300 mb-8">
+                        Blockpit zeigt <strong>"Abweichende Balance (20)"</strong> in deinem Dashboard. Du siehst ETH mit -1,28 und -2.204 EUR. Das Tool weiss, dass etwas nicht stimmt. Aber was genau - und wie gehst du damit um?
+                    </p>
+
+                    <h2 id="problem">
+                        <span class="section-number">01</span>
+                        Das Problem: Abweichende Balance
+                    </h2>
+
+                    <p>
+                        "Abweichende Balance" ist Blockpits Art zu sagen: <strong>Was wir on-chain sehen, stimmt nicht mit dem überein, was wir berechnet haben.</strong>
+                    </p>
+
+                    <p>
+                        Im Unterschied zu CoinTracking, das negative Bestände eher unauffällig im Hintergrund führt, zeigt Blockpit diese Diskrepanz aktiv im Dashboard an. Das ist hilfreich - aber ohne Verständnis der Ursache bleibt das Problem ungelöst.
+                    </p>
+
+                    <!-- Screenshot im Artikel -->
+                    <figure class="screenshot-figure not-prose">
+                        <div class="relative max-w-3xl mx-auto group">
+                            <div class="rounded-[24px] overflow-hidden bg-slate-100 dark:bg-[#0F0F0F] border border-slate-200 dark:border-white/5 shadow-2xl shadow-brand-navy/10 dark:shadow-black/40">
+                                <img src="/assets/landingpages/abweichende und negative bilanz dashboard blockpit.png"
+                                     alt="Blockpit Dashboard mit abweichender Bilanz - Synced vs. Berechnete Balance"
+                                     class="w-full transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+                                     loading="lazy" width="800" height="450">
+                            </div>
+                            <div class="absolute inset-0 rounded-[24px] border border-white/10 pointer-events-none"></div>
+                        </div>
+                        <figcaption>Blockpit Dashboard: Abweichende Balance zeigt Differenz zwischen On-Chain-Bestand und berechneter Balance</figcaption>
+                    </figure>
+
+                    <h2 id="unterschied">
+                        <span class="section-number">02</span>
+                        Synced Balance vs. Berechnete Balance
+                    </h2>
+
+                    <p>
+                        Blockpit unterscheidet zwischen zwei Werten:
+                    </p>
+
+                    <div class="info-box p-4 sm:p-6 rounded-2xl my-8 not-prose">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 text-sm">
+                            <div class="p-4 bg-white/50 dark:bg-white/5 rounded-xl">
+                                <p class="font-bold text-brand-teal dark:text-brand-teal mb-2">Synced Balance</p>
+                                <p class="text-slate-600 dark:text-slate-400">Der tatsächliche Bestand on-chain. Blockpit liest diese Daten direkt von der Blockchain. Beispiel: 0,00056 ETH.</p>
+                            </div>
+                            <div class="p-4 bg-white/50 dark:bg-white/5 rounded-xl">
+                                <p class="font-bold text-brand-navy dark:text-white mb-2">Berechnete Balance</p>
+                                <p class="text-slate-600 dark:text-slate-400">Die Summe aller importierten Transaktionen. Was Blockpit auf Basis der Daten berechnet. Beispiel: -1,28 ETH.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p>
+                        Wenn diese beiden Werte abweichen, fehlen typischerweise Transaktionen in deiner Dokumentation - oder es wurden manuelle Änderungen vorgenommen, die zu Inkonsistenzen geführt haben.
+                    </p>
+
+                    <!-- Pull Quote -->
+                    <div class="pull-quote not-prose">
+                        On-chain zeigt 0,00056 ETH, aber Blockpit berechnet -1,28 ETH. Differenz: -2.204 EUR.
+                    </div>
+
+                    <h2 id="balancing">
+                        <span class="section-number">03</span>
+                        Das "+ Balancing" Problem
+                    </h2>
+
+                    <p>
+                        Hier unterscheidet sich Blockpit fundamental von CoinTracking: <strong>Blockpit versucht, fehlende Historie automatisch auszugleichen.</strong>
+                    </p>
+
+                    <p>
+                        Wenn Blockpit merkt, dass du Assets verkaufst, für die keine Kaufhistorie existiert, erstellt es automatisch einen <strong>"+ Balancing"</strong> Eintrag. Das sieht erstmal praktisch aus - ist aber steuerlich problematisch.
+                    </p>
+
+                    <!-- Info Box -->
+                    <div class="info-box p-4 sm:p-6 rounded-2xl my-8 not-prose">
+                        <p class="font-bold text-brand-navy dark:text-white mb-3">Wie Balancing funktioniert:</p>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                            "+ Balancing" Einträge erhalten automatisch eine Kostenbasis von 0,00 EUR. Bei einem späteren Verkauf wird der gesamte Verkaufserlös als steuerpflichtiger Gewinn berechnet - unabhängig davon, was du beim ursprünglichen Kauf bezahlt hast. Die vollständige Transaktionshistorie bestimmt die korrekte Kostenbasis.
+                        </p>
+                    </div>
+
+                    <!-- Screenshot -->
+                    <figure class="screenshot-figure not-prose">
+                        <div class="relative max-w-3xl mx-auto group">
+                            <div class="rounded-[24px] overflow-hidden bg-slate-100 dark:bg-[#0F0F0F] border border-slate-200 dark:border-white/5 shadow-2xl shadow-brand-navy/10 dark:shadow-black/40">
+                                <img src="/assets/landingpages/fehlende historie fehler steuer blockpit.png"
+                                     alt="Blockpit zeigt Fehlende Historie Tag und + Balancing mit fiktivem Gewinn"
+                                     class="w-full transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+                                     loading="lazy" width="800" height="450">
+                            </div>
+                            <div class="absolute inset-0 rounded-[24px] border border-white/10 pointer-events-none"></div>
+                        </div>
+                        <figcaption>"+ Balancing" mit Kostenbasis 0 EUR führt zu +4.278 EUR fiktivem Gewinn</figcaption>
+                    </figure>
+
+                    <p>
+                        Im Beispiel: 1,278 ETH Verkauf - Blockpit zeigt +4.278,56 EUR als Gewinn. Das ist der gesamte Verkaufserlös, weil die Kostenbasis auf 0 EUR gesetzt wurde.
+                    </p>
+
+                    <h2 id="ursachen">
+                        <span class="section-number">04</span>
+                        Häufige Ursachen für abweichende Bilanzen
+                    </h2>
+
+                    <h3>1. Bridge-Transaktionen nicht erkannt</h3>
+
+                    <p>
+                        Wenn du ETH von Ethereum zu Arbitrum bridgest, muss Blockpit beide Seiten erkennen: den Abfluss auf Ethereum UND den Zufluss auf Arbitrum. Fehlt eine Seite, entsteht eine Abweichung.
+                    </p>
+
+                    <p>
+                        Das Beispiel aus dem Dashboard: Eine Bridge-TX wurde nicht erkannt - ETH kam auf dem Wallet an, aber Blockpit sieht den Zufluss nicht - negativer berechneter Bestand.
+                    </p>
+
+                    <h3>2. Unvollständige Exchange-Imports</h3>
+
+                    <p>
+                        API-Verbindungen zu Börsen holen oft nur Daten ab dem Zeitpunkt der Verbindung. Historische Transaktionen - besonders ältere Trades - werden nicht rückwirkend importiert. Du hast 2021 auf Binance gekauft, die API verbindest du aber erst 2024. Die alten Trades fehlen.
+                    </p>
+
+                    <p>
+                        Das führt dazu, dass Blockpit Verkäufe sieht, aber keine zugehörigen Käufe. Die Kostenbasis fehlt.
+                    </p>
+
+                    <h3>3. DeFi-Protokolle nicht vollständig erkannt</h3>
+
+                    <p>
+                        Komplexe DeFi-Interaktionen (Liquidity Mining, Yield Farming, Staking) werden nicht immer korrekt interpretiert. Der Zufluss von Rewards kann fehlen oder falsch klassifiziert sein.
+                    </p>
+
+                    <h3>4. Manuelle User-Eingriffe</h3>
+
+                    <p>
+                        Manchmal führen gut gemeinte manuelle Korrekturen zu Problemen. Transfers werden als Trades markiert, Transaktionen falsch zusammengeführt (gemergt), oder Duplikate entstehen durch doppeltes Löschen und Neu-Importieren.
+                    </p>
+
+                    <p>
+                        Das Ergebnis: Doppelte ausgehende Transaktionen, fehlende Zugänge, oder Transaktionsketten, die nicht mehr aufgehen.
+                    </p>
+
+                    <h2 id="merge">
+                        <span class="section-number">05</span>
+                        Merge-Probleme im Detail
+                    </h2>
+
+                    <p>
+                        Eine der häufigsten Ursachen für abweichende Bilanzen sind fehlerhafte Merge-Vorgänge. Blockpit bietet die Möglichkeit, zusammengehörige Transaktionen zu "mergen" - also zu verbinden. Das ist nützlich bei Transfers zwischen eigenen Wallets oder bei komplexen DeFi-Transaktionen. Aber wenn es schiefgeht, entstehen Probleme.
+                    </p>
+
+                    <h3>Wann Merge sinnvoll ist</h3>
+
+                    <p>
+                        Ein klassisches Beispiel: Du transferierst ETH von deiner Börse auf dein Hardware-Wallet. Blockpit sieht zwei Transaktionen: einen Abgang bei der Börse und einen Zugang beim Wallet. Ohne Merge würde das wie ein Verkauf und ein separater Zugang aussehen. Mit Merge versteht Blockpit: Das ist derselbe ETH, nur auf einem anderen Wallet.
+                    </p>
+
+                    <h3>Wann Merge zu Problemen führt</h3>
+
+                    <div class="info-box p-4 sm:p-6 rounded-2xl my-8 not-prose">
+                        <p class="font-bold text-brand-navy dark:text-white mb-3">Der häufigste Merge-Fehler:</p>
+                        <ul class="space-y-3 text-slate-600 dark:text-slate-400 text-sm">
+                            <li><strong>Bestehende TX nicht verwendet:</strong> Du siehst eine Transaktion als "unverknüpft" und weißt, wohin sie gehört. Statt die bestehende automatisch importierte TX zu verwenden, trägst du eine neue manuelle TX ein. Ergebnis: Zwei ausgehende Transaktionen für denselben Vorgang.</li>
+                            <li><strong>Zeitlich nicht passende TX gemergt:</strong> Transaktionen von unterschiedlichen Tagen werden zusammengeführt, die nicht zusammengehören.</li>
+                        </ul>
+                    </div>
+
+                    <h3>Das Resultat: Doppelte Buchungen</h3>
+
+                    <p>
+                        Der häufigste Fehler: Eine automatisch importierte Transaktion existiert bereits, der User trägt dieselbe Transaktion manuell ein, ohne sie mit der bestehenden zu mergen. Blockpit sieht nun zwei ausgehende Transaktionen für denselben Vorgang. Die berechnete Balance kippt ins Negative.
+                    </p>
+
+                    <!-- Pull Quote -->
+                    <div class="pull-quote not-prose">
+                        Wenn bestehende Transaktionen nicht mit manuellen Einträgen zusammengeführt werden, entstehen doppelte Buchungen - und die Bilanz stimmt nicht mehr.
+                    </div>
+
+                    <h2 id="neuberechnung">
+                        <span class="section-number">06</span>
+                        Die Neuberechnung verstehen
+                    </h2>
+
+                    <p>
+                        Blockpit verfügt über eine <strong>Neuberechnung</strong>-Funktion. Diese aktualisiert sämtliche Bestands- und Steuerberechnungen nach Änderungen. <strong>Du kannst die Neuberechnung über einen Button manuell anstoßen</strong> - und solltest das auch tun, wenn du zeitnah Ergebnisse sehen willst.
+                    </p>
+
+                    <h3>Wann wird neu berechnet?</h3>
+
+                    <p>
+                        Die Neuberechnung sollte nach folgenden Änderungen erfolgen:
+                    </p>
+
+                    <ul>
+                        <li>Manuelle Anpassungen an Transaktionen (Klassifikation ändern, Werte korrigieren)</li>
+                        <li>Neu-Import von Integrationen (API-Sync, CSV-Import)</li>
+                        <li>Neue Klassifizierungen (z.B. Staking Reward statt Deposit)</li>
+                        <li>Merge oder Trennung von Transaktionen</li>
+                    </ul>
+
+                    <h3>Was passiert bei der Neuberechnung?</h3>
+
+                    <div class="info-box p-4 sm:p-6 rounded-2xl my-8 not-prose">
+                        <p class="font-bold text-brand-teal dark:text-brand-teal mb-3">Die Neuberechnung aktualisiert:</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                            <div class="p-4 bg-white/50 dark:bg-white/5 rounded-xl">
+                                <p class="font-semibold text-brand-navy dark:text-white mb-2">Bestandsberechnung</p>
+                                <p class="text-slate-600 dark:text-slate-400">Alle Asset-Bestände werden neu summiert, basierend auf den aktuellen Transaktionsdaten.</p>
+                            </div>
+                            <div class="p-4 bg-white/50 dark:bg-white/5 rounded-xl">
+                                <p class="font-semibold text-brand-navy dark:text-white mb-2">Steuerberechnung</p>
+                                <p class="text-slate-600 dark:text-slate-400">FIFO/LIFO-Zuordnung, Haltefristen, Kostenbasis und Gewinne/Verluste werden neu berechnet.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>Wichtig: Vor dem Steuerreport neu berechnen</h3>
+
+                    <p>
+                        <strong>Vor jeder Erstellung eines Steuerreports sollte eine Neuberechnung durchgeführt werden.</strong> Nur so stellst du sicher, dass alle Änderungen berücksichtigt wurden und der Report auf den aktuellen Daten basiert.
+                    </p>
+
+                    <p>
+                        Nach der Neuberechnung verschwinden automatisch generierte Tags wie "Fehlende Historie" und "+ Balancing" Einträge - vorausgesetzt, du hast die fehlenden Transaktionen korrekt ergänzt. Das ist ein guter Indikator dafür, dass die Datengrundlage jetzt vollständig ist.
+                    </p>
+
+                    <!-- Pull Quote -->
+                    <div class="pull-quote not-prose">
+                        Nach jeder Änderung neu berechnen. Vor jedem Steuerreport neu berechnen. Die Neuberechnung ist der Schlüssel zu korrekten Ergebnissen.
+                    </div>
+
+                    <h2 id="diagnose">
+                        <span class="section-number">07</span>
+                        Diagnose: Der Ledger Mode
+                    </h2>
+
+                    <p>
+                        Blockpit bietet ein spezifisches Diagnosetool: den <strong>Ledger Mode</strong>. Er zeigt den Bestandsverlauf pro Asset über die Zeit.
+                    </p>
+
+                    <div class="info-box p-4 sm:p-6 rounded-2xl my-8 not-prose">
+                        <p class="font-bold text-brand-teal dark:text-brand-teal mb-3">So findest du die Ursache:</p>
+                        <ol class="list-decimal list-inside space-y-2 text-slate-600 dark:text-slate-400 text-sm">
+                            <li>Gehe zum betroffenen Asset (z.B. ETH)</li>
+                            <li>Wechsle in den <strong>Ledger Mode</strong></li>
+                            <li>Scrolle durch den zeitlichen Verlauf</li>
+                            <li>Finde den Punkt, an dem die Berechnung negativ wird</li>
+                            <li>Die Transaktion direkt davor ist meist die Ursache</li>
+                        </ol>
+                    </div>
+
+                    <h2 id="vergleich">
+                        <span class="section-number">08</span>
+                        Blockpit vs. CoinTracking: Was ist anders?
+                    </h2>
+
+                    <p>
+                        Beide Tools haben mit ähnlichen Problemen zu kämpfen, gehen aber unterschiedlich damit um:
+                    </p>
+
+                    <table class="comparison-table not-prose">
+                        <thead>
+                            <tr>
+                                <th>Aspekt</th>
+                                <th>CoinTracking</th>
+                                <th>Blockpit</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Anzeige</strong></td>
+                                <td>Zeigt negative Bestände direkt</td>
+                                <td>Zeigt "Abweichende Balance" im Dashboard</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Steuerreport</strong></td>
+                                <td>"Short (Warning)" bei fehlender Kostenbasis</td>
+                                <td>Automatisches "+ Balancing" mit Kostenbasis 0 EUR</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Diagnosetool</strong></td>
+                                <td>Transaktionsfluss Report</td>
+                                <td>Ledger Mode</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Markierung</strong></td>
+                                <td>User muss Problem selbst erkennen</td>
+                                <td>"Fehlende Historie" Tag pro Transaktion</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h2 id="loesung">
+                        <span class="section-number">09</span>
+                        Lösungsansätze
+                    </h2>
+
+                    <div class="info-box p-4 sm:p-6 rounded-2xl my-8 not-prose">
+                        <p class="font-bold text-brand-teal dark:text-brand-teal mb-4">Je nach Ursache:</p>
+                        <div class="grid grid-cols-1 gap-4 text-sm">
+                            <div class="p-4 bg-white/50 dark:bg-white/5 rounded-xl">
+                                <p class="font-semibold text-brand-navy dark:text-white mb-2">Bei Bridge-Transaktionen:</p>
+                                <p class="text-slate-600 dark:text-slate-400">Prüfe, ob beide Seiten der Bridge importiert sind. Oft fehlt die eingehende Seite und muss manuell ergänzt werden.</p>
+                            </div>
+                            <div class="p-4 bg-white/50 dark:bg-white/5 rounded-xl">
+                                <p class="font-semibold text-brand-navy dark:text-white mb-2">Bei unvollständigen Exchange-Imports:</p>
+                                <p class="text-slate-600 dark:text-slate-400">Exportiere die vollständige Handelshistorie als CSV direkt von der Börse und importiere sie manuell. API-Verbindungen liefern oft nur aktuelle Daten.</p>
+                            </div>
+                            <div class="p-4 bg-white/50 dark:bg-white/5 rounded-xl">
+                                <p class="font-semibold text-brand-navy dark:text-white mb-2">Bei manuellen Fehlern:</p>
+                                <p class="text-slate-600 dark:text-slate-400">Prüfe im Ledger Mode, wo die Berechnung kippt. Oft hilft es, falsch gemergte Transaktionen wieder zu trennen oder doppelte Einträge zu identifizieren.</p>
+                            </div>
+                            <div class="p-4 bg-white/50 dark:bg-white/5 rounded-xl">
+                                <p class="font-semibold text-brand-navy dark:text-white mb-2">Bei "+ Balancing" Einträgen:</p>
+                                <p class="text-slate-600 dark:text-slate-400">Finde die fehlende Transaktion und importiere sie. Die "Fehlende Historie" Tags und Balancing-Einträge verschwinden bei der Neuberechnung automatisch.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pull Quote -->
+                    <div class="pull-quote not-prose">
+                        Das Ziel: Keine "+ Balancing" Einträge mehr - stattdessen vollständige Transaktionshistorie mit korrekter Kostenbasis.
+                    </div>
+
+                    <h3>Wann professionelle Hilfe sinnvoll ist</h3>
+
+                    <p>
+                        Bei einzelnen Abweichungen ist die Korrektur oft überschaubar. Bei komplexeren Portfolios mit:
+                    </p>
+
+                    <ul>
+                        <li>20+ abweichenden Bilanzen</li>
+                        <li>Mehreren DeFi-Protokollen auf verschiedenen Chains</li>
+                        <li>Historischen Daten über mehrere Jahre</li>
+                        <li>Vielen "+ Balancing" Einträgen</li>
+                    </ul>
+
+                    <p>
+                        ...wird die Korrektur aufwändiger. TX-Partner hat sich auf diese Fälle spezialisiert.
+                    </p>
+
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div id="faq" class="mt-16 border-t border-slate-200 dark:border-white/10 pt-12">
+                <h2 class="text-2xl font-bold text-brand-navy dark:text-white mb-8">Häufige Fragen zu abweichenden Bilanzen</h2>
+
+                <div class="space-y-6">
+                    <div class="faq-box">
+                        <h4>Was bedeutet "Abweichende Balance" in Blockpit?</h4>
+                        <p class="text-slate-600 dark:text-slate-400">"Abweichende Balance" zeigt an, dass der On-Chain-Bestand (Synced Balance) nicht mit dem von Blockpit berechneten Bestand übereinstimmt. Blockpit sieht z.B. 0,00056 ETH on-chain, berechnet aber -1,28 ETH basierend auf den importierten Transaktionen.</p>
+                    </div>
+
+                    <div class="faq-box">
+                        <h4>Was ist das "+ Balancing" in Blockpit?</h4>
+                        <p class="text-slate-600 dark:text-slate-400">Blockpit gleicht fehlende Historie automatisch mit einem "+ Balancing" Eintrag aus. Das Problem: Diese Einträge haben eine Kostenbasis von 0,00 EUR. Wenn du später verkaufst, wird der gesamte Verkaufserlös als steuerpflichtiger Gewinn berechnet.</p>
+                    </div>
+
+                    <div class="faq-box">
+                        <h4>Was ist der Unterschied zwischen Synced und Berechneter Balance?</h4>
+                        <p class="text-slate-600 dark:text-slate-400">Die "Synced Balance" ist der tatsächliche On-Chain-Bestand deines Wallets. Die "Berechnete Balance" ergibt sich aus allen Transaktionen, die Blockpit importiert hat. Wenn diese abweichen, fehlen Transaktionen in der Dokumentation.</p>
+                    </div>
+
+                    <div class="faq-box">
+                        <h4>Wie finde ich die Ursache für abweichende Bilanzen in Blockpit?</h4>
+                        <p class="text-slate-600 dark:text-slate-400">Nutze den "Ledger Mode" in Blockpit. Er zeigt den Bestandsverlauf pro Asset und du kannst exakt sehen, ab welcher Transaktion die Berechnung von der Realität abweicht. Oft sind es Bridge-Transaktionen oder nicht erkannte DeFi-Swaps.</p>
+                    </div>
+
+                    <div class="faq-box">
+                        <h4>Warum führt "Fehlende Historie" zu falschen Steuern?</h4>
+                        <p class="text-slate-600 dark:text-slate-400">Wenn Blockpit die ursprüngliche Kauftransaktion nicht kennt, setzt es die Kostenbasis auf 0 EUR. Bei einem späteren Verkauf wird dann der gesamte Erlös als Gewinn versteuert - auch wenn du beim Kauf bereits bezahlt hast.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Box -->
+            <div class="mt-12 sm:mt-20 aurora-card relative p-5 sm:p-8 md:p-12 rounded-[20px] sm:rounded-[32px] overflow-hidden bg-brand-navy dark:bg-[#0F0F0F] text-center border border-white/10"
+                onmousemove="handleMouseMove(event)">
+                <div class="card-border-glow"></div>
+                <div
+                    class="absolute top-0 right-0 w-[300px] sm:w-[400px] h-[300px] sm:h-[400px] bg-brand-teal/20 blur-[80px] sm:blur-[100px] rounded-full mix-blend-screen pointer-events-none">
+                </div>
+
+                <div class="relative z-10">
+                    <h3 class="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-3 sm:mb-4">
+                        Blockpit zeigt abweichende Bilanzen?
+                    </h3>
+                    <p class="text-slate-300 mb-6 sm:mb-8 max-w-lg mx-auto text-base sm:text-lg leading-relaxed">
+                        TX-Partner analysiert deine Krypto-Historie und identifiziert die Ursachen.
+                    </p>
+                    <a href="https://cal.eu/johannesanderl-tx-partner/dokumentation-prufen"
+                        class="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-white text-brand-navy font-bold rounded-xl hover:bg-brand-teal hover:text-white transition-all duration-300 shadow-xl shadow-brand-navy/40 hover:-translate-y-0.5 text-sm sm:text-base">
+                        <span>Unverbindlichen Doku-Check</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14"></path>
+                            <path d="m12 5 7 7-7 7"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Internal Links -->
+            <div class="internal-links mt-8 sm:mt-12 p-4 sm:p-6 rounded-[16px] sm:rounded-[24px] border border-slate-200 dark:border-white/5">
+                <p class="font-bold text-brand-navy dark:text-white mb-4">Weiterführende Infos</p>
+                <ul class="space-y-3">
+                    <li>
+                        <a href="/blockpit-hinweise" class="text-brand-teal hover:underline underline-offset-2 font-medium">Alle Blockpit Hinweise im Überblick</a>
+                    </li>
+                    <li>
+                        <a href="/blog/krypto-dokumentation" class="text-brand-teal hover:underline underline-offset-2 font-medium">Warum Krypto-Dokumentation essentiell ist</a>
+                    </li>
+                    <li>
+                        <a href="/kontakt" class="text-brand-teal hover:underline underline-offset-2 font-medium">Kontakt: Unverbindlichen Doku-Check anfragen</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Author Bio -->
+            <div class="author-bio mt-8 sm:mt-12 p-4 sm:p-6 rounded-[16px] sm:rounded-[24px] border border-slate-200 dark:border-white/5">
+                <div class="flex items-start gap-4">
+                    <div class="flex gap-1.5 h-12 items-center shrink-0">
+                        <div class="w-2.5 h-12 rounded-full bg-brand-navy dark:bg-slate-200"></div>
+                        <div class="w-2.5 h-12 rounded-full bg-brand-navy dark:bg-slate-200"></div>
+                        <div class="w-2.5 h-12 rounded-full bg-brand-navy dark:bg-slate-200"></div>
+                        <div class="w-2.5 h-12 rounded-full bg-brand-teal"></div>
+                    </div>
+                    <div>
+                        <p class="font-bold text-brand-navy dark:text-white mb-1">TX-Partner</p>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Krypto-Dokumentation einfach richtig.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Back to Blog -->
+            <div class="mt-16 sm:mt-20 mb-8 pt-8 border-t border-slate-200 dark:border-white/10 text-center">
+                <a href="/blog"
+                    class="inline-flex items-center gap-2 text-brand-teal font-semibold hover:underline underline-offset-4 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m12 19-7-7 7-7"></path>
+                        <path d="M19 12H5"></path>
+                    </svg>
+                    Zurück zum Blog
+                </a>
+            </div>
+        </article>
+    </div>
+
+    <!-- Footer -->
+    <footer class="pt-24 pb-12 bg-white dark:bg-dark-bg border-t border-slate-200 dark:border-white/5">
+        <div class="mx-auto px-6 max-w-7xl">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 lg:gap-16 mb-20">
+                <!-- Brand -->
+                <div class="space-y-6">
+                    <a href="/" class="flex items-center gap-3">
+                        <div class="flex items-center gap-1 h-6">
+                            <div class="w-1.5 h-6 rounded-full bg-brand-navy dark:bg-slate-200"></div>
+                            <div class="w-1.5 h-6 rounded-full bg-brand-navy dark:bg-slate-200"></div>
+                            <div class="w-1.5 h-6 rounded-full bg-brand-navy dark:bg-slate-200"></div>
+                            <div class="w-1.5 h-6 rounded-full bg-brand-teal"></div>
+                        </div>
+                        <span class="text-brand-navy dark:text-white text-lg font-bold tracking-wider">TX-Partner</span>
+                    </a>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Krypto-Dokumentation einfach richtig. Die Grundlage für Steuern, Compliance und Ruhe im Kopf.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="https://x.com/TX_Partner" target="_blank" rel="noopener noreferrer"
+                            class="text-slate-400 hover:text-brand-navy dark:hover:text-white transition-colors"
+                            aria-label="TX-Partner auf X (Twitter)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/company/tx-partner/" target="_blank" rel="noopener noreferrer"
+                            class="text-slate-400 hover:text-brand-navy dark:hover:text-white transition-colors"
+                            aria-label="TX-Partner auf LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect width="4" height="12" x="2" y="9"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Leistungen -->
+                <div>
+                    <h4 class="text-xs font-bold text-brand-navy dark:text-white uppercase tracking-widest mb-6">Leistungen</h4>
+                    <ul class="space-y-4">
+                        <li><a href="/leistungen" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Leistungen</a></li>
+                        <li><a href="/blockpit-hinweise" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Blockpit Hinweise</a></li>
+                        <li><a href="/cointracking-fehler" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">CoinTracking Fehler</a></li>
+                        <li><a href="/krypto-finanzamt-rueckfrage" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Finanzamt Rückfrage</a></li>
+                    </ul>
+                </div>
+
+                <!-- Unternehmen -->
+                <div>
+                    <h4 class="text-xs font-bold text-brand-navy dark:text-white uppercase tracking-widest mb-6">Unternehmen</h4>
+                    <ul class="space-y-4">
+                        <li><a href="/über-uns" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">über uns</a></li>
+                        <li><a href="/dokumentationsstandard" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Dokumentationsstandard</a></li>
+                        <li><a href="/blog" class="text-sm font-medium text-brand-teal dark:text-white transition-colors">Blog</a></li>
+                        <li><a href="/faq" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">FAQ</a></li>
+                        <li><a href="/kontakt" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Kontakt</a></li>
+                    </ul>
+                </div>
+
+                <!-- Rechtliches -->
+                <div>
+                    <h4 class="text-xs font-bold text-brand-navy dark:text-white uppercase tracking-widest mb-6">Rechtliches</h4>
+                    <ul class="space-y-4">
+                        <li><a href="/agb" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">AGB</a></li>
+                        <li><a href="/datenschutz" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Datenschutz</a></li>
+                        <li><a href="/impressum" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Impressum</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-200 dark:border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-xs font-medium text-slate-400 dark:text-slate-500">2026 TX-Partner - eine Geschäftsbezeichnung der Solvum GmbH i.G. Alle Rechte vorbehalten.</p>
+                <div class="flex gap-8">
+                    <a href="/sitemap" class="text-xs font-medium text-slate-400 dark:text-slate-500 hover:text-brand-navy dark:hover:text-white transition-colors">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Dark Mode Toggle
+            const themeToggle = document.getElementById('theme-toggle');
+            const html = document.documentElement;
+            if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                html.classList.add('dark');
+            }
+            if (themeToggle) {
+                themeToggle.addEventListener('click', () => {
+                    html.classList.toggle('dark');
+                    localStorage.theme = html.classList.contains('dark') ? 'dark' : 'light';
+                });
+            }
+
+            // Reading Progress Bar
+            const progressBar = document.getElementById('reading-progress');
+            if (progressBar) {
+                window.addEventListener('scroll', () => {
+                    const scrollTop = window.scrollY;
+                    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                    const progress = (scrollTop / docHeight) * 100;
+                    progressBar.style.width = progress + '%';
+                });
+            }
+
+            // Table of Contents Active State
+            const tocLinks = document.querySelectorAll('.toc-sidebar a');
+            const sections = document.querySelectorAll('h2[id]');
+
+            if (tocLinks.length > 0 && sections.length > 0) {
+                const observerOptions = {
+                    rootMargin: '-100px 0px -70% 0px',
+                    threshold: 0
+                };
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            tocLinks.forEach(link => link.classList.remove('active'));
+                            const activeLink = document.querySelector(`.toc-sidebar a[href="#${entry.target.id}"]`);
+                            if (activeLink) activeLink.classList.add('active');
+                        }
+                    });
+                }, observerOptions);
+
+                sections.forEach(section => observer.observe(section));
+            }
+        });
+
+        // Mouse tracking for Aurora Cards
+        function handleMouseMove(event) {
+            const card = event.currentTarget;
+            const rect = card.getBoundingClientRect();
+            const x = event.clientX - rect.left;
+            const y = event.clientY - rect.top;
+            card.style.setProperty('--mouse-x', x + 'px');
+            card.style.setProperty('--mouse-y', y + 'px');
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <!-- Dark Mode: Sofort setzen um Flash zu vermeiden -->
+    <script>
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finanzamt fragt nach Krypto - Ergänzungsersuchen beantworten | TX-Partner</title>
+    <meta name="description"
+        content="Post vom Finanzamt wegen Krypto? Ergänzungsersuchen aus AT oder DE? Finanzämter fordern Steuerreports aus Krypto-Steuertools an. TX-Partner hilft bei der Krypto-Dokumentation.">
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <link rel="canonical" href="https://tx-partner.com/krypto-finanzamt-rueckfrage">
+    <meta http-equiv="Cache-Control" content="public, max-age=31536000, immutable">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tx-partner.com/krypto-finanzamt-rueckfrage">
+    <meta property="og:title" content="Finanzamt fragt nach Krypto - Ergänzungsersuchen beantworten | TX-Partner">
+    <meta property="og:description" content="Ergänzungsersuchen wegen Krypto? TX-Partner hilft bei der Krypto-Dokumentation.">
+    <meta property="og:locale" content="de_DE">
+
+    <!-- Local Fonts Only (DSGVO-konform) -->
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <script defer src="assets/tx-partner-common.js"></script>
+    <link rel="stylesheet" href="assets/css/tailwind.css">
+
+    <style>
+        /* Page Transition */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            opacity: 0;
+            animation: pageLoad 0.5s ease-out 0.1s forwards;
+        }
+
+        @keyframes pageLoad {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Scrollbar Light Mode */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+
+        /* Scrollbar Dark Mode */
+        .dark ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .dark ::-webkit-scrollbar-thumb {
+            background: #334155;
+        }
+
+        .dark ::-webkit-scrollbar-thumb:hover {
+            background: #475569;
+        }
+
+        /* Performance: Skip rendering for below-fold sections */
+        .below-fold {
+            content-visibility: auto;
+            contain-intrinsic-size: auto 500px;
+        }
+
+        /* GPU acceleration for animated elements */
+        .animate-aurora-pulse,
+        .animate-float {
+            will-change: transform, opacity;
+        }
+
+        /* Reduce motion */
+        @media (prefers-reduced-motion: reduce) {
+
+            .animate-aurora-pulse,
+            .animate-float,
+            .animate-shimmer,
+            .animate-pulse {
+                animation: none !important;
+                transform: none !important;
+            }
+        }
+
+        /* Focus States for Accessibility (WCAG AA) */
+        :focus-visible {
+            outline: 2px solid #3A9EAF;
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+
+        a:focus-visible,
+        button:focus-visible {
+            outline: 2px solid #3A9EAF;
+            outline-offset: 2px;
+        }
+
+        .glass a:focus-visible,
+        .glass button:focus-visible {
+            outline-color: #3A9EAF;
+            outline-offset: 4px;
+        }
+
+        /* Card Spotlight Effect */
+        .card-spotlight {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-spotlight::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(58, 158, 175, 0.06), transparent 40%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .card-spotlight:hover::before {
+            opacity: 1;
+        }
+
+        /* Animations */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Glass Effect */
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .dark .glass-nav {
+            background: rgba(10, 10, 10, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        /* Navigation Dropdown */
+        .nav-dropdown {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(8px);
+            transition: all 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        .group:hover .nav-dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        /* Mobile Menu Transition */
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+            transform: translateY(-10px);
+        }
+
+        .mobile-menu.open {
+            max-height: 600px;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Button Transitions */
+        .btn-primary {
+            transition: all 0.2s ease-out;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 10px 40px -10px rgba(58, 158, 175, 0.4);
+        }
+
+        /* Noise Overlay */
+        .bg-noise {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 50;
+            opacity: 0.03;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+        }
+
+        /* Timeline styling */
+        .timeline-item {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #3A9EAF, transparent);
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: -5px;
+            top: 6px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #3A9EAF;
+            border: 2px solid white;
+        }
+
+        .dark .timeline-item::after {
+            border-color: #050505;
+        }
+
+        /* Info Box */
+        .info-box {
+            background: rgba(58, 158, 175, 0.08);
+            border: 1px solid rgba(58, 158, 175, 0.25);
+            border-radius: 24px;
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .dark .info-box {
+            background: rgba(58, 158, 175, 0.08);
+            border: 1px solid rgba(58, 158, 175, 0.2);
+        }
+
+        .info-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle at 100% 0%, rgba(58, 158, 175, 0.15), transparent 70%);
+            pointer-events: none;
+        }
+    </style>
+
+    <!-- Schema.org FAQ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Was ist ein Ergänzungsersuchen vom Finanzamt wegen Krypto?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ein Ergänzungsersuchen (AT) oder Auskunftsersuchen (DE) ist eine offizielle Anfrage des Finanzamts, in der du aufgefordert wirst, Informationen zu deinen Krypto-Aktivitäten nachzureichen. Oft werden Steuerreports aus Krypto-Steuertools wie Blockpit oder CoinTracking angefordert."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Welche Dokumente fordert das Finanzamt bei Krypto an?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Typischerweise werden angefordert: Steuerreports aus Krypto-Steuertools (Blockpit, CoinTracking), Wallet-Adressen, Exchange-CSV-Exports und Transaktionshistorien."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Wie lange habe ich Zeit auf ein Ergänzungsersuchen zu antworten?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "In der Regel wird eine Frist von 2-4 Wochen gesetzt. Diese Frist kann in begründeten Fällen verlängert werden. Reagiere zeitnah und bitte schriftlich um Fristverlängerung, falls nötig."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Was passiert wenn mein Steuerreport Fehler zeigt?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Wenn dein Blockpit- oder CoinTracking-Report Warnungen wie 'Short (Warning)', 'Fehlende Historie' oder 'Abweichende Balance' zeigt, sieht das Finanzamt diese Fehler ebenfalls. Ein Report mit Fehlern kann zu Nachfragen oder Schätzungen durch das Finanzamt führen."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Wie kann TX-Partner bei einem Ergänzungsersuchen helfen?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "TX-Partner ist Dokumentationsspezialist, kein Steuerberater. TX-Partner sorgt dafür, dass die Krypto-Dokumentation vollständig und Audit-Ready ist, bevor sie dem Finanzamt übergeben wird. Saubere Krypto-Historie bedeutet: Dein Steuerberater kann arbeiten."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Schema.org BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://tx-partner.com"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Leistungen",
+                "item": "https://tx-partner.com/leistungen"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Finanzamt Rückfrage",
+                "item": "https://tx-partner.com/krypto-finanzamt-rueckfrage"
+            }
+        ]
+    }
+    </script>
+</head>
+
+<body
+    class="antialiased bg-white dark:bg-dark-bg text-slate-900 dark:text-white font-sans selection:bg-brand-teal selection:text-white">
+
+    <!-- Noise Overlay -->
+    <div class="bg-noise"></div>
+
+    <!-- Navigation -->
+    <nav class="sticky top-6 z-50 pt-6">
+        <div class="mx-auto w-[95%] max-w-6xl">
+            <div
+                class="glass-nav rounded-full px-6 py-3 flex items-center justify-between shadow-2xl shadow-black/5 dark:shadow-black/20 relative">
+                <!-- Logo (Logo-Lock) -->
+                <a href="index" class="flex items-center gap-3 group shrink-0">
+                    <div class="flex items-center gap-1 h-6">
+                        <div class="w-1.5 h-6 rounded-full bg-brand-navy dark:bg-slate-200"></div>
+                        <div class="w-1.5 h-6 rounded-full bg-brand-navy dark:bg-slate-200"></div>
+                        <div class="w-1.5 h-6 rounded-full bg-brand-navy dark:bg-slate-200"></div>
+                        <div class="w-1.5 h-6 rounded-full bg-brand-teal"></div>
+                    </div>
+                    <span
+                        class="text-brand-navy dark:text-white text-lg font-bold tracking-wider font-sans">TX-Partner</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <ul class="hidden lg:flex items-center gap-1">
+                    <!-- Dropdown: Leistungen -->
+                    <li class="relative group">
+                        <button
+                            class="flex items-center gap-1 px-4 py-2 text-sm font-medium text-brand-navy dark:text-white transition-colors">
+                            Leistungen
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="group-hover:rotate-180 transition-transform duration-300">
+                                <path d="m6 9 6 6 6-6"></path>
+                            </svg>
+                        </button>
+                        <div
+                            class="nav-dropdown absolute top-full left-0 mt-2 w-56 rounded-button bg-white dark:bg-[#0F0F0F] border border-slate-100 dark:border-white/10 shadow-xl p-2">
+                            <a href="leistungen"
+                                class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                                <div class="text-sm font-semibold text-brand-navy dark:text-white mb-0.5">Leistungen
+                                </div>
+                                <div class="text-xs text-slate-500 dark:text-slate-500 font-mono">Übersicht aller
+                                    Services</div>
+                            </a>
+                            <a href="blockpit-hinweise"
+                                class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                                <div class="text-sm font-semibold text-brand-navy dark:text-white mb-0.5">Blockpit
+                                    Hinweise</div>
+                                <div class="text-xs text-slate-500 dark:text-slate-500 font-mono">Korrektur &
+                                    Optimierung</div>
+                            </a>
+                            <a href="cointracking-fehler"
+                                class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                                <div class="text-sm font-semibold text-brand-navy dark:text-white mb-0.5">CoinTracking
+                                    Fehler</div>
+                                <div class="text-xs text-slate-500 dark:text-slate-500 font-mono">Datenbereinigung</div>
+                            </a>
+                            <a href="krypto-finanzamt-rueckfrage"
+                                class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                                <div class="text-sm font-semibold text-brand-teal dark:text-brand-teal mb-0.5">Finanzamt Rückfrage</div>
+                                <div class="text-xs text-slate-500 dark:text-slate-500 font-mono">Ergänzungsersuchen</div>
+                            </a>
+                        </div>
+                    </li>
+
+                    <!-- Dropdown: Über uns -->
+                    <li class="relative group">
+                        <button
+                            class="flex items-center gap-1 px-4 py-2 text-sm font-medium text-slate-500 hover:text-brand-navy dark:text-slate-400 dark:hover:text-white transition-colors">
+                            Über uns
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="group-hover:rotate-180 transition-transform duration-300">
+                                <path d="m6 9 6 6 6-6"></path>
+                            </svg>
+                        </button>
+                        <div
+                            class="nav-dropdown absolute top-full left-0 mt-2 w-56 rounded-button bg-white dark:bg-[#0F0F0F] border border-slate-100 dark:border-white/10 shadow-xl p-2">
+                            <a href="ueber-uns"
+                                class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                                <div class="text-sm font-semibold text-brand-navy dark:text-white mb-0.5">Über uns</div>
+                                <div class="text-xs text-slate-500 dark:text-slate-500 font-mono">Wer wir sind</div>
+                            </a>
+                            <a href="dokumentationsstandard"
+                                class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                                <div class="text-sm font-semibold text-brand-navy dark:text-white mb-0.5">
+                                    Dokumentationsstandard</div>
+                                <div class="text-xs text-slate-500 dark:text-slate-500 font-mono">Unsere
+                                    Qualitätsrichtlinien</div>
+                            </a>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="blog"
+                            class="block px-4 py-2 text-sm font-medium text-slate-500 hover:text-brand-navy dark:text-slate-400 dark:hover:text-white transition-colors">Blog</a>
+                    </li>
+                    <li>
+                        <a href="faq"
+                            class="block px-4 py-2 text-sm font-medium text-slate-500 hover:text-brand-navy dark:text-slate-400 dark:hover:text-white transition-colors">FAQ</a>
+                    </li>
+                    <li>
+                        <a href="kontakt"
+                            class="block px-4 py-2 text-sm font-medium text-slate-500 hover:text-brand-navy dark:text-slate-400 dark:hover:text-white transition-colors">Kontakt</a>
+                    </li>
+                </ul>
+
+                <!-- Right Side -->
+                <div class="flex items-center gap-4">
+                    <button id="theme-toggle"
+                        class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-white/10 text-slate-500 dark:text-slate-400 transition-all duration-200 focus:outline-none"
+                        aria-label="Dark Mode umschalten" title="Dark Mode umschalten">
+                        <span class="block dark:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="4"></circle>
+                                <path
+                                    d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32l1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41">
+                                </path>
+                            </svg>
+                        </span>
+                        <span class="hidden dark:block">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                            </svg>
+                        </span>
+                    </button>
+
+                    <button id="mobile-menu-toggle" class="lg:hidden text-slate-600 dark:text-slate-300 p-3"
+                        aria-label="Menü öffnen" aria-expanded="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="4" x2="20" y1="12" y2="12"></line>
+                            <line x1="4" x2="20" y1="6" y2="6"></line>
+                            <line x1="4" x2="20" y1="18" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu"
+                class="mobile-menu absolute top-full left-0 w-full mt-2 bg-white dark:bg-[#0F0F0F] rounded-card border border-slate-100 dark:border-white/10 shadow-xl p-2"
+                role="dialog" aria-label="Hauptmenü">
+                <!-- Close Button Header -->
+                <div
+                    class="flex items-center justify-between px-4 py-2 mb-2 border-b border-slate-100 dark:border-white/10">
+                    <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Menü</span>
+                    <button id="mobile-menu-close"
+                        class="p-2 rounded-lg hover:bg-slate-50 dark:hover:bg-white/5 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-teal"
+                        aria-label="Menü schließen">
+                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="px-4 pt-3 pb-1 text-[11px] font-bold text-slate-400 uppercase tracking-widest">Leistungen
+                </div>
+                <a href="leistungen"
+                    class="block px-4 py-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                    <div class="text-sm font-semibold text-slate-700 dark:text-white">Leistungen</div>
+                    <div class="text-xs text-slate-500 dark:text-slate-500 font-mono">Übersicht aller Services</div>
+                </a>
+                <a href="blockpit-hinweise"
+                    class="block px-4 py-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                    <div class="text-sm font-semibold text-slate-700 dark:text-white">Blockpit Hinweise</div>
+                    <div class="text-xs text-slate-500 dark:text-slate-500 font-mono">Korrektur & Optimierung</div>
+                </a>
+                <a href="cointracking-fehler"
+                    class="block px-4 py-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                    <div class="text-sm font-semibold text-slate-700 dark:text-white">CoinTracking Fehler</div>
+                    <div class="text-xs text-slate-500 dark:text-slate-500 font-mono">Datenbereinigung</div>
+                </a>
+                <a href="krypto-finanzamt-rueckfrage"
+                    class="block px-4 py-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                    <div class="text-sm font-semibold text-brand-teal dark:text-brand-teal">Finanzamt Rückfrage</div>
+                    <div class="text-xs text-slate-500 dark:text-slate-500 font-mono">Ergänzungsersuchen</div>
+                </a>
+
+                <div class="h-px bg-slate-100 dark:bg-white/5 my-1 mx-4"></div>
+
+                <div class="px-4 pt-3 pb-1 text-[11px] font-bold text-slate-400 uppercase tracking-widest">Über uns
+                </div>
+                <a href="ueber-uns"
+                    class="block px-4 py-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                    <div class="text-sm font-semibold text-slate-700 dark:text-white">Über uns</div>
+                    <div class="text-xs text-slate-500 dark:text-slate-500 font-mono">Wer wir sind</div>
+                </a>
+                <a href="dokumentationsstandard"
+                    class="block px-4 py-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                    <div class="text-sm font-semibold text-slate-700 dark:text-white">Dokumentationsstandard</div>
+                    <div class="text-xs text-slate-500 dark:text-slate-500 font-mono">Unsere Qualitätsrichtlinien</div>
+                </a>
+
+                <div class="h-px bg-slate-100 dark:bg-white/5 my-1 mx-4"></div>
+
+                <a href="blog"
+                    class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 font-semibold text-sm text-slate-600 dark:text-slate-300 transition-colors">Blog</a>
+                <a href="faq"
+                    class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 font-semibold text-sm text-slate-600 dark:text-slate-300 transition-colors">FAQ</a>
+                <a href="kontakt"
+                    class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 font-semibold text-sm text-slate-600 dark:text-slate-300 transition-colors">Kontakt</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="container mx-auto px-6 max-w-7xl pt-8">
+        <nav aria-label="Breadcrumb" class="text-sm">
+            <ol class="flex items-center gap-2 text-slate-500 dark:text-slate-400">
+                <li><a href="index" class="hover:text-brand-teal transition-colors">Home</a></li>
+                <li><span class="mx-1">/</span></li>
+                <li><a href="leistungen" class="hover:text-brand-teal transition-colors">Leistungen</a></li>
+                <li><span class="mx-1">/</span></li>
+                <li class="text-brand-navy dark:text-white font-medium">Finanzamt Rückfrage</li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero-section"
+        class="hero-section relative min-h-[50vh] flex flex-col items-center justify-center pt-12 sm:pt-16 md:pt-20 lg:pt-24 pb-16 overflow-hidden">
+        <!-- Grid Pattern -->
+        <div
+            class="absolute inset-0 -z-20 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none">
+        </div>
+
+        <!-- Ambient Background -->
+        <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[400px] md:w-[600px] lg:w-[800px] xl:w-[1000px] h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] xl:h-[600px] bg-brand-teal/10 dark:bg-brand-teal/15 rounded-full blur-[60px] sm:blur-[80px] md:blur-[100px] lg:blur-[120px] xl:blur-[140px] -z-10 mix-blend-multiply dark:mix-blend-screen animate-aurora-pulse">
+        </div>
+
+        <div class="container text-center max-w-7xl mr-auto ml-auto pr-6 pl-6 relative z-10">
+            <!-- Tag -->
+            <div class="fade-in-up visible">
+                <div
+                    class="inline-flex items-center gap-2 border border-brand-teal/20 text-brand-teal text-xs font-bold tracking-widest uppercase rounded-full px-3.5 py-1.5 mb-8 backdrop-blur-sm bg-white/50 dark:bg-white/5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-brand-teal animate-pulse"></span>
+                    Krypto-Dokumentation
+                </div>
+            </div>
+
+            <!-- H1 -->
+            <h1 class="hero-h1 text-brand-navy dark:text-white mb-6 tracking-tight">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-teal to-brand-navy dark:to-white">Post vom Finanzamt</span><br>
+                wegen Krypto?
+            </h1>
+
+            <!-- Subheadline -->
+            <p class="hero-subheadline text-slate-500 dark:text-slate-400 leading-relaxed max-w-2xl mx-auto mb-10">
+                Ergänzungsersuchen aus Österreich oder Auskunftsersuchen aus Deutschland? TX-Partner sorgt dafür, dass deine Krypto-Dokumentation Audit-Ready ist, bevor sie beim Finanzamt landet.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="fade-in-up flex flex-col md:flex-row items-stretch justify-center gap-8 visible"
+                style="animation-delay: 0.3s">
+                <!-- Primary CTA -->
+                <div class="group flex flex-col gap-2 w-full md:w-auto">
+                    <a href="https://app.cal.eu/johannesanderl-tx-partner/dokumentation-prufen" target="_blank"
+                        rel="noopener noreferrer"
+                        class="relative inline-flex h-14 w-full md:min-w-[280px] items-center justify-center gap-2 rounded-2xl bg-brand-navy dark:bg-brand-teal px-8 text-base font-bold text-white shadow-xl shadow-brand-navy/20 dark:shadow-brand-teal/20 ring-1 ring-white/10 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-brand-navy/30 dark:hover:shadow-brand-teal/30 hover:scale-[1.02]">
+                        <span class="flex items-center gap-2 relative z-10">
+                            Unverbindlicher Doku-Check
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="transition-transform duration-300 group-hover:translate-x-1">
+                                <path d="M5 12h14"></path>
+                                <path d="m12 5 7 7-7 7"></path>
+                            </svg>
+                        </span>
+                    </a>
+                    <p class="text-[11px] font-medium text-slate-400 dark:text-slate-500 text-center">
+                        Unverbindliche Ersteinschätzung in 30 Minuten
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Box Section -->
+    <section class="py-8 bg-white dark:bg-dark-bg">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="rounded-2xl p-6 md:p-8 bg-gradient-to-br from-brand-teal/5 to-brand-teal/10 dark:from-brand-teal/10 dark:to-brand-teal/15 border border-brand-teal/20 dark:border-brand-teal/30">
+                <div class="text-center mb-4">
+                    <span class="text-xs font-bold uppercase tracking-widest text-brand-teal">DAC8 seit Januar 2026</span>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                    <div>
+                        <div class="text-2xl md:text-3xl font-bold text-brand-navy dark:text-brand-teal">2026</div>
+                        <div class="text-xs text-slate-500 dark:text-slate-400 mt-1">DAC8 Meldepflicht</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl md:text-3xl font-bold text-brand-navy dark:text-brand-teal">27</div>
+                        <div class="text-xs text-slate-500 dark:text-slate-400 mt-1">EU-Länder melden</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl md:text-3xl font-bold text-brand-navy dark:text-brand-teal">100%</div>
+                        <div class="text-xs text-slate-500 dark:text-slate-400 mt-1">Transparenz für Behörden</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl md:text-3xl font-bold text-brand-navy dark:text-brand-teal">2-4</div>
+                        <div class="text-xs text-slate-500 dark:text-slate-400 mt-1">Wochen Frist</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What is an Ergänzungsersuchen Section -->
+    <section class="py-16 bg-white dark:bg-dark-bg">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div class="grid lg:grid-cols-2 gap-12 items-start">
+                <div>
+                    <span class="inline-block px-3 py-1 rounded-full bg-brand-teal/10 text-brand-teal text-[10px] font-bold uppercase tracking-widest mb-4">Hintergrund</span>
+                    <h2 class="text-2xl md:text-3xl font-bold text-brand-navy dark:text-white mb-6">Was ist ein Ergänzungsersuchen?</h2>
+                    <p class="text-slate-500 dark:text-slate-400 leading-relaxed mb-6">
+                        Ein <strong class="text-brand-navy dark:text-white">Ergänzungsersuchen</strong> (Österreich) oder <strong class="text-brand-navy dark:text-white">Auskunftsersuchen</strong> (Deutschland) ist eine offizielle Anfrage des Finanzamts. Du wirst aufgefordert, Informationen zu deinen Krypto-Aktivitäten nachzureichen.
+                    </p>
+                    <p class="text-slate-500 dark:text-slate-400 leading-relaxed">
+                        Der Hintergrund: Finanzämter haben durch Sammelauskunftsersuchen an Börsen und die DAC8-Meldepflicht seit 2026 zunehmend Informationen über Krypto-Transaktionen. Diese Daten werden mit Steuererklärungen abgeglichen.
+                    </p>
+                </div>
+
+                <!-- Info Box -->
+                <div class="info-box p-6 dark:bg-brand-teal/5 dark:border-brand-teal/15">
+                    <div class="flex items-start gap-4 relative z-10">
+                        <div class="w-10 h-10 rounded-xl bg-brand-teal/20 dark:bg-brand-teal/30 flex items-center justify-center shrink-0">
+                            <svg class="w-5 h-5 text-brand-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-brand-navy dark:text-white mb-2">Gut zu wissen</h4>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                                Finanzämter fordern in Ergänzungsersuchen oft <strong class="text-brand-navy dark:text-white">Steuerreports aus Krypto-Steuertools</strong> wie Blockpit oder CoinTracking an. Wenn der Report Warnungen wie "Short (Warning)" oder "Fehlende Historie" zeigt, sieht das Finanzamt diese Hinweise ebenfalls.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What is typically requested Section -->
+    <section class="py-16 bg-slate-50 dark:bg-[#050505] border-y border-slate-200 dark:border-white/5">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div class="mb-12">
+                <span class="inline-block px-3 py-1 rounded-full bg-brand-teal/10 text-brand-teal text-[10px] font-bold uppercase tracking-widest mb-4">Typische Anfragen</span>
+                <h2 class="text-2xl md:text-3xl font-bold text-brand-navy dark:text-white mb-4">Was das Finanzamt typischerweise anfordert</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Card 1 -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-dark-surface border border-slate-200 dark:border-white/5">
+                    <div class="w-10 h-10 rounded-xl bg-brand-teal/10 dark:bg-brand-teal/20 flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5 text-brand-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-brand-navy dark:text-white mb-2">Steuerreports aus Krypto-Steuertools</h3>
+                    <p class="text-sm text-slate-500 dark:text-slate-400">
+                        Blockpit- oder CoinTracking-Reports werden explizit genannt. Der Report soll alle steuerpflichtigen Transaktionen zeigen.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-dark-surface border border-slate-200 dark:border-white/5">
+                    <div class="w-10 h-10 rounded-xl bg-brand-teal/10 dark:bg-brand-teal/20 flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5 text-brand-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-brand-navy dark:text-white mb-2">Wallet-Adressen</h3>
+                    <p class="text-sm text-slate-500 dark:text-slate-400">
+                        Alle Wallet-Adressen, auf denen Kryptowährungen gehalten wurden. Diese können mit Blockchain-Daten abgeglichen werden.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-dark-surface border border-slate-200 dark:border-white/5">
+                    <div class="w-10 h-10 rounded-xl bg-brand-teal/10 dark:bg-brand-teal/20 flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5 text-brand-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-brand-navy dark:text-white mb-2">Exchange-Exports (CSV)</h3>
+                    <p class="text-sm text-slate-500 dark:text-slate-400">
+                        CSV-Exports von allen genutzten Börsen. Diese dienen zur Verifikation der Steuerreport-Daten.
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="p-6 rounded-2xl bg-white dark:bg-dark-surface border border-slate-200 dark:border-white/5">
+                    <div class="w-10 h-10 rounded-xl bg-brand-teal/10 dark:bg-brand-teal/20 flex items-center justify-center mb-4">
+                        <svg class="w-5 h-5 text-brand-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-brand-navy dark:text-white mb-2">Transaktionshistorien</h3>
+                    <p class="text-sm text-slate-500 dark:text-slate-400">
+                        Vollständige Auflistung aller Krypto-Transaktionen mit Datum, Menge, Wert und Gegenpartei.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Problem Section -->
+    <section class="py-16 bg-white dark:bg-dark-bg">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div class="relative p-8 md:p-12 rounded-[32px] bg-slate-50 dark:bg-slate-800/20 border border-slate-200 dark:border-white/10 overflow-hidden">
+                <div class="relative z-10">
+                    <span class="inline-block px-3 py-1 rounded-full bg-brand-teal/10 text-brand-teal text-[10px] font-bold uppercase tracking-widest mb-4">Das Problem</span>
+                    <h2 class="text-2xl md:text-3xl font-bold text-brand-navy dark:text-white mb-6">Der Steuerreport zeigt Fehler?</h2>
+
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <p class="text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
+                                Wenn der Blockpit- oder CoinTracking-Report Warnungen zeigt, sieht das Finanzamt dieselben Hinweise:
+                            </p>
+                            <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-300">
+                                <li class="flex items-start gap-2">
+                                    <svg class="w-5 h-5 text-slate-500 dark:text-slate-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                                    </svg>
+                                    <span><strong class="text-brand-navy dark:text-white">"Short (Warning)"</strong> - Verkauf ohne vorherigen Kauf</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <svg class="w-5 h-5 text-slate-500 dark:text-slate-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                                    </svg>
+                                    <span><strong class="text-brand-navy dark:text-white">"Fehlende Historie"</strong> - Assets ohne Herkunft</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <svg class="w-5 h-5 text-slate-500 dark:text-slate-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                                    </svg>
+                                    <span><strong class="text-brand-navy dark:text-white">"Abweichende Balance"</strong> - Report stimmt nicht mit Wallet</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <svg class="w-5 h-5 text-slate-500 dark:text-slate-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                                    </svg>
+                                    <span><strong class="text-brand-navy dark:text-white">Negative Bestände</strong> - Bilanzen im Minus</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+                                Mögliche Folgen eines Reports mit Fehlern:
+                            </p>
+                            <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-300">
+                                <li class="flex items-start gap-2">
+                                    <span class="w-6 h-6 rounded-full bg-brand-teal/10 dark:bg-brand-teal/20 text-brand-teal dark:text-brand-teal flex items-center justify-center text-xs font-bold shrink-0">1</span>
+                                    <span>Weitere Rückfragen und Erklärungsbedarf</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="w-6 h-6 rounded-full bg-brand-teal/10 dark:bg-brand-teal/20 text-brand-teal dark:text-brand-teal flex items-center justify-center text-xs font-bold shrink-0">2</span>
+                                    <span>Schätzung durch das Finanzamt</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="w-6 h-6 rounded-full bg-brand-teal/10 dark:bg-brand-teal/20 text-brand-teal dark:text-brand-teal flex items-center justify-center text-xs font-bold shrink-0">3</span>
+                                    <span>Verspätungszuschläge bei Fristüberschreitung</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Role Section -->
+    <section class="py-16 bg-slate-50 dark:bg-[#050505] border-y border-slate-200 dark:border-white/5">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="inline-block px-3 py-1 rounded-full bg-brand-teal/10 text-brand-teal text-[10px] font-bold uppercase tracking-widest mb-4">Was TX-Partner macht</span>
+                    <h2 class="text-2xl md:text-3xl font-bold text-brand-navy dark:text-white mb-6">Krypto-Dokumentation, nicht Steuerberatung</h2>
+                    <p class="text-slate-500 dark:text-slate-400 leading-relaxed mb-6">
+                        TX-Partner ist <strong class="text-brand-navy dark:text-white">Dokumentationsspezialist, kein Steuerberater</strong>. TX-Partner sorgt dafür, dass die <strong class="text-brand-navy dark:text-white">Krypto-Dokumentation Audit-Ready</strong> ist, bevor sie dem Finanzamt übergeben wird.
+                    </p>
+                    <p class="text-slate-500 dark:text-slate-400 leading-relaxed mb-6">
+                        Die Logik ist einfach: Wenn die Krypto-Dokumentation unvollständig ist, wird jeder Steuerreport auf dieser Basis unvollständig sein. Und das Finanzamt sieht die Lücken.
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-px h-12 bg-brand-teal"></div>
+                        <p class="text-brand-navy dark:text-white font-semibold italic">
+                            "Saubere Krypto-Historie = Steuerberater kann arbeiten"
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Visual Element -->
+                <div class="relative">
+                    <div class="p-8 rounded-2xl bg-white dark:bg-dark-surface border border-slate-200 dark:border-white/10 shadow-xl dark:shadow-none">
+                        <div class="space-y-6">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-slate-100 dark:bg-slate-700/50 flex items-center justify-center">
+                                    <svg class="w-6 h-6 text-slate-500 dark:text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="text-sm font-bold text-slate-400 dark:text-slate-500 line-through">Unvollständige Dokumentation</div>
+                                    <div class="text-xs text-slate-500 dark:text-slate-400">= Report mit Fehlern</div>
+                                </div>
+                            </div>
+
+                            <div class="flex justify-center">
+                                <svg class="w-6 h-6 text-brand-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                                </svg>
+                            </div>
+
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-brand-teal/20 dark:bg-brand-teal/30 flex items-center justify-center">
+                                    <svg class="w-6 h-6 text-brand-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="text-sm font-bold text-brand-navy dark:text-white">TX-Partner Krypto-Dokumentation</div>
+                                    <div class="text-xs text-brand-teal">= Audit-Ready</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline / What to do Section -->
+    <section class="py-16 bg-white dark:bg-dark-bg">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="mb-12 text-center">
+                <span class="inline-block px-3 py-1 rounded-full bg-brand-navy/10 dark:bg-brand-teal/10 text-brand-navy dark:text-brand-teal text-[10px] font-bold uppercase tracking-widest mb-4">Handlungsempfehlung</span>
+                <h2 class="text-2xl md:text-3xl font-bold text-brand-navy dark:text-white mb-4">Was du jetzt tun kannst</h2>
+            </div>
+
+            <div class="space-y-8">
+                <!-- Step 1 -->
+                <div class="timeline-item">
+                    <h3 class="text-lg font-bold text-brand-navy dark:text-white mb-2">1. Ruhe bewahren</h3>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                        Ein Ergänzungsersuchen ist eine Informationsanfrage. Du hast Zeit zu reagieren, und Fristverlängerungen sind in der Regel möglich.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="timeline-item">
+                    <h3 class="text-lg font-bold text-brand-navy dark:text-white mb-2">2. Frist prüfen und ggf. verlängern</h3>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                        Prüfe die gesetzte Frist (meist 2-4 Wochen). Wenn du mehr Zeit brauchst, bitte <strong class="text-brand-navy dark:text-white">schriftlich</strong> um Fristverlängerung. Das ist in der Regel unproblematisch.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="timeline-item">
+                    <h3 class="text-lg font-bold text-brand-navy dark:text-white mb-2">3. Steuerreport auf Fehler prüfen</h3>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                        Öffne deinen Blockpit- oder CoinTracking-Report. Gibt es Warnungen? "Short (Warning)"? "Fehlende Historie"? Negative Bestände? Diese Fehler sollten korrigiert werden, bevor der Report eingereicht wird.
+                    </p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="timeline-item">
+                    <h3 class="text-lg font-bold text-brand-navy dark:text-white mb-2">4. Krypto-Dokumentation korrigieren lassen</h3>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                        Wenn der Report Fehler zeigt, kann professionelle Hilfe bei der Datenbereinigung sinnvoll sein. TX-Partner bereitet die Krypto-Dokumentation so auf, dass der Report Audit-Ready ist.
+                    </p>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="timeline-item">
+                    <h3 class="text-lg font-bold text-brand-navy dark:text-white mb-2">5. Mit Steuerberater abstimmen</h3>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                        Für die steuerliche Beurteilung und die finale Einreichung solltest du einen Steuerberater hinzuziehen. TX-Partner liefert die saubere Krypto-Dokumentation, der Steuerberater die steuerliche Expertise.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="below-fold dark:bg-[#080808] border-y dark:border-white/5 bg-slate-50 border-slate-200 pt-24 pb-24">
+        <div class="container mx-auto px-6 max-w-4xl">
+
+            <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-brand-navy dark:text-white mb-12 text-center"
+                style="letter-spacing: -0.02em">
+                Häufige Fragen zum Ergänzungsersuchen
+            </h2>
+
+            <div class="space-y-6">
+
+                <!-- FAQ 1 -->
+                <div class="bg-white dark:bg-white/5 rounded-card p-6 border border-slate-200 dark:border-white/5 fade-in-up">
+                    <h3 class="text-lg font-bold text-brand-navy dark:text-white mb-3">Was ist ein Ergänzungsersuchen wegen Krypto?</h3>
+                    <p class="dark:text-slate-400 leading-relaxed text-sm text-slate-500">
+                        Ein Ergänzungsersuchen (AT) oder Auskunftsersuchen (DE) ist eine offizielle Anfrage des Finanzamts. Du wirst aufgefordert, Informationen zu deinen Krypto-Aktivitäten nachzureichen. Oft werden Steuerreports aus Krypto-Steuertools wie Blockpit oder CoinTracking angefordert.
+                    </p>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="bg-white dark:bg-white/5 rounded-card p-6 border border-slate-200 dark:border-white/5 fade-in-up">
+                    <h3 class="text-lg font-bold text-brand-navy dark:text-white mb-3">Wie lange habe ich Zeit zu antworten?</h3>
+                    <p class="dark:text-slate-400 leading-relaxed text-sm text-slate-500">
+                        In der Regel 2-4 Wochen. Diese Frist kann verlängert werden - bitte <strong class="text-brand-navy dark:text-white">schriftlich</strong> mit Begründung um Fristverlängerung. Das ist normalerweise unproblematisch.
+                    </p>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="bg-white dark:bg-white/5 rounded-card p-6 border border-slate-200 dark:border-white/5 fade-in-up">
+                    <h3 class="text-lg font-bold text-brand-navy dark:text-white mb-3">Was passiert wenn mein Report Fehler zeigt?</h3>
+                    <p class="dark:text-slate-400 leading-relaxed text-sm text-slate-500">
+                        Das Finanzamt sieht dieselben Warnungen. Ein Report mit Fehlern kann zu Rückfragen führen oder dazu, dass das Finanzamt eine Schätzung vornimmt. Fehler in der Krypto-Dokumentation sollten daher vor der Einreichung korrigiert werden.
+                    </p>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="bg-white dark:bg-white/5 rounded-card p-6 border border-slate-200 dark:border-white/5 fade-in-up">
+                    <h3 class="text-lg font-bold text-brand-navy dark:text-white mb-3">Wie kann TX-Partner helfen?</h3>
+                    <p class="dark:text-slate-400 leading-relaxed text-sm text-slate-500">
+                        TX-Partner ist Dokumentationsspezialist, kein Steuerberater. TX-Partner sorgt dafür, dass die <strong class="text-brand-navy dark:text-white">Krypto-Dokumentation Audit-Ready</strong> ist. Das bedeutet: Fehler in Blockpit/CoinTracking werden identifiziert und behoben. Das Ergebnis ist ein sauberer Report, mit dem der Steuerberater arbeiten kann.
+                    </p>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="bg-white dark:bg-white/5 rounded-card p-6 border border-slate-200 dark:border-white/5 fade-in-up">
+                    <h3 class="text-lg font-bold text-brand-navy dark:text-white mb-3">Warum kommen jetzt so viele Anfragen?</h3>
+                    <p class="dark:text-slate-400 leading-relaxed text-sm text-slate-500">
+                        Zwei Faktoren: <strong class="text-brand-navy dark:text-white">Sammelauskunftsersuchen</strong> an Börsen haben den Finanzämtern Daten geliefert. Und seit Januar 2026 gilt die <strong class="text-brand-navy dark:text-white">DAC8-Meldepflicht</strong> - Krypto-Plattformen melden Transaktionsdaten an Behörden. Diese Daten werden mit Steuererklärungen abgeglichen.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="below-fold py-20 bg-white dark:bg-dark-bg">
+        <div class="container mx-auto max-w-6xl px-4 sm:px-6">
+            <div
+                class="relative rounded-card overflow-hidden text-center py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-12 lg:px-20 bg-brand-navy dark:bg-[#0F0F0F] shadow-2xl shadow-brand-navy/30 dark:shadow-none border border-transparent dark:border-white/5">
+                <div
+                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200px] sm:w-[300px] md:w-[400px] lg:w-[600px] h-[200px] sm:h-[300px] md:h-[400px] lg:h-[600px] bg-brand-teal opacity-20 blur-[60px] sm:blur-[80px] md:blur-[100px] lg:blur-[120px] rounded-full pointer-events-none">
+                </div>
+
+                <div class="relative z-10 fade-in-up">
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl leading-tight text-white font-bold tracking-tight mb-6 sm:mb-8"
+                        style="letter-spacing: -0.02em">
+                        Krypto-Dokumentation
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-teal to-white">Audit-Ready</span>
+                    </h2>
+                    <p class="text-base sm:text-lg md:text-xl font-medium text-slate-200 dark:text-slate-300 max-w-xl mr-auto mb-8 sm:mb-10 md:mb-12 ml-auto">
+                        TX-Partner analysiert deine Krypto-Dokumentation, identifiziert Lücken und bereitet die Daten so auf, dass dein Steuerreport beim Finanzamt besteht.
+                    </p>
+                    <a href="https://app.cal.eu/johannesanderl-tx-partner/dokumentation-prufen" target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn-primary inline-flex items-center justify-center bg-white text-brand-navy text-base sm:text-lg font-semibold rounded-button px-6 sm:px-8 py-3 sm:py-4 hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(255,255,255,0.3)] transition-all duration-300 group">
+                        Unverbindlicher Doku-Check
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="ml-2 text-brand-teal group-hover:translate-x-1 transition-transform">
+                            <path d="M5 12h14"></path>
+                            <path d="m12 5 7 7-7 7"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Leistungen Link -->
+    <section class="py-8 bg-white dark:bg-dark-bg">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <a href="leistungen" class="inline-flex items-center gap-2 text-brand-teal hover:text-brand-navy dark:hover:text-white font-medium transition-colors group">
+                <svg class="w-4 h-4 group-hover:-translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                </svg>
+                Zurück zur Leistungen Übersicht
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="pt-24 pb-12 bg-white dark:bg-dark-bg border-t border-slate-200 dark:border-white/5">
+        <div class="container mx-auto px-6 max-w-7xl">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 lg:gap-16 mb-20">
+
+                <!-- Column 1: Brand -->
+                <div class="space-y-6">
+                    <a href="index" class="flex items-center gap-3">
+                        <div class="flex items-center gap-1 h-6">
+                            <div class="w-1.5 h-6 rounded-full bg-brand-navy dark:bg-slate-200"></div>
+                            <div class="w-1.5 h-6 rounded-full bg-brand-navy dark:bg-slate-200"></div>
+                            <div class="w-1.5 h-6 rounded-full bg-brand-navy dark:bg-slate-200"></div>
+                            <div class="w-1.5 h-6 rounded-full bg-brand-teal"></div>
+                        </div>
+                        <span class="text-brand-navy dark:text-white text-lg font-bold tracking-wider font-sans">TX-Partner</span>
+                    </a>
+                    <p class="dark:text-slate-400 leading-relaxed text-sm text-slate-500">Krypto-Dokumentation. Einfach richtig.</p>
+                    <div class="flex gap-4">
+                        <a href="https://x.com/TX_Partner" target="_blank" rel="noopener noreferrer"
+                            class="text-slate-400 hover:text-brand-navy dark:hover:text-white transition-colors"
+                            aria-label="TX-Partner auf X (Twitter)">
+                            <span class="sr-only">X (Twitter)</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/company/tx-partner/" target="_blank" rel="noopener noreferrer"
+                            class="text-slate-400 hover:text-brand-navy dark:hover:text-white transition-colors"
+                            aria-label="TX-Partner auf LinkedIn">
+                            <span class="sr-only">LinkedIn</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect width="4" height="12" x="2" y="9"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Leistungen -->
+                <div>
+                    <h4 class="font-bold mb-6 text-xs uppercase tracking-widest text-brand-navy dark:text-white">Leistungen</h4>
+                    <ul class="space-y-4">
+                        <li><a href="leistungen" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Leistungen</a></li>
+                        <li><a href="blockpit-hinweise" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Blockpit Hinweise</a></li>
+                        <li><a href="cointracking-fehler" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">CoinTracking Fehler</a></li>
+                        <li><a href="krypto-finanzamt-rueckfrage" class="text-sm font-medium text-brand-teal transition-colors">Finanzamt Rückfrage</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Unternehmen -->
+                <div>
+                    <h4 class="font-bold mb-6 text-xs uppercase tracking-widest text-brand-navy dark:text-white">Unternehmen</h4>
+                    <ul class="space-y-4">
+                        <li><a href="ueber-uns" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Über uns</a></li>
+                        <li><a href="dokumentationsstandard" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Dokumentationsstandard</a></li>
+                        <li><a href="blog" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Blog</a></li>
+                        <li><a href="faq" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">FAQ</a></li>
+                        <li><a href="kontakt" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Kontakt</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Rechtliches -->
+                <div>
+                    <h4 class="font-bold mb-6 text-xs uppercase tracking-widest text-brand-navy dark:text-white">Rechtliches</h4>
+                    <ul class="space-y-4">
+                        <li><a href="agb" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">AGB</a></li>
+                        <li><a href="datenschutz" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Datenschutz</a></li>
+                        <li><a href="impressum" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Impressum</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-200 dark:border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-xs font-medium text-slate-400 dark:text-slate-500">© 2026 TX-Partner – eine Geschäftsbezeichnung der Solvum GmbH i.G. Alle Rechte vorbehalten.</p>
+                <div class="flex gap-8">
+                    <a href="sitemap" class="text-xs font-medium text-slate-400 dark:text-slate-500 hover:text-brand-navy dark:hover:text-white transition-colors">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Card Spotlight Effect
+        function handleMouseMove(e) {
+            const card = e.currentTarget;
+            const rect = card.getBoundingClientRect();
+            card.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
+            card.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
+        }
+
+        // Intersection Observer for Animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+
+        // Dark Mode Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+
+        themeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            localStorage.theme = html.classList.contains('dark') ? 'dark' : 'light';
+        });
+    </script>
+</body>
+
+</html>

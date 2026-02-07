@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <!-- Dark Mode: Sofort setzen um Flash zu vermeiden -->
+    <script>
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Meta -->
+    <title>DAC8 und Krypto-Dokumentation: Was du wissen musst | TX-Partner</title>
+    <meta name="description"
+        content="DAC8 ist seit Januar 2026 aktiv. Krypto-Börsen melden an Finanzämter. Erfahre, was das für deine Krypto-Dokumentation bedeutet und wie du dich vorbereitest.">
+    <link rel="canonical" href="https://tx-partner.com/blog/dac8-krypto-dokumentation">
+
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <meta http-equiv="Cache-Control" content="public, max-age=31536000, immutable">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://tx-partner.com/blog/dac8-krypto-dokumentation">
+    <meta property="og:title" content="DAC8 und Krypto-Dokumentation: Was du wissen musst | TX-Partner">
+    <meta property="og:description"
+        content="DAC8 ist seit Januar 2026 aktiv. Krypto-Börsen melden an Finanzämter. Erfahre, was das für deine Dokumentation bedeutet.">
+    <meta property="og:image" content="https://tx-partner.com/assets/blog/dac8-krypto-dokumentation.png">
+    <meta property="og:locale" content="de_DE">
+    <meta property="article:published_time" content="2026-02-07">
+    <meta property="article:author" content="TX-Partner">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DAC8 und Krypto-Dokumentation: Was du wissen musst">
+    <meta name="twitter:description"
+        content="DAC8 ist seit Januar 2026 aktiv. Was bedeutet die Meldepflicht für dich?">
+    <meta name="twitter:image" content="https://tx-partner.com/assets/blog/dac8-krypto-dokumentation.png">
+
+    <!-- Local Fonts Only (DSGVO-konform) -->
+    <link rel="stylesheet" href="/assets/css/fonts.css">
+    <script defer src="/assets/tx-partner-common.js"></script>
+    <link rel="stylesheet" href="/assets/css/tailwind.css">
+
+    <!-- Schema.org BlogPosting -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "DAC8 und Krypto-Dokumentation: Was du wissen musst",
+        "description": "DAC8 ist seit Januar 2026 aktiv. Krypto-Börsen melden an Finanzämter. Erfahre, was das für deine Krypto-Dokumentation bedeutet und wie du dich vorbereitest.",
+        "datePublished": "2026-02-07",
+        "dateModified": "2026-02-07",
+        "author": {
+            "@type": "Organization",
+            "name": "TX-Partner",
+            "url": "https://tx-partner.com/ueber-uns"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "TX-Partner",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://tx-partner.com/assets/logo-signature2.png"
+            }
+        },
+        "image": "https://tx-partner.com/assets/blog/dac8-krypto-dokumentation.png",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://tx-partner.com/blog/dac8-krypto-dokumentation"
+        },
+        "articleSection": "Regulierung",
+        "inLanguage": "de-DE",
+        "keywords": ["DAC8", "DAC8 Krypto", "Krypto Meldepflicht", "Krypto Dokumentation", "Finanzamt Krypto"]
+    }
+    </script>
+
+    <!-- FAQ Schema für Featured Snippets -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Was ist DAC8?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "DAC8 (Directive on Administrative Cooperation 8) ist eine EU-Richtlinie, die Krypto-Dienstleister seit Januar 2026 verpflichtet, Transaktionsdaten automatisch an Finanzbehörden zu melden. Die Daten werden EU-weit zwischen Finanzämtern ausgetauscht."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Seit wann ist DAC8 aktiv?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Die Meldepflicht gilt seit 1. Januar 2026. Die ersten Datenmeldungen an Finanzämter erfolgen 2027 für das Berichtsjahr 2026."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Was wird unter DAC8 gemeldet?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Krypto-Börsen und -Dienstleister melden: Name, Adresse, Steuernummer der Nutzer, sowie Transaktionen über bestimmten Schwellenwerten – Käufe, Verkäufe, Tausche, Überweisungen."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Was bedeutet DAC8 für meine Krypto-Dokumentation?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Das Finanzamt erhält jetzt strukturierte Daten von Börsen. Diese werden mit deiner Steuererklärung verglichen. Wenn Diskrepanzen auftauchen, kann es Rückfragen geben. Eine vollständige, fehlerfreie Krypto-Dokumentation ist daher wichtiger denn je."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Betrifft DAC8 nur zentrale Börsen?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Die Meldepflicht betrifft primär regulierte Krypto-Dienstleister (CEX wie Binance, Kraken, Coinbase). DeFi-Protokolle und selbst gehostete Wallets fallen nicht direkt unter DAC8 – aber On-Chain-Transaktionen sind öffentlich einsehbar."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        /* Page Transition */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            opacity: 0;
+            animation: pageLoad 0.5s ease-out 0.1s forwards;
+            overflow-x: hidden;
+            background-color: #f8fafc;
+        }
+
+        .dark body,
+        html.dark body {
+            background-color: #0C0E14;
+        }
+
+        footer {
+            background-color: white;
+        }
+
+        .dark footer,
+        html.dark footer {
+            background-color: #0C0E14;
+        }
+
+        .author-bio {
+            background-color: white;
+        }
+
+        .dark .author-bio,
+        html.dark .author-bio {
+            background-color: #111318;
+        }
+
+        .internal-links {
+            background-color: white;
+        }
+
+        .dark .internal-links,
+        html.dark .internal-links {
+            background-color: #0C0C0C;
+        }
+
+        @keyframes pageLoad {
+            from {
+                opacity: 0;
+                transform: translateY(8px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Noise Overlay */
+        .bg-noise {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 50;
+            opacity: 0.03;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
+        .dark .bg-noise {
+            opacity: 0.015;
+        }
+
+        /* Glass Effect for Navigation */
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .dark .glass-nav {
+            background: rgba(15, 15, 15, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Dropdown Animation */
+        .nav-dropdown {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-8px);
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .group:hover .nav-dropdown,
+        .group:focus-within .nav-dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        /* Mobile Menu Animation */
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 0.3s ease-out, opacity 0.2s ease;
+        }
+
+        .mobile-menu.open {
+            max-height: 600px;
+            opacity: 1;
+        }
+
+        /* Prose Customization */
+        .prose h2 {
+            scroll-margin-top: 100px;
+        }
+
+        .prose a {
+            color: #3A9EAF;
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 4px;
+            transition: all 0.2s;
+        }
+
+        .prose a:hover {
+            color: #2C7A87;
+            text-decoration-thickness: 2px;
+        }
+
+        /* Info Box Premium (Violet für Regulierung) */
+        .info-box {
+            background: rgba(58, 158, 175, 0.08);
+            border: 1px solid rgba(58, 158, 175, 0.25);
+            border-radius: 24px;
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+
+        .dark .info-box {
+            background: rgba(58, 158, 175, 0.08);
+            border: 1px solid rgba(58, 158, 175, 0.2);
+        }
+
+        .info-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle at 100% 0%, rgba(58, 158, 175, 0.15), transparent 70%);
+            pointer-events: none;
+        }
+
+        /* Prose Overrides */
+        .prose {
+            max-width: 65ch;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .prose h2 {
+            scroll-margin-top: 120px;
+            color: #1E3A5F;
+            font-weight: 800;
+            margin-top: 3rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(58, 158, 175, 0.2);
+        }
+
+        .dark .prose h2 {
+            color: white;
+        }
+
+        .prose h3 {
+            color: #1E3A5F;
+            font-weight: 700;
+        }
+
+        .dark .prose h3 {
+            color: #cbd5e1;
+        }
+
+        .prose strong {
+            color: #1E3A5F;
+            font-weight: 700;
+        }
+
+        .dark .prose strong {
+            color: #fff;
+        }
+
+        .prose ul>li::marker {
+            color: #3A9EAF;
+        }
+
+        /* FAQ Box Style */
+        .faq-box {
+            background-color: rgba(255, 255, 255, 0.95);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.08);
+        }
+
+        @media (min-width: 640px) {
+            .faq-box {
+                border-radius: 16px;
+                padding: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        .dark .faq-box {
+            background-color: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: none;
+        }
+
+        .faq-box h4 {
+            margin-top: 0 !important;
+            color: #1E3A5F;
+            font-weight: 700;
+            font-size: 1.1em;
+        }
+
+        .dark .faq-box h4 {
+            color: white;
+        }
+
+        /* Reading Progress Bar */
+        .reading-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: rgba(0, 0, 0, 0.08);
+            z-index: 60;
+        }
+
+        .dark .reading-progress {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .reading-progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #3A9EAF, #1E3A5F);
+            width: 0%;
+            transition: width 0.1s ease-out;
+        }
+
+        /* Premium Article Container */
+        .article-container {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: 32px;
+            padding: 2rem;
+            margin-top: 2rem;
+            box-shadow: 0 4px 30px -10px rgba(0, 0, 0, 0.08);
+        }
+
+        @media (min-width: 768px) {
+            .article-container {
+                padding: 3rem;
+            }
+        }
+
+        .dark .article-container {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            box-shadow: none;
+        }
+
+        /* Section Numbers */
+        .section-number {
+            display: inline-block;
+            font-family: ui-monospace, SFMono-Regular, monospace;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #3A9EAF;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Pull Quote Style (Violet) */
+        .pull-quote {
+            position: relative;
+            margin: 2.5rem 0;
+            padding: 1.5rem 2rem;
+            background: linear-gradient(135deg, rgba(58, 158, 175, 0.12), rgba(30, 58, 95, 0.08));
+            border-left: 4px solid #3A9EAF;
+            border-radius: 0 16px 16px 0;
+            font-size: 1.15rem;
+            font-style: italic;
+            color: #1E3A5F;
+        }
+
+        .dark .pull-quote {
+            background: linear-gradient(135deg, rgba(58, 158, 175, 0.12), rgba(30, 58, 95, 0.1));
+            color: #e2e8f0;
+        }
+
+        .pull-quote::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            font-size: 4rem;
+            font-family: Georgia, serif;
+            color: rgba(58, 158, 175, 0.3);
+            line-height: 1;
+        }
+
+        /* Enhanced Lists (Violet) */
+        .prose ul {
+            background: rgba(58, 158, 175, 0.06);
+            border-radius: 16px;
+            padding: 1.25rem 1.25rem 1.25rem 2.5rem;
+            border-left: 3px solid #3A9EAF;
+            margin: 1.5rem 0;
+        }
+
+        .dark .prose ul {
+            background: rgba(58, 158, 175, 0.08);
+        }
+
+        .prose li {
+            padding: 0.375rem 0;
+        }
+
+        /* Table of Contents - Sticky Sidebar */
+        .toc-sidebar {
+            position: sticky;
+            top: 120px;
+            width: 200px;
+            max-height: calc(100vh - 160px);
+            overflow-y: auto;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.98);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px -8px rgba(0, 0, 0, 0.15);
+            z-index: 40;
+            align-self: flex-start;
+        }
+
+        .dark .toc-sidebar {
+            background: rgba(15, 17, 23, 0.98);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px -8px rgba(0, 0, 0, 0.5);
+        }
+
+        .article-with-toc {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            align-items: flex-start;
+        }
+
+        .article-main-content {
+            width: 100%;
+            max-width: 768px;
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 1100px) {
+            .toc-sidebar {
+                display: none !important;
+            }
+
+            .article-with-toc {
+                max-width: 768px;
+            }
+        }
+
+        .toc-sidebar h4 {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #1E3A5F;
+            margin-bottom: 1rem;
+        }
+
+        .dark .toc-sidebar h4 {
+            color: #64748b;
+        }
+
+        .toc-sidebar a {
+            display: block;
+            padding: 0.5rem 0;
+            font-size: 0.8rem;
+            color: #64748b;
+            text-decoration: none;
+            border-left: 2px solid transparent;
+            padding-left: 0.75rem;
+            margin-left: -0.75rem;
+            transition: all 0.2s;
+        }
+
+        .toc-sidebar a:hover,
+        .toc-sidebar a.active {
+            color: #3A9EAF;
+            border-left-color: #3A9EAF;
+        }
+
+        .dark .toc-sidebar a {
+            color: #94a3b8;
+        }
+
+        .dark .toc-sidebar a:hover,
+        .dark .toc-sidebar a.active {
+            color: #3A9EAF;
+        }
+
+        /* Aurora Card for CTA */
+        .aurora-card {
+            position: relative;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .aurora-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            background: radial-gradient(800px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+                    rgba(58, 158, 175, 0.1), transparent 60%);
+            opacity: 0;
+            transition: opacity 0.5s;
+            pointer-events: none;
+        }
+
+        .aurora-card:hover::before {
+            opacity: 1;
+        }
+
+        .card-border-glow {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            border-radius: inherit;
+            padding: 1px;
+            background: radial-gradient(400px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+                    rgba(58, 158, 175, 0.5), transparent 40%);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .aurora-card:hover .card-border-glow {
+            opacity: 1;
+        }
+
+        /* Timeline Component */
+        .timeline-horizontal {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .timeline-horizontal::before {
+            content: '';
+            position: absolute;
+            top: 2.5rem;
+            left: 10%;
+            right: 10%;
+            height: 3px;
+            background: linear-gradient(90deg, #3A9EAF, #3A9EAF);
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            flex: 1;
+        }
+
+        .timeline-dot {
+            width: 1rem;
+            height: 1rem;
+            background: #3A9EAF;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            box-shadow: 0 0 0 4px rgba(58, 158, 175, 0.2);
+        }
+
+        .timeline-item.active .timeline-dot {
+            background: #3A9EAF;
+            box-shadow: 0 0 0 4px rgba(58, 158, 175, 0.3), 0 0 20px rgba(58, 158, 175, 0.4);
+            animation: timeline-pulse 2s infinite;
+        }
+
+        @keyframes timeline-pulse {
+            0%, 100% { box-shadow: 0 0 0 4px rgba(58, 158, 175, 0.3); }
+            50% { box-shadow: 0 0 0 8px rgba(58, 158, 175, 0.1), 0 0 20px rgba(58, 158, 175, 0.4); }
+        }
+    </style>
+</head>
+
+<body class="antialiased font-sans bg-slate-50 dark:bg-[#0C0E14] text-slate-900 dark:text-slate-100">
+
+    <!-- Reading Progress Bar -->
+    <div class="reading-progress">
+        <div class="reading-progress-bar" id="reading-progress"></div>
+    </div>
+
+    <!-- Noise Overlay -->
+    <div class="bg-noise"></div>
+
+    <!-- Navigation -->
+    <nav class="sticky top-6 z-50 pt-6">
+        <div class="mx-auto w-[95%] max-w-6xl">
+            <div
+                class="glass-nav rounded-full px-6 py-3 flex items-center justify-between shadow-2xl shadow-black/5 dark:shadow-black/20 relative">
+                <!-- Logo -->
+                <a href="/" class="flex items-center gap-3 shrink-0">
+                    <div class="flex gap-1 h-6 items-center">
+                        <div class="w-1.5 h-6 rounded-full bg-brand-navy dark:bg-slate-200"></div>
+                        <div class="w-1.5 h-6 rounded-full bg-brand-navy dark:bg-slate-200"></div>
+                        <div class="w-1.5 h-6 rounded-full bg-brand-navy dark:bg-slate-200"></div>
+                        <div class="w-1.5 h-6 rounded-full bg-brand-teal"></div>
+                    </div>
+                    <span class="text-brand-navy dark:text-white text-lg font-bold tracking-wider">TX-Partner</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <ul class="hidden lg:flex items-center gap-1">
+                    <li class="relative group">
+                        <button class="flex items-center gap-1 px-4 py-2 text-sm font-medium text-slate-500 hover:text-brand-navy dark:text-slate-400 dark:hover:text-white transition-colors">
+                            Leistungen
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:rotate-180 transition-transform duration-300"><path d="m6 9 6 6 6-6"></path></svg>
+                        </button>
+                        <div class="nav-dropdown absolute top-full left-0 mt-2 w-56 rounded-button bg-white dark:bg-[#0F0F0F] border border-slate-100 dark:border-white/10 shadow-xl p-2">
+                            <a href="/leistungen" class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                                <div class="text-sm font-semibold text-brand-navy dark:text-white mb-0.5">Leistungen</div>
+                                <div class="text-xs text-slate-500 font-mono">Übersicht aller Services</div>
+                            </a>
+                            <a href="/blockpit-hinweise" class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                                <div class="text-sm font-semibold text-brand-navy dark:text-white mb-0.5">Blockpit Hinweise</div>
+                                <div class="text-xs text-slate-500 font-mono">Korrektur & Optimierung</div>
+                            </a>
+                            <a href="/cointracking-fehler" class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                                <div class="text-sm font-semibold text-brand-navy dark:text-white mb-0.5">CoinTracking Fehler</div>
+                                <div class="text-xs text-slate-500 font-mono">Datenbereinigung</div>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="relative group">
+                        <button class="flex items-center gap-1 px-4 py-2 text-sm font-medium text-slate-500 hover:text-brand-navy dark:text-slate-400 dark:hover:text-white transition-colors">
+                            Über uns
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:rotate-180 transition-transform duration-300"><path d="m6 9 6 6 6-6"></path></svg>
+                        </button>
+                        <div class="nav-dropdown absolute top-full left-0 mt-2 w-56 rounded-button bg-white dark:bg-[#0F0F0F] border border-slate-100 dark:border-white/10 shadow-xl p-2">
+                            <a href="/ueber-uns" class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                                <div class="text-sm font-semibold text-brand-navy dark:text-white mb-0.5">Über uns</div>
+                                <div class="text-xs text-slate-500 font-mono">Wer wir sind</div>
+                            </a>
+                            <a href="/dokumentationsstandard" class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
+                                <div class="text-sm font-semibold text-brand-navy dark:text-white mb-0.5">Dokumentationsstandard</div>
+                                <div class="text-xs text-slate-500 font-mono">Unsere Qualitätsrichtlinien</div>
+                            </a>
+                        </div>
+                    </li>
+                    <li><a href="/blog" class="block px-4 py-2 text-sm font-medium text-brand-navy dark:text-white transition-colors">Blog</a></li>
+                    <li><a href="/faq" class="block px-4 py-2 text-sm font-medium text-slate-500 hover:text-brand-navy dark:text-slate-400 dark:hover:text-white transition-colors">FAQ</a></li>
+                    <li><a href="/kontakt" class="block px-4 py-2 text-sm font-medium text-slate-500 hover:text-brand-navy dark:text-slate-400 dark:hover:text-white transition-colors">Kontakt</a></li>
+                </ul>
+
+                <!-- Right Side -->
+                <div class="flex items-center gap-4">
+                    <button id="theme-toggle" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-white/10 text-slate-500 dark:text-slate-400 transition-all duration-300" aria-label="Dark Mode umschalten">
+                        <span class="block dark:hidden"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32l1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg></span>
+                        <span class="hidden dark:block"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg></span>
+                    </button>
+                    <button id="mobile-menu-toggle" class="lg:hidden text-slate-600 dark:text-slate-300 p-3" aria-label="Menü öffnen" aria-expanded="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu -->
+                <div id="mobile-menu" class="mobile-menu absolute top-full left-0 w-full mt-2 bg-white dark:bg-[#0F0F0F] rounded-card border border-slate-100 dark:border-white/10 shadow-xl p-2" role="dialog" aria-label="Hauptmenü">
+                    <div class="flex items-center justify-between px-4 py-2 mb-2 border-b border-slate-100 dark:border-white/10">
+                        <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Menü</span>
+                        <button id="mobile-menu-close" class="p-2 rounded-lg hover:bg-slate-50 dark:hover:bg-white/5" aria-label="Menü schließen">
+                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                        </button>
+                    </div>
+                    <a href="/leistungen" class="block px-4 py-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5"><div class="text-sm font-semibold text-slate-700 dark:text-white">Leistungen</div></a>
+                    <a href="/blockpit-hinweise" class="block px-4 py-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5"><div class="text-sm font-semibold text-slate-700 dark:text-white">Blockpit Hinweise</div></a>
+                    <a href="/cointracking-fehler" class="block px-4 py-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5"><div class="text-sm font-semibold text-slate-700 dark:text-white">CoinTracking Fehler</div></a>
+                    <div class="h-px bg-slate-100 dark:bg-white/5 my-1 mx-4"></div>
+                    <a href="/ueber-uns" class="block px-4 py-2.5 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5"><div class="text-sm font-semibold text-slate-700 dark:text-white">Über uns</div></a>
+                    <a href="/blog" class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 font-semibold text-sm text-brand-navy dark:text-white">Blog</a>
+                    <a href="/faq" class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 font-semibold text-sm text-slate-600 dark:text-slate-300">FAQ</a>
+                    <a href="/kontakt" class="block px-4 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-white/5 font-semibold text-sm text-slate-600 dark:text-slate-300">Kontakt</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Header -->
+    <header class="relative pt-32 sm:pt-40 md:pt-48 pb-16 overflow-hidden">
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-brand-teal/15 blur-[120px] rounded-full opacity-60 mix-blend-multiply dark:mix-blend-screen animate-aurora-pulse"></div>
+            <div class="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
+        </div>
+
+        <div class="container mx-auto px-4 sm:px-6 max-w-3xl relative z-10">
+            <!-- Breadcrumb -->
+            <nav class="flex items-center gap-2 text-sm mb-8 animate-fade-in" aria-label="Breadcrumb">
+                <a href="/" class="text-slate-400 hover:text-brand-teal transition-colors">Home</a>
+                <span class="text-slate-300">/</span>
+                <a href="/blog" class="text-slate-400 hover:text-brand-teal transition-colors">Blog</a>
+                <span class="text-slate-300">/</span>
+                <span class="text-slate-600 dark:text-slate-300 font-medium">Regulierung</span>
+            </nav>
+
+            <!-- Meta & Tags -->
+            <div class="flex flex-wrap items-center gap-4 mb-8">
+                <span class="inline-flex items-center gap-2 border border-brand-teal/20 text-brand-teal text-xs font-bold tracking-widest uppercase rounded-full px-3.5 py-1.5 backdrop-blur-sm bg-white/50 dark:bg-white/5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-brand-teal animate-pulse"></span>
+                    Regulierung
+                </span>
+                <span class="text-sm text-slate-500 dark:text-slate-400 font-mono">7. Februar 2026</span>
+                <span class="text-slate-300 dark:text-slate-600">|</span>
+                <span class="text-sm text-slate-500 dark:text-slate-400 flex items-center gap-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    8 Min. Lesezeit
+                </span>
+            </div>
+
+            <!-- Titel -->
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-brand-navy dark:text-white mb-8 leading-tight tracking-tight">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-teal to-brand-navy dark:to-white">DAC8</span>
+                und Krypto-Dokumentation
+            </h1>
+
+            <!-- Author -->
+            <div class="flex items-center gap-4 py-6 border-y border-slate-200 dark:border-white/10">
+                <div class="flex gap-1 h-10 items-center shrink-0">
+                    <div class="w-2 h-10 rounded-full bg-brand-navy dark:bg-slate-200"></div>
+                    <div class="w-2 h-10 rounded-full bg-brand-navy dark:bg-slate-200"></div>
+                    <div class="w-2 h-10 rounded-full bg-brand-navy dark:bg-slate-200"></div>
+                    <div class="w-2 h-10 rounded-full bg-brand-teal"></div>
+                </div>
+                <div>
+                    <p class="font-bold text-brand-navy dark:text-white text-sm">TX-Partner Redaktion</p>
+                    <p class="text-xs text-slate-500 dark:text-slate-400">Experten für Krypto-Dokumentation</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Featured Image (Platzhalter - Bild wird später geliefert) -->
+    <div class="container mx-auto px-4 sm:px-6 max-w-4xl mb-16">
+        <div
+            class="aspect-[2/1] rounded-[32px] overflow-hidden bg-slate-100 dark:bg-[#0F0F0F] border border-slate-200 dark:border-white/5 shadow-2xl shadow-brand-navy/10 dark:shadow-black/40 relative group">
+            <!-- Platzhalter: Bild wird später ersetzt -->
+            <img src="/assets/blog/dac8-krypto-dokumentation.png"
+                alt="DAC8 und Krypto-Dokumentation: Was du wissen musst" loading="lazy" width="1200" height="630"
+                class="w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-[1.02]">
+            <!-- Border Glow -->
+            <div class="absolute inset-0 border border-white/10 rounded-[32px] pointer-events-none"></div>
+        </div>
+    </div>
+
+    <!-- Article Content with Sticky ToC -->
+    <div class="article-with-toc pb-16">
+        <!-- Table of Contents -->
+        <aside class="toc-sidebar">
+            <h4>Inhalt</h4>
+            <nav>
+                <a href="#was-ist-dac8">Was ist DAC8?</a>
+                <a href="#timeline">Die Timeline</a>
+                <a href="#gemeldet">Was wird gemeldet?</a>
+                <a href="#bedeutung">Was bedeutet das?</a>
+                <a href="#vorbereitung">Wie vorbereitest du dich?</a>
+                <a href="#faq">FAQ</a>
+            </nav>
+        </aside>
+
+        <!-- Main Article Content -->
+        <article class="article-main-content">
+            <div class="article-container">
+                <div class="prose prose-lg dark:prose-invert max-w-none
+                        prose-headings:text-brand-navy dark:prose-headings:text-white
+                        prose-headings:font-bold prose-headings:tracking-tight
+                        prose-p:text-slate-600 dark:prose-p:text-slate-300
+                        prose-p:leading-relaxed
+                        prose-strong:text-brand-navy dark:prose-strong:text-white
+                        prose-ul:text-slate-600 dark:prose-ul:text-slate-300
+                        prose-li:marker:text-brand-teal">
+
+                    <!-- Einleitung -->
+                    <p class="text-xl leading-relaxed text-slate-700 dark:text-slate-300 mb-8">
+                        DAC8 ist seit Januar 2026 aktiv. Krypto-Börsen melden jetzt automatisch an Finanzämter. Das Zeitalter der Intransparenz ist vorbei. Aber was bedeutet das konkret für dich?
+                    </p>
+
+                    <h2 id="was-ist-dac8">
+                        <span class="section-number">01</span>
+                        Was ist DAC8?
+                    </h2>
+
+                    <p>
+                        <strong>DAC8</strong> (Directive on Administrative Cooperation 8) ist eine EU-Richtlinie, die Krypto-Dienstleister verpflichtet, Transaktionsdaten automatisch an Finanzbehörden zu melden.
+                    </p>
+
+                    <p>
+                        Die Daten werden nicht nur an das lokale Finanzamt gemeldet, sondern EU-weit zwischen den Mitgliedstaaten ausgetauscht. Wenn du in Österreich lebst und auf einer in Litauen ansässigen Börse handelst, erhält das österreichische Finanzamt diese Daten.
+                    </p>
+
+                    <p class="text-sm text-slate-500 dark:text-slate-400 italic">
+                        Quelle: EU-Amtsblatt, Directive (EU) 2023/2226
+                    </p>
+
+                    <div class="info-box p-4 sm:p-6 rounded-2xl my-8 not-prose">
+                        <p class="font-bold text-brand-teal dark:text-brand-teal mb-4">DAC8 in Kürze:</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                            <div class="p-4 bg-white/50 dark:bg-white/5 rounded-xl">
+                                <p class="font-semibold text-brand-navy dark:text-white mb-2">EU-weite Richtlinie</p>
+                                <p class="text-slate-600 dark:text-slate-400">Betrifft alle EU-Länder und Krypto-Dienstleister, die in der EU operieren.</p>
+                            </div>
+                            <div class="p-4 bg-white/50 dark:bg-white/5 rounded-xl">
+                                <p class="font-semibold text-brand-navy dark:text-white mb-2">Automatischer Austausch</p>
+                                <p class="text-slate-600 dark:text-slate-400">Daten werden automatisch zwischen Finanzämtern verschiedener EU-Länder geteilt.</p>
+                            </div>
+                            <div class="p-4 bg-white/50 dark:bg-white/5 rounded-xl">
+                                <p class="font-semibold text-brand-navy dark:text-white mb-2">Regulierte Dienstleister</p>
+                                <p class="text-slate-600 dark:text-slate-400">Betrifft primär CEX wie Binance, Kraken, Coinbase – nicht DeFi-Protokolle.</p>
+                            </div>
+                            <div class="p-4 bg-white/50 dark:bg-white/5 rounded-xl">
+                                <p class="font-semibold text-brand-navy dark:text-white mb-2">Schwellenwerte</p>
+                                <p class="text-slate-600 dark:text-slate-400">Transaktionen über bestimmten Schwellenwerten werden gemeldet.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 id="timeline">
+                        <span class="section-number">02</span>
+                        Die Timeline
+                    </h2>
+
+                    <div class="not-prose my-8">
+                        <div class="timeline-horizontal">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <p class="font-bold text-brand-navy dark:text-white text-sm">Okt 2023</p>
+                                <p class="text-slate-500 text-xs">DAC8 verabschiedet</p>
+                            </div>
+                            <div class="timeline-item active">
+                                <div class="timeline-dot"></div>
+                                <p class="font-bold text-brand-navy dark:text-white text-sm">Jan 2026</p>
+                                <p class="text-slate-500 text-xs">Meldepflicht aktiv</p>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <p class="font-bold text-brand-navy dark:text-white text-sm">2027</p>
+                                <p class="text-slate-500 text-xs">Erste Meldungen</p>
+                            </div>
+                        </div>
+                        <p class="text-sm text-slate-500 dark:text-slate-400 italic mt-4 text-center">
+                            Quelle: Europaeischer Rat, Pressemitteilung Oktober 2023
+                        </p>
+                    </div>
+
+                    <p>
+                        Wir befinden uns jetzt in der Phase, in der Daten gesammelt werden. Die ersten Meldungen an Finanzämter erfolgen 2027 für das Berichtsjahr 2026.
+                    </p>
+
+                    <!-- Pull Quote -->
+                    <div class="pull-quote not-prose">
+                        Das Zeitfenster, deine Krypto-Dokumentation in Ordnung zu bringen, schließt sich.
+                    </div>
+
+                    <h2 id="gemeldet">
+                        <span class="section-number">03</span>
+                        Was wird gemeldet?
+                    </h2>
+
+                    <p>
+                        Krypto-Dienstleister melden folgende Informationen:
+                    </p>
+
+                    <ul>
+                        <li><strong>Persönliche Daten</strong> – Name, Adresse, Geburtsdatum, Steuernummer</li>
+                        <li><strong>Transaktionen</strong> – Käufe, Verkäufe, Tausche über bestimmten Schwellenwerten</li>
+                        <li><strong>Wallet-Überweisungen</strong> – Ein- und Auszahlungen auf/von Börsen</li>
+                        <li><strong>Bestände</strong> – Krypto-Guthaben zum Stichtag</li>
+                    </ul>
+
+                    <p class="text-sm text-slate-500 dark:text-slate-400 italic">
+                        Quelle: EU-Kommission, DAC8 Taxation and Customs
+                    </p>
+
+                    <h3>Was NICHT gemeldet wird (aber sichtbar ist)</h3>
+
+                    <p>
+                        DeFi-Protokolle und selbst gehostete Wallets fallen nicht direkt unter DAC8. Aber: On-Chain-Transaktionen sind öffentlich. Wenn du von einer Börse auf ein eigenes Wallet überweist, ist das dokumentiert.
+                    </p>
+
+                    <h2 id="bedeutung">
+                        <span class="section-number">04</span>
+                        Was bedeutet das für dich?
+                    </h2>
+
+                    <p>
+                        Das Finanzamt erhält jetzt <strong>strukturierte Daten</strong>. Diese werden mit deiner Steuererklärung verglichen.
+                    </p>
+
+                    <p>
+                        Wenn dort Widersprüche auftauchen – du hast 50.000€ auf einer Börse verkauft, aber in der Steuererklärung nur 10.000€ angegeben – kann es Rückfragen geben.
+                    </p>
+
+                    <div class="info-box p-4 sm:p-6 rounded-2xl my-8 not-prose">
+                        <p class="font-bold text-brand-teal dark:text-brand-teal mb-4">Mögliche Szenarien:</p>
+                        <div class="space-y-4 text-sm">
+                            <div class="p-4 bg-white/50 dark:bg-white/5 rounded-xl">
+                                <p class="font-semibold text-brand-navy dark:text-white mb-2">Szenario 1: Daten stimmen überein</p>
+                                <p class="text-slate-600 dark:text-slate-400">Deine Steuererklärung passt zu den gemeldeten Daten. Kein Problem.</p>
+                            </div>
+                            <div class="p-4 bg-white/50 dark:bg-white/5 rounded-xl">
+                                <p class="font-semibold text-brand-navy dark:text-white mb-2">Szenario 2: Diskrepanzen</p>
+                                <p class="text-slate-600 dark:text-slate-400">Das Finanzamt sieht mehr als du angegeben hast. Rückfragen können folgen. Du brauchst Belege.</p>
+                            </div>
+                            <div class="p-4 bg-white/50 dark:bg-white/5 rounded-xl">
+                                <p class="font-semibold text-brand-navy dark:text-white mb-2">Szenario 3: Keine Erklärung abgegeben</p>
+                                <p class="text-slate-600 dark:text-slate-400">Das Finanzamt sieht Aktivität, aber keine Erklärung. Das kann problematisch sein.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 id="vorbereitung">
+                        <span class="section-number">05</span>
+                        Wie bereitest du dich vor?
+                    </h2>
+
+                    <p>
+                        DAC8 ändert nicht, was du tun solltest – es macht es nur dringender:
+                    </p>
+
+                    <ul>
+                        <li><strong>Vollständige Krypto-Dokumentation</strong> – Alle Wallets, alle Börsen, alle Jahre</li>
+                        <li><strong>Keine Fehler im Steuerreport</strong> – Negative Bestände, fehlende Historie = Probleme</li>
+                        <li><strong>Belege aufbewahren</strong> – CSV-Exports, Transaktionshistorien, Screenshots</li>
+                        <li><strong>Proaktiv handeln</strong> – Nicht warten, bis eine Anfrage kommt</li>
+                    </ul>
+
+                    <!-- Pull Quote -->
+                    <div class="pull-quote not-prose">
+                        Krypto-Dokumentation ist keine Reaktion auf Anfragen – sie ist die Vorbereitung darauf.
+                    </div>
+
+                    <h3>Der TX-Partner Ansatz</h3>
+
+                    <p>
+                        TX-Partner bereitet deine Krypto-Dokumentation so auf, dass sie belastbar ist:
+                    </p>
+
+                    <ul>
+                        <li>Alle Wallets und Börsen erfassen</li>
+                        <li>Lücken in der Transaktionshistorie schließen</li>
+                        <li>Fehler in Steuertools korrigieren</li>
+                        <li>Audit-Ready für Steuerberater und Finanzamt</li>
+                    </ul>
+
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="mt-16 border-t border-slate-200 dark:border-white/10 pt-12">
+                <h2 id="faq" class="text-2xl font-bold text-brand-navy dark:text-white mb-8">Häufige Fragen zu DAC8</h2>
+
+                <div class="space-y-6">
+                    <div class="faq-box">
+                        <h4>Was ist DAC8?</h4>
+                        <p class="text-slate-600 dark:text-slate-400">DAC8 (Directive on Administrative Cooperation 8) ist eine EU-Richtlinie, die Krypto-Dienstleister seit Januar 2026 verpflichtet, Transaktionsdaten automatisch an Finanzbehörden zu melden. Die Daten werden EU-weit zwischen Finanzämtern ausgetauscht.</p>
+                    </div>
+
+                    <div class="faq-box">
+                        <h4>Seit wann ist DAC8 aktiv?</h4>
+                        <p class="text-slate-600 dark:text-slate-400">Die Meldepflicht gilt seit 1. Januar 2026. Die ersten Datenmeldungen an Finanzämter erfolgen 2027 für das Berichtsjahr 2026.</p>
+                    </div>
+
+                    <div class="faq-box">
+                        <h4>Was wird unter DAC8 gemeldet?</h4>
+                        <p class="text-slate-600 dark:text-slate-400">Krypto-Börsen und -Dienstleister melden: Name, Adresse, Steuernummer der Nutzer, sowie Transaktionen über bestimmten Schwellenwerten – Käufe, Verkäufe, Tausche, Überweisungen.</p>
+                    </div>
+
+                    <div class="faq-box">
+                        <h4>Was bedeutet DAC8 für meine Krypto-Dokumentation?</h4>
+                        <p class="text-slate-600 dark:text-slate-400">Das Finanzamt erhält jetzt strukturierte Daten von Börsen. Diese werden mit deiner Steuererklärung verglichen. Wenn Diskrepanzen auftauchen, kann es Rückfragen geben. Eine vollständige, fehlerfreie Krypto-Dokumentation ist daher wichtiger denn je.</p>
+                    </div>
+
+                    <div class="faq-box">
+                        <h4>Betrifft DAC8 nur zentrale Börsen?</h4>
+                        <p class="text-slate-600 dark:text-slate-400">Die Meldepflicht betrifft primär regulierte Krypto-Dienstleister (CEX wie Binance, Kraken, Coinbase). DeFi-Protokolle und selbst gehostete Wallets fallen nicht direkt unter DAC8 – aber On-Chain-Transaktionen sind öffentlich einsehbar.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Box -->
+            <div class="mt-12 sm:mt-20 aurora-card relative p-5 sm:p-8 md:p-12 rounded-[20px] sm:rounded-[32px] overflow-hidden bg-brand-navy dark:bg-[#0F0F0F] text-center border border-white/10" onmousemove="handleMouseMove(event)">
+                <div class="card-border-glow"></div>
+                <div class="absolute top-0 right-0 w-[300px] sm:w-[400px] h-[300px] sm:h-[400px] bg-brand-teal/20 blur-[80px] sm:blur-[100px] rounded-full mix-blend-screen pointer-events-none"></div>
+
+                <div class="relative z-10">
+                    <h3 class="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-3 sm:mb-4">
+                        DAC8 ist aktiv. Ist deine Dokumentation bereit?
+                    </h3>
+                    <p class="text-slate-300 mb-6 sm:mb-8 max-w-lg mx-auto text-base sm:text-lg leading-relaxed">
+                        Wir prüfen deine Krypto-Dokumentation und identifizieren Lücken. Unverbindlich in 30 Minuten.
+                    </p>
+                    <a href="https://cal.eu/johannesanderl-tx-partner/dokumentation-prufen" class="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-white text-brand-navy font-bold rounded-xl hover:bg-brand-teal hover:text-white transition-all duration-300 shadow-xl shadow-brand-navy/40 hover:-translate-y-0.5 text-sm sm:text-base">
+                        <span>Unverbindlichen Doku-Check anfragen</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Internal Links -->
+            <div class="internal-links mt-8 sm:mt-12 p-4 sm:p-6 rounded-[16px] sm:rounded-[24px] border border-slate-200 dark:border-white/5">
+                <p class="font-bold text-brand-navy dark:text-white mb-4">Weiterführende Infos</p>
+                <ul class="space-y-3">
+                    <li><a href="/blog/finanzamt-fragt-nach-krypto" class="text-brand-teal hover:underline underline-offset-2 font-medium">→ Finanzamt fragt nach Krypto: Was tun?</a></li>
+                    <li><a href="/blog/krypto-dokumentation" class="text-brand-teal hover:underline underline-offset-2 font-medium">→ Warum Krypto-Dokumentation essentiell ist</a></li>
+                    <li><a href="/krypto-finanzamt-rueckfrage" class="text-brand-teal hover:underline underline-offset-2 font-medium">→ Finanzamt Rückfrage: Vollständige Anleitung</a></li>
+                    <li><a href="/kontakt" class="text-brand-teal hover:underline underline-offset-2 font-medium">→ Kontakt: Unverbindlichen Doku-Check anfragen</a></li>
+                </ul>
+            </div>
+
+            <!-- Author Bio -->
+            <div class="author-bio mt-8 sm:mt-12 p-4 sm:p-6 rounded-[16px] sm:rounded-[24px] border border-slate-200 dark:border-white/5">
+                <div class="flex items-start gap-4">
+                    <div class="flex gap-1.5 h-12 items-center shrink-0">
+                        <div class="w-2.5 h-12 rounded-full bg-brand-navy dark:bg-slate-200"></div>
+                        <div class="w-2.5 h-12 rounded-full bg-brand-navy dark:bg-slate-200"></div>
+                        <div class="w-2.5 h-12 rounded-full bg-brand-navy dark:bg-slate-200"></div>
+                        <div class="w-2.5 h-12 rounded-full bg-brand-teal"></div>
+                    </div>
+                    <div>
+                        <p class="font-bold text-brand-navy dark:text-white mb-1">TX-Partner</p>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Krypto-Dokumentation einfach richtig.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Back to Blog -->
+            <div class="mt-16 sm:mt-20 mb-8 pt-8 border-t border-slate-200 dark:border-white/10 text-center">
+                <a href="/blog" class="inline-flex items-center gap-2 text-brand-teal font-semibold hover:underline underline-offset-4 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg>
+                    Zurück zum Blog
+                </a>
+            </div>
+        </article>
+    </div>
+
+    <!-- Footer -->
+    <footer class="pt-24 pb-12 bg-white dark:bg-dark-bg border-t border-slate-200 dark:border-white/5">
+        <div class="mx-auto px-6 max-w-7xl">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 lg:gap-16 mb-20">
+                <div class="space-y-6">
+                    <a href="/" class="flex items-center gap-3">
+                        <div class="flex items-center gap-1 h-6">
+                            <div class="w-1.5 h-6 rounded-full bg-brand-navy dark:bg-slate-200"></div>
+                            <div class="w-1.5 h-6 rounded-full bg-brand-navy dark:bg-slate-200"></div>
+                            <div class="w-1.5 h-6 rounded-full bg-brand-navy dark:bg-slate-200"></div>
+                            <div class="w-1.5 h-6 rounded-full bg-brand-teal"></div>
+                        </div>
+                        <span class="text-brand-navy dark:text-white text-lg font-bold tracking-wider">TX-Partner</span>
+                    </a>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Krypto-Dokumentation einfach richtig.</p>
+                </div>
+                <div>
+                    <h4 class="text-xs font-bold text-brand-navy dark:text-white uppercase tracking-widest mb-6">Leistungen</h4>
+                    <ul class="space-y-4">
+                        <li><a href="/leistungen" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Leistungen</a></li>
+                        <li><a href="/blockpit-hinweise" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Blockpit Hinweise</a></li>
+                        <li><a href="/cointracking-fehler" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">CoinTracking Fehler</a></li>
+                        <li><a href="/krypto-finanzamt-rueckfrage" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Finanzamt Rückfrage</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xs font-bold text-brand-navy dark:text-white uppercase tracking-widest mb-6">Unternehmen</h4>
+                    <ul class="space-y-4">
+                        <li><a href="/ueber-uns" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Über uns</a></li>
+                        <li><a href="/blog" class="text-sm font-medium text-brand-teal dark:text-white transition-colors">Blog</a></li>
+                        <li><a href="/faq" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">FAQ</a></li>
+                        <li><a href="/kontakt" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xs font-bold text-brand-navy dark:text-white uppercase tracking-widest mb-6">Rechtliches</h4>
+                    <ul class="space-y-4">
+                        <li><a href="/agb" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">AGB</a></li>
+                        <li><a href="/datenschutz" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Datenschutz</a></li>
+                        <li><a href="/impressum" class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-brand-teal transition-colors">Impressum</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-200 dark:border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-xs font-medium text-slate-400 dark:text-slate-500">© 2026 TX-Partner – eine Geschäftsbezeichnung der Solvum GmbH i.G.</p>
+                <a href="/sitemap" class="text-xs font-medium text-slate-400 dark:text-slate-500 hover:text-brand-navy dark:hover:text-white transition-colors">Sitemap</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const themeToggle = document.getElementById('theme-toggle');
+            const html = document.documentElement;
+            if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                html.classList.add('dark');
+            }
+            if (themeToggle) {
+                themeToggle.addEventListener('click', () => {
+                    html.classList.toggle('dark');
+                    localStorage.theme = html.classList.contains('dark') ? 'dark' : 'light';
+                });
+            }
+
+            const progressBar = document.getElementById('reading-progress');
+            if (progressBar) {
+                window.addEventListener('scroll', () => {
+                    const scrollTop = window.scrollY;
+                    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                    progressBar.style.width = (scrollTop / docHeight) * 100 + '%';
+                });
+            }
+
+            const tocLinks = document.querySelectorAll('.toc-sidebar a');
+            const sections = document.querySelectorAll('h2[id]');
+            if (tocLinks.length > 0 && sections.length > 0) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            tocLinks.forEach(link => link.classList.remove('active'));
+                            const activeLink = document.querySelector(`.toc-sidebar a[href="#${entry.target.id}"]`);
+                            if (activeLink) activeLink.classList.add('active');
+                        }
+                    });
+                }, { rootMargin: '-100px 0px -70% 0px', threshold: 0 });
+                sections.forEach(section => observer.observe(section));
+            }
+        });
+
+        function handleMouseMove(event) {
+            const card = event.currentTarget;
+            const rect = card.getBoundingClientRect();
+            card.style.setProperty('--mouse-x', (event.clientX - rect.left) + 'px');
+            card.style.setProperty('--mouse-y', (event.clientY - rect.top) + 'px');
+        }
+    </script>
+
+</body>
+
+</html>
